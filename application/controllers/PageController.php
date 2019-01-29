@@ -7,7 +7,7 @@ class PageController extends CI_Controller{
         $data['site_title'] = 'Home';
         $this->load->view('main/main_view', $data);
     }
-
+    
     public function home(){
         $data['site_view'] = 'Home';
         $data['site_title'] = 'Home';
