@@ -17,12 +17,24 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8">
-            <div class="row">
+            <div class="row ">
 
-              
-
-
+              <?php foreach($results as $result) : ?>
               <div class="col-md-6 col-lg-6 mb-4 ftco-animate">
+                <a href="tours-single.html" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/tours/<?php echo $result->photo_id ?>.jpg');">
+                  <div class="text">
+                    <span class="price">$399</span>
+                    <h3 class="heading">Tour in Negombo</h3>
+                    <div class="post-meta">
+                      <span><?php echo $result->discription; ?></span>
+                    </div>
+                    <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
+                  </div>
+                </a>
+              </div>
+              <?php endforeach; ?>
+
+              <!-- <div class="col-md-6 col-lg-6 mb-4 ftco-animate">
                 <a href="tours-single.html" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/tour-1.jpg');">
                   <div class="text">
                     <span class="price">$399</span>
@@ -117,7 +129,7 @@
                     <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
                   </div>
                 </a>
-              </div>
+              </div> -->
             </div>
             <div class="row mt-5">
               <div class="col text-center">
@@ -141,7 +153,7 @@
             <div class="sidebar-box ftco-animate">
               <div class="search-tours bg-light p-4">
                 <h3>Find your tour</h3>
-                <form action="" method="post">
+                <form action="tourcontroller/gettours" method="get" class="form">
                   <div class="fields">
                     <div class="row flex-column">
 
