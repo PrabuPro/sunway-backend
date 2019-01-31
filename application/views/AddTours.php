@@ -6,20 +6,20 @@
                         <h1 class="mb-3 mt-5">Add Tours</h1>
                     </div>
                 </div>
-                <form action="#">
+                <form action="tourcontroller/addtours">
                     <div class="row">
                         <div class="col-md-6 form-group">
-                            <input type="text" class="form-control" placeholder="Hotel Name">
+                            <input name="name" type="text" class="form-control" placeholder="Hotel Name">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6 form-group">
-                            <input type="text" class="form-control" placeholder="Discription">
+                            <input name="discription" type="text" class="form-control" placeholder="Discription">
                         </div>
                     </div>
                     <div class="row">
                         <div class="select-wrap col-md-6 group mb-3">
-                            <select name="" id="" class="form-control">
+                            <select name="" id="" class="form-control" name="tour_type">
                                 <option value="" class="form-control-option-white" >Tour Type</option>
                                 <option value="" class="form-control-option-white" >Common</option>
                                 <option value="" class="form-control-option-white" >Beach</option>
@@ -32,7 +32,7 @@
                             </select>
                         </div>
                         <div class="select-wrap col-md-6 group mb-3">
-                            <select name="" id="" class="form-control">
+                            <select name="" id="" class="form-control" name="suitable_for">
                                 <option value="" class="form-control-option-white">Suitable for</option>
                                 <option value="" class="form-control-option-white">Seniors</option>
                                 <option value="" class="form-control-option-white">Couples</option>
@@ -47,21 +47,21 @@
                     </div>
                     <div class="row">
                         <div class="col-md-6 form-group">
-                            <input type="text" class="form-control" placeholder="Price">
+                            <input type="text" class="form-control" placeholder="Price" name="price">
                         </div>
                         <div class="col-md-6 form-group">
-                            <input type="file" class="form-control" placeholder="Photo">
+                            <input type="file" class="form-control" placeholder="Photo" name="photo_id">
                         </div>
                     </div>
                     <div class="row">
                          <div class="col-md-6 form-group">
-                            <input type="text" class="form-control" placeholder="Location">
+                            <input type="text" class="form-control" placeholder="Location" name="location">
                         </div>
                     </div>
                     <div class="row mb-5">
                         <div class="col-md-10">
                             <div class="form-group">
-                                <input type="submit" value="Submit" class="btn btn-primary py-3 px-5">
+                                <input type="submit" value="Add Tour" class="btn btn-primary py-3 px-5">
                             </div>
                         </div>
                     </div>

@@ -18,11 +18,16 @@ class TourController extends CI_Controller{
         
     }
     
-    public function addTours(){
+    public function addToursView(){
         $data['site_view'] = 'AddTours';
         $data['site_title'] = 'Add Tours';
         $this->load->view('main/main_view', $data);
 
+    }
+
+    public function addTours(){
+
+        $name = $this->input->post('name')
     }
 }
 
