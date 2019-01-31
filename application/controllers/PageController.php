@@ -7,10 +7,34 @@ class PageController extends CI_Controller{
         $data['site_title'] = 'Home';
         $this->load->view('main/main_view', $data);
     }
-    
     public function home(){
         $data['site_view'] = 'Home';
         $data['site_title'] = 'Home';
+        $this->load->view('main/main_view', $data);
+    }
+    public function services(){
+        $data['site_view'] = 'Services';
+        $data['site_title'] = 'Services';
+        $this->load->view('main/main_view', $data);
+    }
+    public function aboutUs(){
+        $data['site_view'] = 'AboutUs';
+        $data['site_title'] = 'About Us';
+        $this->load->view('main/main_view', $data);
+    }
+    public function maldives(){
+        $data['site_view'] = 'Maldives';
+        $data['site_title'] = 'Maldives';
+        $this->load->view('main/main_view', $data);
+    }
+    public function holidays(){
+        $data['site_view'] = 'Holidays';
+        $data['site_title'] = 'Holidays';
+        $this->load->view('main/main_view', $data);
+    }
+    public function contacts(){
+        $data['site_view'] = 'Contacts';
+        $data['site_title'] = 'Contacts';
         $this->load->view('main/main_view', $data);
     }
 

@@ -397,7 +397,7 @@
 
 
 	$('.parallax-window').parallax({
-		imageSrc: 'assets/images/elephant.jpeg'
+		imageSrc: "<?php echo $_SERVER['DOCUMENT_ROOT'];?>/sunwayholidays/assets/images/elephant.jpeg"
 	});
 
 

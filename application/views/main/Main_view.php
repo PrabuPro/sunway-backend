@@ -38,14 +38,14 @@
 
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="tours.html" class="nav-link">Tours</a></li>
-                    <li class="nav-item"><a href="accomadations.html" class="nav-link">Accomadation</a></li>
+                    <li class="nav-item active"><a href="<?php echo base_url(); ?>home" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="<?php echo base_url(); ?>tours" class="nav-link">Tours</a></li>
+                    <li class="nav-item"><a href="<?php echo base_url(); ?>accomadations" class="nav-link">Accomadation</a></li>
                     <li class="nav-item"><a href="" class="nav-link">Services</a></li>
-                    <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
-                    <li class="nav-item"><a href="maldives.html" class="nav-link">Maldives</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Holidays</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="<?php echo base_url(); ?>about-us" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="<?php echo base_url(); ?>maldives" class="nav-link">Maldives</a></li>
+                    <li class="nav-item"><a href="<?php echo base_url(); ?>holidays" class="nav-link">Holidays</a></li>
+                    <li class="nav-item"><a href="<?php echo base_url(); ?>contacts" class="nav-link">Contacts</a></li>
                 </ul>
             </div>
         </div>
@@ -136,22 +136,23 @@
             <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg></div>
 
 
-    <script src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script>
-    <script src="<?php echo base_url(); ?>assets/js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="<?php echo base_url(); ?>assets/js/popper.min.js"></script>
-    <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
-    <script src="<?php echo base_url(); ?>assets/js/jquery.easing.1.3.js"></script>
-    <script src="<?php echo base_url(); ?>assets/js/jquery.waypoints.min.js"></script>
-    <script src="<?php echo base_url(); ?>assets/js/jquery.stellar.min.js"></script>
-    <script src="<?php echo base_url(); ?>assets/js/owl.carousel.min.js"></script>
-    <script src="<?php echo base_url(); ?>assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="<?php echo base_url(); ?>assets/js/aos.js"></script>
-    <script src="<?php echo base_url(); ?>assets/js/jquery.animateNumber.min.js"></script>
-    <script src="<?php echo base_url(); ?>assets/js/bootstrap-datepicker.js"></script>
-    <script src="<?php echo base_url(); ?>assets/js/jquery.timepicker.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-    <script src="<?php echo base_url(); ?>assets/js/google-map.js"></script>
-    <script src="<?php echo base_url(); ?>assets/js/main.js"></script>
+  <script src="<?php echo base_url();?>assets/js/jquery.min.js"></script>
+  <script src="<?php echo base_url();?>assets/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="<?php echo base_url();?>assets/js/popper.min.js"></script>
+  <script src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
+  <script src="<?php echo base_url();?>assets/js/jquery.easing.1.3.js"></script>
+  <script src="<?php echo base_url();?>assets/js/jquery.waypoints.min.js"></script>
+  <script src="<?php echo base_url();?>assets/js/jquery.stellar.min.js"></script>
+  <script src="<?php echo base_url();?>assets/js/owl.carousel.min.js"></script>
+  <script src="<?php echo base_url();?>assets/js/jquery.magnific-popup.min.js"></script>
+  <script src="<?php echo base_url();?>assets/js/aos.js"></script>
+  <script src="<?php echo base_url();?>assets/js/jquery.animateNumber.min.js"></script>
+  <script src="<?php echo base_url();?>assets/js/bootstrap-datepicker.js"></script>
+  <script src="<?php echo base_url();?>assets/js/jquery.timepicker.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="<?php echo base_url();?>assets/js/google-map.js"></script>
+  <script src="<?php echo base_url();?>assets/js/parallax.min.js"></script>
+  <script src="<?php echo base_url();?>assets/js/main.js"></script>
 
 </body>
 
