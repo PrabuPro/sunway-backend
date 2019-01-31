@@ -18,118 +18,19 @@
         <div class="row">
           <div class="col-lg-8">
             <div class="row ">
-
               <?php foreach($results as $result) : ?>
               <div class="col-md-6 col-lg-6 mb-4 ftco-animate">
                 <a href="tours-single.html" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/tours/<?php echo $result->photo_id ?>.jpg');">
                   <div class="text">
-                    <span class="price">$399</span>
-                    <h3 class="heading">Tour in Negombo</h3>
+                    <span class="price">$ <?php echo $result->price; ?></span>
+                    <h3 class="heading">Tour in <?php echo $result->location; ?></h3>
                     <div class="post-meta">
                       <span><?php echo $result->discription; ?></span>
                     </div>
-                    <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
                   </div>
                 </a>
               </div>
               <?php endforeach; ?>
-
-              <!-- <div class="col-md-6 col-lg-6 mb-4 ftco-animate">
-                <a href="tours-single.html" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/tour-1.jpg');">
-                  <div class="text">
-                    <span class="price">$399</span>
-                    <h3 class="heading">Tour in Negombo</h3>
-                    <div class="post-meta">
-                      <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                    </div>
-                    <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
-                  </div>
-                </a>
-              </div>
-              <div class="col-md-6 col-lg-6 mb-4 ftco-animate">
-                <a href="#" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/tour-2.jpg');">
-                  <div class="text">
-                    <span class="price">$399</span>
-                    <h3 class="heading">Tour in Kandy</h3>
-                    <div class="post-meta">
-                      <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                    </div>
-                    <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
-                  </div>
-                </a>
-              </div>
-              <div class="col-md-6 col-lg-6 mb-4 ftco-animate">
-                <a href="#" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/tour-3.jpg');">
-                  <div class="text">
-                    <span class="price">$399</span>
-                    <h3 class="heading">Tour in Nilaveli beach</h3>
-                    <div class="post-meta">
-                      <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                    </div>
-                    <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
-                  </div>
-                </a>
-              </div>
-              <div class="col-md-6 col-lg-6 mb-4 ftco-animate">
-                <a href="#" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/tour-4.jpg');">
-                  <div class="text">
-                    <span class="price">$399</span>
-                    <h3 class="heading">Tour in Sinharaja</h3>
-                    <div class="post-meta">
-                      <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                    </div>
-                    <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
-                  </div>
-                </a>
-              </div>
-              <div class="col-md-6 col-lg-6 mb-4 ftco-animate">
-                <a href="#" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/tour-5.jpg');">
-                  <div class="text">
-                    <span class="price">$399</span>
-                    <h3 class="heading">Tour in Somewhere</h3>
-                    <div class="post-meta">
-                      <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                    </div>
-                    <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
-                  </div>
-                </a>
-              </div>
-              <div class="col-md-6 col-lg-6 mb-4 ftco-animate">
-                <a href="#" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/tour-6.jpg');">
-                  <div class="text">
-                    <span class="price">$399</span>
-                    <h3 class="heading">Tour in Somewhere</h3>
-                    <div class="post-meta">
-                      <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                    </div>
-                    <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
-                  </div>
-                </a>
-              </div>
-              <div class="col-md-6 col-lg-6 mb-4 ftco-animate">
-                <a href="#" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/tour-7.jpg');">
-                  <div class="text">
-                    <span class="price">$399</span>
-                    <h3 class="heading">Tour in Somewhere</h3>
-                    <div class="post-meta">
-                      <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                    </div>
-                    <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
-                  </div>
-                </a>
-              </div>
-              <div class="col-md-6 col-lg-6 mb-4 ftco-animate">
-                <a href="#" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/tour-8.jpg');">
-                  <div class="text">
-                    <span class="price">$399</span>
-                    <h3 class="heading">Tour in Somewhere</h3>
-                    <div class="post-meta">
-                      <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                    </div>
-                    <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
-                  </div>
-                </a>
-              </div> -->
             </div>
             <div class="row mt-5">
               <div class="col text-center">
