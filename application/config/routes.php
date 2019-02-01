@@ -60,3 +60,5 @@ $route['about-us'] = 'pagecontroller/aboutUs';
 $route['maldives'] = 'pagecontroller/maldives';
 $route['holidays'] = 'pagecontroller/holidays';
 $route['contacts'] = 'pagecontroller/contacts';
+$route['pro-login'] = 'adminsunway/admin';
+$route['pro-reg'] = 'adminsunway/register_view';

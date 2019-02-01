@@ -27,7 +27,7 @@ class TourController extends CI_Controller{
 
     public function addTours(){
 
-        $name = $this->input->post('name')
+        $name = $this->input->post('name');
     }
 }
 
