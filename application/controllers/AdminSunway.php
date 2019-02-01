@@ -22,17 +22,22 @@ class AdminSunway extends CI_Controller{
             
         }
         else{
-
-            $options = [
-                'cost' => 12,
-            ];
-
-            $hash = password_hash($this->input->post('password'), PASSWORD_BCRYPT, $options) ;
             
             $username = $this->input->post('username');
-            $password = $hash;
+            $password = $this->input->post('password');
 
-            $this->login_
+            $this->admin_model->user_login($username, $password);
+
+            if($this->session->userdata('logged_in')){
+                redirect('add-tours');
+            } else {
+                $data = array(
+                    'errors' => 'Username or Password Incorrect'
+                );
+                $this->session->set_flashdata($data);
+                redirect('pro-login');
+            }
+            
         }
     
     }
@@ -67,7 +72,7 @@ class AdminSunway extends CI_Controller{
             $username = $this->input->post('username');
             $password = $hash;
 
-            $this->login_model->register_user($username, $password);
+            $this->admin_model->register_user($username, $password);
 
             $data = array(
                 'success' => 'Registration Successful'
@@ -75,9 +80,6 @@ class AdminSunway extends CI_Controller{
             
             $this->session->set_flashdata($data);
             redirect('pro-login');
-
-
-
         }
 
     }
