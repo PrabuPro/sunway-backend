@@ -6,11 +6,11 @@
             <div class="container">
                 <div class="col-lg-12">
                     <div class="row slider-text align-items-center">
-                        <div class="col-md-7 col-sm-12 ftco-animate">
+                        <div class="col-md-4 col-sm-12 ftco-animate">
                             <h1 class="mb-3 mt-5">Add Tours</h1>
                         </div>
                     </div>
-                    <form action="tourcontroller/addtours">
+                    <form action="tourcontroller/addtours" methode="post">
                         <div class="row">
                             <div class="col-md-6 form-group">
                                 <input name="name" type="text" class="form-control" placeholder="Hotel Name">
@@ -70,7 +70,16 @@
                             </div>
                         </div>
                     </form>
-        
+                    <form action="adminsunway/logout"  method="post">
+                        <div class="row mb-5">
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <input type="submit" value="Log out" class="btn btn-primary py-3 px-5">
+                                    </div>
+                                </div>
+                        </div>
+                    </form>
+                  
                 </div>
             </div>
         </section>
