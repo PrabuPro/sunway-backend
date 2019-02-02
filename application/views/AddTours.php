@@ -14,24 +14,30 @@
 
     </style>
 
+
     <section class="ftco-section" style="padding-top:0px !important">
         <div class="container">
             <div class="col-lg-12">
             
              <?php if($this->session->flashdata('errors')) : ?>
-             <div class="message" style="width:50%; height:auto; color: black; background-color:yellow; line-hight: 1; ">
-                <?php echo $this->session->flashdata('errors'); ?>
-             </div>
+                <div class="message" style="width:50%; height:auto; color: black; background-color:yellow; line-hight: 1; ">
+                    <?php echo $this->session->flashdata('errors'); ?>
+                </div>
+            <?php endif; ?>
+             <?php if($this->session->flashdata('name')) : ?>
+                <div class="message" style="width:50%; height:auto; color: black; background-color:yellow; line-hight: 1; ">
+                    <?php echo $this->session->flashdata('name'); ?>
+                </div>
             <?php endif; ?>
                 <div class="row slider-text align-items-center">
                     <div class="col-md-4 col-sm-12 ftco-animate">
                         <h1 class="mb-3 mt-5">Add Tours</h1>
                     </div>
                 </div>
-                <form action="tourcontroller/addtours" method="post">
+                <form action="tourcontroller/addtours" method="post" enctype="multipart/form-data">
                     <div class="row">
                         <div class="col-md-6 form-group">
-                            <input name="name" type="text" class="form-control" placeholder="Hotel Name">
+                            <input name="name" type="text" class="form-control" placeholder="Tour Name">
                         </div>
                     </div>
                     <div class="row">
@@ -41,29 +47,29 @@
                     </div>
                     <div class="row">
                         <div class="select-wrap col-md-6 group mb-3">
-                            <select name="" id="" class="form-control" name="tour_type">
+                            <select class="form-control" name="tour_type">
                                 <option value="" class="form-control-option-white" >Tour Type</option>
-                                <option value="" class="form-control-option-white" >Common</option>
-                                <option value="" class="form-control-option-white" >Beach</option>
-                                <option value="" class="form-control-option-white" >Eco</option>
-                                <option value="" class="form-control-option-white" >Nature</option>
-                                <option value="" class="form-control-option-white" >Wild Life</option>
-                                <option value="" class="form-control-option-white" >Adventure</option>
-                                <option value="" class="form-control-option-white" >Action</option>
-                                <option value="" class="form-control-option-white" >Ayurweda</option>
+                                <option value="common" class="form-control-option-white" >Common</option>
+                                <option value="beach" class="form-control-option-white" >Beach</option>
+                                <option value="eco" class="form-control-option-white" >Eco</option>
+                                <option value="nature" class="form-control-option-white" >Nature</option>
+                                <option value="wild life" class="form-control-option-white" >Wild Life</option>
+                                <option value="adventure" class="form-control-option-white" >Adventure</option>
+                                <option value="action" class="form-control-option-white" >Action</option>
+                                <option value="ayurweda" class="form-control-option-white" >Ayurweda</option>
                             </select>
                         </div>
                         <div class="select-wrap col-md-6 group mb-3">
-                            <select name="" id="" class="form-control" name="suitable_for">
+                            <select class="form-control" name="suitable_for">
                                 <option value="" class="form-control-option-white">Suitable for</option>
-                                <option value="" class="form-control-option-white">Seniors</option>
-                                <option value="" class="form-control-option-white">Couples</option>
-                                <option value="" class="form-control-option-white">Family</option>
-                                <option value="" class="form-control-option-white">Honeymooners</option>
-                                <option value="" class="form-control-option-white">Smalll Group </option>
-                                <option value="" class="form-control-option-white">Resurchers</option>
-                                <option value="" class="form-control-option-white">Singles + kids</option>
-                                <option value="" class="form-control-option-white">Pilgrims</option>
+                                <option value="seniors" class="form-control-option-white">Seniors</option>
+                                <option value="couples" class="form-control-option-white">Couples</option>
+                                <option value="family" class="form-control-option-white">Family</option>
+                                <option value="honeymooners" class="form-control-option-white">Honeymooners</option>
+                                <option value="small-group" class="form-control-option-white">Smalll Group </option>
+                                <option value="resurchers" class="form-control-option-white">Resurchers</option>
+                                <option value="singles-kids" class="form-control-option-white">Singles + kids</option>
+                                <option value="pilgrims" class="form-control-option-white">Pilgrims</option>
                             </select>
                         </div>
                     </div>

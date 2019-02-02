@@ -35,13 +35,67 @@ class TourController extends CI_Controller{
         $this->form_validation->set_rules('location', 'Location', 'trim|required|max_length[15]');
 
         if($this->form_validation->run() == FALSE){
-            $data = array(
+             $data = array(
                 'errors' => validation_errors()
+            );
+            $this->session->set_flashdata($data);
+            redirect('add-tours');
+        }
+
+        else {
+
+            $uploadedStatus =  $this->imageUpload();
+
+            if($uploadedStatus){
+
+            $databaseData = array(
+                'name' => $this->input->post('name'),
+                'description' => $this->input->post('description'),
+                'tour_type' => $this->input->post('tour_type'),
+                'suitable_for' => $this->input->post('suitable_for'),
+                'price' => $this->input->post('price'),
+                'photo_id' => $_FILES['photo_id']['name'],
+                'location' => $this->input->post('location'),
+            );
+
+            $result = $this->tour_model->insert_tour($databaseData);
+
+            $data = array(
+                'success' => 'Uploaded successfully'
             );
 
             $this->session->set_flashdata($data);
             redirect('add-tours');
 
+            } else {
+                redirect('add-tours');
+            }
+        }
+    }
+
+
+    public function imageUpload(){
+
+        $config['upload_path']          = './assets/images/tours/';
+        $config['allowed_types']        = 'gif|jpg|png|jpeg';
+        $config['max_size']             = 200000;
+        $config['max_width']            = 1024;
+        $config['max_height']           = 768;
+
+        $this->load->library('upload', $config);
+
+        if (!$this->upload->do_upload('photo_id'))
+        {
+            $errors = array('errors' => $this->upload->display_errors());
+            $this->session->set_flashdata($errors);
+            $this->load->view('addtours');
+            return FALSE;
+        }
+        else
+        {
+            $data = array('upload_data' => $this->upload->data());
+            $this->load->view('success', $data);
+            return TRUE;
         }
     }
 }

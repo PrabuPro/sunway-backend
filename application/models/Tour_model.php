@@ -11,6 +11,11 @@ class Tour_model extends CI_Model{
         $tours = $this->db->get('tours');
         return $tours->result() ;
     }
+
+    public function insert_tour($data){
+        $result = $this->db->insert('tours', $data);
+        
+    }
 }
 
 
