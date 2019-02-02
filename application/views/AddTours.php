@@ -24,9 +24,9 @@
                     <?php echo $this->session->flashdata('errors'); ?>
                 </div>
             <?php endif; ?>
-             <?php if($this->session->flashdata('name')) : ?>
-                <div class="message" style="width:50%; height:auto; color: black; background-color:yellow; line-hight: 1; ">
-                    <?php echo $this->session->flashdata('name'); ?>
+             <?php if($this->session->flashdata('success')) : ?>
+                <div class="message" style="width:50%; height:auto; color: black; background-color:#7CFC00; line-hight: 1; ">
+                    <?php echo $this->session->flashdata('success'); ?>
                 </div>
             <?php endif; ?>
                 <div class="row slider-text align-items-center">
@@ -75,7 +75,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-6 form-group">
-                            <input type="text" class="form-control" placeholder="Price" name="price">
+                            <input type="text" class="form-control" placeholder="Price in $" name="price">
                         </div>
                         <div class="col-md-6 form-group">
                             <input type="file" class="form-control" placeholder="Photo" name="photo_id">

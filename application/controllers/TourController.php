@@ -31,7 +31,7 @@ class TourController extends CI_Controller{
         $this->form_validation->set_rules('description', 'Description', 'trim|required|max_length[50]');
         $this->form_validation->set_rules('tour_type', 'Tour_type', 'trim|required|max_length[15]');
         $this->form_validation->set_rules('suitable_for', 'Suitable_for', 'trim|required|max_length[15]');
-        $this->form_validation->set_rules('price', 'Price', 'trim|required|max_length[15]');
+        $this->form_validation->set_rules('price', 'Price', 'trim|required|integer|max_length[15]');
         $this->form_validation->set_rules('location', 'Location', 'trim|required|max_length[15]');
 
         if($this->form_validation->run() == FALSE){
@@ -62,7 +62,7 @@ class TourController extends CI_Controller{
             $result = $this->tour_model->insert_tour($databaseData);
 
             $data = array(
-                'success' => 'Uploaded successfully'
+                'success' => 'Successfully Uploaded'
             );
 
             $this->session->set_flashdata($data);
