@@ -44,9 +44,10 @@ class TourController extends CI_Controller{
 
         else {
 
-            $uploadedStatus =  $this->imageUpload();
+            //upload image and insert data into database
+            if($this->imageUpload()){
 
-            if($uploadedStatus){
+            $photo_url = base_url().'assets/images/tours/'.$_FILES['photo_id']['name'];
 
             $databaseData = array(
                 'name' => $this->input->post('name'),
@@ -54,7 +55,7 @@ class TourController extends CI_Controller{
                 'tour_type' => $this->input->post('tour_type'),
                 'suitable_for' => $this->input->post('suitable_for'),
                 'price' => $this->input->post('price'),
-                'photo_id' => $_FILES['photo_id']['name'],
+                'photo_id' => $photo_url,
                 'location' => $this->input->post('location'),
             );
 
@@ -73,7 +74,7 @@ class TourController extends CI_Controller{
         }
     }
 
-
+    //function for uploading images
     public function imageUpload(){
 
         $config['upload_path']          = './assets/images/tours/';
