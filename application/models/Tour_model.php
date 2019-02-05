@@ -38,6 +38,13 @@ class Tour_model extends CI_Model{
 
         return $query->row();
     }
+
+    public function get_tourSuggessions($pageId){
+        $query = $this->db->get_where('tours', array('tour_id' => $pageId), 1);
+        
+        //return tour type from above and get similar tour types
+
+    }
 }
 
 ?>
