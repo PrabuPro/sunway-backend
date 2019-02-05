@@ -15,7 +15,7 @@
 			<?php if($this->session->flashdata('errors')) : ?>
 			<article class="message is-danger">
 				<div class="message-header">
-					<p>Danger</p>
+					<p>Error</p>
 					<button class="delete" aria-label="delete"></button>
 				</div>
 				<div class="message-body">
@@ -58,6 +58,11 @@
 									<input class="input is-info" name="description" type="text" placeholder="Description">
 								</div>
 							</div>
+                            <div class="field">
+                                <div class="control">
+                                    <textarea class="textarea is-info" placeholder="Introduction" name="introduction"></textarea>
+                                </div>
+                            </div>
 							<div class="field">
 								<div class="control">
 									<div class="select is-info">
@@ -94,7 +99,7 @@
 							</div>
 							<div class="field">
 								<div class="control">
-									<input class="input is-info" name="price" type="text" placeholder="Price">
+									<input class="column is-5 input is-info" name="price" type="text" placeholder="Price">
 								</div>
 							</div>
 
@@ -123,10 +128,20 @@
 									<input class="input is-info" name="location" type="text" placeholder="Location">
 								</div>
 							</div>
+							<div class="field">
+								<div class="control">
+									<input class="column is-5 input is-info" name="lat" type="text" placeholder="Latitude">
+								</div>
+							</div>
+							<div class="field">
+								<div class="control ">
+									<input class="column is-5 input is-info" name="lng" type="text" placeholder="Longitude">
+								</div>
+							</div>
 
 							<div class="field">
 								<div class="control">
-									<input class=" column is-3 button is-block is-info is-medium is-fullwidth" type="submit" value="Add Tour">
+									<input class="column is-3 button is-block is-info is-medium is-fullwidth" type="submit" value="Add Tour">
 
 								</div>
 							</div>

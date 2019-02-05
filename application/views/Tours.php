@@ -20,7 +20,7 @@
             <div class="row ">
               <?php foreach($results as $result) : ?>
               <div class="col-md-6 col-lg-6 mb-4 ftco-animate">
-                <a href="tours-single.html" class="block-5" style="background-image: url('<?php echo $result->photo_id; ?>');">
+                <a href="tours/<?php echo $result->tour_id; ?>" class="block-5" style="background-image: url('<?php echo $result->photo_id; ?>');">
                   <div class="text">
                     <span class="price">$ <?php echo $result->price; ?></span>
                     <h3 class="heading">Tour in <?php echo $result->location; ?></h3>

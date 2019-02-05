@@ -60,7 +60,20 @@ class TourController extends CI_Controller{
                 'location' => $this->input->post('location'),
             );
 
-            $result = $this->tour_model->insert_tour($databaseData);
+            //insert tour table
+            $tourId = $this->tour_model->insert_tours($databaseData);
+
+            $databaseData2 = array(
+                'tour_id' => $tourId,
+                'introduction' => $this->input->post('introduction'),
+                'lat' => $this->input->post('lat'),
+                'lng' => $this->input->post('lng')
+            );
+
+            //insert tour_item table
+            $tourItemId = $this->tour_model->insert_tour($databaseData2);
+
+
 
             $dataflash = array(
                 'success' => 'Successfully Uploaded'
@@ -103,6 +116,14 @@ class TourController extends CI_Controller{
             return TRUE;
         }
     }
+
+    public function touritem($pageid){
+        $data['results'] = $this->tour_model->get_tourItem($pageid);
+        $data['site_view'] = 'TourItem';
+        $this->load->view('main/main_view', $data);
+    }
+
+
 }
 
 ?>
