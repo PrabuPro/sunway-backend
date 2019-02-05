@@ -29,7 +29,8 @@ class AdminSunway extends CI_Controller{
             $this->admin_model->user_login($username, $password);
 
             if($this->session->userdata('logged_in')){
-                redirect('add-tours');
+                $data['site_view'] = 'addTours';
+                $this->load->view('admin/dashboard', $data);
             } else {
                 $data = array(
                     'errors' => 'Username or Password Incorrect'

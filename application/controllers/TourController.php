@@ -35,11 +35,12 @@ class TourController extends CI_Controller{
         $this->form_validation->set_rules('location', 'Location', 'trim|required|max_length[15]');
 
         if($this->form_validation->run() == FALSE){
-             $data = array(
+             $dataflash = array(
                 'errors' => validation_errors()
             );
-            $this->session->set_flashdata($data);
-            redirect('add-tours');
+            $this->session->set_flashdata($dataflash);
+            $data['site_view'] = 'addTours';
+            $this->load->view('admin/dashboard', $data);
         }
 
         else {
@@ -61,15 +62,17 @@ class TourController extends CI_Controller{
 
             $result = $this->tour_model->insert_tour($databaseData);
 
-            $data = array(
+            $dataflash = array(
                 'success' => 'Successfully Uploaded'
             );
 
-            $this->session->set_flashdata($data);
-            redirect('add-tours');
+            $this->session->set_flashdata($dataflash);
+            $data['site_view'] = 'addTours';
+            $this->load->view('admin/dashboard', $data);
 
             } else {
-                redirect('add-tours');
+                $data['site_view'] = 'addTours';
+                $this->load->view('admin/dashboard', $data);
             }
         }
     }
@@ -89,13 +92,14 @@ class TourController extends CI_Controller{
         {
             $errors = array('errors' => $this->upload->display_errors());
             $this->session->set_flashdata($errors);
-            $this->load->view('addtours');
+            //  $data['site_view'] = 'addTours';
+            // $this->load->view('admin/dashboard', $data);
             return FALSE;
         }
         else
         {
             $data = array('upload_data' => $this->upload->data());
-            $this->load->view('success', $data);
+            // $this->load->view('success', $data);
             return TRUE;
         }
     }
