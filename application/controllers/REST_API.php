@@ -38,7 +38,7 @@ class REST_API extends REST_Controller {
         
         $temp = $this->tour_model->get_tours();
 
-        $results = json_decode($temp);
+        $results = $temp;
 
         $this->set_response($results, REST_Controller::HTTP_OK);
     }

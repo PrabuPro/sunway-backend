@@ -45,6 +45,9 @@ class Tour_model extends CI_Model{
         //return tour type from above and get similar tour types
 
     }
+
+
+    
 }
 
 ?>
