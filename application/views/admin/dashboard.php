@@ -19,10 +19,10 @@
 	<div class="container">
 		<div id="navMenu" class="navbar-menu">
 			<div class="navbar-start">
-				<a class="navbar-item" href="admin.html">
+				<a class="navbar-item" href="<?php echo site_url('addtoursview');?>">
 					Add Tour
 				</a>
-				<a class="navbar-item" href="admin.html">
+				<a class="navbar-item" href="<?php echo site_url('addhotelsview');?>">
 					Add Hotel
 				</a>
 				<a class="navbar-item" href="admin.html">

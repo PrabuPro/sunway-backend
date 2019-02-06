@@ -18,102 +18,19 @@
         <div class="row">
           <div class="col-lg-8">
             <div class="row">
+              <?php foreach($results as $result) : ?>
               <div class="col-md-6 col-lg-6 mb-4 ftco-animate">
-                <a href="#" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/hotel-1.jpg');">
+                <a href="hotels/<?php echo $result->hotel_id; ?>" class="block-5" style="background-image: url('<?php echo $result->photo_id; ?>');">
                   <div class="text">
-                    <span class="price">$29/night</span>
-                    <h3 class="heading">Luxe Hotel</h3>
+                    <span class="price">$ <?php echo $result->price; ?></span>
+                    <h3 class="heading">Hotel in <?php echo $result->location; ?></h3>
                     <div class="post-meta">
-                      <span>Ameeru Ahmed Magu Male’, Maldives</span>
+                      <span><?php echo $result->description; ?></span>
                     </div>
-                    <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
                   </div>
                 </a>
               </div>
-              <div class="col-md-6 col-lg-6 mb-4 ftco-animate">
-                <a href="#" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/hotel-2.jpg');">
-                  <div class="text">
-                    <span class="price">$29/night</span>
-                    <h3 class="heading">Luxe Hotel</h3>
-                    <div class="post-meta">
-                      <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                    </div>
-                    <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
-                  </div>
-                </a>
-              </div>
-              <div class="col-md-6 col-lg-6 mb-4 ftco-animate">
-                <a href="#" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/hotel-3.jpg');">
-                  <div class="text">
-                    <span class="price">$29/night</span>
-                    <h3 class="heading">Luxe Hotel</h3>
-                    <div class="post-meta">
-                      <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                    </div>
-                    <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
-                  </div>
-                </a>
-              </div>
-              <div class="col-md-6 col-lg-6 mb-4 ftco-animate">
-                <a href="#" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/hotel-4.jpg');">
-                  <div class="text">
-                    <span class="price">$29/night</span>
-                    <h3 class="heading">Luxe Hotel</h3>
-                    <div class="post-meta">
-                      <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                    </div>
-                    <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
-                  </div>
-                </a>
-              </div>
-              <div class="col-md-6 col-lg-6 mb-4 ftco-animate">
-                <a href="#" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/hotel-5.jpg');">
-                  <div class="text">
-                    <span class="price">$29/night</span>
-                    <h3 class="heading">Luxe Hotel</h3>
-                    <div class="post-meta">
-                      <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                    </div>
-                    <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
-                  </div>
-                </a>
-              </div>
-              <div class="col-md-6 col-lg-6 mb-4 ftco-animate">
-                <a href="#" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/hotel-6.jpg');">
-                  <div class="text">
-                    <span class="price">$29/night</span>
-                    <h3 class="heading">Luxe Hotel</h3>
-                    <div class="post-meta">
-                      <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                    </div>
-                    <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
-                  </div>
-                </a>
-              </div>
-              <div class="col-md-6 col-lg-6 mb-4 ftco-animate">
-                <a href="#" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/hotel-7.jpg');">
-                  <div class="text">
-                    <span class="price">$29/night</span>
-                    <h3 class="heading">Luxe Hotel</h3>
-                    <div class="post-meta">
-                      <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                    </div>
-                    <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
-                  </div>
-                </a>
-              </div>
-              <div class="col-md-6 col-lg-6 mb-4 ftco-animate">
-                <a href="#" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/hotel-8.jpg');">
-                  <div class="text">
-                    <span class="price">$29/night</span>
-                    <h3 class="heading">Luxe Hotel</h3>
-                    <div class="post-meta">
-                      <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                    </div>
-                    <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
-                  </div>
-                </a>
-              </div>
+              <?php endforeach; ?>
             </div>
             <div class="row mt-5">
               <div class="col text-center">

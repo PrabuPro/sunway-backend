@@ -65,4 +65,7 @@ $route['pro-reg'] = 'adminsunway/register_view';
 $route['add-tours'] = 'tourcontroller/addtoursview';
 $route['logout'] = 'sunwayadmin/logout';
 $route['addtours'] = 'tourcontroller/addtours';
+$route['addtoursview'] = 'tourcontroller/addtoursview';
 $route['tours/(:num)'] = 'tourcontroller/touritem/$1';
+$route['addhotelsview'] = 'hotelcontroller/addhotelsview';
+$route['addhotels'] = 'hotelcontroller/addhotels';

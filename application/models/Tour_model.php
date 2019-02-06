@@ -29,11 +29,11 @@ class Tour_model extends CI_Model{
         //             ->where('t1.tour_id', $pageId)
         //             ->join('tour_item as t2', 't1.tour_id=t2.tour_id', 'INNER')
         //             ->get();
-
+        $id = (int)$pageId;
         $this->db->select('*');
         $this->db->from('tours');
         $this->db->join('tour_item', 'tour_item.tour_id = tours.tour_id');
-        
+        // $this->db->where('tours.tour_id', $id);
         $query = $this->db->get();
 
         return $query->row();
