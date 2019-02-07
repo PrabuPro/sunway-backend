@@ -124,6 +124,21 @@ class TourController extends CI_Controller{
         $this->load->view('main/main_view', $data);
     }
 
+    public function getSearch() {
+        $suitable = $this->input->post('suitable_for');
+        $tour_type = $this->input->post('tour_type');
+
+        $data['results'] = $this->tour_model->search($suitable,$tour_type);
+
+        $data['site_view'] = 'Tours';
+        $data['site_title'] = 'Tours';
+        $data['suitable'] = $suitable;
+        $data['tour_type'] = $tour_type;
+        $this->load->view('main/main_view', $data);
+
+
+    }
+
 
 
 

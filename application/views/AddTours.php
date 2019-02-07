@@ -89,9 +89,9 @@
 											<option value="couples">Couples</option>
 											<option value="family">Family</option>
 											<option value="honeymooners">Honeymooners</option>
-											<option value="small-group">Smalll Group </option>
-											<option value="resurchers">Resurchers</option>
-											<option value="singles-kids">Singles + kids</option>
+											<option value="small group">Smalll Group </option>
+											<option value="researchers">Researchers</option>
+											<option value="singles + kids">Singles + kids</option>
 											<option value="pilgrims">Pilgrims</option>
 										</select>
 									</div>

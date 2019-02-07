@@ -46,6 +46,14 @@ class Tour_model extends CI_Model{
 
     }
 
+    public function search($suitable, $tour_type) {
+        $this->db->where('suitable_for', $suitable);
+        $this->db->where('tour_type', $tour_type);
+        $query = $this->db->get('tours');
+
+        return $query->result();
+    }
+
 
     
 }

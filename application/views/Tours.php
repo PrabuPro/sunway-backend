@@ -1,4 +1,4 @@
-    <section class="home-slider owl-carousel">
+      <section class="home-slider owl-carousel">
       <div class="slider-item" style="background-image: url('<?php echo base_url();?>assets/images/bg_2.jpg');" data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
@@ -18,19 +18,21 @@
         <div class="row">
           <div class="col-lg-8">
             <div class="row ">
-              <?php foreach($results as $result) : ?>
-              <div class="col-md-6 col-lg-6 mb-4 ftco-animate item-card">
-                <a href="tours/<?php echo $result->tour_id; ?>" class="block-5" style="background-image: url('<?php echo $result->photo_id; ?>');">
-                  <div class="text">
-                    <span class="price">$ <?php echo $result->price; ?></span>
-                    <h3 class="heading">Tour in <?php echo $result->location; ?></h3>
-                    <div class="post-meta">
-                      <span><?php echo $result->description; ?></span>
-                    </div>
+
+                <?php foreach($results as $result) : ?>
+                  <div class="col-md-6 col-lg-6 mb-4 ftco-animate">
+                    <a href="tours/<?php echo $result->tour_id; ?>" class="block-5" style="background-image: url('<?php echo $result->photo_id; ?>');">
+                      <div class="text">
+                        <span class="price">$ <?php echo $result->price; ?></span>
+                        <h3 class="heading">Tour in <?php echo $result->location; ?></h3>
+                        <div class="post-meta">
+                          <span><?php echo $result->description; ?></span>
+                        </div>
+                      </div>
+                    </a>
                   </div>
-                </a>
-              </div>
-              <?php endforeach; ?>
+                <?php endforeach; ?>
+              
             </div>
             <div class="row mt-5">
               <div class="col text-center">
@@ -54,40 +56,39 @@
             <div class="sidebar-box ftco-animate">
               <div class="search-tours bg-light p-4">
                 <h3>Find your tour</h3>
-                <form action="tourcontroller/gettours" method="get" class="form">
+                <form action="<?php echo site_url('tourcontroller/getSearch');?>" method="post" class="form">
                   <div class="fields">
                     <div class="row flex-column">
-
 
                       <div class="check-in col-sm-12 group mb-3"><input type="text" id="checkin_date" class="form-control" placeholder="Check-in date"></div>
 
                       <div class="check-out col-sm-12 group mb-3"><input type="text" id="checkout_date" class="form-control" placeholder="Check-out date"></div>
                       <div class="select-wrap col-sm-12 group mb-3">
                         <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                        <select name="" id="" class="form-control">
+                        <select name="suitable_for" class="form-control">
                           <option value="" class="form-control-option-white">Suitable for</option>
-                          <option value="" class="form-control-option-white">Seniors</option>
-                          <option value="" class="form-control-option-white">Couples</option>
-                          <option value="" class="form-control-option-white">Family</option>
-                          <option value="" class="form-control-option-white">Honeymooners</option>
-                          <option value="" class="form-control-option-white">Smalll Group </option>
-                          <option value="" class="form-control-option-white">Resurchers</option>
-                          <option value="" class="form-control-option-white">Singles + kids</option>
-                          <option value="" class="form-control-option-white">Pilgrims</option>
+                          <option value="seniors" class="form-control-option-white" <?php if(isset($suitable)){ if($suitable == 'seniors') echo 'selected'; } ?> >Seniors</option>
+                          <option value="couples" class="form-control-option-white" <?php if(isset($suitable)){ if($suitable == 'couples') echo 'selected'; } ?> >Couples</option>
+                          <option value="family" class="form-control-option-white" <?php if(isset($suitable)){ if($suitable == 'family') echo 'selected'; } ?> >Family</option>
+                          <option value="honeymooners" class="form-control-option-white" <?php if(isset($suitable)){ if($suitable == 'honeymooners') echo 'selected'; } ?> >Honeymooners</option>
+                          <option value="small gourp" class="form-control-option-white" <?php if(isset($suitable)){ if($suitable == 'small gourp') echo 'selected'; } ?> >Small Group </option>
+                          <option value="researchers" class="form-control-option-white" <?php if(isset($suitable)){ if($suitable == 'researchers') echo 'selected'; } ?> >Researchers</option>
+                          <option value="singles + kids" class="form-control-option-white" <?php if(isset($suitable)){ if($suitable == 'singles + kids') echo 'selected'; } ?> >Singles + kids</option>
+                          <option value="pilgrims" class="form-control-option-white" <?php if(isset($suitable)){ if($suitable == 'pilgrims') echo 'selected'; } ?> >Pilgrims</option>
                         </select>
                       </div>
                       <div class="select-wrap col-sm-12 group mb-3">
                         <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                        <select name="" id="" class="form-control">
+                        <select name="tour_type" class="form-control">
                           <option value="" class="form-control-option-white" >Tour Type</option>
-                          <option value="" class="form-control-option-white" >Common</option>
-                          <option value="" class="form-control-option-white" >Beach</option>
-                          <option value="" class="form-control-option-white" >Eco</option>
-                          <option value="" class="form-control-option-white" >Nature</option>
-                          <option value="" class="form-control-option-white" >Wild Life</option>
-                          <option value="" class="form-control-option-white" >Adventure</option>
-                          <option value="" class="form-control-option-white" >Action</option>
-                          <option value="" class="form-control-option-white" >Ayurweda</option>
+                          <option value="common" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type == 'common') echo 'selected'; } ?> >Common</option>
+                          <option value="beach" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type == 'beach') echo 'selected'; } ?> >Beach</option>
+                          <option value="echo" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type == 'eco') echo 'selected'; } ?> >Eco</option>
+                          <option value="nature" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type == 'nature') echo 'selected'; } ?> >Nature</option>
+                          <option value="wild life" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type == 'wild life') echo 'selected'; } ?>>Wild Life</option>
+                          <option value="advanture" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type == 'adventure') echo 'selected'; } ?>>Adventure</option>
+                          <option value="action" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type == 'action') echo 'selected'; } ?> >Action</option>
+                          <option value="ayurweda" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type == 'ayurweda') echo 'selected'; } ?> >Ayurweda</option>
                         </select>
                       </div>
                       <div class="col-sm-12 group mb-3">
