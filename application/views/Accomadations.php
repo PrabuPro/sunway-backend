@@ -54,48 +54,50 @@
             <div class="sidebar-box ftco-animate">
               <div class="search-tours bg-light p-4">
                 <h3>Find your Hotel</h3>
-                <form action="" method="post">
+                <form action="<?php echo site_url('hotelcontroller/getSearch');?>" method="post">
                   <div class="fields">
                     <div class="row flex-column">
 
                       <div class="select-wrap col-sm-12 group mb-3">
                         <div class="icon"></div>
-                        <select name="" id="" class="form-control">
+                        <select name="country" class="form-control">
                           <option value="" class="form-control-option-white">Country</option>
-                          <option value="" class="form-control-option-white">Sri Lanka</option>
-                          <option value="" class="form-control-option-white">Maldives</option>
+                          <option value="sri lanka" class="form-control-option-white" <?php if(isset($country)){ if($country == 'sri lanka') echo 'selected'; } ?> >Sri Lanka</option>
+                          <option value="maldives" class="form-control-option-white" <?php if(isset($country)){ if($country == 'maldives') echo 'selected'; } ?> >Maldives</option>
                         </select>
                       </div>
 
-                      <div class="check-in col-sm-12 group mb-3"><input type="text" id="checkin_date" class="form-control" placeholder="Check-in date"></div>
+                      <div class="check-in col-sm-12 group mb-3"><input type="text" id="checkin_date" class="form-control" name="check-in-date"  placeholder="Check-in date" <?php if(isset($check_in_date)) echo 'value='. $check_in_date; ?> ></div>
+                        
 
-                      <div class="check-out col-sm-12 group mb-3"><input type="text" id="checkout_date" class="form-control" placeholder="Check-out date"></div>
+                      <div class="check-out col-sm-12 group mb-3"><input type="text" id="checkout_date" class="form-control" name="check-out-date" placeholder="Check-out date"  <?php if(isset($check_out_date)) echo 'value='. $check_out_date; ?> ></div>
+
                       <div class="select-wrap col-sm-12 group mb-3">
                         <div class="icon"></div>
-                        <select name="" id="" class="form-control">
+                        <select name="suitable_for" class="form-control">
                           <option value="" class="form-control-option-white">Suitable for</option>
-                          <option value="" class="form-control-option-white">Seniors</option>
-                          <option value="" class="form-control-option-white">Couples</option>
-                          <option value="" class="form-control-option-white">Family</option>
-                          <option value="" class="form-control-option-white">Honeymooners</option>
-                          <option value="" class="form-control-option-white">Smalll Group </option>
-                          <option value="" class="form-control-option-white">Resurchers</option>
-                          <option value="" class="form-control-option-white">Singles + kids</option>
-                          <option value="" class="form-control-option-white">Pilgrims</option>
+                          <option value="seniors" class="form-control-option-white" <?php if(isset($suitable)){ if($suitable == 'seniors') echo 'selected'; } ?> >Seniors</option>
+                          <option value="couples" class="form-control-option-white" <?php if(isset($suitable)){ if($suitable == 'couples') echo 'selected'; } ?> >Couples</option>
+                          <option value="family" class="form-control-option-white" <?php if(isset($suitable)){ if($suitable == 'family') echo 'selected'; } ?> >Family</option>
+                          <option value="honeymooners" class="form-control-option-white" <?php if(isset($suitable)){ if($suitable == 'honeymooners') echo 'selected'; } ?> >Honeymooners</option>
+                          <option value="small gourp" class="form-control-option-white" <?php if(isset($suitable)){ if($suitable == 'small gourp') echo 'selected'; } ?> >Small Group </option>
+                          <option value="researchers" class="form-control-option-white" <?php if(isset($suitable)){ if($suitable == 'researchers') echo 'selected'; } ?> >Researchers</option>
+                          <option value="singles + kids" class="form-control-option-white" <?php if(isset($suitable)){ if($suitable == 'singles + kids') echo 'selected'; } ?> >Singles + kids</option>
+                          <option value="pilgrims" class="form-control-option-white" <?php if(isset($suitable)){ if($suitable == 'pilgrims') echo 'selected'; } ?> >Pilgrims</option>
                         </select>
                       </div>
                       <div class="select-wrap col-sm-12 group mb-3">
                         <div class="icon"></div>
-                        <select name="" id="" class="form-control">
+                        <select name="hotel_type" class="form-control">
                           <option value="" class="form-control-option-white" >Hotel Type</option>
-                          <option value="" class="form-control-option-white" >Standard</option>
-                          <option value="" class="form-control-option-white" >3 Star</option>
-                          <option value="" class="form-control-option-white" >4 Star</option>
-                          <option value="" class="form-control-option-white" >5 Star</option>
-                          <option value="" class="form-control-option-white" >Bouteque Hotels</option>
-                          <option value="" class="form-control-option-white" >Villas</option>
-                          <option value="" class="form-control-option-white" >Apartments</option>
-                          <option value="" class="form-control-option-white" >Rent a House</option>
+                          <option value="standard" class="form-control-option-white" <?php if(isset($hotel_type)){ if($hotel_type == 'standard') echo 'selected'; } ?> >Standard</option>
+                          <option value="3 star" class="form-control-option-white" <?php if(isset($hotel_type)){ if($hotel_type == '3 star') echo 'selected'; } ?> >3 Star</option>
+                          <option value="4 star" class="form-control-option-white" <?php if(isset($hotel_type)){ if($hotel_type == '4 star') echo 'selected'; } ?> >4 Star</option>
+                          <option value="5 star" class="form-control-option-white" <?php if(isset($hotel_type)){ if($hotel_type == '5 star') echo 'selected'; } ?> >5 Star</option>
+                          <option value="bouteque hotels" class="form-control-option-white" <?php if(isset($hotel_type)){ if($hotel_type == 'bouteque hotels') echo 'selected'; } ?> >Bouteque Hotels</option>
+                          <option value="villas" class="form-control-option-white" <?php if(isset($hotel_type)){ if($hotel_type == 'villas') echo 'selected'; } ?> >Villas</option>
+                          <option value="apartments" class="form-control-option-white" <?php if(isset($hotel_type)){ if($hotel_type == 'apartments') echo 'selected'; } ?> >Apartments</option>
+                          <option value="rent a house" class="form-control-option-white" <?php if(isset($hotel_type)){ if($hotel_type == 'rent a house') echo 'selected'; } ?> >Rent a House</option>
                         </select>
                       </div>
                       <div class="col-sm-12 group mb-3">

@@ -45,6 +45,16 @@ class Hotel_model extends CI_Model{
     //     //return tour type from above and get similar tour types
 
     // }
+
+    public function search($country, $suitable, $hotel_type) {
+        $this->db->where('suitable_for', $suitable);
+        $this->db->where('hotel_type', $hotel_type);
+        $this->db->where('country', $country);
+        $query = $this->db->get('hotels');
+
+        return $query->result();
+    }
+
 }
 
 ?>

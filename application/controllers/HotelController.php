@@ -97,6 +97,31 @@ class HotelController extends CI_Controller{
         }
     }
 
+      public function getSearch() {
+        
+        $country = $this->input->post('country');
+        $suitable = $this->input->post('suitable_for');
+        $hotel_type = $this->input->post('hotel_type');
+        $check_in_date = $this->input->post('check-in-date');
+        $check_out_date = $this->input->post('check-out-date');
+
+        if(empty($suitable) || empty($hotel_type))
+            redirect('accomadations'); 
+
+        $data['results'] = $this->hotel_model->search($country,$suitable,$hotel_type);
+
+        $data['site_view'] = 'Accomadations';
+        $data['site_title'] = 'Accomadations';
+        $data['country'] = $country;
+        $data['suitable'] = $suitable;
+        $data['hotel_type'] = $hotel_type;
+        $data['check_in_date'] = $check_in_date;
+        $data['check_out_date'] = $check_out_date;
+
+        $this->load->view('main/main_view', $data);
+
+    }
+
 }
 
 ?>
