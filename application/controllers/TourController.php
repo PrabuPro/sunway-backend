@@ -127,6 +127,11 @@ class TourController extends CI_Controller{
     public function getSearch() {
         $suitable = $this->input->post('suitable_for');
         $tour_type = $this->input->post('tour_type');
+        $check_in_date = $this->input->post('check-in-date');
+        $check_out_date = $this->input->post('check-out-date');
+
+        if(empty($suitable) || empty($tour_type))
+            redirect('tours'); 
 
         $data['results'] = $this->tour_model->search($suitable,$tour_type);
 
@@ -134,6 +139,9 @@ class TourController extends CI_Controller{
         $data['site_title'] = 'Tours';
         $data['suitable'] = $suitable;
         $data['tour_type'] = $tour_type;
+        $data['check_in_date'] = $check_in_date;
+        $data['check_out_date'] = $check_out_date;
+        
         $this->load->view('main/main_view', $data);
 
 
