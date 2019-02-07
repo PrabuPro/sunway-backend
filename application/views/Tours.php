@@ -17,6 +17,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8">
+          <h2 class="mb-5 pb-3" style="font-size:24px; font-weight:600; text-transform:uppercase;"><?php if(isset($tour_type)){ echo $tour_type; } else { echo "All Types"; } ?></h2>
             <div class="row ">
 
                 <?php foreach($results as $result) : ?>

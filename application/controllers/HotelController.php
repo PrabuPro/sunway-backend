@@ -24,6 +24,7 @@ class HotelController extends CI_Controller{
         $this->form_validation->set_rules('suitable_for', 'Suitable_for', 'trim|required|max_length[15]');
         $this->form_validation->set_rules('price', 'Price', 'trim|required|integer|max_length[15]');
         $this->form_validation->set_rules('location', 'Location', 'trim|required|max_length[15]');
+        $this->form_validation->set_rules('country', 'Country', 'trim|required|max_length[15]');
 
         if($this->form_validation->run() == FALSE){
              $dataflash = array(
@@ -49,6 +50,7 @@ class HotelController extends CI_Controller{
                 'price' => $this->input->post('price'),
                 'photo_id' => $photo_url,
                 'location' => $this->input->post('location'),
+                'country' => $this->input->post('country')
             );
 
             //insert tour table

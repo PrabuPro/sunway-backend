@@ -67,7 +67,7 @@
                                              <option value="3 star">3 Star</option>
                                              <option value="4 star">4 Star</option>
                                              <option value="5 star">5 Star</option>
-                                             <option value="boteque hotels">Bouteque Hotels</option>
+                                             <option value="bouteque hotels">Bouteque Hotels</option>
                                              <option value="villas">Villas</option>
                                              <option value="apartments">Apartments</option>
                                              <option value="rent a house">Rent a House</option>
@@ -84,7 +84,7 @@
 											<option value="couples">Couples</option>
 											<option value="family">Family</option>
 											<option value="honeymooners">Honeymooners</option>
-											<option value="small group">Smalll Group </option>
+											<option value="small gourp">Small Group </option>
 											<option value="researchers">Researchers</option>
 											<option value="singles + kids">Singles + kids</option>
 											<option value="pilgrims">Pilgrims</option>
@@ -126,8 +126,19 @@
 
 							<div class="field">
 								<div class="control">
-									<input class="column is-3 button is-block is-info is-medium is-fullwidth" type="submit" value="Add Tour">
+									<div class="select is-info">
+										<select name="country">
+											<option value="">Conutry</option>
+											<option value="sri lanka">Sri lanka</option>
+											<option value="maldives">Maldives</option>
+										
+									</div>
+								</div>
+							</div>
 
+							<div class="field">
+								<div class="control">
+									<input class="column is-12 button is-block is-info is-medium is-fullwidth" type="submit" value="Add Hotels">
 								</div>
 							</div>
 						</form>

@@ -30,7 +30,7 @@
 				</a>
 			</div>
 			<div class="navbar-end">
-				<form action="logout" method="post">
+				<form action="<?php echo site_url('logout'); ?>" method="post">
 					<input class="button is-block is-info is-medium is-fullwidth" type="submit" value="Log Out">
 				</form>
 			</div>

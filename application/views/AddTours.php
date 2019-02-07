@@ -142,7 +142,6 @@
 							<div class="field">
 								<div class="control">
 									<input class="column is-3 button is-block is-info is-medium is-fullwidth" type="submit" value="Add Tour">
-
 								</div>
 							</div>
 						</form>
