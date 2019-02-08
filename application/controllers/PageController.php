@@ -38,6 +38,12 @@ class PageController extends CI_Controller{
         $this->load->view('main/main_view', $data);
     }
 
+    public function tailormade(){
+        $data['site_view'] = 'Tailormade';
+        $data['site_title'] = 'Tailormade';
+        $this->load->view('main/main_view', $data);
+    }
+
 }
 
 ?>

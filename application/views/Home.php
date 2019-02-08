@@ -488,7 +488,7 @@
           <h1 class="tailorMade__container--heading ftco-animate">Tailor Made</h1>    
           <h1 class="tailorMade__container--sub ftco-animate">You design your tour, We help you to make it awesome</h1>    
           <div class="col-sm-12 group " style="margin-left:auto; margin-right:auto;">
-            <a href="/tailorMade.html" class="search-submit btn btn-primary-white bt-4 ftco-animate" style="width:220px; font-size:1.5em; margin: auto;">Learn More</a>
+            <a href="<?php echo site_url(); ?>tailormade" class="search-submit btn btn-primary-white bt-4 ftco-animate" style="width:220px; font-size:1.5em; margin: auto;">Learn More</a>
           </div>
         </div>
       </div>
