@@ -396,6 +396,12 @@
 	// $('#appointment_time').timepicker();
 
 
+	// $('.parallax-window').parallax({
+	// 	imageSrc: "<?php echo $_SERVER['DOCUMENT_ROOT'];?>/sunwayholidays/assets/images/elephant.jpeg"
+	// });
+
+	src = "<?php echo base_url();?>assets/js/parallax.min.js"
+
 	$('.parallax-window').parallax({
 		imageSrc: "<?php echo $_SERVER['DOCUMENT_ROOT'];?>/sunwayholidays/assets/images/elephant.jpeg"
 	});

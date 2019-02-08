@@ -153,7 +153,7 @@
   <script src="<?php echo base_url();?>assets/js/google-map.js"></script>
   <script src="<?php echo base_url();?>assets/js/parallax.min.js"></script>
   <script src="<?php echo base_url();?>assets/js/main.js"></script>
-  <script src="<?php echo base_url();?>assets/js/tours.js"></script>
+ 
 
 </body>
 

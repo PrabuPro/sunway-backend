@@ -1,4 +1,10 @@
 
+      <style>
+      
+        
+
+      </style>
+
     <section class="home-slider owl-carousel">
       <div class="slider-item" style="background-image: url('<?php echo base_url();?>assets/images/beach.jpeg');">
         <div class="overlay"></div>
@@ -398,7 +404,7 @@
       </div>
     </section>
 
-<div class="parallax-window mb-3" data-parallax="scroll" data-image-src="<?php echo base_url(); ?>assets/images/elephant.jpeg">
+<div class="parallax-window mb-3" data-parallax="scroll" data-image-src="<?php echo base_url(); ?>assets/images/elephant.jpeg" style="min-height: 530px; background: transparent;">
   <div class="parallax-box">
     <svg class="parallax-box--icon">  
       <use xlink:href="<?php echo base_url(); ?>assets/images/sprite.svg#icon-cloud-sun"></use>
@@ -596,6 +602,11 @@
           </div>
       </div>
       </div>
+
+      
+
+     
+
 
 
 
