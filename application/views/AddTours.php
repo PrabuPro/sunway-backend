@@ -50,17 +50,17 @@
 						<form action="<?php echo site_url('tourcontroller/addtours');?>" method="post" enctype="multipart/form-data">
 							<div class="field">
 								<div class="control">
-									<input class="input is-info" name="name" type="text" placeholder="Tour Name">
+									<input class="input is-info" name="name" type="text" value="<?php echo set_value('name');?>" placeholder="Tour Name">
 								</div>
 							</div>
 							<div class="field">
 								<div class="control">
-									<input class="input is-info" name="description" type="text" placeholder="Description">
+									<input class="input is-info" name="description" type="text" value="<?php echo set_value('description');?>" placeholder="Description">
 								</div>
 							</div>
                             <div class="field">
                                 <div class="control">
-                                    <textarea class="textarea is-info" placeholder="Introduction" name="introduction"></textarea>
+                                    <textarea class="textarea is-info" placeholder="Introduction" name="introduction"><?php echo set_value('introduction');?></textarea>
                                 </div>
                             </div>
 							<div class="field">
@@ -99,7 +99,7 @@
 							</div>
 							<div class="field">
 								<div class="control">
-									<input class="column is-5 input is-info" name="price" type="text" placeholder="Price">
+									<input class="column is-5 input is-info" name="price" type="text" placeholder="Price" value="<?php echo set_value('price');?>" >
 								</div>
 							</div>
 
@@ -125,17 +125,17 @@
 
 							<div class="field">
 								<div class="control">
-									<input class="input is-info" name="location" type="text" placeholder="Location">
+									<input class="input is-info" name="location" type="text" placeholder="Location" value="<?php echo set_value('location');?>">
 								</div>
 							</div>
 							<div class="field">
 								<div class="control">
-									<input class="column is-5 input is-info" name="lat" type="text" placeholder="Latitude">
+									<input class="column is-5 input is-info" name="lat" type="text" placeholder="Latitude" value="<?php echo set_value('lat');?>">
 								</div>
 							</div>
 							<div class="field">
 								<div class="control ">
-									<input class="column is-5 input is-info" name="lng" type="text" placeholder="Longitude">
+									<input class="column is-5 input is-info" name="lng" type="text" placeholder="Longitude" value="<?php echo set_value('lng');?>" >
 								</div>
 							</div>
 

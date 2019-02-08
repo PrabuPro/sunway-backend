@@ -106,92 +106,114 @@
 					<h1 class="mb-3 mt-5">Inquire Us</h1>
 				</div>
 			</div>
-			<form action="#">
+            <?php if($this->session->flashdata('errors')) : ?>
+				
+            <?php echo $this->session->flashdata('errors'); ?>
+			
+            <?php endif; ?>
+
+			<form action="<?php echo site_url('inquirycontroller/inquire');?>"  method="post" class="inquiry_form" >
 				<div class="row">
 					<div class="col-md-6 form-group">
-						<input type="text" class="form-control" placeholder="Your Name">
+						<input name="name" type="text" class="form-control" value="<?php echo set_value('name');?>" placeholder="Your Name">
 					</div>
 					<div class="col-md-6 form-group">
-						<input type="text" class="form-control" placeholder="Your Email">
+						<input name="email" type="email" class="form-control" value="<?php echo set_value('email');?>" placeholder="Your Email">
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-6 form-group">
-						<input type="text" class="form-control" placeholder="Your Contact no">
+						<input name="phone" type="text" class="form-control" value="<?php echo set_value('phone');?>" placeholder="Phone Number eg: +941123456789">
 					</div>
 					<div class="col-md-6 form-group">
-						<input type="text" class="form-control" placeholder="Your Country">
+						<input name="country" type="text" class="form-control" value="<?php echo set_value('country');?>" placeholder="Your Country">
 					</div>
 				</div>
 				<div class="row">
 					<div class="select-wrap col-md-6 group mb-3">
-						<select name="" id="" class="form-control">
+						<select name="num-of-adults" class="form-control">
 							<option value="" class="form-control-option-white-top">Number of Adults</option>
-							<option value="" class="form-control-option-white">1</option>
-							<option value="" class="form-control-option-white">2</option>
-							<option value="" class="form-control-option-white">3</option>
-							<option value="" class="form-control-option-white">4</option>
-							<option value="" class="form-control-option-white">5</option>
-							<option value="" class="form-control-option-white">6</option>
-							<option value="" class="form-control-option-white">7</option>
-							<option value="" class="form-control-option-white">8</option>
+							<option value="1" class="form-control-option-white">1</option>
+							<option value="2" class="form-control-option-white">2</option>
+							<option value="3" class="form-control-option-white">3</option>
+							<option value="4" class="form-control-option-white">4</option>
+							<option value="5" class="form-control-option-white">5</option>
+							<option value="6" class="form-control-option-white">6</option>
+							<option value="7" class="form-control-option-white">7</option>
+							<option value="8" class="form-control-option-white">8</option>
 						</select>
 					</div>
 					<div class="select-wrap col-md-6 group mb-3">
-						<select name="" id="" class="form-control">
+						<select name="num-of-children" class="form-control">
 							<option value="" class="form-control-option-white-top">Number of Children</option>
-							<option value="" class="form-control-option-white">None</option>
-							<option value="" class="form-control-option-white">1</option>
-							<option value="" class="form-control-option-white">2</option>
-							<option value="" class="form-control-option-white">3</option>
-							<option value="" class="form-control-option-white">4</option>
-							<option value="" class="form-control-option-white">5</option>
-							<option value="" class="form-control-option-white">6</option>
-							<option value="" class="form-control-option-white">7</option>
+							<option value="0" class="form-control-option-white">None</option>
+							<option value="1" class="form-control-option-white">1</option>
+							<option value="2" class="form-control-option-white">2</option>
+							<option value="3" class="form-control-option-white">3</option>
+							<option value="4" class="form-control-option-white">4</option>
+							<option value="5" class="form-control-option-white">5</option>
+							<option value="6" class="form-control-option-white">6</option>
+							<option value="7" class="form-control-option-white">7</option>
 						</select>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-6">
-						<div class="check-in one-third mb-3"><input type="text" id="checkin_date" class="form-control" placeholder="Approx Arival Date"></div>
+						<div class="check-in one-third mb-3"><input name="check-in-date" type="text" id="checkin_date" class="form-control" placeholder="Approx Arival Date"></div>
 					</div>
 					<div class="col-md-6">
-						<div class="check-out one-third mb-3"><input type="text" id="checkout_date" class="form-control" placeholder="Depature Date"></div>
+						<div class="check-out one-third mb-3"><input name="check-out-date" type="text" id="checkout_date" class="form-control" placeholder="Depature Date"></div>
 					</div>
 				</div>
 				<div class="row">
 					<div class="select-wrap col-md-6 group mb-3">
-						<select name="" id="" class="form-control">
+						<select name="hotel_type" class="form-control">
 							<option value="" class="form-control-option-white">Hotel Type</option>
-							<option value="" class="form-control-option-white">Standard</option>
-							<option value="" class="form-control-option-white">3 Star</option>
-							<option value="" class="form-control-option-white">4 Star</option>
-							<option value="" class="form-control-option-white">5 Star</option>
-							<option value="" class="form-control-option-white">Bouteque Hotels</option>
-							<option value="" class="form-control-option-white">Villas</option>
-							<option value="" class="form-control-option-white">Apartments</option>
-							<option value="" class="form-control-option-white">Rent a House</option>
+							<option value="standard" class="form-control-option-white">Standard</option>
+                            <option value="3 star" class="form-control-option-white"  >3 Star</option>
+                            <option value="4 star" class="form-control-option-white"  >4 Star</option>
+                            <option value="5 star" class="form-control-option-white"  >5 Star</option>
+                            <option value="bouteque hotels" class="form-control-option-white"  >Bouteque Hotels</option>
+                            <option value="villas" class="form-control-option-white"  >Villas</option>
+                            <option value="apartments" class="form-control-option-white"  >Apartments</option>
+                            <option value="rent a house" class="form-control-option-white"  >Rent a House</option>
 						</select>
 					</div>
+                    <div class="select-wrap col-md-6 group mb-3">
+						<select name="tour_type" class="form-control">
+							<option value="" class="form-control-option-white">Tour Type</option>
+	                        <option value="common" class="form-control-option-white"  >Common</option>
+                            <option value="beach" class="form-control-option-white"  >Beach</option>
+                            <option value="echo" class="form-control-option-white"  >Eco</option>
+                            <option value="nature" class="form-control-option-white"  >Nature</option>
+                            <option value="wild life" class="form-control-option-white" >Wild Life</option>
+                            <option value="advanture" class="form-control-option-white" >Adventure</option>
+                            <option value="action" class="form-control-option-white"  >Action</option>
+                            <option value="ayurweda" class="form-control-option-white"  >Ayurweda</option>
+						</select>
+					</div>
+					
+				</div>
+				<div class="row">
 					<div class="select-wrap col-md-6 group mb-3">
-						<select name="" id="" class="form-control">
+						<select name="tranportation_type" class="form-control">
 							<option value="" class="form-control-option-white-top">Transportation Type</option>
-							<option value="" class="form-control-option-white">Car</option>
-							<option value="" class="form-control-option-white">Van</option>
-							<option value="" class="form-control-option-white">Bus</option>
+							<option value="car" class="form-control-option-white">Car</option>
+							<option value="van" class="form-control-option-white">Van</option>
+							<option value="bus" class="form-control-option-white">Bus</option>
 
 						</select>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-12 form-group">
-						<textarea name="" id="" cols="120" rows="7" class="form-control" placeholder="Message"></textarea>
+						<textarea name="message" cols="120" rows="7" class="form-control" placeholder="Message"><?php echo set_value('name');?></textarea>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-10">
 						<div class="form-group">
-							<input type="submit" value="Submit" class="btn btn-primary py-3 px-5">
+							<input type="submit" value="Send" class="btn btn-primary py-3 px-5">
 						</div>
 					</div>
 				</div>
@@ -200,3 +222,57 @@
 		</div>
 	</div>
 </section>
+
+
+<script src="<?php echo base_url();?>assets/js/jquery.min.js"></script>
+<script src="<?php echo base_url();?>assets/js/inquiry.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<script>
+
+  $(document).ready(function () {
+  	$('.inquiry_form').on('submit', function (e) {
+  		e.preventDefault();
+
+  		$.ajax({
+  			type: 'POST',
+  			url: 'inquirycontroller/inquire',
+  			data: $('.inquiry_form').serialize(),
+  			datatype: "html",
+  			success: function (data) {
+                  console.log(data);
+
+                  if(data === "Successfull"){
+                      swal({
+                          title: "Mail Sent Successfully",
+                          text: "check your inbox",
+                          icon: "success",
+                          button: "ok",
+                      });
+                      
+                  } else if(data === "Data insertion faild") {
+                    swal({
+                          title: "Internal Error.",
+                          text: "Please try again",
+                          icon: "success",
+                          button: "ok",
+                      });
+
+                  }
+                  
+                  else {
+                    swal({
+                        title: "We found some errors! Please check below",
+                        text: (data).replace(/(<([^>]+)>)/ig,""),
+                        icon: "error",
+                        button: "ok",
+                    });
+                  }
+                    
+                    
+  			}
+  		});
+  	});
+  });
+
+</script>
