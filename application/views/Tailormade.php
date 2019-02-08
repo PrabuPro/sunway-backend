@@ -225,54 +225,6 @@
 
 
 <script src="<?php echo base_url();?>assets/js/jquery.min.js"></script>
-<script src="<?php echo base_url();?>assets/js/inquiry.js"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="<?php echo base_url();?>assets/js/inquiry.js"></script>
 
-<script>
-
-  $(document).ready(function () {
-  	$('.inquiry_form').on('submit', function (e) {
-  		e.preventDefault();
-
-  		$.ajax({
-  			type: 'POST',
-  			url: 'inquirycontroller/inquire',
-  			data: $('.inquiry_form').serialize(),
-  			datatype: "html",
-  			success: function (data) {
-                  console.log(data);
-
-                  if(data === "Successfull"){
-                      swal({
-                          title: "Mail Sent Successfully",
-                          text: "check your inbox",
-                          icon: "success",
-                          button: "ok",
-                      });
-                      
-                  } else if(data === "Data insertion faild") {
-                    swal({
-                          title: "Internal Error.",
-                          text: "Please try again",
-                          icon: "success",
-                          button: "ok",
-                      });
-
-                  }
-                  
-                  else {
-                    swal({
-                        title: "We found some errors! Please check below",
-                        text: (data).replace(/(<([^>]+)>)/ig,""),
-                        icon: "error",
-                        button: "ok",
-                    });
-                  }
-                    
-                    
-  			}
-  		});
-  	});
-  });
-
-</script>

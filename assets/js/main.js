@@ -406,6 +406,8 @@
 		imageSrc: "<?php echo $_SERVER['DOCUMENT_ROOT'];?>/sunwayholidays/assets/images/elephant.jpeg"
 	});
 
+	
+
 
 })(jQuery);
 
