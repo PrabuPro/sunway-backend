@@ -2,14 +2,14 @@
     if (!defined('BASEPATH')) exit('No direct script access allowed');
     
     function sendEmail($emailAddress, $name, $subject, $content) {
-        require 'vendor/autoload.php'; 
+        require 'application/vendor/autoload.php'; 
 
         $email = new \SendGrid\Mail\Mail(); 
-        $email->setFrom("admin@swift.dev", "SWIFT ADMIN");
+        $email->setFrom("prabuddha.proart@gmail.com", "ADMIN WEB");
         $email->setSubject($subject);
         $email->addTo($emailAddress, $name);
         $email->addContent("text/plain", $content);
-        $sendgrid = new \SendGrid(getenv('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'));
+        $sendgrid = new \SendGrid(getenv('SENDGRID_API_KEY'));
         try {
             $response = $sendgrid->send($email);
             // print $response->statusCode() . "\n";

@@ -50,12 +50,11 @@ class InquiryController extends CI_Controller{
             if($reault = false) {
                 $message = "Data insertion faild";
             } else {
-                $this->sendMail($databaseData);
+                $reault = $this->sendMail($databaseData);
                 $message = "Successfull";
             }
 
             echo $message;
-
 
         }
 
@@ -65,9 +64,10 @@ class InquiryController extends CI_Controller{
         $this->load->helper('email_helper');
 
         $emailAddress = 'it@sunwayholidays.lk';
-        $name = $data['name'];
+        $name = 'name';
         $subject = 'test mail';
         $content = 'testing content';
+
 
         sendEmail($emailAddress,$name,$subject,$content);
 
