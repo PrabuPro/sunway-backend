@@ -4,6 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class InquiryController extends CI_Controller{
 
     public function inquire(){
+       
 
         $this->form_validation->set_rules('name','Your Name','trim|required|max_length[30]');
         $this->form_validation->set_rules('email','Your Email','trim|required|valid_email|max_length[50]');
@@ -49,15 +50,26 @@ class InquiryController extends CI_Controller{
             if($reault = false) {
                 $message = "Data insertion faild";
             } else {
+                $this->sendMail($databaseData);
                 $message = "Successfull";
             }
 
             echo $message;
 
 
-
-
         }
+
+    }
+
+    public function sendMail($data) {
+        $this->load->helper('email_helper');
+
+        $emailAddress = 'it@sunwayholidays.lk';
+        $name = $data['name'];
+        $subject = 'test mail';
+        $content = 'testing content';
+
+        sendEmail($emailAddress,$name,$subject,$content);
 
     }
 
