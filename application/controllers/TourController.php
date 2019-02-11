@@ -127,6 +127,7 @@ class TourController extends CI_Controller{
 
     public function touritem($pageid){
         $data['results'] = $this->tour_model->get_tourItem($pageid);
+        $data['itineraries'] = $this->tour_model->get_itinerary($pageid);
         $data['suggessions'] = $this->tour_model->get_tourSuggessions($pageid);
         $data['site_view'] = 'TourItem';
         $this->load->view('main/main_view', $data);
