@@ -33,6 +33,10 @@ class TourController extends CI_Controller{
         $this->form_validation->set_rules('suitable_for', 'Suitable_for', 'trim|required|max_length[15]');
         $this->form_validation->set_rules('price', 'Price', 'trim|required|integer|max_length[15]');
         $this->form_validation->set_rules('location', 'Location', 'trim|required|max_length[15]');
+        $this->form_validation->set_rules('lat', 'Lat', 'trim|required|max_length[15]');
+        $this->form_validation->set_rules('lng', 'Lng', 'trim|required|max_length[15]');
+        $this->form_validation->set_rules('day[]', 'Day', 'trim|required|max_length[15]');
+        $this->form_validation->set_rules('desc[]', 'Itinerary Desc', 'trim|required|max_length[15]');
 
         if($this->form_validation->run() == FALSE){
              $dataflash = array(
@@ -63,25 +67,29 @@ class TourController extends CI_Controller{
             //insert tour table
             $tourId = $this->tour_model->insert_tours($databaseData);
 
-            $databaseData2 = array(
-                'tour_id' => $tourId,
-                'introduction' => $this->input->post('introduction'),
-                'lat' => $this->input->post('lat'),
-                'lng' => $this->input->post('lng')
-            );
 
-            //insert tour_item table
-            $tourItemId = $this->tour_model->insert_tour($databaseData2);
+            $res = $this->tour_model->insert_itinerary($tourId);
 
+            if($res){
+                $dataflash = array(
+                    'success' => 'Successfully Uploaded'
+                );
+    
+                $this->session->set_flashdata($dataflash);
+                $data['site_view'] = 'addTours';
+                $this->load->view('admin/dashboard', $data);
+                
+            } else {
+                    $dataflash = array(
+                        'error' => 'Database error'
+                    );
+        
+                    $this->session->set_flashdata($dataflash);
+                    $data['site_view'] = 'addTours';
+                    $this->load->view('admin/dashboard', $data);
 
+            }
 
-            $dataflash = array(
-                'success' => 'Successfully Uploaded'
-            );
-
-            $this->session->set_flashdata($dataflash);
-            $data['site_view'] = 'addTours';
-            $this->load->view('admin/dashboard', $data);
 
             } else {
                 $data['site_view'] = 'addTours';

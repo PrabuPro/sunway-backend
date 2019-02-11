@@ -55,14 +55,15 @@
 							</div>
 							<div class="field">
 								<div class="control">
-									<input class="input is-info" name="description" type="text" value="<?php echo set_value('description');?>" placeholder="Description">
+									<input class="input is-info" name="description" type="text" value="<?php echo set_value('description');?>"
+									 placeholder="Description">
 								</div>
 							</div>
-                            <div class="field">
-                                <div class="control">
-                                    <textarea class="textarea is-info" placeholder="Introduction" name="introduction"><?php echo set_value('introduction');?></textarea>
-                                </div>
-                            </div>
+							<div class="field">
+								<div class="control">
+									<textarea class="textarea is-info" placeholder="Introduction" name="introduction"><?php echo set_value('introduction');?></textarea>
+								</div>
+							</div>
 							<div class="field">
 								<div class="control">
 									<div class="select is-info">
@@ -99,7 +100,7 @@
 							</div>
 							<div class="field">
 								<div class="control">
-									<input class="column is-5 input is-info" name="price" type="text" placeholder="Price" value="<?php echo set_value('price');?>" >
+									<input class="column is-5 input is-info" name="price" type="text" placeholder="Price" value="<?php echo set_value('price');?>">
 								</div>
 							</div>
 
@@ -135,15 +136,24 @@
 							</div>
 							<div class="field">
 								<div class="control ">
-									<input class="column is-5 input is-info" name="lng" type="text" placeholder="Longitude" value="<?php echo set_value('lng');?>" >
+									<input class="column is-5 input is-info" name="lng" type="text" placeholder="Longitude" value="<?php echo set_value('lng');?>">
 								</div>
 							</div>
+
+							<h2>Itinerary</h2><br>
+				
+							<div style="margin-bottom:20px;" id="description"><p id="add_field" style="background-color:green; width:30%; color:white;">ADD DESCRIPTION</p></div>
 
 							<div class="field">
 								<div class="control">
 									<input class="column is-3 button is-block is-info is-medium is-fullwidth" type="submit" value="Add Tour">
 								</div>
 							</div>
+
+							
+
+							
+
 						</form>
 
 					</div>
@@ -153,6 +163,30 @@
 		</div>
 	</div>
 </div>
+<script src="<?php echo base_url();?>assets/js/jquery.min.js"></script>
+<script>
+ var count = 0;
+	var count = 0;
+    $(document).ready(function() {
+        $('p#add_field').click(function(){
+           count += 1;
+			var html=`<div class="columns is-mobile is-multiline ">
+								<div class="column ">
+									<strong>Itinarary Item  - `+ count +`  </strong>
+								</div>
+								<div class="column is-narrow">
+									<input class="column is-3 input is-info" name="day[]" type="text" placeholder="Day" >
+								</div>
+								<div class="column ">
+									<input class="column is-9 input is-info" name="desc[]" type="text" placeholder="Description" >
+								</div>
+							</div>`;
+            $('#description').append(html);
+
+    	});
+    });
+
+</script>
 <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script async type="text/javascript" src="<?php echo base_url(); ?>assets/js/form.js"></script>
 

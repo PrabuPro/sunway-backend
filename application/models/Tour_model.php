@@ -41,9 +41,30 @@ class Tour_model extends CI_Model{
 
     public function get_tourSuggessions($pageId){
         $query = $this->db->get_where('tours', array('tour_id' => $pageId), 1);
-        
-        //return tour type from above and get similar tour types
 
+    }
+
+    public function insert_itinerary($id){
+
+        $day = $this->input->post("day");
+        $desc = $this->input->post("desc");
+        $i = 0;
+
+        if($desc){
+            foreach($desc as $row){
+                $data['tour_id'] = $id;
+                $data['item_number'] = $day[$i];
+                $data['item_details'] = $desc[$i];
+                $this->db->insert("itinerary",$data);
+                $i++;
+            }
+        }
+
+       if ($this->db->affected_rows() == '1')
+        {
+            return TRUE;
+        }
+        return FALSE;
     }
 
     public function search($suitable, $tour_type) {
@@ -54,8 +75,6 @@ class Tour_model extends CI_Model{
         return $query->result();
     }
 
-
-    
 }
 
 ?>
