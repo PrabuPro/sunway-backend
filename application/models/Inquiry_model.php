@@ -5,7 +5,7 @@ class Inquiry_model extends CI_Model{
         $this->db->insert('inquiry', $data);
         
         if($this->db->affected_rows() > 0) {
-            return true;
+            return $this->db->insert_id();
         } else{
             return false;
         }

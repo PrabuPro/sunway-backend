@@ -5,10 +5,10 @@
         require 'application/vendor/autoload.php'; 
 
         $email = new \SendGrid\Mail\Mail(); 
-        $email->setFrom("prabuddha.proart@gmail.com", "ADMIN WEB");
+        $email->setFrom("it@sunwayholidays.lk", "WEB ADMIN");
         $email->setSubject($subject);
         $email->addTo($emailAddress, $name);
-        $email->addContent("text/plain", $content);
+        $email->addContent("text/html", $content);
         $sendgrid = new \SendGrid(getenv('SENDGRID_API_KEY'));
         try {
             $response = $sendgrid->send($email);

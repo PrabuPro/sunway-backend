@@ -45,12 +45,12 @@ class InquiryController extends CI_Controller{
 
             );
 
-            $reault = $this->inquiry_model->insert_inquiry($databaseData);
+            $result = $this->inquiry_model->insert_inquiry($databaseData);
 
             if($reault = false) {
                 $message = "Data insertion faild";
             } else {
-                $reault = $this->sendMail($databaseData);
+                $this->sendMail($databaseData,$result);
                 $message = "Successfull";
             }
 
@@ -60,13 +60,26 @@ class InquiryController extends CI_Controller{
 
     }
 
-    public function sendMail($data) {
+    public function sendMail($data,$result) {
         $this->load->helper('email_helper');
 
         $emailAddress = 'it@sunwayholidays.lk';
-        $name = 'name';
-        $subject = 'test mail';
-        $content = 'testing content';
+        $name = 'Prabuddha';
+        $subject = 'Sunway Holidays Inquiry';
+        $content = '<h1>Inquiry Number - SH0'. $result . '</h1>';
+        $content .= '<h3>This mail is generated with the information of the iquiry iteslf</h3><br>';
+        $content .= '<p>Name - '.$data['name'] . '</p>';
+        $content .= '<p>Email - '.$data['email'] . '</p>';
+        $content .= '<p>Contact Number - '.$data['phone'] . '</p>';
+        $content .= '<p>Country - '.$data['country'] . '</p>';
+        $content .= '<p>Tour Type - '.$data['tour_type'] . '</p>';
+        $content .= '<p>Hotel Type - '.$data['hotel_type'] . '</p>';
+        $content .= '<p>Transportation Type - '.$data['transportation_type'] . '</p>';
+        $content .= '<p>Check In Date - '.$data['check_in_date'] . '</p>';
+        $content .= '<p>Check Out Date - '.$data['check_out_date'] . '</p>';
+        $content .= '<p>Number of Adults - '.$data['num_of_adults'] . '</p>';
+        $content .= '<p>Number of Children - '.$data['num_of_children'] . '</p>';
+        $content .= '<p>Costomer Message - '.$data['message'] . '</p>';
 
 
         sendEmail($emailAddress,$name,$subject,$content);
