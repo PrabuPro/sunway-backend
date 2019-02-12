@@ -2731,11 +2731,15 @@ input[type="button"].btn-block {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none; }
-
+  
+  .nav-link-selected{
+    border-bottom: 2px solid #ffffff;
+    transform: translateY(4px);
+  }
 .nav-link {
   display: block;
   padding: 0.5rem 1rem; }
-  .nav-link:hover, .nav-link:focus {
+  .nav-link:hover, .nav-link:focus ,nav-link:visited{
     text-decoration: none; }
   .nav-link.disabled {
     color: #6c757d; }

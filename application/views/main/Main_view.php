@@ -38,7 +38,7 @@
 
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"><a href="<?php echo base_url(); ?>home" class="nav-link">Home</a></li>
+                    <li class="nav-item "><a href="<?php echo base_url(); ?>home" class="nav-link nav-link-selected" style="border-bottom: 2px solid #fff; transform:translateY:(-4px);">Home</a></li>
                     <li class="nav-item"><a href="<?php echo base_url(); ?>tours-list/0" class="nav-link">Tours</a></li>
                     <li class="nav-item"><a href="<?php echo base_url(); ?>accomadations" class="nav-link">Accomadation</a></li>
                     <li class="nav-item"><a href="" class="nav-link">Services</a></li>
