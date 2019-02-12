@@ -18,6 +18,7 @@ class TourController extends CI_Controller{
 
         $data['results'] = $this->tour_model->get_tours($config['per_page'], $pagenum);
         $data['links'] = $this->pagination->create_links();
+        $data['total_pagination'] = $config["total_rows"]/$config["per_page"];
         $data['site_view'] = 'Tours';
         $data['site_title'] = 'Sunway Holidays - Tours';
         $this->load->view('main/main_view', $data);
@@ -168,7 +169,7 @@ class TourController extends CI_Controller{
         $check_out_date = $this->input->post('check-out-date');
 
         if(empty($suitable) || empty($tour_type))
-            redirect('tours'); 
+            redirect('tours-list/0'); 
 
         $data['results'] = $this->tour_model->search($suitable,$tour_type);
 
