@@ -43,8 +43,8 @@
                     <ul>
                     <!-- <li><a href="#">&lt;</a></li> -->
                     <!-- <li><a href="http://localhost/sunwayholidays/tours-list/0" data-ci-pagination-page="2" rel="previous">&gt;</a></li> -->
-                    <?php for($i = 0; $i <= $total_pagination ; $i++) : ?>
-                    <li  <?php if(current_url() == base_url().'tours-list/'.$i) echo 'class="active"' ?>><span><a href="http://localhost/sunwayholidays/tours-list/<?php echo $i; ?>" data-ci-pagination-page="1"><?php echo $i+1; ?></a></span></li>
+                    <?php for($i = 0; $i < $total_pagination ; $i++) : ?>
+                    <li  <?php if(current_url() == base_url().'tours-list/'.$i) echo 'class="active"' ?>><span><a href="http://localhost/sunwayholidays/tours-list/<?php echo $i*8; ?>" data-ci-pagination-page="1"><?php echo $i+1; ?></a></span></li>
                     <?php endfor; ?>
                     <!-- <li><a href="http://localhost/sunwayholidays/tours-list/0" data-ci-pagination-page="2" rel="next">&gt;</a></li> -->
                   </ul>
