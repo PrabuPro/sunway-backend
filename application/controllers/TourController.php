@@ -5,7 +5,7 @@ class TourController extends CI_Controller{
     public function tours(){
         $data['results'] = $this->tour_model->get_tours();
         $data['site_view'] = 'Tours';
-        $data['site_title'] = 'Tours';
+        $data['site_title'] = 'Sunway Holidays - Tours';
         $this->load->view('main/main_view', $data);
     }
 
@@ -13,7 +13,7 @@ class TourController extends CI_Controller{
 
         $data['results'] = $this->tour_model->get_tours();
         $data['site_view'] = 'Tours';
-        $data['site_title'] = 'Tours';
+        $data['site_title'] = 'Sunway Holidays - Tours';
         $this->load->view('main/main_view', $data);
         
     }
@@ -62,6 +62,9 @@ class TourController extends CI_Controller{
                 'price' => $this->input->post('price'),
                 'photo_id' => $photo_url,
                 'location' => $this->input->post('location'),
+                'lat' => $this->input->post('location'),
+                'lng' => $this->input->post('location'),
+                'introduction' => $this->input->post('location'),
             );
 
             //insert tour table
@@ -128,8 +131,9 @@ class TourController extends CI_Controller{
     public function touritem($pageid){
         $data['results'] = $this->tour_model->get_tourItem($pageid);
         $data['itineraries'] = $this->tour_model->get_itinerary($pageid);
-        $data['suggessions'] = $this->tour_model->get_tourSuggessions($pageid);
+        // $data['suggessions'] = $this->tour_model->get_tourSuggessions($pageid);
         $data['site_view'] = 'TourItem';
+        $data['site_title'] = 'Sunway Holidays - Tour Item';
         $this->load->view('main/main_view', $data);
     }
 

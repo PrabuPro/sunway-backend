@@ -57,7 +57,7 @@
             <div class="sidebar-box ftco-animate">
               <div class="search-tours bg-light p-4">
                 <h3>Find your tour</h3>
-                <form action="<?php echo site_url('tourcontroller/getSearch');?>" method="post" class="form">
+                <form action="<?php echo site_url('search-tours');?>" method="post" class="form">
                   <div class="fields">
                     <div class="row flex-column">
 

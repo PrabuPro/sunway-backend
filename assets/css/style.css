@@ -8128,9 +8128,15 @@ textarea.form-control {
 .tours-itinerary {
   list-style: none; }
   .tours-itinerary-item {
-    font-size: 1.3em;
-    font-weight: 500;
+    font-size: 1.4em;
+    font-weight: 700;
     color: #000; }
+  .tours-itinerary-item-details {
+    font-size: 1.3em;
+    font-weight: 400;
+    color: #000; 
+    margin-left:35px;
+  }
   .tours-itinerary-icon {
     width: 1em;
     margin-right: .5em; }

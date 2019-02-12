@@ -55,7 +55,7 @@
             <div class="sidebar-box ftco-animate">
               <div class="search-tours bg-light p-4">
                 <h3>Find your Hotel</h3>
-                <form action="<?php echo site_url('hotelcontroller/getSearch');?>" method="post">
+                <form action="<?php echo site_url('search-accomadations');?>" method="post">
                   <div class="fields">
                     <div class="row flex-column">
 

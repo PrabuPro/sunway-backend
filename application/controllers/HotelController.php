@@ -6,7 +6,7 @@ class HotelController extends CI_Controller{
     public function accomadations(){
         $data['results'] =  $this->hotel_model->get_hotels();
         $data['site_view'] = 'Accomadations';
-        $data['site_title'] = 'Accomadations';
+        $data['site_title'] = 'Sunway Holidays - Accomadations';
         $this->load->view('main/main_view', $data);
     }
     

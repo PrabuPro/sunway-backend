@@ -4,6 +4,7 @@ class Tour_model extends CI_Model{
 
 
     public function get_tours(){
+        $this->db->select('tour_id,description, tour_type,suitable_for,price,photo_id,location');
         $tours = $this->db->get('tours');
         return $tours->result() ;
     }
@@ -29,25 +30,26 @@ class Tour_model extends CI_Model{
         //             ->where('t1.tour_id', $pageId)
         //             ->join('tour_item as t2', 't1.tour_id=t2.tour_id', 'INNER')
         //             ->get();
-        $id = (int)$pageId;
-        $this->db->select('*');
-        $this->db->from('tours');
-        $this->db->join('tour_item', 'tour_item.tour_id = tours.tour_id');
-        // $this->db->where('tours.tour_id', $id);
-        $query = $this->db->get();
+        // $id = (int)$pageId;
+        // $this->db->select('*');
+        // $this->db->from('tours');
+        // $this->db->join('tour_item', 'tour_item.tour_id = tours.tour_id');
+        // // $this->db->where('tours.tour_id', $id);
+        $this->db->select('tour_id, name, tour_type,suitable_for,price,photo_id,location,lat,lng,introduction');
+        $this->db->where('tour_id',$pageId);
+        $query = $this->db->get('tours');
 
         return $query->row();
     }
 
     public function get_itinerary($id){
         $this->db->where('tour_id', $id);
-        $this->db->get('itinerary');
+        $query = $this->db->get('itinerary');
+
+        return $query->result();
     }
 
-    public function get_tourSuggessions($pageId){
-        $query = $this->db->get_where('tours', array('tour_id' => $pageId), 1);
-
-    }
+   
 
     public function insert_itinerary($id){
 

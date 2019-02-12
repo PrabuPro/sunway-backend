@@ -34,8 +34,7 @@
                             <?php foreach($itineraries as $itinerary) : ?>
                                 <li class="tours-itinerary-item"> <img src="<?php echo base_url(); ?>assets/images/checkmark.png" class="tours-itinerary-icon"
                                         alt="">Day <?php echo $itinerary->item_number; ?></li>
-                                <li class="tours-itinerary-item"> <img src="<?php echo base_url(); ?>assets/images/checkmark.png" class="tours-itinerary-icon"
-                                        alt=""><?php echo $itinerary->item_details; ?></li>
+                                <li class="tours-itinerary-item-details"> <?php echo $itinerary->item_details; ?></li>
                             <?php endforeach; ?>
                             </ul>
                         </div>
