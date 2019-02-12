@@ -49,7 +49,8 @@
 
             <?php global $last ?>
             
-
+              <?php if(!(current_url() == base_url().'search-tours')) : ?>
+              
 							<ul>
 								<!-- <li><a href="#">&lt;</a></li> -->
 								<!-- <li><a href="http://localhost/sunwayholidays/tours-list/0" data-ci-pagination-page="2" rel="previous">&gt;</a></li> -->
@@ -61,7 +62,6 @@
 								<li <?php if(current_url()==base_url().'tours-list/'.$i*8) { $last = ($i+1)*8;  echo 'class="active"'; } ?>><span><a href="http://localhost/sunwayholidays/tours-list/<?php echo $i*8; ?>"
 										 data-ci-pagination-page="1">
                       <?php echo $i+1; ?></a></span></li>
-                      
                 <?php endfor; ?>
                 
 								<?php if($total_pagination > 1) : ?>
@@ -69,6 +69,7 @@
 								<?php endif; ?>
 
 							</ul>
+              <?php endif; ?>
 						</div>
 					</div>
 				</div>
