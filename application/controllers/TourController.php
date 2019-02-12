@@ -2,8 +2,22 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class TourController extends CI_Controller{
-    public function tours(){
-        $data['results'] = $this->tour_model->get_tours();
+
+
+      
+
+
+    public function tours($pagenum){
+        $config = array();
+       $config["base_url"] = base_url() . "tours-list";
+       $config["total_rows"] = $this->tour_model->record_count();
+       $config["per_page"] = 8;
+       $config["uri_segment"] = 1;
+       $this->pagination->initialize($config);
+       $page = ($this->uri->segment(1)) ? $this->uri->segment(1) : 0;
+
+        $data['results'] = $this->tour_model->get_tours($config['per_page'], $pagenum);
+        $data['links'] = $this->pagination->create_links();
         $data['site_view'] = 'Tours';
         $data['site_title'] = 'Sunway Holidays - Tours';
         $this->load->view('main/main_view', $data);
@@ -11,7 +25,16 @@ class TourController extends CI_Controller{
 
     public function getTours(){
 
-        $data['results'] = $this->tour_model->get_tours();
+       $config = array();
+       $config["base_url"] = base_url() . "tours";
+       $config["total_rows"] = $this->Departments->record_count();
+       $config["per_page"] = 5;
+       $config["uri_segment"] = 3;
+       $this->pagination->initialize($config);
+       $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+
+        $data['results'] = $this->tour_model->get_tours($config['per_page'], $page);
+        $data['links'] = $this->pagination->create_links();
         $data['site_view'] = 'Tours';
         $data['site_title'] = 'Sunway Holidays - Tours';
         $this->load->view('main/main_view', $data);

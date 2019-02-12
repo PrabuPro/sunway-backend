@@ -3,9 +3,11 @@
 class Tour_model extends CI_Model{
 
 
-    public function get_tours(){
+    public function get_tours($limit, $start){
         $this->db->select('tour_id,description, tour_type,suitable_for,price,photo_id,location');
+        $this->db->limit($limit, $start);
         $tours = $this->db->get('tours');
+
         return $tours->result() ;
     }
 
@@ -24,17 +26,11 @@ class Tour_model extends CI_Model{
         return $this->db->insert_id();
     }
 
+    public function record_count(){
+        return $this->db->count_all('tours');
+    }
+
     public function get_tourItem($pageId){
-        // $query = $this->db->select('t1.name,t1.photo_id,t2.introduction,t2.lat,t2.lng')
-        //             ->from('tours as t1')
-        //             ->where('t1.tour_id', $pageId)
-        //             ->join('tour_item as t2', 't1.tour_id=t2.tour_id', 'INNER')
-        //             ->get();
-        // $id = (int)$pageId;
-        // $this->db->select('*');
-        // $this->db->from('tours');
-        // $this->db->join('tour_item', 'tour_item.tour_id = tours.tour_id');
-        // // $this->db->where('tours.tour_id', $id);
         $this->db->select('tour_id, name, tour_type,suitable_for,price,photo_id,location,lat,lng,introduction');
         $this->db->where('tour_id',$pageId);
         $query = $this->db->get('tours');

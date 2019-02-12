@@ -22,7 +22,7 @@
 
                 <?php foreach($results as $result) : ?>
                   <div class="col-md-6 col-lg-6 mb-4 ftco-animate">
-                    <a href="tours/<?php echo $result->tour_id; ?>" class="block-5" style="background-image: url('<?php echo $result->photo_id; ?>');">
+                    <a href="<?php echo site_url('tours/'.$result->tour_id);?>" class="block-5" style="background-image: url('<?php echo $result->photo_id; ?>');">
                       <div class="text">
                         <span class="price">$ <?php echo $result->price; ?></span>
                         <h3 class="heading">Tour in <?php echo $result->location; ?></h3>
@@ -33,19 +33,22 @@
                     </a>
                   </div>
                 <?php endforeach; ?>
-              
-            </div>
-            <div class="row mt-5">
-              <div class="col text-center">
-                <div class="block-27">
-                  <ul>
-                    <li><a href="#">&lt;</a></li>
-                    <li class="active"><span>1</span></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#">&gt;</a></li>
+
+                
+              </div>
+              <div class="row mt-5">
+                <div class="col text-center">
+                  <div class="block-27">
+
+                    <ul>
+                    <!-- <li><a href="#">&lt;</a></li> -->
+                    <!-- <li><a href="http://localhost/sunwayholidays/tours-list/0" data-ci-pagination-page="2" rel="previous">&gt;</a></li> -->
+                    <li  <?php if(current_url() == 'http://localhost/sunwayholidays/tours-list/0') echo 'class="active"' ?>><span><a href="http://localhost/sunwayholidays/tours-list/0" data-ci-pagination-page="1">1</a></span></li>
+                    <li  <?php if(current_url() == 'http://localhost/sunwayholidays/tours-list/8') echo 'class="active"' ?>><span><a href="http://localhost/sunwayholidays/tours-list/8" data-ci-pagination-page="2">2</a></span></li>
+                    <li <?php if(current_url() == 'http://localhost/sunwayholidays/tours-list/16') echo 'class="active"' ?>><span><a href="http://localhost/sunwayholidays/tours-list/16" data-ci-pagination-page="3">3</a></span></li>
+                    <li <?php if(current_url() == 'http://localhost/sunwayholidays/tours-list/24') echo 'class="active"' ?>><span><a href="http://localhost/sunwayholidays/tours-list/24" data-ci-pagination-page="4">4</a></span></li>
+                    <li <?php if(current_url() == 'http://localhost/sunwayholidays/tours-list/32') echo 'class="active"' ?>><span><a href="http://localhost/sunwayholidays/tours-list/32" data-ci-pagination-page="5">5</a></span></li>
+                    <!-- <li><a href="http://localhost/sunwayholidays/tours-list/0" data-ci-pagination-page="2" rel="next">&gt;</a></li> -->
                   </ul>
                 </div>
               </div>
