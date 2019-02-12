@@ -67,34 +67,48 @@
             <div class="tab-content py-4" id="v-pills-tabContent">
               <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
                 <div class="block-17">
-                  <form action="" method="post" class="d-block d-lg-flex">
+                  <form action="<?php echo site_url('search-accomadations');?>" method="post" class="d-block d-lg-flex">
                     <div class="fields d-block d-lg-flex">
+                      
+                    <div class="select-wrap one-third">
+                        <div class="icon"></div>
+                        <select name="country" id="" class="form-control form-control-select">
+                          <option value="" class="form-control-option-white">Country</option>
+                          <option value="sri lanka" class="form-control-option-white"  >Sri Lanka</option>
+                          <option value="maldives" class="form-control-option-white"  >Maldives</option>
+                        </select>
+                      </div>
 
-                      <div class="check-in one-third"><input type="text" id="checkin_date" class="form-control" placeholder="Check-in date"></div>
+                      <div class="check-in one-third"><input type="text" id="checkin_date" class="form-control" placeholder="Check-in date" name="check-in-date"></div>
 
-                      <div class="check-out one-third"><input type="text" id="checkout_date" class="form-control" placeholder="Check-out date"></div>
+                      <div class="check-out one-third"><input type="text" id="checkout_date" class="form-control" placeholder="Check-out date" name="check-out-date"></div>
                       <div class="select-wrap one-third">
                         <div class="icon"></div>
-                        <select name="" id="" class="form-control form-control-select">
-                          <option value="">Suitable For</option>
-                          <option value="">Cupples</option>
-                          <option value="">Beach Lovers</option>
-                          <option value="">Gourps</option>
-                          <option value="">Sineors</option>
-                          <option value="">Small Groups</option>
-                          <option value="">Families</option>
-                          <option value="">Ladies only</option>
-                          <option value="">Singles</option>
+                        <select name="suitable_for"  id="" class="form-control form-control-select">
+                          <option value="" class="form-control-option-white">Suitable For</option>  
+                          <option value="seniors" class="form-control-option-white"  >Seniors</option>
+                          <option value="couples" class="form-control-option-white"  >Couples</option>
+                          <option value="family" class="form-control-option-white"  >Family</option>
+                          <option value="honeymooners" class="form-control-option-white"  >Honeymooners</option>
+                          <option value="small gourp" class="form-control-option-white"  >Small Group </option>
+                          <option value="researchers" class="form-control-option-white"  >Researchers</option>
+                          <option value="singles + kids" class="form-control-option-white"  >Singles + kids</option>
+                          <option value="pilgrims" class="form-control-option-white"  >Pilgrims</option>
                         </select>
+                        
                       </div>
                       <div class="select-wrap one-third">
                         <div class="icon"></div>
-                        <select name="" id="" class="form-control">
+                        <select name="hotel_type" id="" class="form-control">
                           <option value="">Accomadation Type</option>
-                          <option value="">Standard</option>
-                          <option value="">Star class 3/4/5</option>
-                          <option value="">Boutique Hotels</option>
-                          <option value="">Villas</option>
+                          <option value="standard" class="form-control-option-white">Standard</option>
+                          <option value="3 star" class="form-control-option-white">3 Star</option>
+                          <option value="4 star" class="form-control-option-white">4 Star</option>
+                          <option value="5 star" class="form-control-option-white">5 Star</option>
+                          <option value="bouteque hotels" class="form-control-option-white">Bouteque Hotels</option>
+                          <option value="villas" class="form-control-option-white">Villas</option>
+                          <option value="apartments" class="form-control-option-white">Apartments</option>
+                          <option value="rent a house" class="form-control-option-white">Rent a House</option>
                         </select>
                       </div>
                       
@@ -105,42 +119,37 @@
               </div>
               <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
                 <div class="block-17">
-                  <form action="" method="post" class="d-block d-lg-flex">
+                  <form action="<?php echo site_url('search-tours');?>" method="post" class="d-block d-lg-flex">
                     <div class="fields d-block d-lg-flex">
-                      <div class="check-in one-third"><input type="text" id="checkin_date" class="form-control" placeholder="Check-in date"></div>
+                      <div class="check-in one-third"><input type="text" id="checkin_date" class="form-control" placeholder="Check-in date" name="check-in-date"></div>
 
-                      <div class="check-out one-third"><input type="text" id="checkout_date" class="form-control" placeholder="Check-out date"></div>
+                      <div class="check-out one-third"><input type="text" id="checkout_date" class="form-control" placeholder="Check-out date" name="check-out-date"></div>
                       <div class="select-wrap one-third">
                         <div class="icon"></div>
-                        <select name="" id="" class="form-control">
-                          <option value="">Suitable For</option>
-                          <option value="">Cupples</option>
-                          <option value="">Beach Lovers</option>
-                          <option value="">Gourps</option>
-                          <option value="">Sineors</option>
-                          <option value="">Small Groups</option>
-                          <option value="">Families</option>
-                          <option value="">Ladies only</option>
-                          <option value="">Singles</option>
+                        <select name="suitable_for"  id="" class="form-control form-control-select">
+                          <option value="" class="form-control-option-white">Suitable For</option>
+                          <option value="seniors" class="form-control-option-white"  >Seniors</option>
+                          <option value="couples" class="form-control-option-white"  >Couples</option>
+                          <option value="family" class="form-control-option-white"  >Family</option>
+                          <option value="honeymooners" class="form-control-option-white"  >Honeymooners</option>
+                          <option value="small gourp" class="form-control-option-white"  >Small Group </option>
+                          <option value="researchers" class="form-control-option-white"  >Researchers</option>
+                          <option value="singles + kids" class="form-control-option-white"  >Singles + kids</option>
+                          <option value="pilgrims" class="form-control-option-white"  >Pilgrims</option>
                         </select>
                       </div>
                       <div class="select-wrap one-third">
                         <div class="icon"></div>
-                        <select name="" id="" class="form-control">
+                        <select name="tour_type" id="" class="form-control">
                           <option value="">Tour Type</option>
-                          <option value="">Common</option>
-                          <option value="">Beach</option>
-                          <option value="">Eco</option>
-                          <option value="">Nature</option>
-                          <option value="">Wild Life</option>
-                          <option value="">Adventure</option>
-                          <option value="">Action</option>
-                          <option value="">Ayurweda</option>
-                          <option value="">Honey Moon</option>
-                          <option value="">Ramayana Trails</option>
-                          <option value="">Buddist Tours</option>
-                          <option value="">Catholic Tours</option>
-                          <option value="">Hindu Pilgrimage Tours</option>
+                          <option value="common" class="form-control-option-white" >Common</option>
+                          <option value="beach" class="form-control-option-white"  >Beach</option>
+                          <option value="echo" class="form-control-option-white">Eco</option>
+                          <option value="nature" class="form-control-option-white" >Nature</option>
+                          <option value="wild life" class="form-control-option-white">Wild Life</option>
+                          <option value="advanture" class="form-control-option-white">Adventure</option>
+                          <option value="action" class="form-control-option-white">Action</option>
+                          <option value="ayurweda" class="form-control-option-white">Ayurweda</option>
                         </select>
                       </div>
                     </div>
@@ -264,7 +273,7 @@
         
         <div class="row no-gutters">
           <div class="col-md-6 col-lg-3 ftco-animate">
-            <a href="#" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/trip.jpeg');">
+            <a href="<?php echo base_url(); ?>search-tours/common" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/trip.jpeg');">
               <div class="text">
                 <h3 class="heading">Common - Classical Tour</h3>
                 <div class="post-meta">
@@ -274,7 +283,7 @@
             </a>
           </div>
           <div class="col-md-6 col-lg-3 ftco-animate">
-            <a href="#" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/nature.jpg');">
+            <a href="<?php echo base_url(); ?>search-tours/nature" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/nature.jpg');">
               <div class="text">
                 <h3 class="heading">Nature </h3>
                 <div class="post-meta">
@@ -284,7 +293,7 @@
             </a>
           </div>
           <div class="col-md-6 col-lg-3 ftco-animate">
-            <a href="#" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/tour-3.jpg');">
+            <a href="<?php echo base_url(); ?>search-tours/beach" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/tour-3.jpg');">
               <div class="text">
                 <h3 class="heading">Beach</h3>
                 <div class="post-meta">
@@ -294,7 +303,7 @@
             </a>
           </div>
           <div class="col-md-6 col-lg-3 ftco-animate">
-            <a href="#" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/safari.jpg');">
+            <a href="<?php echo base_url(); ?>search-tours/wild" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/safari.jpg');">
               <div class="text">
                 <h3 class="heading">Wild</h3>
                 <div class="post-meta">
@@ -304,7 +313,7 @@
             </a>
           </div>
           <div class="col-md-6 col-lg-3 ftco-animate">
-            <a href="#" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/honeymoon.jpeg');">
+            <a href="<?php echo base_url(); ?>search-for/honeymoon" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/honeymoon.jpeg');">
               <div class="text">
                 <h3 class="heading">Honeymoon</h3>
                 <div class="post-meta">
@@ -314,7 +323,7 @@
             </a>
           </div>
           <div class="col-md-6 col-lg-3 ftco-animate">
-            <a href="#" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/family.jpeg');">
+            <a href="<?php echo base_url(); ?>search-for/family" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/family.jpeg');">
               <div class="text">
                 <h3 class="heading">Family Trous</h3>
                 <div class="post-meta">
@@ -324,7 +333,7 @@
             </a>
           </div>
           <div class="col-md-6 col-lg-3 ftco-animate">
-            <a href="#" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/group.jpeg');">
+            <a href="<?php echo base_url(); ?>search-for/small group" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/group.jpeg');">
               <div class="text">
                 <h3 class="heading">Friends Tours</h3>
                 <div class="post-meta">
@@ -334,7 +343,7 @@
             </a>
           </div>
           <div class="col-md-6 col-lg-3 ftco-animate">
-            <a href="#" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/tour-8.jpg');">
+            <a href="<?php echo base_url(); ?>maldives" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/tour-8.jpg');">
               <div class="text">
                 <h3 class="heading">Group Tour in Maldives</h3>
                 <div class="post-meta">

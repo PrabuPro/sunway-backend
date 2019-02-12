@@ -174,11 +174,38 @@ class TourController extends CI_Controller{
         $data['results'] = $this->tour_model->search($suitable,$tour_type);
 
         $data['site_view'] = 'Tours';
-        $data['site_title'] = 'Tours';
+        $data['site_title'] = 'Sunway Holidaya - Tours';
         $data['suitable'] = $suitable;
         $data['tour_type'] = $tour_type;
         $data['check_in_date'] = $check_in_date;
         $data['check_out_date'] = $check_out_date;
+
+        $this->load->view('main/main_view', $data);
+
+    }
+    public function getHomeSearch() {
+     
+        $searchVal = $this->uri->segment(2);
+
+        $data['results'] = $this->tour_model->homeSearch($searchVal);
+        $data['total_pagination'] = 0;
+        $data['tour_type'] = $searchVal;
+        $data['site_view'] = 'Tours';
+        $data['site_title'] = 'Sunway Holidays - Tours';
+
+        $this->load->view('main/main_view', $data);
+
+    }
+
+    public function getHomeSearchFor() {
+     
+        $searchVal = $this->uri->segment(2);
+
+        $data['results'] = $this->tour_model->homeSearchFor($searchVal);
+        $data['total_pagination'] = 0;
+        $data['tour_type'] = $searchVal;
+        $data['site_view'] = 'Tours';
+        $data['site_title'] = 'Sunway Holidays - Tours';
 
         $this->load->view('main/main_view', $data);
 

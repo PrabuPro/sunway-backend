@@ -19,7 +19,8 @@
 		<div class="row">
 			<div class="col-lg-8">
 				<h2 class="mb-5 pb-3" style="font-size:24px; font-weight:600; text-transform:capitalize;">
-					<?php if(isset($tour_type)){ echo  $tour_type . ' for ' . $suitable ;  } else { echo "All Types"; } ?>
+					<?php if(isset($suitable)){ echo  $tour_type . ' for ' . $suitable ;  } else if (isset($tour_type)){ echo  $tour_type ; } else { echo "All Types"; }?>
+		
 				</h2>
 				<div class="row ">
 

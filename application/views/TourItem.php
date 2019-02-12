@@ -47,74 +47,7 @@
                 </div>
 
 
-                <div class="col-lg-12">
-                    <div class="row slider-text align-items-center">
-                        <div class="col-md-7 col-sm-12 ftco-animate">
-                            <h1 class="mb-3 mt-5">Recommended Hotels</h1>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 col-lg-6 mb-4 ftco-animate">
-                            <a href="#" class="block-5" style="background-image: url('<?php echo base_url(); ?>assets/images/hotel-1.jpg');">
-                                <div class="text">
-                                    <span class="price">$29/night</span>
-                                    <h3 class="heading">Luxe Hotel</h3>
-                                    <div class="post-meta">
-                                        <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                                    </div>
-                                    <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span
-                                            class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span>
-                                        <span>500 reviews</span></p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-6 col-lg-6 mb-4 ftco-animate">
-                            <a href="#" class="block-5" style="background-image: url('<?php echo base_url(); ?>assets/images/hotel-2.jpg');">
-                                <div class="text">
-                                    <span class="price">$29/night</span>
-                                    <h3 class="heading">Luxe Hotel</h3>
-                                    <div class="post-meta">
-                                        <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                                    </div>
-                                    <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span
-                                            class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span>
-                                        <span>500 reviews</span></p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-6 col-lg-6 mb-4 ftco-animate">
-                            <a href="#" class="block-5" style="background-image: url('<?php echo base_url(); ?>assets/images/hotel-3.jpg');">
-                                <div class="text">
-                                    <span class="price">$29/night</span>
-                                    <h3 class="heading">Luxe Hotel</h3>
-                                    <div class="post-meta">
-                                        <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                                    </div>
-                                    <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span
-                                            class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span>
-                                        <span>500 reviews</span></p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-6 col-lg-6 mb-4 ftco-animate">
-                            <a href="#" class="block-5" style="background-image: url('<?php echo base_url(); ?>assets/images/hotel-4.jpg');">
-                                <div class="text">
-                                    <span class="price">$29/night</span>
-                                    <h3 class="heading">Luxe Hotel</h3>
-                                    <div class="post-meta">
-                                        <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                                    </div>
-                                    <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span
-                                            class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span>
-                                        <span>500 reviews</span></p>
-                                </div>
-                            </a>
-                        </div>
-
-
-                    </div>
-
-                </div>
+              
                 <div class="col-lg-12">
                     <div class="row slider-text align-items-center">
                         <div class="col-md-7 col-sm-12 ftco-animate">
