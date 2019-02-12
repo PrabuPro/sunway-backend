@@ -19,7 +19,7 @@
 		<div class="row">
 			<div class="col-lg-8">
 				<h2 class="mb-5 pb-3" style="font-size:24px; font-weight:600; text-transform:capitalize;">
-					<?php if(isset($suitable)){ echo  $tour_type . ' for ' . $suitable ;  } else if (isset($tour_type)){ echo  $tour_type ; } else { echo "All Types"; }?>
+					<?php if(isset($suitable)){ echo  $tour_type . ' for ' . $suitable ;  } else if (isset($tour_type)){ echo urldecode($tour_type) ; } else { echo "All Types"; }?>
 		
 				</h2>
 				<div class="row ">
@@ -154,14 +154,14 @@
 				<div class="sidebar-box ftco-animate">
 					<h3>Tag Cloud</h3>
 					<div class="tagcloud">
-						<a href="#" class="tag-cloud-link">Common</a>
-						<a href="#" class="tag-cloud-link">Beach</a>
-						<a href="#" class="tag-cloud-link">Eco</a>
-						<a href="#" class="tag-cloud-link">Nature</a>
-						<a href="#" class="tag-cloud-link">Wild Life</a>
-						<a href="#" class="tag-cloud-link">Adventure</a>
-						<a href="#" class="tag-cloud-link">Action</a>
-						<a href="#" class="tag-cloud-link">Ayurweda</a>
+						<a href="<?php echo base_url(); ?>search-tours/common" class="tag-cloud-link" <?php if(current_url() == base_url().'search-tours/common') echo "style='background-color:#000000; color:#ffffff;'"?>>Common</a>
+						<a href="<?php echo base_url(); ?>search-tours/beach" <?php if(current_url() == base_url().'search-tours/beach') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Beach</a>
+						<a href="<?php echo base_url(); ?>search-tours/eco" <?php if(current_url() == base_url().'search-tours/eco') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Eco</a>
+						<a href="<?php echo base_url(); ?>search-tours/nature" <?php if(current_url() == base_url().'search-tours/nature') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Nature</a>
+						<a href="<?php echo base_url(); ?>search-tours/wild life" <?php if(current_url() == base_url().'search-tours/wild%20life') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Wild Life</a>
+						<a href="<?php echo base_url(); ?>search-tours/adventure" <?php if(current_url() == base_url().'search-tours/adventure') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Adventure</a>
+						<a href="<?php echo base_url(); ?>search-tours/action" <?php if(current_url() == base_url().'search-tours/action') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Action</a>
+						<a href="<?php echo base_url(); ?>search-tours/ayurweda" <?php if(current_url() == base_url().'search-tours/ayurweda') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Ayurweda</a>
 					</div>
 				</div>
 

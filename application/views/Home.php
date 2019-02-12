@@ -430,7 +430,7 @@
             <div>
               <h2 class="mb-5 pb-3" style="font-size:24px;">Want to get our hottest travel deals top tips and advice? Click below!</h2>
               <div class="col-sm-12 group mb-3">
-                <input type="submit" class="search-submit btn btn-primary" value="Find Hotels" style="width:100%; font-size:1.5em;">
+                <input type="button" class="search-submit btn btn-primary" value="Find Hotels" style="width:100%; font-size:1.5em;" onclick="window.location='<?php echo base_url();?>accomadations';">
               </div>
               <!-- <form action="#" class="subscribe-form">
                 <div class="form-group">
@@ -444,7 +444,7 @@
             <h2 class="mb-5 p-2 pb-3 ftco-animate">Most Recommended Hotels</h2>
             <div class="row no-gutters d-flex">
               <div class="col-md-4 ftco-animate">
-                <a href="#" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/hotel-1.jpg');">
+                <a href="" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/hotel-1.jpg');">
                   <div class="text">
                     <span class="price">$29/night</span>
                     <h3 class="heading">Luxe Hotel</h3>
