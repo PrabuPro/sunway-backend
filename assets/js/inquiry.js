@@ -20,7 +20,6 @@
 				data: $('.inquiry_form').serialize(),
 				datatype: "html",
 				success: function (data) {
-					console.log(data);
 
 					if (data === "Successfull") {
 						swal.stopLoading();
@@ -29,7 +28,11 @@
 							text: "We will contact you shortly",
 							icon: "success",
 							button: "ok",
-						});
+						}).then((value) => {
+							location.reload();
+						}) ;
+						
+						
 
 					} else if (data === "Data insertion faild") {
 						swal.stopLoading();

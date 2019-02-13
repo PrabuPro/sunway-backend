@@ -169,7 +169,7 @@
 						<div class="check-in one-third mb-3"><input  name="check-in-date" type="text" id="checkin_date" class="form-control" placeholder="Approx Arival Date"></div>
 					</div>
 					<div class="col-md-6">
-						<label  for="checkout_date" style="font-size:14px; margin-bottom:0px; color:#636363; font-weight:600;">Arrival Date</label>
+						<label  for="checkout_date" style="font-size:14px; margin-bottom:0px; color:#636363; font-weight:600;">Depature Date</label>
 						<div class="check-out one-third mb-3"><input name="check-out-date" type="text" id="checkout_date" class="form-control" placeholder="Depature Date"></div>
 					</div>
 				</div>
