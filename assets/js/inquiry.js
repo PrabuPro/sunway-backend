@@ -1,6 +1,7 @@
 	$(document).ready(function(){
 		$('.inquiry_form').on('submit', function (e) {
 			e.preventDefault();
+			console.log('Submited');
 
 			swal({
 				title: "Hang on!",

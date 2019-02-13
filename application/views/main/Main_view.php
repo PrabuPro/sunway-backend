@@ -41,7 +41,7 @@
                     <li class="nav-item "><a href="<?php echo base_url(); ?>home" class="nav-link ">Home</a></li>
                     <li class="nav-item"><a href="<?php echo base_url(); ?>tours-list/0" class="nav-link">Tours</a></li>
                     <li class="nav-item"><a href="<?php echo base_url(); ?>accomadations" class="nav-link">Accomadation</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="<?php echo base_url(); ?>services" class="nav-link">Services</a></li>
                     <li class="nav-item"><a href="<?php echo base_url(); ?>about-us" class="nav-link">About Us</a></li>
                     <li class="nav-item"><a href="<?php echo base_url(); ?>maldives" class="nav-link">Maldives</a></li>
                     <li class="nav-item"><a href="<?php echo base_url(); ?>holidays" class="nav-link">Holidays</a></li>

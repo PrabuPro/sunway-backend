@@ -77,3 +77,5 @@ $route['accomadations'] = 'hotelcontroller/accomadations';
 $route['addhotelsview'] = 'hotelcontroller/addhotelsview';
 $route['addhotels'] = 'hotelcontroller/addhotels';
 $route['search-accomadations'] = 'hotelcontroller/getSearch';
+$route['tailormade/inquirycontroller/inquire'] = 'inquirycontroller/inquire';
+$route['tours/inquirycontroller/inquire'] = 'inquirycontroller/inquire';

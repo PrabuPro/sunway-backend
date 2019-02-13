@@ -23,10 +23,11 @@
               <div class="col-md-6 col-lg-6 mb-4 ftco-animate">
                 <a href="hotels/<?php echo $result->hotel_id; ?>" class="block-5" style="background-image: url('<?php echo $result->photo_id; ?>');">
                   <div class="text">
-                    <span class="price">$ <?php echo $result->price; ?></span>
-                    <h3 class="heading">Hotel in <?php echo $result->location; ?></h3>
+                    <span class="price">$<?php echo $result->price; ?></span>
+                    <h3 class="heading"><?php echo ucfirst($result->name); ?></h3>
                     <div class="post-meta">
                       <span><?php echo $result->description; ?></span>
+                    <h3 class="heading" style="font-size:14px;"><?php echo ucfirst($result->name); ?></h3>
                     </div>
                   </div>
                 </a>

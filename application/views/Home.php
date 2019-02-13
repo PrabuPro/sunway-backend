@@ -368,6 +368,7 @@
                   dolores, a ullam velit nostrum expedita quidem unde nesciunt pariatur, ex neque vitae voluptatibus.</h3>
         <div class="row ftco-animate">
           <div class="carousel owl-carousel ftco-owl">
+          <a href="<?php echo base_url(); ?>search-for/group friends">
             <div class="item">
               <div class="card-vacations card-vacations-1"> 
                 <div class="card-vacations__text">
@@ -378,6 +379,8 @@
                 </div>
               </div>
             </div>
+            </a>
+            <a href="<?php echo base_url(); ?>search-for/group family">
             <div class="item">
               <div class="card-vacations card-vacations-2">
                 <div class="card-vacations__text">
@@ -388,6 +391,8 @@
               </div>
             </div>
             </div>
+            </a>
+            <a href="<?php echo base_url(); ?>search-for/group lovers">
             <div class="item">
               <div class="card-vacations card-vacations-3">
                 <div class="card-vacations__text">
@@ -398,6 +403,8 @@
                 </div>
               </div>
             </div>
+            </a>
+            <a href="<?php echo base_url(); ?>search-for/group singles">
             <div class="item">
               <div class="card-vacations card-vacations-4">
                 <div class="card-vacations__text">
@@ -407,7 +414,8 @@
                   </div>
                 </div>
               </div>
-            </div>            
+            </div>
+            </a>            
           </div>
         </div>
       </div>
