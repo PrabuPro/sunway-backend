@@ -18,6 +18,9 @@ class InquiryController extends CI_Controller{
         $this->form_validation->set_rules('tour_type','Tour Type','trim|required|alpha_numeric_spaces|max_length[15]');
         $this->form_validation->set_rules('tranportation_type','Tranportation Type','trim|required|alpha|max_length[10]');
         $this->form_validation->set_rules('message','Message','trim|required|max_length[200]');
+        $this->form_validation->set_rules('g-recaptcha-response', 'recaptcha validation', 'required|callback_validate_captcha');
+        $this->form_validation->set_message('validate_captcha', 'Please check the the captcha form');
+
 
         if($this->form_validation->run() == FALSE) {
         
@@ -58,6 +61,16 @@ class InquiryController extends CI_Controller{
 
         }
 
+    }
+
+    function validate_captcha() {
+        $captcha = $this->input->post('g-recaptcha-response');
+         $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6Le8HJEUAAAAAPqllBEAB4yjl9EZQnMy2SEVW25a&response=" . $captcha . "&remoteip=" . $_SERVER['REMOTE_ADDR']);
+        if ($response . 'success' == false) {
+            return FALSE;
+        } else {
+            return TRUE;
+        }
     }
 
     public function sendMail($data,$result) {

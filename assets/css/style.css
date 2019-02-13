@@ -2734,7 +2734,8 @@ input[type="button"].btn-block {
   
   .nav-link-selected{
     border-bottom: 2px solid #ffffff;
-    transform: translateY(4px);
+    padding-bottom: 0px !important;
+    transform: translateY(-4px);
   }
 .nav-link {
   display: block;

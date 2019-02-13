@@ -210,6 +210,7 @@
 						<textarea name="message" cols="120" rows="7" class="form-control" placeholder="Message"><?php echo set_value('name');?></textarea>
 					</div>
 				</div>
+				<div class="g-recaptcha" style="margin-bottom: 20px;" data-sitekey="6Le8HJEUAAAAAHg1eHa0e7U5Fw3O9djmgn9agkvc"></div>
 				<div class="row">
 					<div class="col-md-10">
 						<div class="form-group">
@@ -225,6 +226,7 @@
 
 
 <script src="<?php echo base_url();?>assets/js/jquery.min.js"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="<?php echo base_url();?>assets/js/inquiry.js"></script>
 
