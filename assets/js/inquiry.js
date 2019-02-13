@@ -2,6 +2,18 @@
 		$('.inquiry_form').on('submit', function (e) {
 			e.preventDefault();
 
+			swal({
+				title: "Hang on!",
+				text: "Your Inquiry is sending....",
+				imageUrl: "http://localhost/sunwayholidays/assets/images/rolling2.gif",
+				showSpinner: true,
+				button: false,
+				showCancelButton: false,
+				showConfirmButton: false,
+				allowOutsideClick: false
+			
+			});
+
 			$.ajax({
 				type: 'POST',
 				url: 'inquirycontroller/inquire',
@@ -11,6 +23,7 @@
 					console.log(data);
 
 					if (data === "Successfull") {
+						swal.stopLoading();
 						swal({
 							title: "Successfully made an Inquiry",
 							text: "We will contact you shortly",
@@ -19,6 +32,7 @@
 						});
 
 					} else if (data === "Data insertion faild") {
+						swal.stopLoading();
 						swal({
 							title: "Internal Error.",
 							text: "Please try again",
@@ -27,6 +41,7 @@
 						});
 
 					} else {
+						swal.stopLoading();
 						swal({
 							title: "We found some errors! Please check below",
 							text: (data).replace(/(<([^>]+)>)/ig, ""),

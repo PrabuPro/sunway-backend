@@ -115,23 +115,28 @@
 			<form action="<?php echo site_url('inquirycontroller/inquire');?>"  method="post" class="inquiry_form" >
 				<div class="row">
 					<div class="col-md-6 form-group">
-						<input name="name" type="text" class="form-control" value="<?php echo set_value('name');?>" placeholder="Your Name">
+						<label for="name" style="font-size:14px; margin-bottom:0px; color:#636363; font-weight:600;">Name</label>
+						<input id="name" name="name" type="text" class="form-control" value="<?php echo set_value('name');?>" placeholder="Your Name">
 					</div>
 					<div class="col-md-6 form-group">
-						<input name="email" type="email" class="form-control" value="<?php echo set_value('email');?>" placeholder="Your Email">
+						<label for="email" style="font-size:14px; margin-bottom:0px; color:#636363; font-weight:600;">Email</label>
+						<input id="email" name="email" type="email" class="form-control" value="<?php echo set_value('email');?>" placeholder="Your Email">
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-6 form-group">
-						<input name="phone" type="text" class="form-control" value="<?php echo set_value('phone');?>" placeholder="Phone Number eg: +941123456789">
+						<label for="phone" style="font-size:14px; margin-bottom:0px; color:#636363; font-weight:600;">Phone Number</label>
+						<input id="phone" name="phone" type="text" class="form-control" value="<?php echo set_value('phone');?>" placeholder="Phone Number eg: +941123456789">
 					</div>
 					<div class="col-md-6 form-group">
+						<label for="email" style="font-size:14px; margin-bottom:0px; color:#636363; font-weight:600;">Country</label>
 						<input name="country" type="text" class="form-control" value="<?php echo set_value('country');?>" placeholder="Your Country">
 					</div>
 				</div>
 				<div class="row">
 					<div class="select-wrap col-md-6 group mb-3">
-						<select name="num-of-adults" class="form-control">
+						<label for="num-of-adults" style="font-size:14px; margin-bottom:0px; color:#636363; font-weight:600;">Number of Adults</label>
+						<select id="num-of-adults" name="num-of-adults" class="form-control">
 							<option value="" class="form-control-option-white-top">Number of Adults</option>
 							<option value="1" class="form-control-option-white">1</option>
 							<option value="2" class="form-control-option-white">2</option>
@@ -144,7 +149,8 @@
 						</select>
 					</div>
 					<div class="select-wrap col-md-6 group mb-3">
-						<select name="num-of-children" class="form-control">
+						<label  for="num-of-children" style="font-size:14px; margin-bottom:0px; color:#636363; font-weight:600;">Number of Children</label>
+						<select id="num-of-children" name="num-of-children" class="form-control">
 							<option value="" class="form-control-option-white-top">Number of Children</option>
 							<option value="0" class="form-control-option-white">None</option>
 							<option value="1" class="form-control-option-white">1</option>
@@ -159,15 +165,18 @@
 				</div>
 				<div class="row">
 					<div class="col-md-6">
-						<div class="check-in one-third mb-3"><input name="check-in-date" type="text" id="checkin_date" class="form-control" placeholder="Approx Arival Date"></div>
+						<label  for="checkin_date" style="font-size:14px; margin-bottom:0px; color:#636363; font-weight:600;">Arrival Date</label>
+						<div class="check-in one-third mb-3"><input  name="check-in-date" type="text" id="checkin_date" class="form-control" placeholder="Approx Arival Date"></div>
 					</div>
 					<div class="col-md-6">
+						<label  for="checkout_date" style="font-size:14px; margin-bottom:0px; color:#636363; font-weight:600;">Arrival Date</label>
 						<div class="check-out one-third mb-3"><input name="check-out-date" type="text" id="checkout_date" class="form-control" placeholder="Depature Date"></div>
 					</div>
 				</div>
 				<div class="row">
 					<div class="select-wrap col-md-6 group mb-3">
-						<select name="hotel_type" class="form-control">
+						<label  for="hotel_type" style="font-size:14px; margin-bottom:0px; color:#636363; font-weight:600;">Hotel Type</label>
+						<select id="hotel_type" name="hotel_type" class="form-control">
 							<option value="" class="form-control-option-white">Hotel Type</option>
 							<option value="standard" class="form-control-option-white">Standard</option>
                             <option value="3 star" class="form-control-option-white"  >3 Star</option>
@@ -180,7 +189,8 @@
 						</select>
 					</div>
                     <div class="select-wrap col-md-6 group mb-3">
-						<select name="tour_type" class="form-control">
+						<label  for="tour_type" style="font-size:14px; margin-bottom:0px; color:#636363; font-weight:600;">Tour Type</label>
+						<select id="tour_type" name="tour_type" class="form-control">
 							<option value="" class="form-control-option-white">Tour Type</option>
 	                        <option value="common" class="form-control-option-white"  >Common</option>
                             <option value="beach" class="form-control-option-white"  >Beach</option>
@@ -196,7 +206,8 @@
 				</div>
 				<div class="row">
 					<div class="select-wrap col-md-6 group mb-3">
-						<select name="tranportation_type" class="form-control">
+						<label  for="transportation_type" style="font-size:14px; margin-bottom:0px; color:#636363; font-weight:600;">Transportation Type</label>
+						<select id="transportation_type" name="tranportation_type" class="form-control">
 							<option value="" class="form-control-option-white-top">Transportation Type</option>
 							<option value="car" class="form-control-option-white">Car</option>
 							<option value="van" class="form-control-option-white">Van</option>
@@ -207,7 +218,8 @@
 				</div>
 				<div class="row">
 					<div class="col-md-12 form-group">
-						<textarea name="message" cols="120" rows="7" class="form-control" placeholder="Message"><?php echo set_value('name');?></textarea>
+						<label  for="message" style="font-size:14px; margin-bottom:0px; color:#636363; font-weight:600;">Message</label>
+						<textarea id="message" name="message" cols="120" rows="7" class="form-control" placeholder="Message"><?php echo set_value('name');?></textarea>
 					</div>
 				</div>
 				<div class="g-recaptcha" style="margin-bottom: 20px;" data-sitekey="6Le8HJEUAAAAAHg1eHa0e7U5Fw3O9djmgn9agkvc"></div>
