@@ -27,7 +27,6 @@
                     <h3 class="heading"><?php echo ucfirst($result->name); ?></h3>
                     <div class="post-meta">
                       <span><?php echo $result->description; ?></span>
-                    <h3 class="heading" style="font-size:14px;"><?php echo ucfirst($result->name); ?></h3>
                     </div>
                   </div>
                 </a>

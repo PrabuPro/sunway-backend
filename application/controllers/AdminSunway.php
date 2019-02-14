@@ -9,6 +9,7 @@ class AdminSunway extends CI_Controller{
     }
 
     public function login(){
+
         $this->form_validation->set_rules('username','Username','trim|required|max_length[15]');
         $this->form_validation->set_rules('password','Password','trim|required|max_length[15]');
     
@@ -44,11 +45,16 @@ class AdminSunway extends CI_Controller{
     }
 
     public function register_view(){
+
+        $this->redirectIfNotAuthorized();
+
         $data['site_view'] = 'register';
         $this->load->view('admin/admin',$data);
     }
 
     public function register(){
+        
+        $this->redirectIfNotAuthorized();
 
         $this->form_validation->set_rules('username','Username','trim|required|max_length[15]');
         $this->form_validation->set_rules('password','Password','trim|required|max_length[15]');
@@ -86,8 +92,16 @@ class AdminSunway extends CI_Controller{
     }
 
     public function logout(){
+
+        $this->redirectIfNotAuthorized();
+
         $this->session->sess_destroy();
         redirect('home');
+    }
+
+    public function redirectIfNotAuthorized(){
+        if(!$this->session->logged_in)
+            redirect('pro-login');
     }
 
 

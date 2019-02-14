@@ -55,8 +55,6 @@
                         width="550" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> -->
 			</div>
 
-
-
 			<div class="col-lg-12">
 				<div class="row slider-text align-items-center">
 					<div class="col-md-7 col-sm-12 ftco-animate">

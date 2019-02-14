@@ -62,15 +62,15 @@
 								<div class="control">
 									<div class="select is-info">
 										<select name="hotel_type">
-											 <option value="">Hotel Type</option>
-                                             <option value="standard">Standard</option>
-                                             <option value="3 star">3 Star</option>
-                                             <option value="4 star">4 Star</option>
-                                             <option value="5 star">5 Star</option>
-                                             <option value="bouteque hotels">Bouteque Hotels</option>
-                                             <option value="villas">Villas</option>
-                                             <option value="apartments">Apartments</option>
-                                             <option value="rent a house">Rent a House</option>
+											<option value="">Hotel Type</option>
+											<option value="standard">Standard</option>
+											<option value="3 star">3 Star</option>
+											<option value="4 star">4 Star</option>
+											<option value="5 star">5 Star</option>
+											<option value="bouteque hotels">Bouteque Hotels</option>
+											<option value="villas">Villas</option>
+											<option value="apartments">Apartments</option>
+											<option value="rent a house">Rent a House</option>
 										</select>
 									</div>
 								</div>
@@ -126,19 +126,46 @@
 
 							<div class="field">
 								<div class="control">
-									<div class="select is-info">
-										<select name="country">
-											<option value="">Conutry</option>
-											<option value="sri lanka">Sri lanka</option>
-											<option value="maldives">Maldives</option>
-										
-									</div>
+									<input class="column is-5 input is-info" name="lat" type="text" placeholder="Latitude" value="<?php echo set_value('lat');?>">
+								</div>
+							</div>
+							<div class="field">
+								<div class="control ">
+									<input class="column is-5 input is-info" name="lng" type="text" placeholder="Longitude" value="<?php echo set_value('lng');?>">
 								</div>
 							</div>
 
 							<div class="field">
 								<div class="control">
-									<input class="column is-12 button is-block is-info is-medium is-fullwidth" type="submit" value="Add Hotels">
+									<div class="select is-info">
+										<select name="country">
+											<option value="">Conutry</option>
+											<option value="sri lanka">Sri lanka</option>
+											<option value="maldives">Maldives</option>
+										</select>
+									</div>
+								</div>
+							</div>
+
+							<div class="field">
+								<div class="control ">
+									<p style="font-size:20px; font-weight:600;">Facilities</p>
+									<input id="facilities" class="" name="facility[]" type="checkbox" value="Wifi">WIFI <br>
+									<input id="facilities" class="" name="facility[]" type="checkbox" value="Wifi">Children <br>
+									<input id="facilities" class="" name="facility[]" type="checkbox" value="Wifi">Meal <br>
+									<input id="facilities" class="" name="facility[]" type="checkbox" value="Wifi">Special <br>
+								</div>
+							</div>
+
+							<p style="font-size:20px; font-weight:600;">Room Types</p>
+				
+							<div style="margin-bottom:20px;" id="description"><p id="add_field" style="background-color:green; width:30%; color:white;">ADD ROOM TYPE</p></div>
+
+
+
+							<div class="field">
+								<div class="control">
+									<input class="column is-3 button is-block is-info is-medium is-fullwidth" type="submit" value="Add Hotels">
 								</div>
 							</div>
 						</form>
@@ -150,6 +177,43 @@
 		</div>
 	</div>
 </div>
+
+<script src="<?php echo base_url();?>assets/js/jquery.min.js"></script>
+<script>
+ var count = 0;
+	var count = 0;
+    $(document).ready(function() {
+        $('p#add_field').click(function(){
+           count += 1;
+			var html=`<div class="columns is-mobile is-multiline ">
+								<div class="column ">
+									<strong>Room Type - `+ count +`  </strong>
+								</div>
+								<div class="column ">
+									<div class="select is-info">
+										<select name="room_type[]">
+											<option value="">Room Type</option>
+											<option value="single">Single</option>
+											<option value="double">Double</option>
+										</select>
+									</div>
+								</div>
+								<div class="column ">
+									<input class="column input is-info" name="people[]" type="text" placeholder="People" >
+								</div>
+								<div class="column ">
+									<input class="column input is-info" name="children[]" type="text" placeholder="Children" >
+								</div>
+								<div class="column ">
+									<input class="column input is-info" name="price[]" type="text" placeholder="Price" >
+								</div>
+							</div>`;
+            $('#description').append(html);
+
+    	});
+    });
+
+</script>
 <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script async type="text/javascript" src="<?php echo base_url(); ?>assets/js/form.js"></script>
 

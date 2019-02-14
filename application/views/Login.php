@@ -57,9 +57,7 @@
 						<input class="button is-block is-info is-large is-fullwidth" name="login" type="submit" value="Login">
 					</form>
 				</div>
-				<p class="has-text-grey">
-					<a href="pro-reg">Sign Up</a> &nbsp;·&nbsp;
-				</p>
+	
 			</div>
 		</div>
 	</div>
