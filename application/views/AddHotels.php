@@ -151,9 +151,9 @@
 								<div class="control ">
 									<p style="font-size:20px; font-weight:600;">Facilities</p>
 									<input id="facilities" class="" name="facility[]" type="checkbox" value="Wifi">WIFI <br>
-									<input id="facilities" class="" name="facility[]" type="checkbox" value="Wifi">Children <br>
-									<input id="facilities" class="" name="facility[]" type="checkbox" value="Wifi">Meal <br>
-									<input id="facilities" class="" name="facility[]" type="checkbox" value="Wifi">Special <br>
+									<input id="facilities" class="" name="facility[]" type="checkbox" value="children">Children <br>
+									<input id="facilities" class="" name="facility[]" type="checkbox" value="meal">Meal <br>
+									<input id="facilities" class="" name="facility[]" type="checkbox" value="special">Special <br>
 								</div>
 							</div>
 
@@ -205,7 +205,7 @@
 									<input class="column input is-info" name="children[]" type="text" placeholder="Children" >
 								</div>
 								<div class="column ">
-									<input class="column input is-info" name="price[]" type="text" placeholder="Price" >
+									<input class="column input is-info" name="room_price[]" type="text" placeholder="Price" >
 								</div>
 							</div>`;
             $('#description').append(html);

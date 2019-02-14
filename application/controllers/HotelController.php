@@ -24,7 +24,14 @@ class HotelController extends CI_Controller{
         $this->form_validation->set_rules('suitable_for', 'Suitable_for', 'trim|required|max_length[15]');
         $this->form_validation->set_rules('price', 'Price', 'trim|required|integer|max_length[15]');
         $this->form_validation->set_rules('location', 'Location', 'trim|required|max_length[15]');
+        $this->form_validation->set_rules('lat', 'Lat', 'trim|required|max_length[15]');
+        $this->form_validation->set_rules('lng', 'Lng', 'trim|required|max_length[15]');
         $this->form_validation->set_rules('country', 'Country', 'trim|required|max_length[15]');
+        $this->form_validation->set_rules('facility[]', 'Facility', 'trim|required|max_length[10]');
+        $this->form_validation->set_rules('room_type[]', 'Room Type', 'trim|required|max_length[10]');
+        $this->form_validation->set_rules('people[]', 'People', 'trim|required|max_length[5]');
+        $this->form_validation->set_rules('children[]', 'Children', 'trim|required|max_length[5]');
+        $this->form_validation->set_rules('room_price[]', 'Room Price', 'trim|required|max_length[8]');
 
         if($this->form_validation->run() == FALSE){
              $dataflash = array(
@@ -53,9 +60,29 @@ class HotelController extends CI_Controller{
                 'country' => $this->input->post('country')
             );
 
-            //insert tour table
+            //insert Hotel table
             $tourId = $this->hotel_model->insert_hotels($databaseData);
 
+            //insert locations
+            $dataLocations = array (
+                'hotel_id' => $tourId,
+                'lat' => $this->input->post('lat'),
+                'lng' => $this->input->post('lng')
+            );
+
+            $locations = $this->hotel_model->insert_locations($dataLocations);
+            
+            //intert facilities
+            $facilities = implode(",",$this->input->post('facility'));
+            $dataFacilities = array (
+                'hotel_id' => $tourId,
+                'facilities' => $facilities
+            );
+
+            $facilities = $this->hotel_model->insert_facilities($dataFacilities);
+
+            $room_type = $this->hotel_model->insert_roomtype($tourId);
+            
 
             $dataflash = array(
                 'success' => 'Successfully Uploaded'
