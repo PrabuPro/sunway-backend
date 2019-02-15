@@ -114,7 +114,6 @@ class TourController extends CI_Controller{
 
             }
 
-
             } else {
                 $data['site_view'] = 'addTours';
                 $this->load->view('admin/dashboard', $data);

@@ -3,11 +3,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class HotelController extends CI_Controller{
 
-    public function accomadations(){
-        $data['results'] =  $this->hotel_model->get_hotels();
+    public function accomadations($pagenum){
+
+       $config = array();
+       $config["base_url"] = base_url() . "accomadations-list";
+       $config["total_rows"] = $this->hotel_model->record_count();
+       $config["per_page"] = 8;
+       $config["uri_segment"] = 1;
+       $this->pagination->initialize($config);
+       $page = ($this->uri->segment(1)) ? $this->uri->segment(1) : 0;
+
+        $data['results'] = $this->hotel_model->get_hotels($config['per_page'], $pagenum);
+        $data['links'] = $this->pagination->create_links();
+        $data['total_pagination'] = $config["total_rows"]/$config["per_page"];
+
         $data['site_view'] = 'Accomadations';
         $data['site_title'] = 'Sunway Holidays - Accomadations';
         $this->load->view('main/main_view', $data);
+
     }
     
     public function addHotelsView(){
@@ -154,6 +167,7 @@ class HotelController extends CI_Controller{
         $data['site_title'] = 'Accomadations';
         $data['country'] = $country;
         $data['suitable'] = $suitable;
+        $data['total_pagination'] = 0;
         $data['hotel_type'] = $hotel_type;
         $data['check_in_date'] = $check_in_date;
         $data['check_out_date'] = $check_out_date;

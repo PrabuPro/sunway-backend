@@ -33,22 +33,37 @@
               </div>
               <?php endforeach; ?>
             </div>
-            <div class="row mt-5">
-              <div class="col text-center">
-                <div class="block-27">
-                  <ul>
-                    <li><a href="#">&lt;</a></li>
-                    <li class="active"><span>1</span></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#">&gt;</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+     				<div class="row mt-5">
+					<div class="col text-center">
+						<div class="block-27">
+
+            <?php global $last ?>
+            
+              <?php if(!(current_url() == base_url().'search-tours')) : ?>
+              
+							<ul>
+								<!-- <li><a href="#">&lt;</a></li> -->
+								<!-- <li><a href="http://localhost/sunwayholidays/tours-list/0" data-ci-pagination-page="2" rel="previous">&gt;</a></li> -->
+								<?php if($total_pagination > 1) : ?>
+								<li><a href="<?php echo base_url(); ?>accomadations-list/0" data-ci-pagination-page="2" rel="previous">&lt;</a></li>
+                <?php endif; ?>
+                
+								<?php for($i = 0; $i < $total_pagination ; $i++) : ?>
+								<li <?php if(current_url()==base_url().'accomadations-list/'.$i*8) { $last = ($i+1)*8;  echo 'class="active"'; } ?>><span><a href="<?php echo base_url(); ?>accomadations-list/<?php echo $i*8; ?>"
+										 data-ci-pagination-page="1">
+                      <?php echo $i+1; ?></a></span></li>
+                <?php endfor; ?>
+                
+								<?php if($total_pagination > 1) : ?>
+								<li><a href="<?php echo base_url(); ?>accomadations-list/<?php echo $last; ?>" data-ci-pagination-page="2" rel="previous">&gt;</a></li>
+								<?php endif; ?>
+
+							</ul>
+              <?php endif; ?>
+						</div>
+					</div>
+				</div>
+			</div>
           <!-- END -->
 
           <div class="col-lg-4 sidebar">
@@ -118,16 +133,16 @@
             <div class="sidebar-box ftco-animate">
               <h3>Tag Cloud</h3>
               <div class="tagcloud">
-                <a href="<?php echo base_url(); ?>search-accomadations/standard" class="tag-cloud-link" <?php if(current_url() == base_url().'search-accomadations/standard') echo "style='background-color:#000000; color:#ffffff;'"?>>Standard</a>
-                <a href="<?php echo base_url(); ?>search-accomadations/3 star" <?php if(current_url() == base_url().'search-accomadations/3%20star') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">3 Star</a>
-                <a href="<?php echo base_url(); ?>search-accomadations/4 star" <?php if(current_url() == base_url().'search-accomadations/4%20star') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">4 Star</a>
-                <a href="<?php echo base_url(); ?>search-accomadations/5 star" <?php if(current_url() == base_url().'search-accomadations/5%20star') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">5 Star</a>
-                <a href="<?php echo base_url(); ?>search-accomadations/bouteque hotels" <?php if(current_url() == base_url().'search-accomadations/bouteque%20hotels') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Boutque Hotels</a>
-                <a href="<?php echo base_url(); ?>search-accomadations/villas" <?php if(current_url() == base_url().'search-accomadations/villas') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Villas</a>
-                <a href="<?php echo base_url(); ?>search-accomadations/apartments" <?php if(current_url() == base_url().'search-accomadations/apartments') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Rent a House</a>
-                <a href="<?php echo base_url(); ?>search-accomadations/rent a house" <?php if(current_url() == base_url().'search-accomadations/rent%20a%20house') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Rent a House</a>
-                <a href="<?php echo base_url(); ?>search-accomadations-country/sri lanka" <?php if(current_url() == base_url().'search-accomadations-country/sri%20lanka') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Sri Lanka</a>
-                <a href="<?php echo base_url(); ?>search-accomadations-country/maldives" <?php if(current_url() == base_url().'search-accomadations-country/maldives') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Maldives</a>
+                <a href="<?php echo base_url(); ?>search-accomadation/standard" class="tag-cloud-link" <?php if(current_url() == base_url().'search-accomadation/standard') echo "style='background-color:#000000; color:#ffffff;'"?>>Standard</a>
+                <a href="<?php echo base_url(); ?>search-accomadation/3 star" <?php if(current_url() == base_url().'search-accomadation/3%20star') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">3 Star</a>
+                <a href="<?php echo base_url(); ?>search-accomadation/4 star" <?php if(current_url() == base_url().'search-accomadation/4%20star') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">4 Star</a>
+                <a href="<?php echo base_url(); ?>search-accomadation/5 star" <?php if(current_url() == base_url().'search-accomadation/5%20star') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">5 Star</a>
+                <a href="<?php echo base_url(); ?>search-accomadation/bouteque hotels" <?php if(current_url() == base_url().'search-accomadation/bouteque%20hotels') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Boutque Hotels</a>
+                <a href="<?php echo base_url(); ?>search-accomadation/villas" <?php if(current_url() == base_url().'search-accomadation/villas') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Villas</a>
+                <a href="<?php echo base_url(); ?>search-accomadation/apartments" <?php if(current_url() == base_url().'search-accomadation/apartments') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Rent a House</a>
+                <a href="<?php echo base_url(); ?>search-accomadation/rent a house" <?php if(current_url() == base_url().'search-accomadation/rent%20a%20house') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Rent a House</a>
+                <a href="<?php echo base_url(); ?>search-accomadation-country/sri lanka" <?php if(current_url() == base_url().'search-accomadation-country/sri%20lanka') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Sri Lanka</a>
+                <a href="<?php echo base_url(); ?>search-accomadation-country/maldives" <?php if(current_url() == base_url().'search-accomadation-country/maldives') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Maldives</a>
               </div>
             </div>
             

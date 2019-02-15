@@ -3,14 +3,17 @@
 class Hotel_model extends CI_Model{
 
 
-    public function get_hotels(){
-        $tours = $this->db->get('hotels');
-        return $tours->result() ;
+    public function get_hotels($limit, $start){
+        $this->db->select('hotel_id,name,,description, hotel_type,suitable_for,price,photo_id,location');
+        $this->db->limit($limit, $start);
+        $hotels = $this->db->get('hotels');
+
+        return $hotels->result() ;
     }
 
     public function get_hotel($hotelsId){
-        $tours = $this->db->get('hotels');
-        return $tours->result() ;
+        $hotels = $this->db->get('hotels');
+        return $hotels->result() ;
     }
 
     public function insert_hotels($data){
@@ -26,6 +29,10 @@ class Hotel_model extends CI_Model{
     public function insert_facilities($data){
         $query = $this->db->insert('hotel_facilities', $data);
         return true;
+    }
+
+     public function record_count(){
+        return $this->db->count_all('hotels');
     }
 
     public function insert_roomtype($id) {
@@ -136,6 +143,8 @@ class Hotel_model extends CI_Model{
 
         return $query->result();
     }
+
+    
     
 
 }
