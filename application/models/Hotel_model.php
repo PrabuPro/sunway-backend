@@ -91,6 +91,39 @@ class Hotel_model extends CI_Model{
         return $query->result();
     }
 
+    public function get_hotelItem($pageId){
+        $this->db->select('hotel_id, name, hotel_type,suitable_for,price,photo_id,location,introduction');
+        $this->db->where('hotel_id',$pageId);
+        $query = $this->db->get('hotels');
+
+        return $query->row();
+    }
+
+    public function get_hotelLocation($pageId){
+        $this->db->select('lat, lng');
+        $this->db->where('hotel_id',$pageId);
+        $query = $this->db->get('hotel_location');
+
+        return $query->row();
+    }
+
+    public function get_hotelFacilities($pageId){
+        $this->db->select('facilities');
+        $this->db->where('hotel_id',$pageId);
+        $query = $this->db->get('hotel_facilities');
+
+        return $query->row();
+    }
+
+    public function get_hotelRoomType($pageId){
+        $this->db->select('room_type, people, children, price');
+        $this->db->where('hotel_id',$pageId);
+        $query = $this->db->get('hotel_roomType');
+
+        return $query->result();
+    }
+    
+
 }
 
 ?>

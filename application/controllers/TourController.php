@@ -4,11 +4,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class TourController extends CI_Controller{
 
 
-      
-
-
     public function tours($pagenum){
-        $config = array();
+       $config = array();
        $config["base_url"] = base_url() . "tours-list";
        $config["total_rows"] = $this->tour_model->record_count();
        $config["per_page"] = 8;

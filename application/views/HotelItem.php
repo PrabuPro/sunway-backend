@@ -1,3 +1,45 @@
+<style>
+	table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+  color:#000000;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.facility-icons{
+  fill: #303040;
+  display: flex;
+  margin: 20px auto 10px auto;
+  height: 70px;
+  width: 70px;
+}
+
+.facility{
+	display: flex;
+	flex-direction: column;
+	margin: 10px 50px 10px 50px;
+}
+
+.facility-text{
+	color: #303040;
+	font-size: 20px;
+	text-align: center;
+	font-weight: 500;
+
+}
+</style>
+
+
 <section class="home-slider owl-carousel">
 	<div class="slider-item" style="background-image: url('<?php echo $results->photo_id;?>');"
 	 data-stellar-background-ratio="0.5">
@@ -19,33 +61,21 @@
 <section class="ftco-section">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-12">
-				<div class="row slider-text align-items-center">
-					<div class="col-md-7 col-sm-12 ftco-animate">
-						<h1 class="mb-3">Introduction</h1>
-					</div>
-				</div>
-			</div>
-			<h3 class="col-md-7 col-sm-12 sub--para-itenary mb-5">
-				<?php echo $results->introduction; ?>
-			</h3><br>
 
 			<div class="col-lg-6">
 				<div class="row slider-text align-items-center">
 					<div class="col-md-12 col-sm-12 ftco-animate">
-						<h1 class="mb-3">Things You Can Do</h1>
-						<ul class="tours-itinerary">
+						<div class="col-lg-12">
+							<div class="row slider-text align-items-center">
+								<div class="col-md-7 col-sm-12 ftco-animate">
+									<h1 class="mb-3">Introduction</h1>
+								</div>
+							</div>
+						</div>
+						<h3 class="col-md-7 col-sm-12 sub--para-itenary mb-5">
+							<?php echo $results->introduction; ?>
+						</h3>
 
-							<?php foreach($itineraries as $itinerary) : ?>
-							<li class="tours-itinerary-item"> <img src="<?php echo base_url(); ?>assets/images/checkmark.png" class="tours-itinerary-icon"
-								 alt="">Day
-								<?php echo $itinerary->item_number; ?>
-							</li>
-							<li class="tours-itinerary-item-details">
-								<?php echo $itinerary->item_details; ?>
-							</li>
-							<?php endforeach; ?>
-						</ul>
 					</div>
 				</div>
 			</div>
@@ -55,6 +85,64 @@
                         width="550" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> -->
 			</div>
 
+			<div class="col-lg-12">
+				<div class="row slider-text align-items-center">
+					<div class="col-md-7 col-sm-12 ftco-animate">
+						<h1 class="mb-3 mt-5">Facilities</h1>
+					</div>
+				</div>
+				<div class="row">
+				<?php $facilities = explode(",", $facilities->facilities); ?>
+				<?php $length = count($facilities); ?>
+				<?php for($i = 0; $i < $length; $i++) : ?>
+				<div class="facility">
+				<svg class="facility-icons">  
+              		<use xlink:href="<?php echo base_url(); ?>assets/images/sprite.svg#icon-<?php echo $facilities[$i]; ?>"></use>
+            	</svg>
+					<p class="facility-text"> <?php echo ucfirst($facilities[$i]); ?> </p>  
+				</div>
+				<?php endfor;?>
+
+				</div>
+
+			</div>
+			<div class="col-lg-12">
+				<div class="row slider-text align-items-center">
+					<div class="col-md-7 col-sm-12 ftco-animate">
+						<h1 class="mb-3 mt-5">Room Rates</h1>
+					</div>
+				</div>
+				<div class="row">
+					<table>
+						<tr>
+							<th>Room Type</th>
+							<th>People</th>
+							<th>Kids</th>
+							<th>Price</th>
+						</tr>
+						<?php foreach($room_types as $room_type) : ?>
+						<tr>
+							<td>
+								<?php echo $room_type->room_type; ?>
+							</td>
+							<td>
+								<?php echo $room_type->people; ?>
+							</td>
+							<td>
+								<?php echo $room_type->children; ?>
+							</td>
+							<td>$
+								<?php echo $room_type->price; ?>
+							</td>
+						</tr>
+						<?php endforeach; ?>
+
+
+					</table>
+
+				</div>
+
+			</div>
 			<div class="col-lg-12">
 				<div class="row slider-text align-items-center">
 					<div class="col-md-7 col-sm-12 ftco-animate">
@@ -140,7 +228,8 @@
 								</div>
 								<div class="col-md-6 form-group">
 									<label for="email" style="font-size:14px; margin-bottom:0px; color:#636363; font-weight:600;">Country</label>
-									<input name="country" type="text" class="form-control" value="<?php echo set_value('country');?>" placeholder="Your Country" required>
+									<input name="country" type="text" class="form-control" value="<?php echo set_value('country');?>" placeholder="Your Country"
+									 required>
 								</div>
 							</div>
 							<div class="row">
@@ -191,7 +280,8 @@
 							</div>
 							<div class="row">
 								<div class="select-wrap col-md-6 group mb-3">
-									<label for="hotel_type" style="font-size:14px; margin-bottom:0px; color:#636363; font-weight:600;" required>Hotel Type</label>
+									<label for="hotel_type" style="font-size:14px; margin-bottom:0px; color:#636363; font-weight:600;" required>Hotel
+										Type</label>
 									<select id="hotel_type" name="hotel_type" class="form-control">
 										<option value="" class="form-control-option-white">Hotel Type</option>
 										<option value="standard" class="form-control-option-white">Standard</option>
@@ -313,10 +403,10 @@
 	</div>
 </section>
 
- <script src="<?php echo base_url();?>assets/js/jquery.min.js"></script>
- <script src="https://www.google.com/recaptcha/api.js" async defer></script>
- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
- <script src="<?php echo base_url();?>assets/js/inquiry.js"></script>
+<script src="<?php echo base_url();?>assets/js/jquery.min.js"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="<?php echo base_url();?>assets/js/inquiry.js"></script>
 
 <script>
 	function initMap() {

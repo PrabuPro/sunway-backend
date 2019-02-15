@@ -126,7 +126,19 @@ class HotelController extends CI_Controller{
         }
     }
 
-      public function getSearch() {
+    public function hotelitem($pageid){
+        $data['results'] = $this->hotel_model->get_hotelItem($pageid);
+        $data['location'] = $this->hotel_model->get_hotelLocation($pageid);
+        $data['facilities'] = $this->hotel_model->get_hotelFacilities($pageid);
+        $data['room_types'] = $this->hotel_model->get_hotelRoomType($pageid);
+        
+        $data['site_view'] = 'HotelItem';
+        $data['site_title'] = 'Sunway Holidays - Hotel Item';
+        $this->load->view('main/main_view', $data);
+    
+    }
+
+    public function getSearch() {
         
         $country = $this->input->post('country');
         $suitable = $this->input->post('suitable_for');

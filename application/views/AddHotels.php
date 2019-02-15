@@ -150,7 +150,7 @@
 							<div class="field">
 								<div class="control ">
 									<p style="font-size:20px; font-weight:600;">Facilities</p>
-									<input id="facilities" class="" name="facility[]" type="checkbox" value="Wifi">WIFI <br>
+									<input id="facilities" class="" name="facility[]" type="checkbox" value="wifi">WIFI <br>
 									<input id="facilities" class="" name="facility[]" type="checkbox" value="children">Children <br>
 									<input id="facilities" class="" name="facility[]" type="checkbox" value="meal">Meal <br>
 									<input id="facilities" class="" name="facility[]" type="checkbox" value="special">Special <br>

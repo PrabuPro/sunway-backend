@@ -74,6 +74,7 @@ $route['tours/(:num)'] = 'tourcontroller/touritem/$1';
 $route['tours-list'] = 'tourcontroller/tours';
 $route['tours-list/(:num)'] = 'tourcontroller/tours/$1';
 $route['accomadations'] = 'hotelcontroller/accomadations';
+$route['accomadations/(:num)'] = 'hotelcontroller/hotelitem/$1';
 $route['addhotelsview'] = 'hotelcontroller/addhotelsview';
 $route['addhotels'] = 'hotelcontroller/addhotels';
 $route['search-accomadations'] = 'hotelcontroller/getSearch';
