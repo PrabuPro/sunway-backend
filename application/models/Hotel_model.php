@@ -122,6 +122,20 @@ class Hotel_model extends CI_Model{
 
         return $query->result();
     }
+
+      public function homeSearch($searchVal) {
+        $this->db->where('hotel_type', $searchVal);
+        $query = $this->db->get('hotels');
+
+        return $query->result();
+    }
+
+      public function homeSearchCountry($searchVal) {
+        $this->db->where('country', $searchVal);
+        $query = $this->db->get('hotels');
+
+        return $query->result();
+    }
     
 
 }

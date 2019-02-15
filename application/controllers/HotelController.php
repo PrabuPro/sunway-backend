@@ -17,7 +17,6 @@ class HotelController extends CI_Controller{
     }
 
      public function addHotels(){
-
         $this->form_validation->set_rules('name', 'Name', 'trim|required|max_length[20]');
         $this->form_validation->set_rules('description', 'Description', 'trim|required|max_length[50]');
         $this->form_validation->set_rules('hotel_type', 'Hotel_type', 'trim|required|max_length[15]');
@@ -158,6 +157,34 @@ class HotelController extends CI_Controller{
         $data['hotel_type'] = $hotel_type;
         $data['check_in_date'] = $check_in_date;
         $data['check_out_date'] = $check_out_date;
+
+        $this->load->view('main/main_view', $data);
+
+    }
+
+    public function getHomeSearch() {
+     
+        $searchVal = urldecode($this->uri->segment(2));
+
+        $data['results'] = $this->hotel_model->homeSearch($searchVal);
+        $data['total_pagination'] = 0;
+        $data['tour_type'] = $searchVal;
+        $data['site_view'] = 'Accomadations';
+        $data['site_title'] = 'Sunway Holidays - Accomadations';
+
+        $this->load->view('main/main_view', $data);
+
+    }
+
+    public function getHomeSearchCountry() {
+     
+        $searchVal = urldecode($this->uri->segment(2));
+
+        $data['results'] = $this->hotel_model->homeSearchCountry($searchVal);
+        $data['total_pagination'] = 0;
+        $data['tour_type'] = $searchVal;
+        $data['site_view'] = 'Accomadations';
+        $data['site_title'] = 'Sunway Holidays - Accomadations';
 
         $this->load->view('main/main_view', $data);
 

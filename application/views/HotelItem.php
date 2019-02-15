@@ -96,13 +96,12 @@ tr:nth-child(even) {
 				<?php $length = count($facilities); ?>
 				<?php for($i = 0; $i < $length; $i++) : ?>
 				<div class="facility">
-				<svg class="facility-icons">  
+				<svg class="facility-icons ftco-animate">  
               		<use xlink:href="<?php echo base_url(); ?>assets/images/sprite.svg#icon-<?php echo $facilities[$i]; ?>"></use>
             	</svg>
-					<p class="facility-text"> <?php echo ucfirst($facilities[$i]); ?> </p>  
+					<p class="facility-text ftco-animate"> <?php echo ucfirst($facilities[$i]); ?> </p>  
 				</div>
 				<?php endfor;?>
-
 				</div>
 
 			</div>
@@ -112,7 +111,7 @@ tr:nth-child(even) {
 						<h1 class="mb-3 mt-5">Room Rates</h1>
 					</div>
 				</div>
-				<div class="row">
+				<div class="row ftco-animate">
 					<table>
 						<tr>
 							<th>Room Type</th>
