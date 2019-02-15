@@ -50,12 +50,12 @@
 						<form action="<?php echo site_url('hotelcontroller/addhotels');?>" method="post" enctype="multipart/form-data">
 							<div class="field">
 								<div class="control">
-									<input class="input is-info" name="name" type="text" placeholder="Hotel Name">
+									<input class="input is-info" name="name" type="text" placeholder="Hotel Name" value="<?php echo set_value('name');?>">
 								</div>
 							</div>
 							<div class="field">
 								<div class="control">
-									<input class="input is-info" name="description" type="text" placeholder="Description">
+									<input class="input is-info" name="description" type="text" placeholder="Description" value="<?php echo set_value('description');?>">
 								</div>
 							</div>
 							<div class="field">
@@ -94,7 +94,7 @@
 							</div>
 							<div class="field">
 								<div class="control">
-									<input class="column is-5 input is-info" name="price" type="text" placeholder="Price">
+									<input class="column is-5 input is-info" name="price" type="text" placeholder="Price" value="<?php echo set_value('price');?>">
 								</div>
 							</div>
 
@@ -120,7 +120,7 @@
 
 							<div class="field">
 								<div class="control">
-									<input class="input is-info" name="location" type="text" placeholder="Location">
+									<input class="input is-info" name="location" type="text" placeholder="Location" value="<?php echo set_value('location');?>">
 								</div>
 							</div>
 

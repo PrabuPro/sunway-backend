@@ -6,9 +6,8 @@
 
 <h3>Your file was successfully uploaded!</h3>
 
-<?php echo $suitable; ?>
-<?php echo $tour_type; ?>
-<?php echo $test; ?>
+<?php echo $id; ?>
+
 
 <p><?php echo anchor('upload', 'Upload Another File!'); ?></p>
 

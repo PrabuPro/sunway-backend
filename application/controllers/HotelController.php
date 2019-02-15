@@ -18,7 +18,7 @@ class HotelController extends CI_Controller{
 
      public function addHotels(){
 
-        $this->form_validation->set_rules('name', 'Name', 'trim|required|max_length[15]');
+        $this->form_validation->set_rules('name', 'Name', 'trim|required|max_length[20]');
         $this->form_validation->set_rules('description', 'Description', 'trim|required|max_length[50]');
         $this->form_validation->set_rules('hotel_type', 'Hotel_type', 'trim|required|max_length[15]');
         $this->form_validation->set_rules('suitable_for', 'Suitable_for', 'trim|required|max_length[15]');
@@ -61,11 +61,11 @@ class HotelController extends CI_Controller{
             );
 
             //insert Hotel table
-            $tourId = $this->hotel_model->insert_hotels($databaseData);
+            $hotelId = $this->hotel_model->insert_hotels($databaseData);
 
             //insert locations
             $dataLocations = array (
-                'hotel_id' => $tourId,
+                'hotel_id' => $hotelId,
                 'lat' => $this->input->post('lat'),
                 'lng' => $this->input->post('lng')
             );
@@ -75,13 +75,13 @@ class HotelController extends CI_Controller{
             //intert facilities
             $facilities = implode(",",$this->input->post('facility'));
             $dataFacilities = array (
-                'hotel_id' => $tourId,
+                'hotel_id' => $hotelId,
                 'facilities' => $facilities
             );
 
             $facilities = $this->hotel_model->insert_facilities($dataFacilities);
 
-            $room_type = $this->hotel_model->insert_roomtype($tourId);
+            $room_type = $this->hotel_model->insert_roomtype($hotelId);
             
 
             $dataflash = array(
