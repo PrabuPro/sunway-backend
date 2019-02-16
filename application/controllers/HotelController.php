@@ -158,8 +158,8 @@ class HotelController extends CI_Controller{
         $check_in_date = $this->input->post('check-in-date');
         $check_out_date = $this->input->post('check-out-date');
 
-        if(empty($suitable) || empty($hotel_type))
-            redirect('accomadations'); 
+        if(empty($suitable) && empty($hotel_type) && empty($country))
+            redirect('accomadations-list/0'); 
 
         $data['results'] = $this->hotel_model->search($country,$suitable,$hotel_type);
 

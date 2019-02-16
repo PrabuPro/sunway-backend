@@ -90,8 +90,11 @@ class Hotel_model extends CI_Model{
     // }
 
     public function search($country, $suitable, $hotel_type) {
+        if(!empty($country))
         $this->db->where('suitable_for', $suitable);
+        if(!empty($suitable))
         $this->db->where('hotel_type', $hotel_type);
+        if(!empty($hotel_type))
         $this->db->where('country', $country);
         $query = $this->db->get('hotels');
 

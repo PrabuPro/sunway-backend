@@ -139,10 +139,10 @@
                 <a href="<?php echo base_url(); ?>search-accomadation/5 star" <?php if(current_url() == base_url().'search-accomadation/5%20star') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">5 Star</a>
                 <a href="<?php echo base_url(); ?>search-accomadation/bouteque hotels" <?php if(current_url() == base_url().'search-accomadation/bouteque%20hotels') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Boutque Hotels</a>
                 <a href="<?php echo base_url(); ?>search-accomadation/villas" <?php if(current_url() == base_url().'search-accomadation/villas') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Villas</a>
-                <a href="<?php echo base_url(); ?>search-accomadation/apartments" <?php if(current_url() == base_url().'search-accomadation/apartments') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Rent a House</a>
+                <a href="<?php echo base_url(); ?>search-accomadation/apartments" <?php if(current_url() == base_url().'search-accomadation/apartments') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">apartments</a>
                 <a href="<?php echo base_url(); ?>search-accomadation/rent a house" <?php if(current_url() == base_url().'search-accomadation/rent%20a%20house') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Rent a House</a>
-                <a href="<?php echo base_url(); ?>search-accomadation-country/sri lanka" <?php if(current_url() == base_url().'search-accomadation-country/sri%20lanka') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Sri Lanka</a>
-                <a href="<?php echo base_url(); ?>search-accomadation-country/maldives" <?php if(current_url() == base_url().'search-accomadation-country/maldives') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Maldives</a>
+                <a href="<?php echo base_url(); ?>search-accomadations-country/sri lanka" <?php if(current_url() == base_url().'search-accomadation-country/sri%20lanka') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Sri Lanka</a>
+                <a href="<?php echo base_url(); ?>search-accomadations-country/maldives" <?php if(current_url() == base_url().'search-accomadation-country/maldives') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Maldives</a>
               </div>
             </div>
             

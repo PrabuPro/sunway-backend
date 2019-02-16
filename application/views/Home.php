@@ -72,7 +72,7 @@
                       
                     <div class="select-wrap one-third">
                         <div class="icon"></div>
-                        <select name="country" id="" class="form-control form-control-select">
+                        <select name="country" id="" class="form-control form-control-select" required>
                           <option value="" class="form-control-option-white">Country</option>
                           <option value="sri lanka" class="form-control-option-white"  >Sri Lanka</option>
                           <option value="maldives" class="form-control-option-white"  >Maldives</option>
@@ -84,7 +84,7 @@
                       <div class="check-out one-third"><input type="text" id="checkout_date" class="form-control" placeholder="Check-out date" name="check-out-date"></div>
                       <div class="select-wrap one-third">
                         <div class="icon"></div>
-                        <select name="suitable_for"  id="" class="form-control form-control-select">
+                        <select name="suitable_for"  id="" class="form-control form-control-select" required>
                           <option value="" class="form-control-option-white">Suitable For</option>  
                           <option value="seniors" class="form-control-option-white"  >Seniors</option>
                           <option value="couples" class="form-control-option-white"  >Couples</option>
@@ -99,7 +99,7 @@
                       </div>
                       <div class="select-wrap one-third">
                         <div class="icon"></div>
-                        <select name="hotel_type" id="" class="form-control">
+                        <select name="hotel_type" id="" class="form-control" required>
                           <option value="">Accomadation Type</option>
                           <option value="standard" class="form-control-option-white">Standard</option>
                           <option value="3 star" class="form-control-option-white">3 Star</option>
@@ -126,7 +126,7 @@
                       <div class="check-out one-third"><input type="text" id="checkout_date" class="form-control" placeholder="Check-out date" name="check-out-date"></div>
                       <div class="select-wrap one-third">
                         <div class="icon"></div>
-                        <select name="suitable_for"  id="" class="form-control form-control-select">
+                        <select name="suitable_for"  id="" class="form-control form-control-select" required>
                           <option value="" class="form-control-option-white">Suitable For</option>
                           <option value="seniors" class="form-control-option-white"  >Seniors</option>
                           <option value="couples" class="form-control-option-white"  >Couples</option>
@@ -140,7 +140,7 @@
                       </div>
                       <div class="select-wrap one-third">
                         <div class="icon"></div>
-                        <select name="tour_type" id="" class="form-control">
+                        <select name="tour_type" id="" class="form-control" required>
                           <option value="">Tour Type</option>
                           <option value="common" class="form-control-option-white" >Common</option>
                           <option value="beach" class="form-control-option-white"  >Beach</option>
