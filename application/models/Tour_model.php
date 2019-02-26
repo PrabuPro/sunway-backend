@@ -92,6 +92,17 @@ class Tour_model extends CI_Model{
         return $query->result();
     }
 
+    public function getLastPhoto(){
+        $lastImage = $this->db->select('tour_id')
+                              ->order_by('tour_id','desc')
+                              ->limit(1)
+                              ->get('tours')  
+                              ->row();
+                              
+        return $lastImage ;
+
+    }
+
 }
 
 ?>

@@ -70,10 +70,18 @@ class TourController extends CI_Controller{
 
         else {
 
-            //upload image and insert data into database
-            if($this->imageUpload()){
+            $lastimage = $this->tour_model->getLastPhoto();
 
-            $photo_url = base_url().'assets/images/tours/'.$_FILES['photo_id']['name'];
+            $currentImageName = (int)$lastimage->tour_id + 1 ;
+
+            $imageName = $currentImageName;
+
+            //upload image and insert data into database
+            if($this->imageUpload($imageName)){
+
+            $path = $_FILES['photo_id']['name'];
+
+            $photo_url = $imageName. '.'. pathinfo($path, PATHINFO_EXTENSION);
 
             $databaseData = array(
                 'name' => $this->input->post('name'),
@@ -122,10 +130,11 @@ class TourController extends CI_Controller{
     }
 
     //function for uploading images
-    public function imageUpload(){
+    public function imageUpload($imageName){
 
         $config['upload_path']          = './assets/images/tours/';
         $config['allowed_types']        = 'gif|jpg|png|jpeg';
+        $config['file_name']            = $imageName;
         $config['max_size']             = 200000;
         $config['max_width']            = 1024;
         $config['max_height']           = 768;
