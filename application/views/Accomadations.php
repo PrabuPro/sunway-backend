@@ -21,7 +21,7 @@
             <div class="row">
               <?php foreach($results as $result) : ?>
               <div class="col-md-6 col-lg-6 mb-4 ftco-animate">
-                <a href="accomadations/<?php echo $result->hotel_id; ?>" class="block-5" style="background-image: url('<?php echo $result->photo_id; ?>');">
+                <a href="<?php echo site_url('accomadations/'. $result->hotel_id); ?>" class="block-5" style="background-image: url('<?php echo base_url().'assets/images/hotels/'.$result->photo_id; ?>');">
                   <div class="text">
                     <span class="price">$<?php echo $result->price; ?></span>
                     <h3 class="heading"><?php echo ucfirst($result->name); ?></h3>

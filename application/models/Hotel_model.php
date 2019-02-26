@@ -148,6 +148,18 @@ class Hotel_model extends CI_Model{
     }
 
     
+    public function getLastPhoto(){
+        $lastImage = $this->db->select('hotel_id')
+                              ->order_by('hotel_id','desc')
+                              ->limit(1)
+                              ->get('hotels')  
+                              ->row();
+                              
+        return $lastImage ;
+
+    }
+
+    
     
 
 }

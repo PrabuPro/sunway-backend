@@ -41,7 +41,7 @@ tr:nth-child(even) {
 
 
 <section class="home-slider owl-carousel">
-	<div class="slider-item" style="background-image: url('<?php echo $results->photo_id;?>');"
+	<div class="slider-item" style="background-image: url('<?php echo base_url().'assets/images/hotels/'.$results->photo_id; ?>');"
 	 data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">

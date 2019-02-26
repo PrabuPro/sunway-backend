@@ -72,9 +72,7 @@ class TourController extends CI_Controller{
 
             $lastimage = $this->tour_model->getLastPhoto();
 
-            $currentImageName = (int)$lastimage->tour_id + 1 ;
-
-            $imageName = $currentImageName;
+            $imageName = (int)$lastimage->tour_id + 1 ;
 
             //upload image and insert data into database
             if($this->imageUpload($imageName)){

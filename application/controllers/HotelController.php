@@ -56,10 +56,16 @@ class HotelController extends CI_Controller{
 
         else {
 
-            //upload image and insert data into database
-            if($this->imageUpload()){
+            $lastimage = $this->hotel_model->getLastPhoto();
 
-            $photo_url = base_url().'assets/images/hotels/'.$_FILES['photo_id']['name'];
+            $imageName = (int)$lastimage->hotel_id + 1 ;
+
+            //upload image and insert data into database
+            if($this->imageUpload($imageName)){
+
+           $path = $_FILES['photo_id']['name'];
+
+            $photo_url = $imageName. '.'. pathinfo($path, PATHINFO_EXTENSION);
 
             $databaseData = array(
                 'name' => $this->input->post('name'),
@@ -112,10 +118,11 @@ class HotelController extends CI_Controller{
     }
 
     //function for uploading images
-    public function imageUpload(){
+    public function imageUpload($imageName){
 
         $config['upload_path']          = './assets/images/hotels/';
         $config['allowed_types']        = 'gif|jpg|png|jpeg';
+        $config['file_name']            = $imageName;
         $config['max_size']             = 200000;
         $config['max_width']            = 1024;
         $config['max_height']           = 768;
