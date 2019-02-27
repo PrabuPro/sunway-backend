@@ -118,19 +118,20 @@
                     <h1 class="mb-3 ">Send Us a Mail</h1>
                 </div>
               </div>
-            <form action="#">
+            <form action="mailcontroller/mail" method="post" class="mail-form">
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Name">
+                <input type="text" class="form-control" placeholder="Your Name" name="name" required>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Email">
+                <input type="text" class="form-control" placeholder="Your Email" name="email" required>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject">
+                <input type="text" class="form-control" placeholder="Subject" name="subject" required>
               </div>
               <div class="form-group">
-                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+                <textarea cols="30" rows="7" class="form-control" placeholder="Message" name="message" required></textarea>
               </div>
+              <div class="g-recaptcha" style="margin-bottom: 20px;" data-sitekey="6Le8HJEUAAAAAHg1eHa0e7U5Fw3O9djmgn9agkvc"></div>
               <div class="form-group">
                 <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
               </div>
@@ -144,3 +145,8 @@
 
       </div>
     </section>
+
+    <script src="<?php echo base_url();?>assets/js/jquery.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="<?php echo base_url();?>assets/js/mail.js"></script>
