@@ -438,7 +438,7 @@
             <div>
               <h2 class="mb-5 pb-3" style="font-size:24px;">Want to get our hottest travel deals top tips and advice? Click below!</h2>
               <div class="col-sm-12 group mb-3">
-                <input type="button" class="search-submit btn btn-primary" value="Find Hotels" style="width:100%; font-size:1.5em;" onclick="window.location='<?php echo base_url();?>accomadations';">
+                <input type="button" class="search-submit btn btn-primary" value="Find Hotels" style="width:100%; font-size:1.5em;" onclick="window.location='<?php echo base_url();?>accomadations-list/0'">
               </div>
               <!-- <form action="#" class="subscribe-form">
                 <div class="form-group">
@@ -451,7 +451,24 @@
           <div class="col-lg-8 p-2 pl-md-5 heading-section">
             <h2 class="mb-5 p-2 pb-3 ftco-animate">Most Recommended Hotels</h2>
             <div class="row no-gutters d-flex">
+              <?php foreach($recommended_hotels as $recommended_hotel): ?>
+
               <div class="col-md-4 ftco-animate">
+                <a href="<?php echo site_url('accomadations/'.$recommended_hotel->hotel_id);?>" class="block-5" style="background-image: url('<?php echo base_url().'assets/images/hotels/'.$recommended_hotel->photo_id; ?>');">
+                  <div class="text">
+                    <span class="price">$<?php echo $recommended_hotel->price;?></span>
+                    <h3 class="heading"><?php echo $recommended_hotel->name;?></h3>
+                    <div class="post-meta">
+                      <span><?php echo $recommended_hotel->description;?></span>
+                    </div>
+                    
+                  </div>
+                </a>
+              </div>
+
+            <?php endforeach;?>
+
+              <!-- <div class="col-md-4 ftco-animate">
                 <a href="" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/hotel-1.jpg');">
                   <div class="text">
                     <span class="price">$29/night</span>
@@ -486,7 +503,7 @@
                     <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
                   </div>
                 </a>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>

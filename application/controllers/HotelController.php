@@ -39,6 +39,7 @@ class HotelController extends CI_Controller{
         $this->form_validation->set_rules('lat', 'Lat', 'trim|required|max_length[15]');
         $this->form_validation->set_rules('lng', 'Lng', 'trim|required|max_length[15]');
         $this->form_validation->set_rules('country', 'Country', 'trim|required|max_length[15]');
+        $this->form_validation->set_rules('rating', 'Sunway Rating', 'trim|required|max_length[5]');
         $this->form_validation->set_rules('facility[]', 'Facility', 'trim|required|max_length[10]');
         $this->form_validation->set_rules('room_type[]', 'Room Type', 'trim|required|max_length[10]');
         $this->form_validation->set_rules('people[]', 'People', 'trim|required|max_length[5]');
@@ -75,7 +76,8 @@ class HotelController extends CI_Controller{
                 'price' => $this->input->post('price'),
                 'photo_id' => $photo_url,
                 'location' => $this->input->post('location'),
-                'country' => $this->input->post('country')
+                'country' => $this->input->post('country'),
+                'sunway_ratings' => $this->input->post('rating')
             );
 
             //insert Hotel table

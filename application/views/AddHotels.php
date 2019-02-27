@@ -149,6 +149,12 @@
 
 							<div class="field">
 								<div class="control ">
+									<input class="column is-5 input is-info" name="rating" type="text" placeholder="Sunway Rating" value="<?php echo set_value('rating');?>">
+								</div>
+							</div>
+
+							<div class="field">
+								<div class="control ">
 									<p style="font-size:20px; font-weight:600;">Facilities</p>
 									<input id="facilities" class="" name="facility[]" type="checkbox" value="wifi">WIFI <br>
 									<input id="facilities" class="" name="facility[]" type="checkbox" value="children">Children <br>

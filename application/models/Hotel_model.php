@@ -159,6 +159,18 @@ class Hotel_model extends CI_Model{
 
     }
 
+    public function getRecommendedHotels($number){
+        $result = $this->db->select('hotel_id,name, description, price, photo_id, location')
+                           ->where('sunway_ratings', $number)
+                           ->order_by('sunway_ratings', 'desc')
+                           ->limit(3)
+                           ->get('hotels')
+                           ->result();
+        
+        return $result;
+    }
+    
+
     
     
 

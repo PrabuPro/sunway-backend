@@ -5,6 +5,7 @@ class PageController extends CI_Controller{
     public function index(){
         $data['site_view'] = 'Home';
         $data['site_title'] = 'Home';
+        $data['recommended_hotels'] = $this->hotel_model->getRecommendedHotels(1);
         $this->load->view('main/main_view', $data);
     }
     public function home(){
