@@ -58,6 +58,16 @@
 				}
 			});
 		});
+
+		$('.payments').on('click',function(){
+			swal({
+				title: "Payments",
+				text: "Payment procedure",
+				icon: "info",
+				button: "ok",
+
+			});
+		})
 	});
 
 

@@ -106,6 +106,10 @@
 					<h1 class="mb-3 mt-5">Inquire Us</h1>
 				</div>
 			</div>
+			<button type="button" class="btn btn-info payments">Payments</button>
+			<button type="button" class="btn btn-info">Info</button>
+			<button type="button" class="btn btn-info">Info</button>
+			<button type="button" class="btn btn-info">Info</button>
             <?php if($this->session->flashdata('errors')) : ?>
 				
             <?php echo $this->session->flashdata('errors'); ?>

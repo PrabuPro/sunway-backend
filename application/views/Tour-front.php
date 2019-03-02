@@ -220,7 +220,7 @@
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-md-7 text-center heading-section ftco-animate">
-				<h2>Our Services</h2>
+				<h2>point section</h2>
 			</div>
 		</div>
 		<div class="row">

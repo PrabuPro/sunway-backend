@@ -13,9 +13,9 @@ class PageController extends CI_Controller{
         $data['site_title'] = 'Home';
         $this->load->view('main/main_view', $data);
     }
-    public function services(){
-        $data['site_view'] = 'Services';
-        $data['site_title'] = 'Services';
+    public function experts_in(){
+        $data['site_view'] = 'experts-in';
+        $data['site_title'] = 'Experts In';
         $this->load->view('main/main_view', $data);
     }
     public function aboutUs(){
