@@ -45,6 +45,12 @@ class PageController extends CI_Controller{
         $this->load->view('main/main_view', $data);
     }
 
+    public function step(){
+        $data['site_view'] = 'step';
+        $data['site_title'] = 'step';
+        $this->load->view('main/main_view', $data);
+    }
+
 }
 
 ?>

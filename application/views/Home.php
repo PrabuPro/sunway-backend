@@ -187,7 +187,6 @@
                     <div class="fields d-block d-lg-flex">
                       <div class="textfield-search one-third one-third-1"><input type="text" class="form-control" placeholder="Search Location"></div>
 
-
                       <div class="check-out one-third one-third-1"><input type="text" id="start_date" class="form-control" placeholder="Check-out date"></div>
 
                       <div class="select-wrap one-third one-third-1">
@@ -221,7 +220,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
+          <div class="col-md-6 col-lg-4 d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services d-block text-center">
               <div class="d-flex justify-content-center"><div class="icon d-flex justify-content-center mb-3"><span class="align-self-center flaticon-sailboat"></span></div></div>
               <div class="media-body p-2">
@@ -230,7 +229,7 @@
               </div>
             </div>      
           </div>
-          <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
+          <div class="col-md-6 col-lg-4 d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services d-block text-center">
               <div class="d-flex justify-content-center"><div class="icon d-flex justify-content-center mb-3"><span class="align-self-center flaticon-around"></span></div></div>
               <div class="media-body p-2">
@@ -239,7 +238,7 @@
               </div>
             </div>      
           </div>
-          <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
+          <div class="col-md-6 col-lg-4 d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services d-block text-center">
               <div class="d-flex justify-content-center"><div class="icon d-flex justify-content-center mb-3"><span class="align-self-center flaticon-compass"></span></div></div>
               <div class="media-body p-2">
@@ -247,17 +246,36 @@
                 <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
               </div>
             </div>    
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
+          </div>         
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-4 d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services d-block text-center">
-              <div class="d-flex justify-content-center"><div class="icon d-flex justify-content-center mb-3"><span class="align-self-center flaticon-map-of-roads"></span></div></div>
+              <div class="d-flex justify-content-center"><div class="icon d-flex justify-content-center mb-3"><span class="align-self-center flaticon-sailboat"></span></div></div>
               <div class="media-body p-2">
-                <h3 class="heading">Customer Friendly</h3>
+                <h3 class="heading">Special Activities</h3>
                 <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
               </div>
             </div>      
           </div>
+          <div class="col-md-6 col-lg-4 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services d-block text-center">
+              <div class="d-flex justify-content-center"><div class="icon d-flex justify-content-center mb-3"><span class="align-self-center flaticon-around"></span></div></div>
+              <div class="media-body p-2">
+                <h3 class="heading">Travel Arrangements</h3>
+                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+              </div>
+            </div>      
+          </div>
+          <div class="col-md-6 col-lg-4 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services d-block text-center">
+              <div class="d-flex justify-content-center"><div class="icon d-flex justify-content-center mb-3"><span class="align-self-center flaticon-compass"></span></div></div>
+              <div class="media-body p-2">
+                <h3 class="heading">Private Guide</h3>
+                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+              </div>
+            </div>    
+          </div>         
         </div>
       </div>
     </section>
@@ -431,104 +449,7 @@
   </div>
 </div>
 
-    <section class="ftco-section">
-      <div class="container-fluid">
-        <div class="row pb-5 no-gutters">
-          <div class="col-lg-4 bg-light p-3 p-md-5 d-flex align-items-center heading-section ftco-animate">
-            <div>
-              <h2 class="mb-5 pb-3" style="font-size:24px;">Want to get our hottest travel deals top tips and advice? Click below!</h2>
-              <div class="col-sm-12 group mb-3">
-                <input type="button" class="search-submit btn btn-primary" value="Find Hotels" style="width:100%; font-size:1.5em;" onclick="window.location='<?php echo base_url();?>accomadations-list/0'">
-              </div>
-              <!-- <form action="#" class="subscribe-form">
-                <div class="form-group">
-                  <span class="icon icon-paper-plane"></span>
-                  <input type="text" class="form-control" placeholder="Enter your email address">
-                </div>
-              </form> -->
-            </div>
-          </div>
-          <div class="col-lg-8 p-2 pl-md-5 heading-section">
-            <h2 class="mb-5 p-2 pb-3 ftco-animate">Most Recommended Hotels</h2>
-            <div class="row no-gutters d-flex">
-              <?php foreach($recommended_hotels as $recommended_hotel): ?>
-
-              <div class="col-md-4 ftco-animate">
-                <a href="<?php echo site_url('accomadations/'.$recommended_hotel->hotel_id);?>" class="block-5" style="background-image: url('<?php echo base_url().'assets/images/hotels/'.$recommended_hotel->photo_id; ?>');">
-                  <div class="text">
-                    <span class="price">$<?php echo $recommended_hotel->price;?></span>
-                    <h3 class="heading"><?php echo $recommended_hotel->name;?></h3>
-                    <div class="post-meta">
-                      <span><?php echo $recommended_hotel->description;?></span>
-                    </div>
-                    
-                  </div>
-                </a>
-              </div>
-
-            <?php endforeach;?>
-
-              <!-- <div class="col-md-4 ftco-animate">
-                <a href="" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/hotel-1.jpg');">
-                  <div class="text">
-                    <span class="price">$29/night</span>
-                    <h3 class="heading">Luxe Hotel</h3>
-                    <div class="post-meta">
-                      <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                    </div>
-                    <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
-                  </div>
-                </a>
-              </div>
-              <div class="col-md-4 ftco-animate">
-                <a href="#" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/hotel-2.jpg');">
-                  <div class="text">
-                    <span class="price">$29/night</span>
-                    <h3 class="heading">Deluxe Hotel</h3>
-                    <div class="post-meta">
-                      <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                    </div>
-                    <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
-                  </div>
-                </a>
-              </div>
-              <div class="col-md-4 ftco-animate">
-                <a href="#" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/hotel-3.jpg');">
-                  <div class="text">
-                    <span class="price">$29/night</span>
-                    <h3 class="heading">Deluxe Hotel</h3>
-                    <div class="post-meta">
-                      <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                    </div>
-                    <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
-                  </div>
-                </a>
-              </div> -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="tailorMade-section">
-      <div class="bg-video">
-        <video class="bg-video__content" autoplay muted loop>
-          <source src="<?php echo base_url(); ?>assets/images/beach.mp4" type="video/mp4">
-            <source src="<?php echo base_url(); ?>assets/images/beach.webm" type="video/webm">
-            </video>
-          </div>
-      <div class="tailorMade">
-        <div class="tailorMade__container">
-          <h1 class="tailorMade__container--heading ftco-animate">Tailor Made</h1>    
-          <h1 class="tailorMade__container--sub ftco-animate">You design your tour, We help you to make it awesome</h1>    
-          <div class="col-sm-12 group " style="margin-left:auto; margin-right:auto;">
-            <a href="<?php echo site_url(); ?>tailormade" class="search-submit btn btn-primary-white bt-4 ftco-animate" style="width:220px; font-size:1.5em; margin: auto;">Learn More</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="ftco-section bg-light">
+<section class="ftco-section bg-light">
       <div class="container">
         <div class="row justify-content-center mb-5 pb-5">
           <div class="col-md-7 text-center heading-section ftco-animate">
@@ -626,6 +547,25 @@
         </div>
       </div>
     </section>
+
+    <section class="tailorMade-section">
+      <div class="bg-video">
+        <video class="bg-video__content" autoplay muted loop>
+          <source src="<?php echo base_url(); ?>assets/images/beach.mp4" type="video/mp4">
+            <source src="<?php echo base_url(); ?>assets/images/beach.webm" type="video/webm">
+            </video>
+          </div>
+      <div class="tailorMade">
+        <div class="tailorMade__container">
+          <h1 class="tailorMade__container--heading ftco-animate">Tailor Made</h1>    
+          <h1 class="tailorMade__container--sub ftco-animate">You design your tour, We help you to make it awesome</h1>    
+          <div class="col-sm-12 group " style="margin-left:auto; margin-right:auto;">
+            <a href="<?php echo site_url(); ?>tailormade" class="search-submit btn btn-primary-white bt-4 ftco-animate" style="width:220px; font-size:1.5em; margin: auto;">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
     <div class="transport">
       <div class="transport__container">

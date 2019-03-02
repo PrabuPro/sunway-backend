@@ -21,6 +21,12 @@ class TourController extends CI_Controller{
         $this->load->view('main/main_view', $data);
     }
 
+    public function tourPage(){
+        $data['site_view'] = 'Tour-front';
+        $data['site_title'] = 'Sunway Holidays - Tours';
+        $this->load->view('main/main_view', $data);
+    }
+
     public function getTours(){
 
        $config = array();
