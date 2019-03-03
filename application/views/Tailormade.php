@@ -13,6 +13,30 @@
 </section>
 <!-- END slider -->
 
+
+
+<section class="ftco-section" style='padding-top:0 !important;'>
+	<div class="container">
+		<div class="row" style="margin-top:6em; margin-bottom: 2em;">
+
+			<div class="col-md-12 col-lg-6">
+				<div class="row slider-text align-items-center">
+					<div class="col-md-12 col-sm-12 ftco-animate">
+						<h1 class="mb-3 ">Tailor Made Tours</h1>
+					</div>
+				</div>
+				<h4 class="tailorMadePage__para">
+“Ayubowan!” Greeting you from our traditional way wishing you a long life. The Therapy for happiness flows with the style of travel with your consciousness, your heart and your memories. Find your chance to add some excitement into your holiday to the promised island of Sri Lanka and embrace flexibility with us. Experience the island renowned real adventure, rich cultural heritage along with sun kissed golden beaches and amazing hospitality exclusively in Sri Lanka				</h4>
+
+			</div>
+			<div class="col-md-6 tailorMadePage__image">
+
+			</div>
+
+		</div>
+	</div>
+</section>
+
 <section class="ftco-section bg-light">
 	<div class="container">
 		<div class="row justify-content-center mb-5 pb-5">
@@ -64,34 +88,6 @@
 					</svg>
 					<div class="tailorMadePage__box--text">Begin Travel</div>
 				</div>
-			</div>
-
-		</div>
-	</div>
-</section>
-
-<section class="ftco-section">
-	<div class="container">
-		<div class="row" style="margin-top:6em; margin-bottom: 2em;">
-
-			<div class="col-md-6">
-				<div class="row slider-text align-items-center">
-					<div class="col-md-12 col-sm-12 ftco-animate">
-						<h1 class="mb-3 ">Why we are good at Tailor Made</h1>
-					</div>
-				</div>
-				<h4 class="tailorMadePage__para">
-					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quas ipsam molestias, earum amet distinctio
-					repellendus libero laboriosam, officia omnis, temporibus repudiandae veniam? Consequuntur doloremque tenetur non
-					quia beatae, voluptas voluptatem sint ad, numquam at corrupti dolorum ab, repellendus molestias reiciendis
-					voluptatibus? Consectetur quaerat, iure deleniti incidunt, error ipsam temporibus illo neque totam iste,
-					perspiciatis cupiditate quo atque ad nam. Quibusdam, perferendis tempore nesciunt maxime, sapiente illo neque sed
-					maiores suscipit eaque minus recusandae voluptas.
-				</h4>
-
-			</div>
-			<div class="col-md-6 tailorMadePage__image">
-
 			</div>
 
 		</div>

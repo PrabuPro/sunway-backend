@@ -50,6 +50,11 @@ class PageController extends CI_Controller{
         $data['site_title'] = 'step';
         $this->load->view('main/main_view', $data);
     }
+    public function sustainable(){
+        $data['site_view'] = 'sustainable';
+        $data['site_title'] = 'Sustainable Resposible';
+        $this->load->view('main/main_view', $data);
+    }
 
 }
 

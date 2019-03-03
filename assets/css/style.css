@@ -418,7 +418,8 @@ mark,
 
 .figure-img {
   margin-bottom: 0.5rem;
-  line-height: 1; }
+  line-height: 1; 
+}
 
 .figure-caption {
   font-size: 90%;
@@ -6468,6 +6469,13 @@ a.text-dark:hover, a.text-dark:focus {
     color: #000;
     font-weight: 700; }
 
+    @media (max-width: 767.98px) {
+    	.tailorMadePage__box {
+    		margin-bottom:4em;
+    	}
+    }
+    
+
 .tailorMadePage__circle {
   position: absolute;
   top: 0px;
@@ -6482,16 +6490,35 @@ a.text-dark:hover, a.text-dark:focus {
     font-size: 2.5em;
     font-weight: 700;
     color: #fff;
-    text-align: center; }
+    text-align: center;
+   }
+
+    
+    @media (max-width: 767.98px) {
+    	.tailorMadePage__circle {
+    		left: 150px;
+    	}
+    }
 
 .tailorMadePage__image {
   background-image: url(../images/bg_4.jpg);
-  background-size: cover; }
+  background-size: cover; 
+  height:27em;
+  width:80%;
+}
+
+ @media (max-width: 991.98px) {
+ 	.tailorMadePage__image {
+ 		display: none;
+ 	}
+ }
 
 .tailorMadePage__para {
   font-size: 1.2em;
   font-weight: 400;
-  color: gray; }
+  color: gray; 
+  text-align: justify;
+}
 
 .parent {
   overflow: hidden;
@@ -8128,6 +8155,35 @@ textarea.form-control {
     padding: 4em 8em; }
     @media (max-width: 767.98px) {
       .transport__container {
+        padding: 2em; } }
+.sustainable {
+  background-image: linear-gradient(to left bottom, rgba(255, 193, 7, 0.5), rgba(48, 48, 64, 0.5)), url(../images/transport.jpeg);
+  background-position: 10% 50%;
+  height: 25em;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  @media (max-width: 767.98px) {
+    .sustainable {
+      background-image: linear-gradient(to left bottom, rgba(255, 193, 7, 0.5), rgba(48, 48, 64, 0.5)), url(../images/transport-mobile.jpg);
+      background-position: center center !important;
+      background-size: cover;
+      width: 100%; } }
+  .sustainable__heading {
+    font-family: inherit;
+    color: #fff;
+    font-weight: 700;
+    font-size: 3em;
+    text-align: center;
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+    padding-bottom: .4em; }
+    @media (max-width: 767.98px) {
+      .sustainable__heading {
+        font-size: 2em; } }
+  .sustainable__container {
+    padding: 4em 8em; }
+    @media (max-width: 767.98px) {
+      .sustainable__container {
         padding: 2em; } }
 
 .tours-itinerary {

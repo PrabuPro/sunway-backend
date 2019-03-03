@@ -62,6 +62,7 @@ $route['maldives'] = 'pagecontroller/maldives';
 $route['holidays'] = 'pagecontroller/holidays';
 $route['contacts'] = 'pagecontroller/contacts';
 $route['tailormade'] = 'pagecontroller/tailormade';
+$route['sustainale-responsible'] = 'pagecontroller/sustainable';
 $route['step'] = 'pagecontroller/step';
 $route['pro-login'] = 'adminsunway/admin';
 $route['pro-reg'] = 'adminsunway/register_view';
@@ -85,4 +86,6 @@ $route['addhotels'] = 'hotelcontroller/addhotels';
 $route['search-accomadations'] = 'hotelcontroller/getSearch';
 $route['tailormade/inquirycontroller/inquire'] = 'inquirycontroller/inquire';
 $route['tours/inquirycontroller/inquire'] = 'inquirycontroller/inquire';
+$route['blog'] = 'blogcontroller/blog';
+$route['blog/title1'] = 'blogcontroller/title1';
 
