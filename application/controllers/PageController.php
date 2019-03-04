@@ -55,6 +55,16 @@ class PageController extends CI_Controller{
         $data['site_title'] = 'Sustainable Resposible';
         $this->load->view('main/main_view', $data);
     }
+    public function inquiry(){
+        $data['site_view'] = 'inquiry';
+        $data['site_title'] = 'Inquiry';
+        $this->load->view('main/main_view', $data);
+    }
+    public function policy(){
+        $data['site_view'] = 'policy';
+        $data['site_title'] = 'Travel Policy';
+        $this->load->view('main/main_view', $data);
+    }
 
 }
 

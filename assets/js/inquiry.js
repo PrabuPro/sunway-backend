@@ -67,7 +67,9 @@
 				button: "ok",
 
 			});
-		})
+		});
+
+		$('[data-toggle="tooltip"]').tooltip();  
 	});
 
 

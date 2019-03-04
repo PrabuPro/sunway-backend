@@ -44,6 +44,7 @@
                     <li class="nav-item"><a href="<?php echo base_url(); ?>experts-in" class="nav-link">Experts In</a></li>
                     <!-- <li class="nav-item"><a href="<?php echo base_url(); ?>about-us" class="nav-link">Sustainable Responsible</a></li> -->
                     <li class="nav-item"><a href="<?php echo base_url(); ?>maldives" class="nav-link">Maldives</a></li>
+                    <li class="nav-item"><a href="<?php echo base_url(); ?>inquiry" class="nav-link">Inquiry</a></li>
                     <li class="nav-item"><a href="<?php echo base_url(); ?>about-us" class="nav-link">About Us</a></li>
                     <li class="nav-item"><a href="<?php echo base_url(); ?>blog" class="nav-link">Blog</a></li>
                     <li class="nav-item"><a href="<?php echo base_url(); ?>contacts" class="nav-link">Contacts</a></li>

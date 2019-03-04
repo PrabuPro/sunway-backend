@@ -226,54 +226,54 @@
 		<div class="row">
 			<div class="col-md-6 col-lg-6 d-flex align-self-stretch ftco-animate">
 				<div class="feature-list">
-					<svg class="contacts--icon">
-						<use xlink:href="<?php echo base_url();?>assets/images/sprite.svg#icon-phone"></use>
+					<svg class="tours--icon">
+						<use xlink:href="<?php echo base_url();?>assets/images/sprite.svg#icon-pin"></use>
 					</svg>
-					<div class="feature-list-text">This title is awesome</div>
+					<div class="tours-text">This title is awesome</div>
 				</div>
 			</div>
 			<div class="col-md-6 col-lg-6 d-flex align-self-stretch ftco-animate">
 				<div class="feature-list-right">
-					<svg class="contacts--icon">
-						<use xlink:href="<?php echo base_url();?>assets/images/sprite.svg#icon-phone"></use>
+					<svg class="tours--icon">
+						<use xlink:href="<?php echo base_url();?>assets/images/sprite.svg#icon-pin"></use>
 					</svg>
-					<div class="feature-list-text">This title is awesome</div>
+					<div class="tours-text">This title is awesome</div>
 				</div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-md-6 col-lg-6 d-flex align-self-stretch ftco-animate">
 				<div class="feature-list">
-					<svg class="contacts--icon">
-						<use xlink:href="<?php echo base_url();?>assets/images/sprite.svg#icon-phone"></use>
+					<svg class="tours--icon">
+						<use xlink:href="<?php echo base_url();?>assets/images/sprite.svg#icon-pin"></use>
 					</svg>
-					<div class="feature-list-text">This title is awesome</div>
+					<div class="tours-text">This title is awesome</div>
 				</div>
 			</div>
 			<div class="col-md-6 col-lg-6 d-flex align-self-stretch ftco-animate">
 				<div class="feature-list-right">
-					<svg class="contacts--icon">
-						<use xlink:href="<?php echo base_url();?>assets/images/sprite.svg#icon-phone"></use>
+					<svg class="tours--icon">
+						<use xlink:href="<?php echo base_url();?>assets/images/sprite.svg#icon-pin"></use>
 					</svg>
-					<div class="feature-list-text">This title is awesome</div>
+					<div class="tours-text">This title is awesome</div>
 				</div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-md-6 col-lg-6 d-flex align-self-stretch ftco-animate">
 				<div class="feature-list">
-					<svg class="contacts--icon">
-						<use xlink:href="<?php echo base_url();?>assets/images/sprite.svg#icon-phone"></use>
+					<svg class="tours--icon">
+						<use xlink:href="<?php echo base_url();?>assets/images/sprite.svg#icon-pin"></use>
 					</svg>
-					<div class="feature-list-text">This title is awesome</div>
+					<div class="tours-text">This title is awesome</div>
 				</div>
 			</div>
 			<div class="col-md-6 col-lg-6 d-flex align-self-stretch ftco-animate">
 				<div class="feature-list-right">
-					<svg class="contacts--icon">
-						<use xlink:href="<?php echo base_url();?>assets/images/sprite.svg#icon-phone"></use>
+					<svg class="tours--icon">
+						<use xlink:href="<?php echo base_url();?>assets/images/sprite.svg#icon-pin"></use>
 					</svg>
-					<div class="feature-list-text">This title is awesome</div>
+					<div class="tours-text">This title is awesome</div>
 				</div>
 			</div>
 		</div>

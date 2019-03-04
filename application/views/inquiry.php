@@ -4,7 +4,7 @@
 		<div class="container">
 			<div class="row slider-text align-items-center">
 				<div class="col-md-7 col-sm-12 ftco-animate">
-					<h1 class="mb-3">Tailor Made</h1>
+					<h1 class="mb-3">Inquiry</h1>
 				</div>
 			</div>
 		</div>
@@ -13,85 +13,6 @@
 <!-- END slider -->
 
 
-
-<section class="ftco-section" style='padding-top:0 !important;'>
-	<div class="container">
-		<div class="row" style="margin-top:6em; margin-bottom: 2em;">
-
-			<div class="col-md-12 col-lg-6">
-				<div class="row slider-text align-items-center">
-					<div class="col-md-12 col-sm-12 ftco-animate">
-						<h1 class="mb-3 ">Tailor Made Tours</h1>
-					</div>
-				</div>
-				<h4 class="tailorMadePage__para" style='padding-right:2em;'>
-“Ayubowan!” Greeting you from our traditional way wishing you a long life. The Therapy for happiness flows with the style of travel with your consciousness, your heart and your memories. Find your chance to add some excitement into your holiday to the promised island of Sri Lanka and embrace flexibility with us. Experience the island renowned real adventure, rich cultural heritage along with sun kissed golden beaches and amazing hospitality exclusively in Sri Lanka				</h4>
-
-			</div>
-			<div class="col-md-6 tailorMadePage__image">
-
-			</div>
-
-		</div>
-	</div>
-</section>
-
-<section class="ftco-section bg-light">
-	<div class="container">
-		<div class="row justify-content-center mb-5 pb-5">
-			<div class="col-md-7 text-center heading-section ftco-animate">
-				<h2>Tailor Made Process</h2>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-3 tailorMadePage ftco-animate">
-				<div class="tailorMadePage__circle">
-					<h1 class="tailorMadePage__circle--number">1</h1>
-				</div>
-				<div class="tailorMadePage__box">
-					<svg class="tailorMadePage__box--icon">
-						<use xlink:href="<?php echo base_url(); ?>assets/images/sprite.svg#icon-paper-plane"></use>
-					</svg>
-					<div class="tailorMadePage__box--text">Send us a Inquiry</div>
-				</div>
-			</div>
-			<div class="col-md-3 tailorMadePage ftco-animate">
-				<div class="tailorMadePage__circle">
-					<h1 class="tailorMadePage__circle--number">2</h1>
-				</div>
-				<div class="tailorMadePage__box">
-					<svg class="tailorMadePage__box--icon">
-						<use xlink:href="<?php echo base_url(); ?>assets/images/sprite.svg#icon-phone"></use>
-					</svg>
-					<div class="tailorMadePage__box--text">We call you back</div>
-				</div>
-			</div>
-			<div class="col-md-3 tailorMadePage ftco-animate">
-				<div class="tailorMadePage__circle">
-					<h1 class="tailorMadePage__circle--number">3</h1>
-				</div>
-				<div class="tailorMadePage__box">
-					<svg class="tailorMadePage__box--icon">
-						<use xlink:href="<?php echo base_url(); ?>assets/images/sprite.svg#icon-document-checked"></use>
-					</svg>
-					<div class="tailorMadePage__box--text">Confrim tour</div>
-				</div>
-			</div>
-			<div class="col-md-3 tailorMadePage ftco-animate">
-				<div class="tailorMadePage__circle">
-					<h1 class="tailorMadePage__circle--number">4</h1>
-				</div>
-				<div class="tailorMadePage__box">
-					<svg class="tailorMadePage__box--icon">
-						<use xlink:href="<?php echo base_url(); ?>assets/images/sprite.svg#icon-airplane"></use>
-					</svg>
-					<div class="tailorMadePage__box--text">Begin Travel</div>
-				</div>
-			</div>
-
-		</div>
-	</div>
-</section>
 
 <section class="ftco-section">
 	<div class="container">
