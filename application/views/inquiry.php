@@ -139,7 +139,7 @@
 				<div class="row">
 					<div class="col-md-12 form-group">
 						<label  for="message" style="font-size:14px; margin-bottom:0px; color:#636363; font-weight:600;">Message</label>
-						<textarea id="message" name="message" cols="120" rows="7" class="form-control" placeholder="Tell us more about what your need 🙂" required><?php echo set_value('name');?></textarea>
+						<textarea id="message" name="message" cols="120" rows="7" class="form-control" placeholder="Tell us bit more about what your tour 🙂" ><?php echo set_value('name');?></textarea>
 					</div>
 				</div>
 				<div class="g-recaptcha" style="margin-bottom: 20px;" data-sitekey="6Le8HJEUAAAAAHg1eHa0e7U5Fw3O9djmgn9agkvc"></div>

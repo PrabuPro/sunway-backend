@@ -79,11 +79,11 @@
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<h4 class="panel-title">
-							<a data-toggle="collapse" data-parent="#accordion" href="#collapse3">How many pieces of luggage can I bring?
+							<a data-toggle="collapse" data-parent="#accordion" href="#collapse4">How many pieces of luggage can I bring?
 								What should I pack?</a>
 						</h4>
 					</div>
-					<div id="collapse3" class="panel-collapse collapse">
+					<div id="collapse4" class="panel-collapse collapse">
 						<div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
 							sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
@@ -92,10 +92,10 @@
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<h4 class="panel-title">
-							<a data-toggle="collapse" data-parent="#accordion" href="#collapse3">What if I am a single traveler?</a>
+							<a data-toggle="collapse" data-parent="#accordion" href="#collapse5">What if I am a single traveler?</a>
 						</h4>
 					</div>
-					<div id="collapse3" class="panel-collapse collapse">
+					<div id="collapse5" class="panel-collapse collapse">
 						<div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
 							sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>

@@ -211,6 +211,17 @@
       </div>
     </div>
 
+    <div class="ftco-section">
+      <div class="container">
+        <div class="row pb-5">
+          <div class="col-md-12 col-lg-12 text-center heading-section ftco-animate">
+            <h2>Our Services</h2>
+            <h4 class="tailorMadePage__para" style='padding:0 4em 0 4em;'>
+“Ayubowan!” Greeting you from our traditional way wishing you a long life. The Therapy for happiness flows with the style of travel with your consciousness, your heart and your memories. Find your chance to add some excitement into your holiday to the promised island of Sri Lanka and embrace flexibility with us. Experience the island renowned real adventure, rich cultural heritage along with sun kissed golden beaches and amazing hospitality exclusively in Sri Lanka				</h4>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <section class="ftco-section bg-light">
       <div class="container">
@@ -293,7 +304,7 @@
           <div class="col-md-6 col-lg-3 ftco-animate">
             <a href="<?php echo base_url(); ?>search-tours/common" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/trip.jpeg');">
               <div class="text">
-                <h3 class="heading">Common - Classical Tour</h3>
+                <h3 class="heading">Culture & Heritage</h3>
                 <div class="post-meta">
                   <span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
                 </div>
@@ -303,7 +314,7 @@
           <div class="col-md-6 col-lg-3 ftco-animate">
             <a href="<?php echo base_url(); ?>search-tours/nature" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/nature.jpg');">
               <div class="text">
-                <h3 class="heading">Nature </h3>
+                <h3 class="heading">Eco & Wildlife</h3>
                 <div class="post-meta">
                     <span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
                 </div>
@@ -313,7 +324,7 @@
           <div class="col-md-6 col-lg-3 ftco-animate">
             <a href="<?php echo base_url(); ?>search-tours/beach" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/tour-3.jpg');">
               <div class="text">
-                <h3 class="heading">Beach</h3>
+                <h3 class="heading">Active</h3>
                 <div class="post-meta">
                     <span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
                 </div>
@@ -323,7 +334,7 @@
           <div class="col-md-6 col-lg-3 ftco-animate">
             <a href="<?php echo base_url(); ?>search-tours/wild" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/safari.jpg');">
               <div class="text">
-                <h3 class="heading">Wild</h3>
+                <h3 class="heading">Adventure</h3>
                 <div class="post-meta">
                     <span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
                 </div>
@@ -333,7 +344,7 @@
           <div class="col-md-6 col-lg-3 ftco-animate">
             <a href="<?php echo base_url(); ?>search-for/honeymoon" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/honeymoon.jpeg');">
               <div class="text">
-                <h3 class="heading">Honeymoon</h3>
+                <h3 class="heading">Classical Beach Holidays</h3>
                 <div class="post-meta">
                     <span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
                 </div>
@@ -343,7 +354,7 @@
           <div class="col-md-6 col-lg-3 ftco-animate">
             <a href="<?php echo base_url(); ?>search-for/family" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/family.jpeg');">
               <div class="text">
-                <h3 class="heading">Family Trous</h3>
+                <h3 class="heading">Wellness and Ayurweda</h3>
                 <div class="post-meta">
                     <span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
                 </div>
@@ -353,7 +364,7 @@
           <div class="col-md-6 col-lg-3 ftco-animate">
             <a href="<?php echo base_url(); ?>search-for/small group" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/group.jpeg');">
               <div class="text">
-                <h3 class="heading">Friends Tours</h3>
+                <h3 class="heading">Luxury</h3>
                 <div class="post-meta">
                     <span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
                 </div>
@@ -363,7 +374,47 @@
           <div class="col-md-6 col-lg-3 ftco-animate">
             <a href="<?php echo base_url(); ?>maldives" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/tour-8.jpg');">
               <div class="text">
-                <h3 class="heading">Group Tour in Maldives</h3>
+                <h3 class="heading">Responsible Tours</h3>
+                <div class="post-meta">
+                    <span style="margin-bottom:4em;" >Ameeru Ahmed Magu Male’, Maldives</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <a href="<?php echo base_url(); ?>maldives" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/tour-8.jpg');">
+              <div class="text">
+                <h3 class="heading">Romantic Tours</h3>
+                <div class="post-meta">
+                    <span style="margin-bottom:4em;" >Ameeru Ahmed Magu Male’, Maldives</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <a href="<?php echo base_url(); ?>maldives" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/tour-8.jpg');">
+              <div class="text">
+                <h3 class="heading">Family with Children</h3>
+                <div class="post-meta">
+                    <span style="margin-bottom:4em;" >Ameeru Ahmed Magu Male’, Maldives</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <a href="<?php echo base_url(); ?>maldives" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/tour-8.jpg');">
+              <div class="text">
+                <h3 class="heading">Relaxing holidays</h3>
+                <div class="post-meta">
+                    <span style="margin-bottom:4em;" >Ameeru Ahmed Magu Male’, Maldives</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <a href="<?php echo base_url(); ?>maldives" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/tour-8.jpg');">
+              <div class="text">
+                <h3 class="heading">MICE</h3>
                 <div class="post-meta">
                     <span style="margin-bottom:4em;" >Ameeru Ahmed Magu Male’, Maldives</span>
                 </div>
@@ -567,15 +618,7 @@
     </section>
 
 
-    <div class="transport">
-      <div class="transport__container">
-        <h1 class="transport__heading">You need a car, We've got you coverd!</h2>
-        <h3 class="sub--para-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur labore quos impedit cupiditate eveniet ipsum odio? Quasi, maiores. Distinctio reiciendis dolorem amet, atque ratione, delectus exercitationem vero fugiat illum quisquam rem. Doloribus, velit quia optio rem minus mollitia repudiandae ex?</h3>
-          <div class="col-sm-12 group mt-5" style="margin-left:auto; margin-right:auto;">
-            <button type="submit" class="search-submit btn btn-primary-white bt-4" value="Find Hotels" style=" font-size:1.5em; margin: auto;"> Learn More </button>
-          </div>
-      </div>
-      </div>
+    
 
       
 

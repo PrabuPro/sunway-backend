@@ -168,8 +168,8 @@
 						<div class="check-in one-third mb-3"><input  name="check-in-date" type="text" id="checkin_date" class="form-control" placeholder="Approx Arival Date" required></div>
 					</div>
 					<div class="col-md-6">
-						<label  for="checkout_date" style="font-size:14px; margin-bottom:0px; color:#636363; font-weight:600;">Depature Date</label>
-						<div class="check-out one-third mb-3"><input name="check-out-date" type="text" id="checkout_date" class="form-control" placeholder="Depature Date" required></div>
+						<label  for="number-of-days" style="font-size:14px; margin-bottom:0px; color:#636363; font-weight:600;">Number of days planing to stay</label>
+						<input id="number-of-days" name="number-of-days" type="text" class="form-control" value="<?php echo set_value('number-of-days');?>" placeholder="Number of days" required>
 					</div>
 				</div>
 				<div class="row">
@@ -187,34 +187,33 @@
                             <option value="rent a house" class="form-control-option-white"  >Rent a House</option>
 						</select>
 					</div>
-                    <div class="select-wrap col-md-6 group mb-3">
-						<label  for="tour_type" style="font-size:14px; margin-bottom:0px; color:#636363; font-weight:600;">Tour Type</label>
-						<select id="tour_type" name="tour_type" class="form-control" required>
-							<option value="" class="form-control-option-white">Tour Type</option>
-	                        <option value="common" class="form-control-option-white"  >Common</option>
-                            <option value="beach" class="form-control-option-white"  >Beach</option>
-                            <option value="echo" class="form-control-option-white"  >Eco</option>
-                            <option value="nature" class="form-control-option-white"  >Nature</option>
-                            <option value="wild life" class="form-control-option-white" >Wild Life</option>
-                            <option value="advanture" class="form-control-option-white" >Adventure</option>
-                            <option value="action" class="form-control-option-white"  >Action</option>
-                            <option value="ayurweda" class="form-control-option-white"  >Ayurweda</option>
-						</select>
-					</div>
+                    
 					
 				</div>
 				<div class="row">
-					<div class="select-wrap col-md-6 group mb-3">
-						<label  for="transportation_type" style="font-size:14px; margin-bottom:0px; color:#636363; font-weight:600;">Transportation Type</label>
-						<select id="transportation_type" name="tranportation_type" class="form-control" required>
-							<option value="" class="form-control-option-white-top">Transportation Type</option>
-							<option value="car" class="form-control-option-white">Car</option>
-							<option value="van" class="form-control-option-white">Van</option>
-							<option value="bus" class="form-control-option-white">Bus</option>
-
-						</select>
+				
+                    <div class="select-wrap col-md-6 group mb-3">
+						<label  for="tour_type" style="font-size:14px; margin-bottom:0px; color:#636363; font-weight:600;">Tour Type</label>
+						<div class="field">
+								<div class="control" style="display:flex; flex-direction:row;">
+									<input style="align-self:center;" id="tour_type" class="" name="tour_type[]" type="checkbox" value="culture"><p id="tour_type" style="align-self:center; margin-bottom:0 !important; margin-top:0 !important; margin-right:1.5em;">Culture</p> 
+									<input style="align-self:center;" id="tour_type" class="" name="tour_type[]" type="checkbox" value="eco"><p style="align-self:center; margin-bottom:0 !important; margin-top:0 !important; margin-right:1.5em;">Eco</p>  
+									<input style="align-self:center;" id="tour_type" class="" name="tour_type[]" type="checkbox" value="active"><p style="align-self:center; margin-bottom:0 !important; margin-top:0 !important; margin-right:1.5em;">Active</p> 
+									<input style="align-self:center;" id="tour_type" class="" name="tour_type[]" type="checkbox" value="adventure"><p style="align-self:center; margin-bottom:0 !important; margin-top:0 !important; margin-right:1.5em;">Adventure</p>  
+								</div>
+							</div>
+						<div class="field">
+								<div class="control" style="display:flex; flex-direction:row;">
+									<input style="align-self:center;" id="tour_type" class="" name="tour_type[]" type="checkbox" value="romantic"><p style="align-self:center; margin-bottom:0 !important; margin-top:0 !important; margin-right:1.5em;">Romantic</p> 
+									<input style="align-self:center;" id="tour_type" class="" name="tour_type[]" type="checkbox" value="family"><p style="align-self:center; margin-bottom:0 !important; margin-top:0 !important; margin-right:1.5em;">Family</p>  
+									<input style="align-self:center;" id="tour_type" class="" name="tour_type[]" type="checkbox" value="relaxing holiday"><p style="align-self:center; margin-bottom:0 !important; margin-top:0 !important; margin-right:1.5em;">Relaxing holiday</p> 
+									<input style="align-self:center;" id="tour_type" class="" name="tour_type[]" type="checkbox" value="mice"><p style="align-self:center; margin-bottom:0 !important; margin-top:0 !important; margin-right:1.5em;">MICE</p>  
+								</div>
+							</div>
 					</div>
+					
 				</div>
+
 				<div class="row">
 					<div class="col-md-12 form-group">
 						<label  for="message" style="font-size:14px; margin-bottom:0px; color:#636363; font-weight:600;">Message</label>

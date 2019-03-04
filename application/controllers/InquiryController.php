@@ -13,11 +13,10 @@ class InquiryController extends CI_Controller{
         $this->form_validation->set_rules('num-of-adults','Number of Adults','trim|required|numeric|max_length[2]');
         $this->form_validation->set_rules('num-of-children','Number of Children','trim|required|alpha_numeric|max_length[2]');
         $this->form_validation->set_rules('check-in-date','Approx Arival Date','trim|required|max_length[15]');
-        $this->form_validation->set_rules('check-out-date','Depature Date','trim|required|max_length[15]');
+        $this->form_validation->set_rules('number-of-days','Number of Days','trim|required|numeric|max_length[15]');
         $this->form_validation->set_rules('hotel_type','Hotel Type','trim|required|alpha_numeric_spaces|max_length[15]');
-        $this->form_validation->set_rules('tour_type','Tour Type','trim|required|alpha_numeric_spaces|max_length[15]');
-        $this->form_validation->set_rules('tranportation_type','Tranportation Type','trim|required|alpha|max_length[10]');
-        $this->form_validation->set_rules('message','Message','trim|required|max_length[200]');
+        $this->form_validation->set_rules('tour_type[]','Tour Type','trim|required|alpha_numeric_spaces|max_length[75]');
+        $this->form_validation->set_rules('message','Message','trim|max_length[200]');
         $this->form_validation->set_rules('g-recaptcha-response', 'recaptcha validation', 'required|callback_validate_captcha');
         $this->form_validation->set_message('validate_captcha', 'Please check the the captcha form');
 
@@ -29,7 +28,7 @@ class InquiryController extends CI_Controller{
         } else {
 
             $in_date = DateTime::createFromFormat('m/d/Y', $this->input->post('check-in-date'));
-            $out_date = DateTime::createFromFormat('m/d/Y', $this->input->post('check-out-date'));
+            $number_of_days = implode(",",$this->input->post('tour_type'));
 
 
             $databaseData = array (
@@ -40,10 +39,9 @@ class InquiryController extends CI_Controller{
                 'num_of_adults' => htmlspecialchars($this->input->post('num-of-adults')),
                 'num_of_children' => htmlspecialchars($this->input->post('num-of-children')),
                 'check_in_date' => $in_date->format('Y-m-d'),
-                'check_out_date' => $out_date->format('Y-m-d'),
+                'number_of_days' => htmlspecialchars($this->input->post('number-of-days')),
                 'hotel_type' => htmlspecialchars($this->input->post('hotel_type')),
-                'tour_type' => htmlspecialchars($this->input->post('tour_type')),
-                'transportation_type' => htmlspecialchars($this->input->post('tranportation_type')),
+                'tour_type' => $number_of_days,
                 'message' => htmlspecialchars($this->input->post('message'))
 
             );
@@ -87,9 +85,8 @@ class InquiryController extends CI_Controller{
         $content .= '<p>Country - '.$data['country'] . '</p>';
         $content .= '<p>Tour Type - '.$data['tour_type'] . '</p>';
         $content .= '<p>Hotel Type - '.$data['hotel_type'] . '</p>';
-        $content .= '<p>Transportation Type - '.$data['transportation_type'] . '</p>';
         $content .= '<p>Check In Date - '.$data['check_in_date'] . '</p>';
-        $content .= '<p>Check Out Date - '.$data['check_out_date'] . '</p>';
+        $content .= '<p>Check Out Date - '.$data['number_of_days'] . '</p>';
         $content .= '<p>Number of Adults - '.$data['num_of_adults'] . '</p>';
         $content .= '<p>Number of Children - '.$data['num_of_children'] . '</p>';
         $content .= '<p>Costomer Message - '.$data['message'] . '</p>';
