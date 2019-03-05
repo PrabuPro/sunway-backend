@@ -119,6 +119,11 @@
 			font-size:.8em;
 			font-weight:500;
 		}
+
+		.before_points-text:hover {
+			text-decoration: underline;
+		}
+
 		.before_points-text-para{
 			color: #000000 !important;
 			font-weight:500;
@@ -300,8 +305,8 @@ You can also show your enthusiasm and satisfaction about our Journey with us by 
 	<div class="row">
 		<div class="container">
 			<div class="col-md-12 col-lg-12">
-				<h4 class="tailorMadePage__para mb-5">
-					<a href="<?php echo base_url(); ?>travel-policy" style="text-decoration:underline;">Sunway Holidays Responsible Travel Policy</a>
+				<h4 class="tailorMadePage__para mb-5"> 
+					<a href="<?php echo base_url(); ?>travel-policy" style="text-decoration:underline; font-weight:600;">Sunway Holidays Responsible Travel Policy &rarr;</a>
 				</h4>
 			</div>
 		</div>

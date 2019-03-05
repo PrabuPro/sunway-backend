@@ -381,46 +381,7 @@
               </div>
             </a>
           </div>
-          <div class="col-md-6 col-lg-3 ftco-animate">
-            <a href="<?php echo base_url(); ?>maldives" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/tour-8.jpg');">
-              <div class="text">
-                <h3 class="heading">Romantic Tours</h3>
-                <div class="post-meta">
-                    <span style="margin-bottom:4em;" >Ameeru Ahmed Magu Male’, Maldives</span>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-3 ftco-animate">
-            <a href="<?php echo base_url(); ?>maldives" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/tour-8.jpg');">
-              <div class="text">
-                <h3 class="heading">Family with Children</h3>
-                <div class="post-meta">
-                    <span style="margin-bottom:4em;" >Ameeru Ahmed Magu Male’, Maldives</span>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-3 ftco-animate">
-            <a href="<?php echo base_url(); ?>maldives" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/tour-8.jpg');">
-              <div class="text">
-                <h3 class="heading">Relaxing holidays</h3>
-                <div class="post-meta">
-                    <span style="margin-bottom:4em;" >Ameeru Ahmed Magu Male’, Maldives</span>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-3 ftco-animate">
-            <a href="<?php echo base_url(); ?>maldives" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/tour-8.jpg');">
-              <div class="text">
-                <h3 class="heading">MICE</h3>
-                <div class="post-meta">
-                    <span style="margin-bottom:4em;" >Ameeru Ahmed Magu Male’, Maldives</span>
-                </div>
-              </div>
-            </a>
-          </div>
+         
         </div>
       </div>
     </section>

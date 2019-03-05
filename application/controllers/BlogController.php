@@ -7,7 +7,7 @@ class BlogController extends CI_Controller{
         $this->load->view('main/main_view', $data);
     } 
     public function title1(){
-        $data['site_view'] = 'title1';
+        $data['site_view'] = 'blog1';
         $data['site_title'] = 'Title';
         $this->load->view('main/main_view', $data);
     } 

@@ -24,6 +24,7 @@ class TourController extends CI_Controller{
     public function tourPage(){
         $data['site_view'] = 'Tour-front';
         $data['site_title'] = 'Sunway Holidays - Tours';
+        $data['recommended_tours'] = $this->tour_model->getRecommendedTours(1);
         $this->load->view('main/main_view', $data);
     }
 
@@ -64,6 +65,8 @@ class TourController extends CI_Controller{
         $this->form_validation->set_rules('lng', 'Lng', 'trim|required|max_length[15]');
         $this->form_validation->set_rules('day[]', 'Day', 'trim|required|max_length[15]');
         $this->form_validation->set_rules('desc[]', 'Itinerary Desc', 'trim|required|max_length[15]');
+        $this->form_validation->set_rules('rating', 'Sunway Rating', 'trim|required|max_length[5]');
+
 
         if($this->form_validation->run() == FALSE){
              $dataflash = array(
@@ -88,16 +91,17 @@ class TourController extends CI_Controller{
             $photo_url = $imageName. '.'. pathinfo($path, PATHINFO_EXTENSION);
 
             $databaseData = array(
-                'name' => $this->input->post('name'),
-                'description' => $this->input->post('description'),
-                'tour_type' => $this->input->post('tour_type'),
-                'suitable_for' => $this->input->post('suitable_for'),
-                'price' => $this->input->post('price'),
+                'name' => htmlspecialchars($this->input->post('name')),
+                'description' => htmlspecialchars($this->input->post('description')),
+                'tour_type' => htmlspecialchars($this->input->post('tour_type')),
+                'suitable_for' => htmlspecialchars($this->input->post('suitable_for')),
+                'price' => htmlspecialchars($this->input->post('price')),
                 'photo_id' => $photo_url,
-                'location' => $this->input->post('location'),
-                'lat' => $this->input->post('location'),
-                'lng' => $this->input->post('location'),
-                'introduction' => $this->input->post('location'),
+                'location' => htmlspecialchars($this->input->post('location')),
+                'lat' => htmlspecialchars($this->input->post('location')),
+                'lng' => htmlspecialchars($this->input->post('location')),
+                'introduction' => htmlspecialchars($this->input->post('location')),
+                'rating' => htmlspecialchars($this->input->post('rating'))
             );
 
             //insert tour table
@@ -164,7 +168,7 @@ class TourController extends CI_Controller{
     public function touritem($pageid){
         $data['results'] = $this->tour_model->get_tourItem($pageid);
         $data['itineraries'] = $this->tour_model->get_itinerary($pageid);
-        // $data['suggessions'] = $this->tour_model->get_tourSuggessions($pageid);
+        $data['suggestions'] = $this->tour_model->suggestions(1);
         $data['site_view'] = 'TourItem';
         $data['site_title'] = 'Sunway Holidays - Tour Item';
         $this->load->view('main/main_view', $data);
@@ -219,6 +223,12 @@ class TourController extends CI_Controller{
         $this->load->view('main/main_view', $data);
 
     }
+
+
+
+        
+
+    
 
 }
 

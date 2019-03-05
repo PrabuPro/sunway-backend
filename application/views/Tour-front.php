@@ -22,7 +22,7 @@
 					<h2 class="mb-5 pb-3" style="font-size:24px;">Want to get our hottest travel deals top tips and advice? Click
 						below!</h2>
 					<div class="col-sm-12 group mb-3">
-						<input type="button" class="search-submit btn btn-primary" value="Find Hotels" style="width:100%; font-size:1.5em;"
+						<input type="button" class="search-submit btn btn-primary" value="Find Tours" style="width:100%; font-size:1.5em;"
 						 onclick="window.location='<?php echo base_url(); ?>tours-list/0'">
 					</div>
 
@@ -31,62 +31,27 @@
 			<div class="col-lg-8 p-2 pl-md-5 heading-section">
 				<h2 class="mb-5 p-2 pb-3 ftco-animate">Most Recommended Tours</h2>
 				<div class="row no-gutters d-flex">
-					<!-- <?php foreach($recommended_hotels as $recommended_hotel): ?>
 
-              <div class="col-md-4 ftco-animate">
-                <a href="<?php echo site_url('accomadations/'.$recommended_hotel->hotel_id);?>" class="block-5" style="background-image: url('<?php echo base_url().'assets/images/hotels/'.$recommended_hotel->photo_id; ?>');">
-                  <div class="text">
-                    <span class="price">$<?php echo $recommended_hotel->price;?></span>
-                    <h3 class="heading"><?php echo $recommended_hotel->name;?></h3>
-                    <div class="post-meta">
-                      <span><?php echo $recommended_hotel->description;?></span>
-                    </div>
-                    
-                  </div>
-                </a>
-              </div>
+					<?php foreach($recommended_tours as $recommended_tour) : ?>
 
-            <?php endforeach;?> -->
-
-					<div class="col-md-4 ftco-animate">
-						<a href="" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/hotel-1.jpg');">
-							<div class="text">
-								<span class="price">$29/night</span>
-								<h3 class="heading">Luxe Hotel</h3>
-								<div class="post-meta">
-									<span>Ameeru Ahmed Magu Male’, Maldives</span>
+						<div class="col-md-6 col-lg-4 mb-4 ftco-animate">
+							<a href="<?php echo site_url('tours/'.$recommended_tour->tour_id);?>" class="block-5" style="background-image: url('<?php echo base_url().'assets/images/tours/'.$recommended_tour->photo_id; ?>');">
+								<div class="text">
+									<span class="price">$
+										<?php echo $recommended_tour->price; ?></span>
+									<h3 class="heading">Tour in
+										<?php echo $recommended_tour->location; ?>
+									</h3>
+									<div class="post-meta">
+										<span>
+											<?php echo $recommended_tour->description; ?></span>
+									</div>
 								</div>
-								<p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span
-									 class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
-							</div>
-						</a>
-					</div>
-					<div class="col-md-4 ftco-animate">
-						<a href="#" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/hotel-2.jpg');">
-							<div class="text">
-								<span class="price">$29/night</span>
-								<h3 class="heading">Deluxe Hotel</h3>
-								<div class="post-meta">
-									<span>Ameeru Ahmed Magu Male’, Maldives</span>
-								</div>
-								<p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span
-									 class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
-							</div>
-						</a>
-					</div>
-					<div class="col-md-4 ftco-animate">
-						<a href="#" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/hotel-3.jpg');">
-							<div class="text">
-								<span class="price">$29/night</span>
-								<h3 class="heading">Deluxe Hotel</h3>
-								<div class="post-meta">
-									<span>Ameeru Ahmed Magu Male’, Maldives</span>
-								</div>
-								<p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span
-									 class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
-							</div>
-						</a>
-					</div>
+							</a>
+						</div>
+						
+					<?php endforeach; ?>
+						
 				</div>
 			</div>
 		</div>

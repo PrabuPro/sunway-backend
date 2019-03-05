@@ -103,6 +103,38 @@ class Tour_model extends CI_Model{
 
     }
 
+    public function suggestions($selection){
+        if($selection == 1){
+            $this->db->select('tour_id,description, tour_type,suitable_for,price,photo_id,location');
+            $this->db->order_by('tour_id','RANDOM');
+            $this->db->limit(3);
+            $suggestions = $this->db->get('tours');
+
+            return $suggestions->result();
+
+        } else if ($selection == 2){
+            $this->db->select('tour_id,description, tour_type,suitable_for,price,photo_id,location');
+            $this->db->order_by('tour_id','RANDOM');
+            $this->db->limit(2);
+            $suggestions = $this->db->get('tours');
+
+            return $suggestions->result();
+        }
+        
+    }
+
+     public function getRecommendedTours($number){
+        $result = $this->db->select('tour_id,description, tour_type,suitable_for,price,photo_id,location')
+                           ->where('ratings', $number)
+                           ->order_by('ratings', 'desc')
+                           ->limit(3)
+                           ->get('tours')
+                           ->result();
+        
+        return $result;
+    }
+
+
 }
 
 ?>

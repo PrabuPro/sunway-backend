@@ -14,76 +14,62 @@
 <!-- END slider -->
 
 <section class="ftco-section bg-light">
-      <div class="container">
-        
-        <div class="row ftco-animate">
-          <div class="carousel1 owl-carousel ">
-            <div class="item">
-              <div class="blog-entry">
-                <a href="blog-single.html" class="block-20" style="background-image: url('<?php echo base_url();?>assets/images/image_5.jpg');">
-                </a>
-                <div class="text p-4">
-                  <div class="meta">
-                    <div><a href="#">July 7, 2018</a></div>
-                    <div><a href="#">Admin</a></div>
-                  </div>
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-                  <p class="clearfix">
-                    <a href="#" class="float-left">Read more</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="blog-entry" data-aos-delay="100">
-                <a href="blog-single.html" class="block-20" style="background-image: url('<?php echo base_url();?>assets/images/image_6.jpg');">
-                </a>
-                <div class="text p-4">
-                  <div class="meta">
-                    <div><a href="#">July 7, 2018</a></div>
-                    <div><a href="#">Admin</a></div>
-                  </div>
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-                  <p class="clearfix">
-                    <a href="#" class="float-left">Read more</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="blog-entry" data-aos-delay="200">
-                <a href="blog-single.html" class="block-20" style="background-image: url('<?php echo base_url();?>assets/images/image_7.jpg');">
-                </a>
-                <div class="text p-4">
-                  <div class="meta">
-                    <div><a href="#">July 7, 2018</a></div>
-                    <div><a href="#">Admin</a></div>
-                  </div>
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-                  <p class="clearfix">
-                    <a href="#" class="float-left">Read more</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="blog-entry" data-aos-delay="200">
-                <a href="blog-single.html" class="block-20" style="background-image: url('<?php echo base_url();?>assets/images/image_8.jpg');">
-                </a>
-                <div class="text p-4">
-                  <div class="meta">
-                    <div><a href="#">July 7, 2018</a></div>
-                    <div><a href="#">Admin</a></div>
-                  </div>
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-                  <p class="clearfix">
-                    <a href="#" class="float-left">Read more</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-            
-          </div>
-        </div>
-      </div>
-    </section>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12 col-lg-8 ftco-animate" style="padding: 4px;">
+				<a href="<?php echo base_url(); ?>blog/title1" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/trip.jpeg');">
+					<div class="text">
+						<h3 class="heading">Culture & Heritage</h3>
+						<div class="post-meta">
+							<span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="col-md-12 col-lg-4 ftco-animate" style="padding: 4px;">
+				<a href="<?php echo base_url(); ?>search-tours/common" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/trip.jpeg');">
+					<div class="text">
+						<h3 class="heading">Culture & Heritage</h3>
+						<div class="post-meta">
+							<span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 col-lg-4 ftco-animate" style="padding: 4px;">
+				<a href="<?php echo base_url(); ?>search-tours/common" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/trip.jpeg');">
+					<div class="text">
+						<h3 class="heading">Culture & Heritage</h3>
+						<div class="post-meta">
+							<span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="col-md-12 col-lg-4 ftco-animate" style="padding: 4px;">
+				<a href="<?php echo base_url(); ?>search-tours/common" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/trip.jpeg');">
+					<div class="text">
+						<h3 class="heading">Culture & Heritage</h3>
+						<div class="post-meta">
+							<span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
+						</div>
+					</div>
+				</a>
+			</div>
+		<div class="col-md-12 col-lg-4 ftco-animate" style="padding: 4px;">
+			<a href="<?php echo base_url(); ?>search-tours/common" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/trip.jpeg');">
+				<div class="text">
+					<h3 class="heading">Culture & Heritage</h3>
+					<div class="post-meta">
+						<span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
+					</div>
+				</div>
+			</a>
+		</div>
+		</div>
+	</div>
+
+	</div>
+</section>

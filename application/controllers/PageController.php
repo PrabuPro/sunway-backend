@@ -42,6 +42,7 @@ class PageController extends CI_Controller{
     public function tailormade(){
         $data['site_view'] = 'Tailormade';
         $data['site_title'] = 'Tailormade';
+        $data['suggestions'] = $this->tour_model->suggestions(2);
         $this->load->view('main/main_view', $data);
     }
 
@@ -58,6 +59,7 @@ class PageController extends CI_Controller{
     public function inquiry(){
         $data['site_view'] = 'inquiry';
         $data['site_title'] = 'Inquiry';
+        $data['suggestions'] = $this->tour_model->suggestions(2);
         $this->load->view('main/main_view', $data);
     }
     public function policy(){

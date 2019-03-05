@@ -145,6 +145,12 @@
 							<div style="margin-bottom:20px;" id="description"><p id="add_field" style="background-color:green; width:30%; color:white;">ADD DESCRIPTION</p></div>
 
 							<div class="field">
+								<div class="control ">
+									<input class="column is-5 input is-info" name="rating" type="text" placeholder="Sunway Rating" value="<?php echo set_value('rating');?>">
+								</div>
+							</div>
+
+							<div class="field">
 								<div class="control">
 									<input class="column is-3 button is-block is-info is-medium is-fullwidth" type="submit" value="Add Tour">
 								</div>

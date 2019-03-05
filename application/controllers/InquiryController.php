@@ -16,7 +16,7 @@ class InquiryController extends CI_Controller{
         $this->form_validation->set_rules('number-of-days','Number of Days','trim|required|numeric|max_length[15]');
         $this->form_validation->set_rules('hotel_type','Hotel Type','trim|required|alpha_numeric_spaces|max_length[15]');
         $this->form_validation->set_rules('tour_type[]','Tour Type','trim|required|alpha_numeric_spaces|max_length[75]');
-        $this->form_validation->set_rules('message','Message','trim|max_length[200]');
+        $this->form_validation->set_rules('message','Message','trim|max_length[700]');
         $this->form_validation->set_rules('g-recaptcha-response', 'recaptcha validation', 'required|callback_validate_captcha');
         $this->form_validation->set_message('validate_captcha', 'Please check the the captcha form');
 

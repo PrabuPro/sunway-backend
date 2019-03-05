@@ -6917,6 +6917,10 @@ h1, h2, h3, h4, h5,
 .bg-light {
   background: #fafafa !important; }
 
+.bg-blue {
+  background: rgb(226, 233, 233) !important;
+  }
+
 .bg-primary {
   background: #303040; }
 
@@ -8266,4 +8270,22 @@ textarea.form-control {
   .swal-button:hover{
     background-color: #fff !important;
     color:#303040;
+  }
+
+  .inquiry_form-checkbox{
+    display:flex;
+    flex-direction:row;
+  }
+  .inquiry_form-input{
+    align-self:center;
+  }
+
+  .inquiry_form-label{
+    margin-left: .4em;
+    color:#000000; 
+    font-weight:500; 
+    align-self:center; 
+    margin-bottom:0 !important; 
+    margin-top:0 !important; 
+    margin-right:1.5em;
   }
