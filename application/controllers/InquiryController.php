@@ -15,8 +15,10 @@ class InquiryController extends CI_Controller{
         $this->form_validation->set_rules('check-in-date','Approx Arival Date','trim|required|max_length[15]');
         $this->form_validation->set_rules('number-of-days','Number of Days','trim|required|numeric|max_length[15]');
         $this->form_validation->set_rules('hotel_type','Hotel Type','trim|required|alpha_numeric_spaces|max_length[15]');
-        $this->form_validation->set_rules('tour_type[]','Tour Type','trim|required|alpha_numeric_spaces|max_length[75]');
+        $this->form_validation->set_rules('tour_type[]','Tour Type','trim|alpha_numeric_spaces|max_length[75]');
         $this->form_validation->set_rules('message','Message','trim|max_length[700]');
+        $this->form_validation->set_rules('tour_id','Tour','trim|numeric|max_length[10]');
+        $this->form_validation->set_rules('tour_type-item','Tour','trim|max_length[20]');
         $this->form_validation->set_rules('g-recaptcha-response', 'recaptcha validation', 'required|callback_validate_captcha');
         $this->form_validation->set_message('validate_captcha', 'Please check the the captcha form');
 
@@ -28,8 +30,14 @@ class InquiryController extends CI_Controller{
         } else {
 
             $in_date = DateTime::createFromFormat('m/d/Y', $this->input->post('check-in-date'));
-            $number_of_days = implode(",",$this->input->post('tour_type'));
+            
+            
 
+            if($this->input->post('tour_id') == NULL){
+                $tour_type = implode(",",$this->input->post('tour_type')); ;
+            } else{
+                $tour_type = htmlspecialchars($this->input->post('tour_type-item'));
+            }
 
             $databaseData = array (
                 'name' => htmlspecialchars($this->input->post('name')),
@@ -41,8 +49,9 @@ class InquiryController extends CI_Controller{
                 'check_in_date' => $in_date->format('Y-m-d'),
                 'number_of_days' => htmlspecialchars($this->input->post('number-of-days')),
                 'hotel_type' => htmlspecialchars($this->input->post('hotel_type')),
-                'tour_type' => $number_of_days,
-                'message' => htmlspecialchars($this->input->post('message'))
+                'tour_type' => $tour_type,
+                'message' => htmlspecialchars($this->input->post('message')),
+                'tour_id' => htmlspecialchars($this->input->post('tour_id'))
 
             );
 
@@ -78,11 +87,12 @@ class InquiryController extends CI_Controller{
         $name = 'Prabuddha';
         $subject = 'Sunway Holidays Inquiry';
         $content = '<h1>Inquiry Number - SH0'. $result . '</h1>';
-        $content .= '<h3>This mail is generated with the information of the iquiry iteslf</h3><br>';
+        $content .= '<h3>This mail is generated with the information of the inquiry iteslf</h3><br>';
         $content .= '<p>Name - '.$data['name'] . '</p>';
         $content .= '<p>Email - '.$data['email'] . '</p>';
         $content .= '<p>Contact Number - '.$data['phone'] . '</p>';
         $content .= '<p>Country - '.$data['country'] . '</p>';
+        $content .= '<p>Tour Id - '.$data['tour_id'] . '</p>';
         $content .= '<p>Tour Type - '.$data['tour_type'] . '</p>';
         $content .= '<p>Hotel Type - '.$data['hotel_type'] . '</p>';
         $content .= '<p>Check In Date - '.$data['check_in_date'] . '</p>';

@@ -4,6 +4,7 @@
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+ @import "//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css";
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -6351,6 +6352,49 @@ a.text-dark:hover, a.text-dark:focus {
       text-align: center;
       color: rgba(255, 255, 255, 0.5); }
 
+.box_card {
+  height: 15em;
+  width:15em;
+  background-color: #fff;
+  background-size: cover;
+   box-shadow: 0 0.5em 3em rgba(0, 0, 0, 0.5);
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all .5s;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end; }
+
+  .box_card__text {
+    display: flex;
+    margin-top: 17em;
+    align-self: flex-end;
+    flex-direction: column;
+    color: #000000;
+    margin: 1em;
+  }
+
+  .box_card__text--number{
+    height: 3em;
+    width: 3em;
+    border-radius: 50%;
+    background-color: #000000;
+    margin:.2em auto 1em auto;
+  }
+
+  .box_card__text--number-text{
+    color:#ffffff;
+    text-align: center;
+    margin: auto;
+  }
+    .box_card__text--heading {
+      font-size: 1.4em;
+      color: #000000;
+      text-align: center; }
+    .box_card__text--post-meta {
+      text-align: center;
+      color: rgba(0, 0, 0, 0.5); }
+
 .parallax-window {
   min-height: 550px;
   background: transparent; }
@@ -8289,3 +8333,70 @@ textarea.form-control {
     margin-top:0 !important; 
     margin-right:1.5em;
   }
+
+
+    
+/* about us - mission, vission, values */
+
+    .box>.icon {
+      text-align: center;
+      position: relative;
+    }
+
+    .box>.icon>.image {
+      position: relative;
+      z-index: 2;
+      margin: auto;
+      width: 88px;
+      height: 88px;
+      border: 8px solid white;
+      line-height: 88px;
+      border-radius: 50%;
+      background: #303040;
+      vertical-align: middle;
+    }
+
+    .box>.icon:hover>.image {
+      background: rgba(#303040, 0.5);
+    }
+
+    .box>.icon>.image>i {
+      font-size: 36px !important;
+      color: #7c7c7c !important;
+    }
+
+    .box>.icon:hover>.image>i {
+      color: white !important;
+    }
+
+    .box>.icon>.info {
+      margin-top: -24px;
+      background: rgba(0, 0, 0, 0.04);
+      border: 1px solid #e0e0e0;
+      padding: 15px 0 10px 0;
+      height: 16em;
+    }
+
+    .box>.icon:hover>.info {
+      background: rgba(0, 0, 0, 0.04);
+      border-color: #e0e0e0;
+      color: white;
+    }
+
+    .box>.icon:hover>.info>h3.title,
+    .box>.icon:hover>.info>p,
+    .box>.icon:hover>.info>.more>a {
+      color: #222;
+    }
+
+    .box>.icon>.info>.more a {}
+
+    .box>.icon:hover>.info>.more>a {
+      color: #fff;
+      padding: 6px 8px;
+      background-color: #63B76C;
+    }
+
+    .box .space {
+      height: 30px;
+    }

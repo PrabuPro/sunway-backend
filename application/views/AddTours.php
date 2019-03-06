@@ -142,7 +142,7 @@
 
 							<h2>Itinerary</h2><br>
 				
-							<div style="margin-bottom:20px;" id="description"><p id="add_field" style="background-color:green; width:30%; color:white;">ADD DESCRIPTION</p></div>
+							<div style="margin-bottom:20px; cursor:pointer;" id="description"><p id="add_field" style="background-color:green; width:30%; color:white;">ADD DESCRIPTION</p></div>
 
 							<div class="field">
 								<div class="control ">
@@ -177,14 +177,14 @@
         $('p#add_field').click(function(){
            count += 1;
 			var html=`<div class="columns is-mobile is-multiline ">
-								<div class="column ">
+								<div class="column is-11">
 									<strong>Itinarary Item  - `+ count +`  </strong>
 								</div>
 								<div class="column is-narrow">
 									<input class="column is-3 input is-info" name="day[]" type="text" placeholder="Day" >
 								</div>
 								<div class="column ">
-									<input class="column is-9 input is-info" name="desc[]" type="text" placeholder="Description" >
+									<textarea class="textarea is-info is-12" name="desc[]" type="text" placeholder="Description"><?php echo set_value('desc[]');?></textarea>
 								</div>
 							</div>`;
             $('#description').append(html);

@@ -53,11 +53,7 @@
 				<div id="map"></div>
 				<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31659.998183437292!2d80.57900303960295!3d7.297608838410905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae366266498acd3%3A0x411a3818a1e03c35!2sKandy!5e0!3m2!1sen!2slk!4v1548053966566"
                         width="550" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> -->
-			</div>
-
-
-
-			
+			</div>			
 			<section class="ftco-section">
 				<div class="container">
 					<div class="col-lg-12 col-md-12">
@@ -150,29 +146,7 @@
 						
 						
 					</div>
-					<div class="row">
 					
-						<div class="select-wrap col-md-8 group mb-3">
-							<label  for="tour_type" style="font-size:14px; margin-bottom:0px; color:#636363; font-weight:600;">Tour Type</label>
-							<div class="field">
-									<div class="control" class="inquiry_form-checkbox">
-										<input class="inquiry_form-input" id="culture" name="tour_type[]" type="checkbox" value="culture"><label for="culture" id="tour_type" class="inquiry_form-label">Culture</label> 
-										<input class="inquiry_form-input" id="eco" name="tour_type[]" type="checkbox" value="eco"><label for="eco" class="inquiry_form-label">Eco</label>  
-										<input class="inquiry_form-input" id="active" name="tour_type[]" type="checkbox" value="active"><label for="active" class="inquiry_form-label">Active</label> 
-										<input class="inquiry_form-input" id="adventure" name="tour_type[]" type="checkbox" value="adventure"><label for="adventure" class="inquiry_form-label">Adventure</label>  
-									</div>
-								</div>
-							<div class="field">
-									<div class="control" class="inquiry_form-checkbox">
-										<input class="inquiry_form-input" id="romantic" name="tour_type[]" type="checkbox" value="romantic"><label for="romantic" class="inquiry_form-label">Romantic</label> 
-										<input class="inquiry_form-input" id="family" name="tour_type[]" type="checkbox" value="family"><label for="family" class="inquiry_form-label">Family</label>  
-										<input class="inquiry_form-input" id="relaxing" name="tour_type[]" type="checkbox" value="relaxing holiday"><label for="relaxing" class="inquiry_form-label">Relaxing holiday</label> 
-										<input class="inquiry_form-input" id="mice" name="tour_type[]" type="checkbox" value="mice"><label for="mice" class="inquiry_form-label">MICE</label>  
-									</div>
-								</div>
-						</div>
-						
-					</div>
 	
 					<div class="row">
 						<div class="col-md-12 form-group">
@@ -180,6 +154,10 @@
 							<textarea id="message" name="message" cols="120" rows="7" class="form-control" placeholder="Tell us more about what your need 🙂 (max 100 words)" required><?php echo set_value('name');?></textarea>
 						</div>
 					</div>
+
+					<input type="hidden" value="<?php echo $results->tour_id;?>" name="tour_id" />
+					<input type="hidden" value="<?php echo $results->tour_type;?>" name="tour_type-item" />
+
 					<div class="g-recaptcha" style="margin-bottom: 20px;" data-sitekey="6Le8HJEUAAAAAHg1eHa0e7U5Fw3O9djmgn9agkvc"></div>
 					<div class="row">
 						<div class="col-md-10">

@@ -23,7 +23,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/sunwayholidays/';
+//Local URL
+// $config['base_url'] = 'http://localhost/sunwayholidays/';
+
+//Distributed URL
+$config['base_url'] = 'http://192.168.1.15/sunwayholidays/';
 
 /*
 |--------------------------------------------------------------------------

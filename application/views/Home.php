@@ -314,7 +314,7 @@
           <div class="col-md-6 col-lg-3 ftco-animate">
             <a href="<?php echo base_url(); ?>search-tours/nature" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/nature.jpg');">
               <div class="text">
-                <h3 class="heading">Eco & Wildlife</h3>
+                <h3 class="heading">Romantic</h3>
                 <div class="post-meta">
                     <span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
                 </div>
@@ -354,7 +354,7 @@
           <div class="col-md-6 col-lg-3 ftco-animate">
             <a href="<?php echo base_url(); ?>search-for/family" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/family.jpeg');">
               <div class="text">
-                <h3 class="heading">Wellness and Ayurweda</h3>
+                <h3 class="heading">Family with Children</h3>
                 <div class="post-meta">
                     <span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
                 </div>
@@ -374,7 +374,7 @@
           <div class="col-md-6 col-lg-3 ftco-animate">
             <a href="<?php echo base_url(); ?>maldives" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/tour-8.jpg');">
               <div class="text">
-                <h3 class="heading">Responsible Tours</h3>
+                <h3 class="heading">Relaxing</h3>
                 <div class="post-meta">
                     <span style="margin-bottom:4em;" >Ameeru Ahmed Magu Male’, Maldives</span>
                 </div>
@@ -386,8 +386,94 @@
       </div>
     </section>
 
+       <section class="ftco-section testimony-section" style="padding-top:0; padding-bottom:0;">
+      <div class="container">
+        <div class="row justify-content-center mb-1 pb-1">
+          <div class="col-md-12 text-center heading-section ftco-animate">
+            <h2>Process</h2>
+          </div>
+        </div>
+                
+        <div class="row ftco-animate justify-content-center">
+          <div class="carousel owl-carousel ftco-owl" style="margin: 4em;">
+          <a href="<?php echo base_url(); ?>search-for/group friends">
+            <div class="item">
+              <div class="box_card "> 
+                <div class="box_card__text">
+                  <div class="box_card__text--number">
+                    <h3 class="box_card__text--number-text">1</h3>
+                  </div>
+                  <h3 class="box_card__text--heading">Lorem, ipsum dolor. Friends</h3>
+                  <div class="box_card__text--post-meta">
+                      <span style="margin-bottom:4em;">Lorem ipsum, dolor sit amet consectetur</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </a>
+            <a href="<?php echo base_url(); ?>search-for/group family">
+            <div class="item">
+              <div class="box_card ">
+                <div class="box_card__text">
+                  <div class="box_card__text--number">
+                    <h3 class="box_card__text--number-text">2</h3>
+                  </div>
+                  <h3 class="box_card__text--heading">Lorem, ipsum dolor. Family</h3>
+                  <div class="box_card__text--post-meta">
+                      <span style="margin-bottom:4em;">Lorem ipsum, dolor sit amet consectetur</span>
+                  </div>
+              </div>
+            </div>
+            </div>
+            </a>
+            <a href="<?php echo base_url(); ?>search-for/group lovers">
+            <div class="item">
+              <div class="box_card ">
+                <div class="box_card__text">
+                  <div class="box_card__text--number">
+                    <h3 class="box_card__text--number-text">3</h3>
+                  </div>
+                  <h3 class="box_card__text--heading">Lorem, ipsum dolor. Lovers</h3>
+                  <div class="box_card__text--post-meta">
+                      <span style="margin-bottom:4em;">Lorem ipsum, dolor sit amet consectetur</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </a>
+            <a href="<?php echo base_url(); ?>search-for/group singles">
+            <div class="item">
+              <div class="box_card ">
+                <div class="box_card__text">
+                  <div class="box_card__text--number">
+                    <h3 class="box_card__text--number-text">4</h3>
+                  </div>
+                  <h3 class="box_card__text--heading">Lorem, ipsum dolor. Singles</h3>
+                  <div class="box_card__text--post-meta">
+                      <span style="margin-bottom:4em;">Lorem ipsum, dolor sit amet consectetur</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </a>            
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <section class="ftco-section testimony-section">
+ 
+
+<div class="parallax-window mb-3" data-parallax="scroll" data-image-src="<?php echo base_url(); ?>assets/images/elephant.jpeg" style="min-height: 530px; background: transparent;">
+  <div class="parallax-box">
+    <svg class="parallax-box--icon">  
+      <use xlink:href="<?php echo base_url(); ?>assets/images/sprite.svg#icon-cloud-sun"></use>
+    </svg>
+    <h3 class="parallax-box--text">Lorem ipsum dolor sit amet.</h3>
+    <h3 class="parallax-box--para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae incidunt perspiciatis dolores, a ullam velit nostrum expedita quidem unde nesciunt pariatur, ex neque vitae voluptatibus.</h3>
+  </div>
+</div>
+
+ <section class="ftco-section testimony-section">
       <div class="container">
         <div class="row justify-content-center mb-4 pb-4">
           <div class="col-md-7 text-center heading-section ftco-animate">
@@ -450,16 +536,6 @@
         </div>
       </div>
     </section>
-
-<div class="parallax-window mb-3" data-parallax="scroll" data-image-src="<?php echo base_url(); ?>assets/images/elephant.jpeg" style="min-height: 530px; background: transparent;">
-  <div class="parallax-box">
-    <svg class="parallax-box--icon">  
-      <use xlink:href="<?php echo base_url(); ?>assets/images/sprite.svg#icon-cloud-sun"></use>
-    </svg>
-    <h3 class="parallax-box--text">Lorem ipsum dolor sit amet.</h3>
-    <h3 class="parallax-box--para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae incidunt perspiciatis dolores, a ullam velit nostrum expedita quidem unde nesciunt pariatur, ex neque vitae voluptatibus.</h3>
-  </div>
-</div>
 
 <section class="ftco-section bg-light">
       <div class="container">
@@ -578,12 +654,7 @@
       </div>
     </section>
 
-
     
-
-      
-
-     
 
 
 

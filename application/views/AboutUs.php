@@ -17,7 +17,6 @@
       <div class="container-fluid d-flex">
         <div class="section-2-blocks-wrapper row no-gutters">
           <div class="img col-sm-12 col-lg-6" style="background-image: url('<?php echo base_url();?>assets/images/tour-1.jpg');">
-            <a href="https://vimeo.com/45830194" class="button popup-vimeo"><span class="ion-ios-play"></span></a>
           </div>
           <div class="text col-lg-6 ftco-animate">
             <div class="text-inner align-self-start">
@@ -31,6 +30,69 @@
         </div>
       </div>
     </section>
+
+    <style>
+
+    
+    </style>
+
+    <section class="ftco-section">
+       <div class="container">
+	<div class="row">
+        <!-- Boxes de Acoes -->
+    	<div class="col-xs-12 col-sm-6 col-lg-4">
+			<div class="box">							
+				<div class="icon">
+					<div class="image"><i class="fa fa-thumbs-o-up"></i></div>
+					<div class="info">
+						<h3 class="title">Vision</h3>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in lobortis nisl, vitae iaculis sapien. Phasellus ultrices gravida massa luctus ornare. Suspendisse blandit quam elit, eu imperdiet neque semper.
+						</p>
+						
+					</div>
+				</div>
+				<div class="space"></div>
+			</div> 
+		</div>
+			
+        <div class="col-xs-12 col-sm-6 col-lg-4">
+			<div class="box">							
+				<div class="icon">
+					<div class="image"><i class="fa fa-flag"></i></div>
+					<div class="info">
+						<h3 class="title">Mission</h3>
+    					<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in lobortis nisl, vitae iaculis sapien. Phasellus ultrices gravida massa luctus ornare. Suspendisse blandit quam elit, eu imperdiet neque semper.
+						</p>
+						
+					</div>
+				</div>
+				<div class="space"></div>
+			</div> 
+		</div>
+			
+        <div class="col-xs-12 col-sm-6 col-lg-4">
+			<div class="box">							
+				<div class="icon">
+					<div class="image"><i class="fa fa-desktop"></i></div>
+					<div class="info">
+						<h3 class="title">Values</h3>
+    					<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in lobortis nisl, vitae iaculis sapien. Phasellus ultrices gravida massa luctus ornare. Suspendisse blandit quam elit, eu imperdiet neque semper.
+						</p>
+						
+					</div>
+				</div>
+				<div class="space"></div>
+			</div> 
+		</div>		    
+		<!-- /Boxes de Acoes -->
+	</div>
+</div>
+    </section>
+
+   
 
     <div class="sustainable">
       <div class="sustainable__container">

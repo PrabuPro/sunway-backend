@@ -120,7 +120,6 @@ class Tour_model extends CI_Model{
 
             return $suggestions->result();
         }
-        
     }
 
      public function getRecommendedTours($number){

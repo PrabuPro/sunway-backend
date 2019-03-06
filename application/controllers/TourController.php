@@ -50,7 +50,6 @@ class TourController extends CI_Controller{
         $data['site_view'] = 'AddTours';
         $data['site_title'] = 'Add Tours';
         $this->load->view('admin/dashboard', $data);
-
     }
 
     public function addTours(){
@@ -100,8 +99,8 @@ class TourController extends CI_Controller{
                 'location' => htmlspecialchars($this->input->post('location')),
                 'lat' => htmlspecialchars($this->input->post('location')),
                 'lng' => htmlspecialchars($this->input->post('location')),
-                'introduction' => htmlspecialchars($this->input->post('location')),
-                'rating' => htmlspecialchars($this->input->post('rating'))
+                'introduction' => htmlspecialchars($this->input->post('introduction')),
+                'ratings' => htmlspecialchars($this->input->post('rating'))
             );
 
             //insert tour table

@@ -21,7 +21,7 @@
 				data: $('.inquiry_form').serialize(),
 				datatype: "html",
 				success: function (data) {
-
+					
 					if (data === "Successfull") {
 						swal.stopLoading();
 						swal({
