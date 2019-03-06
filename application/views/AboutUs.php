@@ -94,7 +94,7 @@
 
    
 
-    <div class="sustainable">
+    <!-- <div class="sustainable">
       <div class="sustainable__container">
         <h1 class="sustainable__heading">Sustainable Responsibility</h2>
         <h3 class="sub--para-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus eaque soluta pariatur saepe autem unde perferendis laborum laudantium dolorum delectus.</h3>
@@ -102,7 +102,7 @@
             <button type="submit" class="search-submit btn btn-primary-white bt-4" value="Find Hotels" style=" font-size:1.5em; margin: auto;" onclick="location.href='<?php base_url();?>sustainale-responsible';" > Learn More </button>
           </div>
       </div>
-      </div>
+      </div> -->
 
 
 

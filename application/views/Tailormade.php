@@ -258,7 +258,7 @@
 
 				<?php foreach($suggestions as $suggestion) : ?>
 
-				<a href="<?php echo site_url('tours/'.$suggestion->tour_id);?>" class="block-5" style="background-image: url('<?php echo base_url().'assets/images/tours/'.$suggestion->photo_id; ?>');">
+				<a href="<?php echo site_url('tours/'.$suggestion->tour_id);?>" class="block-5 mb-3" style="background-image: url('<?php echo base_url().'assets/images/tours/'.$suggestion->photo_id; ?>');">
 					<div class="text">
 						<span class="price">$
 							<?php echo $suggestion->price; ?></span>
