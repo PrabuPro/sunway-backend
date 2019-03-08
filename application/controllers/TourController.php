@@ -56,14 +56,14 @@ class TourController extends CI_Controller{
 
         $this->form_validation->set_rules('name', 'Name', 'trim|required|max_length[15]');
         $this->form_validation->set_rules('description', 'Description', 'trim|required|max_length[50]');
+        $this->form_validation->set_rules('introduction', 'Introduction', 'trim|required|max_length[700]');
         $this->form_validation->set_rules('tour_type', 'Tour_type', 'trim|required|max_length[15]');
         $this->form_validation->set_rules('suitable_for', 'Suitable_for', 'trim|required|max_length[15]');
         $this->form_validation->set_rules('price', 'Price', 'trim|required|integer|max_length[15]');
         $this->form_validation->set_rules('location', 'Location', 'trim|required|max_length[15]');
-        $this->form_validation->set_rules('lat', 'Lat', 'trim|required|max_length[15]');
-        $this->form_validation->set_rules('lng', 'Lng', 'trim|required|max_length[15]');
-        $this->form_validation->set_rules('day[]', 'Day', 'trim|required|max_length[15]');
-        $this->form_validation->set_rules('desc[]', 'Itinerary Desc', 'trim|required|max_length[15]');
+        $this->form_validation->set_rules('day[]', 'Itinerary Day', 'trim|required|max_length[15]');
+        $this->form_validation->set_rules('desc[]', 'Itinerary Desc', 'trim|required|max_length[500]');
+        $this->form_validation->set_rules('duration', 'Duration', 'trim|required|max_length[5]');
         $this->form_validation->set_rules('rating', 'Sunway Rating', 'trim|required|max_length[5]');
 
 
@@ -97,10 +97,9 @@ class TourController extends CI_Controller{
                 'price' => htmlspecialchars($this->input->post('price')),
                 'photo_id' => $photo_url,
                 'location' => htmlspecialchars($this->input->post('location')),
-                'lat' => htmlspecialchars($this->input->post('location')),
-                'lng' => htmlspecialchars($this->input->post('location')),
                 'introduction' => htmlspecialchars($this->input->post('introduction')),
-                'ratings' => htmlspecialchars($this->input->post('rating'))
+                'ratings' => htmlspecialchars($this->input->post('rating')),
+                'duration' => htmlspecialchars($this->input->post('duration'))
             );
 
             //insert tour table
@@ -143,8 +142,8 @@ class TourController extends CI_Controller{
         $config['allowed_types']        = 'gif|jpg|png|jpeg';
         $config['file_name']            = $imageName;
         $config['max_size']             = 200000;
-        $config['max_width']            = 1024;
-        $config['max_height']           = 768;
+        $config['max_width']            = 1300;
+        $config['max_height']           = 900;
 
         $this->load->library('upload', $config);
 

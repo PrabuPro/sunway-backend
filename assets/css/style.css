@@ -4,7 +4,7 @@
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
- @import "//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css";
+ /* @import "//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"; */
 :root {
   --blue: #007bff;
   --indigo: #6610f2;

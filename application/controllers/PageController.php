@@ -60,7 +60,7 @@ class PageController extends CI_Controller{
         $data['site_view'] = 'inquiry';
         $data['site_title'] = 'Inquiry';
         $data['suggestions'] = $this->tour_model->suggestions(2);
-        $this->load->view('main/main_view', $data);
+        $this->load->view('inquiry', $data);
     }
     public function policy(){
         $data['site_view'] = 'policy';

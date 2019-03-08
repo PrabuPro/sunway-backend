@@ -4,8 +4,8 @@
 
 <style>
 	.thumbnail-image{
-    background-size:cover;
-}
+    	background-size:cover;
+	}
 
 </style>
 
@@ -28,7 +28,7 @@
 			<article class="message is-success">
 				<div class="message-header">
 					<p>Success</p>
-					<button class="delete" aria-label="delete"></button>
+					<button class="delete btn-refresh" aria-label="delete"></button>
 				</div>
 				<div class="message-body">
 					<?php echo $this->session->flashdata('success'); ?>
@@ -50,24 +50,24 @@
 						<form action="<?php echo site_url('tourcontroller/addtours');?>" method="post" enctype="multipart/form-data">
 							<div class="field">
 								<div class="control">
-									<input class="input is-info" name="name" type="text" value="<?php echo set_value('name');?>" placeholder="Tour Name">
+									<input class="input is-info" name="name" type="text" value="<?php echo set_value('name');?>" placeholder="Tour Name" required>
 								</div>
 							</div>
 							<div class="field">
 								<div class="control">
 									<input class="input is-info" name="description" type="text" value="<?php echo set_value('description');?>"
-									 placeholder="Description">
+									 placeholder="Description" required>
 								</div>
 							</div>
 							<div class="field">
 								<div class="control">
-									<textarea class="textarea is-info" placeholder="Introduction" name="introduction"><?php echo set_value('introduction');?></textarea>
+									<textarea class="textarea is-info" placeholder="Introduction" name="introduction" required><?php echo set_value('introduction');?></textarea>
 								</div>
 							</div>
 							<div class="field">
 								<div class="control">
 									<div class="select is-info">
-										<select name="tour_type">
+										<select name="tour_type" required>
 											<option value="">Tour Type</option>
 											<option value="common">Common</option>
 											<option value="beach">Beach</option>
@@ -84,7 +84,7 @@
 							<div class="field">
 								<div class="control">
 									<div class="select is-info">
-										<select name="suitable_for">
+										<select name="suitable_for" required>
 											<option value="">Suitable for</option>
 											<option value="seniors">Seniors</option>
 											<option value="couples">Couples</option>
@@ -100,7 +100,7 @@
 							</div>
 							<div class="field">
 								<div class="control">
-									<input class="column is-5 input is-info" name="price" type="text" placeholder="Price" value="<?php echo set_value('price');?>">
+									<input class="column is-5 input is-info" name="price" type="text" placeholder="Price" value="<?php echo set_value('price');?>" required>
 								</div>
 							</div>
 
@@ -108,7 +108,7 @@
 								<div class="control">
 									<div class="file">
 										<label class="file-label">
-											<input class="file-input" type="file" name="photo_id" accept="image/jpg, image/jpeg, image/png" onchange="readURL(this);">
+											<input class="file-input" type="file" name="photo_id" accept="image/jpg, image/jpeg, image/png" onchange="readURL(this);" required>
 											<span class="file-cta">
 												<span class="file-icon">
 													<i class="fas fa-upload"></i>
@@ -126,27 +126,39 @@
 
 							<div class="field">
 								<div class="control">
-									<input class="input is-info" name="location" type="text" placeholder="Location" value="<?php echo set_value('location');?>">
-								</div>
-							</div>
-							<div class="field">
-								<div class="control">
-									<input class="column is-5 input is-info" name="lat" type="text" placeholder="Latitude" value="<?php echo set_value('lat');?>">
-								</div>
-							</div>
-							<div class="field">
-								<div class="control ">
-									<input class="column is-5 input is-info" name="lng" type="text" placeholder="Longitude" value="<?php echo set_value('lng');?>">
+									<input class="input is-info" name="location" type="text" placeholder="Location" value="<?php echo set_value('location');?>" required>
 								</div>
 							</div>
 
 							<h2>Itinerary</h2><br>
 				
+							<div class="counters" style="font-weight:700; font-size:1.2em;">Added Days - <span class="itinerary-counter">0</span></div>
 							<div style="margin-bottom:20px; cursor:pointer;" id="description"><p id="add_field" style="background-color:green; width:30%; color:white;">ADD DESCRIPTION</p></div>
 
 							<div class="field">
-								<div class="control ">
-									<input class="column is-5 input is-info" name="rating" type="text" placeholder="Sunway Rating" value="<?php echo set_value('rating');?>">
+								<div class="control">
+									<div class="select is-info">
+										<select name="duration" required>
+											<option value="">Duration</option>
+											<option value="7">7 Days</option>
+											<option value="10-12">10-12 Days</option>
+											<option value="14">14 Days</option>
+											<option value="14+">14+</option>
+										</select>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="field">
+								<div class="control">
+									<div class="select is-info">
+										<select name="rating" required>
+											<option value="">Sunway Rating</option>
+											<option value="0">0</option>
+											<option value="1">1</option>
+										</select>
+									</div>
 								</div>
 							</div>
 
@@ -155,13 +167,7 @@
 									<input class="column is-3 button is-block is-info is-medium is-fullwidth" type="submit" value="Add Tour">
 								</div>
 							</div>
-
-							
-
-							
-
 						</form>
-
 					</div>
 				</div>
 			</section>
@@ -171,8 +177,9 @@
 </div>
 <script src="<?php echo base_url();?>assets/js/jquery.min.js"></script>
 <script>
- var count = 0;
-	var count = 0;
+	 
+	 var count = 0;
+
     $(document).ready(function() {
         $('p#add_field').click(function(){
            count += 1;
@@ -187,9 +194,15 @@
 									<textarea class="textarea is-info is-12" name="desc[]" type="text" placeholder="Description"><?php echo set_value('desc[]');?></textarea>
 								</div>
 							</div>`;
-            $('#description').append(html);
+			$('#description').append(html);
+			$('.itinerary-counter').text(count);
 
-    	});
+		});
+		
+		$('.btn-refresh').click(function(){
+			window.location.href = '<?php echo base_url();?>addhotelsview';
+			window.location.href = '<?php echo base_url();?>addtoursview';
+		});
     });
 
 </script>

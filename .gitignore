@@ -4,6 +4,7 @@ application/vendor/
 .DS_Store
 
 assets/images/
+assets2/img/
 
 application/cache/*
 !application/cache/index.html

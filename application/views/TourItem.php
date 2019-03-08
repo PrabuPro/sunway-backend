@@ -26,7 +26,7 @@
 					</div>
 				</div>
 			</div>
-			<h3 class="col-md-7 col-sm-12 sub--para-itenary mb-5 ftco-animate">
+			<h3 class="col-md-12 col-sm-12 col-lg-12 sub--para-itenary mb-5 ftco-animate">
 				<?php echo $results->introduction; ?>
 			</h3><br>
 
@@ -50,10 +50,12 @@
 				</div>
 			</div>
 			<div class="col-lg-6">
-				<div id="map"></div>
-				<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31659.998183437292!2d80.57900303960295!3d7.297608838410905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae366266498acd3%3A0x411a3818a1e03c35!2sKandy!5e0!3m2!1sen!2slk!4v1548053966566"
-                        width="550" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> -->
-			</div>			
+				<div class="tour_item-image" style="width:100%; height:30em; background-size:cover; background-image: url('<?php echo base_url().'assets/images/tours/'.$results->photo_id; ?>');">
+
+				</div>
+
+			</div>
+
 			<section class="ftco-section">
 				<div class="container">
 					<div class="col-lg-12 col-md-12">
@@ -218,26 +220,26 @@
  <script src="<?php echo base_url();?>assets/js/inquiry.js"></script>
 
 <script>
-	function initMap() {
-		// The location of Uluru
-		var uluru = {
-			lat: -25.344,
-			lng: 131.036
-		};
-		// The map, centered at Uluru
-		var map = new google.maps.Map(
-			document.getElementById('map'), {
-				zoom: 4,
-				center: uluru
-			});
-		// The marker, positioned at Uluru
-		var marker = new google.maps.Marker({
-			position: uluru,
-			map: map
-		});
-	}
+	// function initMap() {
+	// 	// The location of Uluru
+	// 	var uluru = {
+	// 		lat: -25.344,
+	// 		lng: 131.036
+	// 	};
+	// 	// The map, centered at Uluru
+	// 	var map = new google.maps.Map(
+	// 		document.getElementById('map'), {
+	// 			zoom: 4,
+	// 			center: uluru
+	// 		});
+	// 	// The marker, positioned at Uluru
+	// 	var marker = new google.maps.Marker({
+	// 		position: uluru,
+	// 		map: map
+	// 	});
+	// }
 
 </script>
 
-<script async defer src="https://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452&key=YOUR_API_KEY">
-</script>
+<!-- <script async defer src="https://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452&key=YOUR_API_KEY">
+</script> -->

@@ -47,13 +47,7 @@
           <div class="col-md-12 tabulation-search">
             <div class="element-animate">
               <div class="nav nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                <a class="nav-link p-3 active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
-                    <svg class="nav-pills__social--icon">
-                        <a href="#" class="nav-pills__social--link">
-                            <use xlink:href="<?php echo base_url(); ?>assets/images/sprite2.svg#icon-bed"></use>
-                        </a>
-                    </svg>Hotel</a>
-                <a class="nav-link p-3" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                <a class="nav-link p-3 active" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">
                     <svg class="nav-pills__social--icon">
                         <a href="#" class="nav-pills__social--link">
                             <use xlink:href="<?php echo base_url(); ?>assets/images/sprite2.svg#icon-thumb-tack"></use>
@@ -65,65 +59,42 @@
             </div>
               
             <div class="tab-content py-4" id="v-pills-tabContent">
-              <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+              
+              <div class="tab-pane fade show active" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
                 <div class="block-17">
-                  <form action="<?php echo site_url('search-accomadations');?>" method="post" class="d-block d-lg-flex">
+                  <form action="<?php echo site_url('search-tours');?>" method="post" class="d-block d-lg-flex">
                     <div class="fields d-block d-lg-flex">
                       
                     <div class="select-wrap one-third">
                         <div class="icon"></div>
-                        <select name="country" id="" class="form-control form-control-select" required>
-                          <option value="" class="form-control-option-white">Country</option>
-                          <option value="sri lanka" class="form-control-option-white"  >Sri Lanka</option>
-                          <option value="maldives" class="form-control-option-white"  >Maldives</option>
+                        <select name="duration" id="" class="form-control" required>
+                          <option value="">Tour Duration</option>
+                          <option value="7" class="form-control-option-white" >7 Days</option>
+                          <option value="10-12" class="form-control-option-white"  >10 to 12 Days</option>
+                          <option value="14" class="form-control-option-white">14 Days</option>
+                          <option value="14+" class="form-control-option-white" >More than 14</option>
                         </select>
                       </div>
 
-                      <div class="check-in one-third"><input type="text" id="checkin_date" class="form-control" placeholder="Check-in date" name="check-in-date"></div>
-
-                      <div class="check-out one-third"><input type="text" id="checkout_date" class="form-control" placeholder="Check-out date" name="check-out-date"></div>
                       <div class="select-wrap one-third">
                         <div class="icon"></div>
-                        <select name="suitable_for"  id="" class="form-control form-control-select" required>
-                          <option value="" class="form-control-option-white">Suitable For</option>  
-                          <option value="seniors" class="form-control-option-white"  >Seniors</option>
-                          <option value="couples" class="form-control-option-white"  >Couples</option>
-                          <option value="family" class="form-control-option-white"  >Family</option>
-                          <option value="honeymooners" class="form-control-option-white"  >Honeymooners</option>
-                          <option value="small gourp" class="form-control-option-white"  >Small Group </option>
-                          <option value="researchers" class="form-control-option-white"  >Researchers</option>
-                          <option value="singles + kids" class="form-control-option-white"  >Singles + kids</option>
-                          <option value="pilgrims" class="form-control-option-white"  >Pilgrims</option>
-                        </select>
-                        
-                      </div>
-                      <div class="select-wrap one-third">
-                        <div class="icon"></div>
-                        <select name="hotel_type" id="" class="form-control" required>
-                          <option value="">Accomadation Type</option>
-                          <option value="standard" class="form-control-option-white">Standard</option>
-                          <option value="3 star" class="form-control-option-white">3 Star</option>
-                          <option value="4 star" class="form-control-option-white">4 Star</option>
-                          <option value="5 star" class="form-control-option-white">5 Star</option>
-                          <option value="bouteque hotels" class="form-control-option-white">Bouteque Hotels</option>
-                          <option value="villas" class="form-control-option-white">Villas</option>
-                          <option value="apartments" class="form-control-option-white">Apartments</option>
-                          <option value="rent a house" class="form-control-option-white">Rent a House</option>
+                        <select name="mounth"  id="" class="form-control form-control-select" required>
+                          <option value="" class="form-control-option-white">Month</option>
+                          <option value="jan" class="form-control-option-white"  >January</option>
+                          <option value="feb" class="form-control-option-white"  >February</option>
+                          <option value="mar" class="form-control-option-white"  >March</option>
+                          <option value="apr" class="form-control-option-white"  >April</option>
+                          <option value="may" class="form-control-option-white"  >May</option>
+                          <option value="june" class="form-control-option-white"  >June</option>
+                          <option value="july" class="form-control-option-white"  >July</option>
+                          <option value="aug" class="form-control-option-white"  >August</option>
+                          <option value="sep" class="form-control-option-white"  >September</option>
+                          <option value="oct" class="form-control-option-white"  >October</option>
+                          <option value="nov" class="form-control-option-white"  >November</option>
+                          <option value="dec" class="form-control-option-white"  >December</option>
                         </select>
                       </div>
-                      
-                    </div>
-                    <input type="submit" class="search-submit btn btn-primary" value="Find Hotels">  
-                  </form>
-                </div>
-              </div>
-              <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-                <div class="block-17">
-                  <form action="<?php echo site_url('search-tours');?>" method="post" class="d-block d-lg-flex">
-                    <div class="fields d-block d-lg-flex">
-                      <div class="check-in one-third"><input type="text" id="checkin_date" class="form-control" placeholder="Check-in date" name="check-in-date"></div>
 
-                      <div class="check-out one-third"><input type="text" id="checkout_date" class="form-control" placeholder="Check-out date" name="check-out-date"></div>
                       <div class="select-wrap one-third">
                         <div class="icon"></div>
                         <select name="suitable_for"  id="" class="form-control form-control-select" required>
@@ -290,6 +261,106 @@
         </div>
       </div>
     </section>
+
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 text-center heading-section ftco-animate">
+            <h2>Our Famouse itinerary</h2>
+          </div>
+        </div>
+        <div class="row ftco-animate">
+          <div class="carousel1 owl-carousel ftco-owl">
+            <div class="item">
+              <div class="blog-entry">
+                <a href="blog-single.html" class="block-20" style="background-image: url('<?php echo base_url();?>assets/images/image_5.jpg');">
+                </a>
+                <div class="text p-4">
+                  <div class="meta">
+                    <div><a href="#">July 7, 2018</a></div>
+                    <div><a href="#">Admin</a></div>
+                  </div>
+                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                  <p class="clearfix">
+                    <a href="#" class="float-left">Read more</a>
+                    <a href="#" class="float-right meta-chat"><span class="icon-chat"></span> 3</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="blog-entry" data-aos-delay="100">
+                <a href="blog-single.html" class="block-20" style="background-image: url('<?php echo base_url();?>assets/images/image_6.jpg');">
+                </a>
+                <div class="text p-4">
+                  <div class="meta">
+                    <div><a href="#">July 7, 2018</a></div>
+                    <div><a href="#">Admin</a></div>
+                  </div>
+                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                  <p class="clearfix">
+                    <a href="#" class="float-left">Read more</a>
+                    <a href="#" class="float-right meta-chat"><span class="icon-chat"></span> 3</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="blog-entry" data-aos-delay="200">
+                <a href="blog-single.html" class="block-20" style="background-image: url('<?php echo base_url();?>assets/images/image_7.jpg');">
+                </a>
+                <div class="text p-4">
+                  <div class="meta">
+                    <div><a href="#">July 7, 2018</a></div>
+                    <div><a href="#">Admin</a></div>
+                  </div>
+                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                  <p class="clearfix">
+                    <a href="#" class="float-left">Read more</a>
+                    <a href="#" class="float-right meta-chat"><span class="icon-chat"></span> 3</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="blog-entry" data-aos-delay="200">
+                <a href="blog-single.html" class="block-20" style="background-image: url('<?php echo base_url();?>assets/images/image_8.jpg');">
+                </a>
+                <div class="text p-4">
+                  <div class="meta">
+                    <div><a href="#">July 7, 2018</a></div>
+                    <div><a href="#">Admin</a></div>
+                  </div>
+                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                  <p class="clearfix">
+                    <a href="#" class="float-left">Read more</a>
+                    <a href="#" class="float-right meta-chat"><span class="icon-chat"></span> 3</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="blog-entry" data-aos-delay="200">
+                <a href="blog-single.html" class="block-20" style="background-image: url('<?php echo base_url();?>assets/images/image_9.jpg');">
+                </a>
+                <div class="text p-4">
+                  <div class="meta">
+                    <div><a href="#">July 7, 2018</a></div>
+                    <div><a href="#">Admin</a></div>
+                  </div>
+                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                  <p class="clearfix">
+                    <a href="#" class="float-left">Read more</a>
+                    <a href="#" class="float-right meta-chat"><span class="icon-chat"></span> 3</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
     <section class="ftco-section">
       <div class="container-fluid">
@@ -537,104 +608,6 @@
       </div>
     </section>
 
-<section class="ftco-section bg-light">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-5">
-          <div class="col-md-7 text-center heading-section ftco-animate">
-            <h2>Our Famouse itinerary</h2>
-          </div>
-        </div>
-        <div class="row ftco-animate">
-          <div class="carousel1 owl-carousel ftco-owl">
-            <div class="item">
-              <div class="blog-entry">
-                <a href="blog-single.html" class="block-20" style="background-image: url('<?php echo base_url();?>assets/images/image_5.jpg');">
-                </a>
-                <div class="text p-4">
-                  <div class="meta">
-                    <div><a href="#">July 7, 2018</a></div>
-                    <div><a href="#">Admin</a></div>
-                  </div>
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-                  <p class="clearfix">
-                    <a href="#" class="float-left">Read more</a>
-                    <a href="#" class="float-right meta-chat"><span class="icon-chat"></span> 3</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="blog-entry" data-aos-delay="100">
-                <a href="blog-single.html" class="block-20" style="background-image: url('<?php echo base_url();?>assets/images/image_6.jpg');">
-                </a>
-                <div class="text p-4">
-                  <div class="meta">
-                    <div><a href="#">July 7, 2018</a></div>
-                    <div><a href="#">Admin</a></div>
-                  </div>
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-                  <p class="clearfix">
-                    <a href="#" class="float-left">Read more</a>
-                    <a href="#" class="float-right meta-chat"><span class="icon-chat"></span> 3</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="blog-entry" data-aos-delay="200">
-                <a href="blog-single.html" class="block-20" style="background-image: url('<?php echo base_url();?>assets/images/image_7.jpg');">
-                </a>
-                <div class="text p-4">
-                  <div class="meta">
-                    <div><a href="#">July 7, 2018</a></div>
-                    <div><a href="#">Admin</a></div>
-                  </div>
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-                  <p class="clearfix">
-                    <a href="#" class="float-left">Read more</a>
-                    <a href="#" class="float-right meta-chat"><span class="icon-chat"></span> 3</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="blog-entry" data-aos-delay="200">
-                <a href="blog-single.html" class="block-20" style="background-image: url('<?php echo base_url();?>assets/images/image_8.jpg');">
-                </a>
-                <div class="text p-4">
-                  <div class="meta">
-                    <div><a href="#">July 7, 2018</a></div>
-                    <div><a href="#">Admin</a></div>
-                  </div>
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-                  <p class="clearfix">
-                    <a href="#" class="float-left">Read more</a>
-                    <a href="#" class="float-right meta-chat"><span class="icon-chat"></span> 3</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="blog-entry" data-aos-delay="200">
-                <a href="blog-single.html" class="block-20" style="background-image: url('<?php echo base_url();?>assets/images/image_9.jpg');">
-                </a>
-                <div class="text p-4">
-                  <div class="meta">
-                    <div><a href="#">July 7, 2018</a></div>
-                    <div><a href="#">Admin</a></div>
-                  </div>
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-                  <p class="clearfix">
-                    <a href="#" class="float-left">Read more</a>
-                    <a href="#" class="float-right meta-chat"><span class="icon-chat"></span> 3</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <section class="tailorMade-section">
       <div class="bg-video">
@@ -653,6 +626,14 @@
         </div>
       </div>
     </section>
+
+    <div class="ftco-section">
+      <div class="container-flex">
+        <div class="row">
+            
+        </div>
+      </div>
+    </div>
 
     
 

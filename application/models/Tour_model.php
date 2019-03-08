@@ -31,7 +31,7 @@ class Tour_model extends CI_Model{
     }
 
     public function get_tourItem($pageId){
-        $this->db->select('tour_id, name, tour_type,suitable_for,price,photo_id,location,lat,lng,introduction');
+        $this->db->select('tour_id, name, tour_type,suitable_for,price,photo_id,location,introduction');
         $this->db->where('tour_id',$pageId);
         $query = $this->db->get('tours');
 
