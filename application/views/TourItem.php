@@ -50,7 +50,7 @@
 				</div>
 			</div>
 			<div class="col-lg-6">
-				<div class="tour_item-image" style="width:100%; height:30em; background-size:cover; background-image: url('<?php echo base_url().'assets/images/tours/'.$results->photo_id; ?>');">
+				<div class="tour_item-image" style="width:100%; height:30em; background-size:cover; background-image: url('<?php echo base_url().'assets/images/tours/'.$results->map_id; ?>');">
 
 				</div>
 

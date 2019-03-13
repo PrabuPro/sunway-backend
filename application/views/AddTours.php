@@ -104,11 +104,12 @@
 								</div>
 							</div>
 
+							<label for="">Photo</label>
 							<div class="field">
 								<div class="control">
 									<div class="file">
 										<label class="file-label">
-											<input class="file-input" type="file" name="photo_id" accept="image/jpg, image/jpeg, image/png" onchange="readURL(this);" required>
+											<input class="file-input input-photo" type="file" name="photo_id" accept="image/jpg, image/jpeg, image/png" onchange="readURL(this);" required>
 											<span class="file-cta">
 												<span class="file-icon">
 													<i class="fas fa-upload"></i>
@@ -120,6 +121,26 @@
 										</label>
 									</div>
 									<img id="thumbnail" src="#" alt="your image" class="thumbnail-image" />
+								</div>
+							</div>
+
+							<label for="">Map</label>
+							<div class="field">
+								<div class="control">
+									<div class="file">
+										<label class="file-label">
+											<input class="file-input input-map" type="file" name="map_id" accept="image/jpg, image/jpeg, image/png" onchange="readURLMap(this);" required>
+											<span class="file-cta">
+												<span class="file-icon">
+													<i class="fas fa-upload"></i>
+												</span>
+												<span class="file-label">
+													Choose a file…
+												</span>
+											</span>
+										</label>
+									</div>
+									<img id="thumbnail-map" src="#" alt="your image" class="thumbnail-image" />
 								</div>
 							</div>
 

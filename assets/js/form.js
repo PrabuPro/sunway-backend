@@ -9,6 +9,23 @@ function readURL(input) {
                 .height(150);
         };
 
+      
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+function readURLMap(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#thumbnail-map')
+                .attr('src', e.target.result)
+                .width(250)
+                .height(150);
+        };
+
+      
         reader.readAsDataURL(input.files[0]);
     }
 }

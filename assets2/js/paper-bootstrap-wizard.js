@@ -127,15 +127,47 @@ transparent = true;
                     readURL(this);
                 });
 
-                $('[data-toggle="wizard-radio"]').click(function(){
+                // $('[data-toggle="wizard-radio"]').click(function(){
+                //     wizard = $(this).closest('.wizard-card');
+                //     wizard.find('[data-toggle="wizard-radio"]').removeClass('active');
+                //     $(this).addClass('active');
+                //     $(wizard).find('[type="checkbox"]').removeAttr('checked');
+                //     $(this).find('[type="checkbox"]').attr('checked','true');
+                // });
+
+                $('[data-toggle="wizard-radio-pace"]').click(function () {
                     wizard = $(this).closest('.wizard-card');
-                    wizard.find('[data-toggle="wizard-radio"]').removeClass('active');
+                    wizard.find('[data-toggle="wizard-radio-pace"]').removeClass('active');
                     $(this).addClass('active');
-                    $(wizard).find('[type="radio"]').removeAttr('checked');
-                    $(this).find('[type="radio"]').attr('checked','true');
+                    $(wizard).find('.pace').removeAttr('checked');
+                    $(this).find('.pace').attr('checked','true');
                 });
 
-                $('[data-toggle="wizard-checkbox"]').click(function(){
+                $('[data-toggle="wizard-radio-people"]').click(function () {
+                    wizard = $(this).closest('.wizard-card');
+                    wizard.find('[data-toggle="wizard-radio-people"]').removeClass('active');
+                    $(this).addClass('active');
+                    $(wizard).find('.people').removeAttr('checked');
+                    $(this).find('.people').attr('checked','true');
+                });
+
+                $('[data-toggle="wizard-radio-hotel"]').click(function () {
+                    wizard = $(this).closest('.wizard-card');
+                    wizard.find('[data-toggle="wizard-radio-hotel"]').removeClass('active');
+                    $(this).addClass('active');
+                    $(wizard).find('.accomadation').removeAttr('checked');
+                    $(this).find('.accomadation').attr('checked','true');
+                });
+
+                $('[data-toggle="wizard-radio-maldives"]').click(function () {
+                    wizard = $(this).closest('.wizard-card');
+                    wizard.find('[data-toggle="wizard-radio-maldives"]').removeClass('active');
+                    $(this).addClass('active');
+                    $(wizard).find('.maldives').removeAttr('checked');
+                    $(this).find('.maldives').attr('checked','true');
+                });
+
+                $('[data-toggle="wizard-checkbox-experience"]').click(function(){
                     if( $(this).hasClass('active')){
                         $(this).removeClass('active');
                         // $(this).find('.card-checkboxes').css('background-color', 'rgb(187, 186, 181)');
@@ -148,6 +180,7 @@ transparent = true;
 
                     }
                 });
+         
 
                 $('.set-full-height').css('height', 'auto');
 

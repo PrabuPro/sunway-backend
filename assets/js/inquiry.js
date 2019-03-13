@@ -2,7 +2,6 @@ $(document).ready(function(){
 	$('.inquiry_form').on('submit', function (e) {
 		e.preventDefault();
 		
-
 		swal({
 			title: "Hang on!",
 			text: "Your Inquiry is sending....",

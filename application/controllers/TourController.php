@@ -82,12 +82,16 @@ class TourController extends CI_Controller{
 
             $imageName = (int)$lastimage->tour_id + 1 ;
 
+            $mapName = $imageName . '-m';
+
             //upload image and insert data into database
-            if($this->imageUpload($imageName)){
+            if($this->imageUpload($imageName) && $this->imageUpload($mapName)){
 
-            $path = $_FILES['photo_id']['name'];
+            $path_photo = $_FILES['photo_id']['name'];
+            $path_map = $_FILES['map_id']['name'];
 
-            $photo_url = $imageName. '.'. pathinfo($path, PATHINFO_EXTENSION);
+            $photo_url = $imageName. '.'. pathinfo($path_photo, PATHINFO_EXTENSION);
+            $map_url = $mapName. '.'. pathinfo($path_map, PATHINFO_EXTENSION);
 
             $databaseData = array(
                 'name' => htmlspecialchars($this->input->post('name')),
@@ -99,7 +103,8 @@ class TourController extends CI_Controller{
                 'location' => htmlspecialchars($this->input->post('location')),
                 'introduction' => htmlspecialchars($this->input->post('introduction')),
                 'ratings' => htmlspecialchars($this->input->post('rating')),
-                'duration' => htmlspecialchars($this->input->post('duration'))
+                'duration' => htmlspecialchars($this->input->post('duration')),
+                'map_id' => $map_url
             );
 
             //insert tour table

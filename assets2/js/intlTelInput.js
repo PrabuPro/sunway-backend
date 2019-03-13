@@ -1231,8 +1231,8 @@
             return Iti;
         }();
         /********************
- *  STATIC METHODS
- ********************/
+         *  STATIC METHODS
+        ********************/
         // get the country data object
         window.intlTelInputGlobals.getCountryData = function() {
             return allCountries;
