@@ -93,8 +93,27 @@
 			margin-bottom:10px;
 			
 		}
+		.radio-box-2{
+			width: 100px;
+			height: 120px;
+			background-color:#F2F2ED;
+			padding: 10px 0;
+			border-radius: 5px;
+			display:flex;
+			flex-direction:column;
+			transition: transform 0.2s, box-shadow .2s;
+			margin-bottom:10px;
+			
+		}
 
 		.radio-box:hover {
+			transform: translateY(-10px);
+			box-shadow: 0px 12px 17px -7px rgba(0, 0, 0, 0.3);
+			cursor: pointer;
+
+		}
+
+		.radio-box-2:hover {
 			transform: translateY(-10px);
 			box-shadow: 0px 12px 17px -7px rgba(0, 0, 0, 0.3);
 			cursor: pointer;
@@ -117,6 +136,14 @@
 			background-size:cover;
 			background-repeat:no-repeat;
 		}
+		.radio-box--image-2{
+			width:60px;
+			height:60px;
+			margin:0 auto;
+			background-image: url('assets/images/hotel-1.jpg');
+			background-size:cover;
+			background-repeat:no-repeat;
+		}
 
 		.radio-box--text{
 			align-self:center;
@@ -124,6 +151,18 @@
 			font-weight:800;
 			text-transform:uppercase;
 			margin-top:130px;
+			margin-left:auto;
+			margin-right:auto;
+			text-align:center;
+			color:#A9A9A5;
+		}
+	
+		.radio-box--text-2{
+			align-self:center;
+			font-size:15px;
+			font-weight:800;
+			text-transform:uppercase;
+			margin-top:80px;
 			margin-left:auto;
 			margin-right:auto;
 			text-align:center;
@@ -268,135 +307,6 @@
 												</div>
 											</div>
 
-<script>
-
-	function colorChangeFirst(){
-		document.getElementById('pace-box-1').style.backgroundColor = "#7E9C9D";
-		document.getElementById('radio-box--text-1').style.color = "#ffffff";
-		document.getElementById('pace-box-2').style.backgroundColor = "#F1F2EC";
-		document.getElementById('radio-box--text-2').style.color = "#A9A9A5";
-		document.getElementById('pace-box-3').style.backgroundColor = "#F1F2EC";
-		document.getElementById('radio-box--text-3').style.color = "#A9A9A5";
-	}
-
-	function colorChangeSecound(){
-		document.getElementById('pace-box-2').style.backgroundColor = "#7E9C9D";
-		document.getElementById('radio-box--text-2').style.color = "#ffffff";
-		document.getElementById('pace-box-1').style.backgroundColor = "#F1F2EC";
-		document.getElementById('radio-box--text-1').style.color = "#A9A9A5";
-		document.getElementById('pace-box-3').style.backgroundColor = "#F1F2EC";
-		document.getElementById('radio-box--text-3').style.color = "#A9A9A5";
-	}
-
-	function colorChangeThird(){
-		document.getElementById('pace-box-3').style.backgroundColor = "#7E9C9D";
-		document.getElementById('radio-box--text-3').style.color = "#ffffff";
-		document.getElementById('pace-box-2').style.backgroundColor = "#F1F2EC";
-		document.getElementById('radio-box--text-2').style.color = "#A9A9A5";
-		document.getElementById('pace-box-1').style.backgroundColor = "#F1F2EC";
-		document.getElementById('radio-box--text-1').style.color = "#A9A9A5";
-	}
-
-	let firstBoxCheck = true;
-	let secoundBoxCheck = true;
-	let thirdBoxCheck = true;
-	let fourthBoxCheck = true;
-	let fifthBoxCheck = true;
-	let sixethBoxCheck = true;
-
-	// let label = document.getElementById('culture-label')
-
-	let firstBox = document.getElementById('checkbox-box-1');
-	let secoundBox = document.getElementById('checkbox-box-2');
-	let thirdBox = document.getElementById('checkbox-box-3');
-	let fourthBox = document.getElementById('checkbox-box-4');
-	let fifthBox = document.getElementById('checkbox-box-5');
-	let sixethBox = document.getElementById('checkbox-box-6');
-
-	function checkboxColorChange_1(){
-		if(firstBoxCheck){
-			firstBox.style.backgroundColor="#7E9C9D";
-			let box = firstBox.querySelector('#radio-box--text');
-			box.style.color = '#ffffff';
-			firstBoxCheck = false;
-		} else {
-			firstBox.style.backgroundColor="#F1F2EC";
-			let box = firstBox.querySelector('#radio-box--text');
-			box.style.color="#A9A9A5";
-			firstBoxCheck = true;
-		}
-	}
-	function checkboxColorChange_2(){
-		if(secoundBoxCheck){
-			secoundBox.style.backgroundColor="#7E9C9D";
-			let box = secoundBox.querySelector('#radio-box--text');
-			box.style.color = '#ffffff';
-			secoundBoxCheck = false;
-		} else {
-			secoundBox.style.backgroundColor="#F1F2EC";
-			let box = secoundBox.querySelector('#radio-box--text');
-			box.style.color="#A9A9A5";
-			secoundBoxCheck = true;
-		}
-	}
-	function checkboxColorChange_3(){
-		if(thirdBoxCheck){
-			thirdBox.style.backgroundColor="#7E9C9D";
-			let box = thirdBox.querySelector('#radio-box--text');
-			box.style.color = '#ffffff';
-			thirdBoxCheck = false;
-		} else {
-			thirdBox.style.backgroundColor="#F1F2EC";
-			let box = thirdBox.querySelector('#radio-box--text');
-			box.style.color="#A9A9A5";
-			thirdBoxCheck = true;
-		}
-	}
-	function checkboxColorChange_4(){
-		if(fourthBoxCheck){
-			fourthBox.style.backgroundColor="#7E9C9D";
-			let box = fourthBox.querySelector('#radio-box--text');
-			box.style.color = '#ffffff';
-			fourthBoxCheck = false;
-		} else {
-			fourthBox.style.backgroundColor="#F1F2EC";
-			let box = fourthBox.querySelector('#radio-box--text');
-			box.style.color="#A9A9A5";
-			fourthBoxCheck = true;
-		}
-	}
-	function checkboxColorChange_5(){
-		if(fifthBoxCheck){
-			fifthBox.style.backgroundColor="#7E9C9D";
-			let box = fifthBox.querySelector('#radio-box--text');
-			box.style.color = '#ffffff';
-			fifthBoxCheck = false;
-		} else {
-			fifthBox.style.backgroundColor="#F1F2EC";
-			let box = fifthBox.querySelector('#radio-box--text');
-			box.style.color="#A9A9A5";
-			fifthBoxCheck = true;
-		}
-	}
-	function checkboxColorChange_6(){
-		if(sixethBoxCheck){
-			sixethBox.style.backgroundColor="#7E9C9D";
-			let box = sixethBox.querySelector('#radio-box--text');
-			box.style.color = '#ffffff';
-			sixethBoxCheck = false;
-		} else {
-			sixethBox.style.backgroundColor="#F1F2EC";
-			let box = sixethBox.querySelector('#radio-box--text');
-			box.style.color="#A9A9A5";
-			sixethBoxCheck = true;
-		}
-	}
-	
-
-</script>
-
-
-
 												<div class="form-group" style="margin-top:50px !important;">
 												<label class="col-sm-8 col-sm-offset-1" style="margin-bottom:10px;">2)  Which pace would suit you best?</label>
 											</div>
@@ -436,63 +346,20 @@
 												</div>
 											</div>
 
-											<!-- <div class="form-group">
-												<div class="col-lg-12 col-md-12" style="margin-bottom:50px;">
-													<div class="col-lg-3 col-md-3 col-sm-offset-1">
-														<div class="choice" data-toggle="wizard-radio-pace" style="margin-top:0;">
-															<input type="checkbox" name="pace[]" value="active" class="pace">
-															<div class="card card-checkboxes card-hover-effect">
-																<img class="card-img-top" src="<?php echo base_url();?>assets2/img/pexels-photo-76093.jpeg" alt="Card image cap" style='width:140px; height:100px; background-size:cover; '>
-																<div class="card-body">
-																	<h5 class="card-title" style="font-size:16px; font-weight:600; text-transform:uppercase;">ACTIVE</h5>
-																</div>
-															</div>
-															<p style="text-align: center; font-size:12px;">see as much as possible of Sri Lanka during my Trip</p>
-														</div>
-													</div>											
-													<div class="col-lg-3 col-md-3">
-														<div class="choice" data-toggle="wizard-radio-pace" style="margin-top:0;">
-															<input type="checkbox" name="pace[]" value="soft adventure" class="pace">
-															<div class="card card-checkboxes card-hover-effect">
-																<img class="card-img-top" src="<?php echo base_url();?>assets2/img/pexels-photo-76093.jpeg" alt="Card image cap" style='width:140px; height:100px; background-size:cover; '>
-																<div class="card-body">
-																	<h5 class="card-title" style="font-size:16px; font-weight:600; text-transform:uppercase;">SOFT ADVENTURE </h5>
-																</div>
-															</div>
-														</div>
-														<p style="text-align: center; font-size:12px;">Combine fun activities like cycling/ trekking/ canoeing … etc</p>
-													</div>											
-													<div class="col-lg-3 col-md-3 ">
-														<div class="choice" data-toggle="wizard-radio-pace" style="margin-top:0;">
-															<input type="checkbox" name="pace[]" value="relaxing" class="pace">
-															<div class="card card-checkboxes card-hover-effect">
-																<img class="card-img-top" src="<?php echo base_url();?>assets2/img/pexels-photo-76093.jpeg" alt="Card image cap" style='width:140px; height:100px; background-size:cover; '>
-																<div class="card-body">
-																	<h5 class="card-title" style="font-size:16px; font-weight:600; text-transform:uppercase;">RELAXING</h5>
-																</div>
-															</div>
-														</div>
-														<p style="text-align: center; font-size:12px;">Experience Sri Lanka at a leisurely pace</p>
-													</div>
-																						
-												</div>
-											</div> -->
-											<!-- <div class="form-group" style="margin-top:50px !important;">
+											<div class="form-group" style="margin-top:50px !important;">
 												<label class="col-sm-8 col-sm-offset-1" style="margin-bottom:10px;">3)  How many people will travel together in your private tour?</label>
 											</div>
 											<div class="form-group" >
 												<div class="col-lg-12 col-md-12" style="margin-bottom:50px;">
 													<div class="col-lg-2 col-md-2 col-sm-offset-1" style="padding-right:5px;">
-														<div class="choice solo" data-toggle="wizard-radio-people" style="margin-top:0;">
-															<input type="checkbox" name="people[]" value="solo" class="people">
-															<div class="card card-checkboxes card-hover-effect">
-																<img class="card-img-top" src="<?php echo base_url();?>assets2/img/standing-up-man-.svg" alt="Card image cap" style='width:50px; height:50px; background-size:cover; '>
-																<div class="card-body">
-																	<h5 class="card-title" style="font-size:16px; font-weight:600; text-transform:uppercase;">SOLO</h5>
+														<label for="solo" class="pace-label">
+															<div class="radio-box-2" id="pace-box-3" >
+																<div class="radio-box--image-2" style="background-image: url('<?php echo base_url();?>assets2/img/female-and-male-shapes-silhouettes.svg')">
+																<h2 class="radio-box--text-2" id="radio-box--text-3">solo</h2>
 																</div>
 															</div>
-															
-														</div>
+														</label>
+														<input type="radio" id="solo" value="active" name="pace" class="radio-btn" onclick="colorChangeThird();">
 													</div>											
 													<div class="col-lg-2 col-md-2" style="padding-right:5px; padding-left:5px;">
 														<div class="choice couple" data-toggle="wizard-radio-people" style="margin-top:0;">
@@ -598,7 +465,7 @@
 													<label>Remarks on preferred accommodation type:</label>
 													<textarea type="text" class="form-control" name="accomadation_remarks" id="exampleInputEmail1" placeholder=""></textarea>
 												</div>
-											</div> -->
+											</div>
 		                            	</div>
 		                        	</div>
 		                            <!-- <div class="tab-pane" id="captain">
@@ -799,6 +666,134 @@
 
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="<?php echo base_url();?>assets2/js/tailorMade-form.js"></script>
+
+
+<script>
+
+	function colorChangeFirst(){
+		document.getElementById('pace-box-1').style.backgroundColor = "#7E9C9D";
+		document.getElementById('radio-box--text-1').style.color = "#ffffff";
+		document.getElementById('pace-box-2').style.backgroundColor = "#F1F2EC";
+		document.getElementById('radio-box--text-2').style.color = "#A9A9A5";
+		document.getElementById('pace-box-3').style.backgroundColor = "#F1F2EC";
+		document.getElementById('radio-box--text-3').style.color = "#A9A9A5";
+	}
+
+	function colorChangeSecound(){
+		document.getElementById('pace-box-2').style.backgroundColor = "#7E9C9D";
+		document.getElementById('radio-box--text-2').style.color = "#ffffff";
+		document.getElementById('pace-box-1').style.backgroundColor = "#F1F2EC";
+		document.getElementById('radio-box--text-1').style.color = "#A9A9A5";
+		document.getElementById('pace-box-3').style.backgroundColor = "#F1F2EC";
+		document.getElementById('radio-box--text-3').style.color = "#A9A9A5";
+	}
+
+	function colorChangeThird(){
+		document.getElementById('pace-box-3').style.backgroundColor = "#7E9C9D";
+		document.getElementById('radio-box--text-3').style.color = "#ffffff";
+		document.getElementById('pace-box-2').style.backgroundColor = "#F1F2EC";
+		document.getElementById('radio-box--text-2').style.color = "#A9A9A5";
+		document.getElementById('pace-box-1').style.backgroundColor = "#F1F2EC";
+		document.getElementById('radio-box--text-1').style.color = "#A9A9A5";
+	}
+
+	let firstBoxCheck = true;
+	let secoundBoxCheck = true;
+	let thirdBoxCheck = true;
+	let fourthBoxCheck = true;
+	let fifthBoxCheck = true;
+	let sixethBoxCheck = true;
+
+	// let label = document.getElementById('culture-label')
+
+	let firstBox = document.getElementById('checkbox-box-1');
+	let secoundBox = document.getElementById('checkbox-box-2');
+	let thirdBox = document.getElementById('checkbox-box-3');
+	let fourthBox = document.getElementById('checkbox-box-4');
+	let fifthBox = document.getElementById('checkbox-box-5');
+	let sixethBox = document.getElementById('checkbox-box-6');
+
+	function checkboxColorChange_1(){
+		if(firstBoxCheck){
+			firstBox.style.backgroundColor="#7E9C9D";
+			let box = firstBox.querySelector('#radio-box--text');
+			box.style.color = '#ffffff';
+			firstBoxCheck = false;
+		} else {
+			firstBox.style.backgroundColor="#F1F2EC";
+			let box = firstBox.querySelector('#radio-box--text');
+			box.style.color="#A9A9A5";
+			firstBoxCheck = true;
+		}
+	}
+	function checkboxColorChange_2(){
+		if(secoundBoxCheck){
+			secoundBox.style.backgroundColor="#7E9C9D";
+			let box = secoundBox.querySelector('#radio-box--text');
+			box.style.color = '#ffffff';
+			secoundBoxCheck = false;
+		} else {
+			secoundBox.style.backgroundColor="#F1F2EC";
+			let box = secoundBox.querySelector('#radio-box--text');
+			box.style.color="#A9A9A5";
+			secoundBoxCheck = true;
+		}
+	}
+	function checkboxColorChange_3(){
+		if(thirdBoxCheck){
+			thirdBox.style.backgroundColor="#7E9C9D";
+			let box = thirdBox.querySelector('#radio-box--text');
+			box.style.color = '#ffffff';
+			thirdBoxCheck = false;
+		} else {
+			thirdBox.style.backgroundColor="#F1F2EC";
+			let box = thirdBox.querySelector('#radio-box--text');
+			box.style.color="#A9A9A5";
+			thirdBoxCheck = true;
+		}
+	}
+	function checkboxColorChange_4(){
+		if(fourthBoxCheck){
+			fourthBox.style.backgroundColor="#7E9C9D";
+			let box = fourthBox.querySelector('#radio-box--text');
+			box.style.color = '#ffffff';
+			fourthBoxCheck = false;
+		} else {
+			fourthBox.style.backgroundColor="#F1F2EC";
+			let box = fourthBox.querySelector('#radio-box--text');
+			box.style.color="#A9A9A5";
+			fourthBoxCheck = true;
+		}
+	}
+	function checkboxColorChange_5(){
+		if(fifthBoxCheck){
+			fifthBox.style.backgroundColor="#7E9C9D";
+			let box = fifthBox.querySelector('#radio-box--text');
+			box.style.color = '#ffffff';
+			fifthBoxCheck = false;
+		} else {
+			fifthBox.style.backgroundColor="#F1F2EC";
+			let box = fifthBox.querySelector('#radio-box--text');
+			box.style.color="#A9A9A5";
+			fifthBoxCheck = true;
+		}
+	}
+	function checkboxColorChange_6(){
+		if(sixethBoxCheck){
+			sixethBox.style.backgroundColor="#7E9C9D";
+			let box = sixethBox.querySelector('#radio-box--text');
+			box.style.color = '#ffffff';
+			sixethBoxCheck = false;
+		} else {
+			sixethBox.style.backgroundColor="#F1F2EC";
+			let box = sixethBox.querySelector('#radio-box--text');
+			box.style.color="#A9A9A5";
+			sixethBoxCheck = true;
+		}
+	}
+	
+
+</script>
 
 
 
