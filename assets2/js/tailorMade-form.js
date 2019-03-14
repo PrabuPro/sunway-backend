@@ -8,6 +8,227 @@
 		// 		requiredCheckBoxes.attr('required', 'required');
 		// 	}
 		// });
+
+	function colorChangeFirst() {
+		document.getElementById('pace-box-1').style.backgroundColor = "#7E9C9D";
+		document.getElementById('radio-box--text-1').style.color = "#ffffff";
+		document.getElementById('pace-box-2').style.backgroundColor = "#F1F2EC";
+		document.getElementById('radio-box--text-2').style.color = "#A9A9A5";
+		document.getElementById('pace-box-3').style.backgroundColor = "#F1F2EC";
+		document.getElementById('radio-box--text-3').style.color = "#A9A9A5";
+	}
+
+	function colorChangeSecound() {
+		document.getElementById('pace-box-2').style.backgroundColor = "#7E9C9D";
+		document.getElementById('radio-box--text-2').style.color = "#ffffff";
+		document.getElementById('pace-box-1').style.backgroundColor = "#F1F2EC";
+		document.getElementById('radio-box--text-1').style.color = "#A9A9A5";
+		document.getElementById('pace-box-3').style.backgroundColor = "#F1F2EC";
+		document.getElementById('radio-box--text-3').style.color = "#A9A9A5";
+	}
+
+	function colorChangeThird() {
+		document.getElementById('pace-box-3').style.backgroundColor = "#7E9C9D";
+		document.getElementById('radio-box--text-3').style.color = "#ffffff";
+		document.getElementById('pace-box-2').style.backgroundColor = "#F1F2EC";
+		document.getElementById('radio-box--text-2').style.color = "#A9A9A5";
+		document.getElementById('pace-box-1').style.backgroundColor = "#F1F2EC";
+		document.getElementById('radio-box--text-1').style.color = "#A9A9A5";
+	}
+
+	function colorChangePeople_1() {
+		document.getElementById('people-box-1').style.backgroundColor = "#7E9C9D";
+		document.getElementById('people-box--text-1').style.color = "#ffffff";
+		document.getElementById('people-box-2').style.backgroundColor = "#F1F2EC";
+		document.getElementById('people-box--text-2').style.color = "#A9A9A5";
+		document.getElementById('people-box-3').style.backgroundColor = "#F1F2EC";
+		document.getElementById('people-box--text-3').style.color = "#A9A9A5";
+		document.getElementById('people-box-4').style.backgroundColor = "#F1F2EC";
+		document.getElementById('people-box--text-4').style.color = "#A9A9A5";
+
+	}
+
+	function colorChangePeople_2() {
+		document.getElementById('people-box-2').style.backgroundColor = "#7E9C9D";
+		document.getElementById('people-box--text-2').style.color = "#ffffff";
+		document.getElementById('people-box-1').style.backgroundColor = "#F1F2EC";
+		document.getElementById('people-box--text-1').style.color = "#A9A9A5";
+		document.getElementById('people-box-3').style.backgroundColor = "#F1F2EC";
+		document.getElementById('people-box--text-3').style.color = "#A9A9A5";
+		document.getElementById('people-box-4').style.backgroundColor = "#F1F2EC";
+		document.getElementById('people-box--text-4').style.color = "#A9A9A5";
+
+	}
+
+	function colorChangePeople_3() {
+		document.getElementById('people-box-3').style.backgroundColor = "#7E9C9D";
+		document.getElementById('people-box--text-3').style.color = "#ffffff";
+		document.getElementById('people-box-2').style.backgroundColor = "#F1F2EC";
+		document.getElementById('people-box--text-2').style.color = "#A9A9A5";
+		document.getElementById('people-box-1').style.backgroundColor = "#F1F2EC";
+		document.getElementById('people-box--text-1').style.color = "#A9A9A5";
+		document.getElementById('people-box-4').style.backgroundColor = "#F1F2EC";
+		document.getElementById('people-box--text-4').style.color = "#A9A9A5";
+
+	}
+
+	function colorChangePeople_4() {
+		document.getElementById('people-box-4').style.backgroundColor = "#7E9C9D";
+		document.getElementById('people-box--text-4').style.color = "#ffffff";
+		document.getElementById('people-box-2').style.backgroundColor = "#F1F2EC";
+		document.getElementById('people-box--text-2').style.color = "#A9A9A5";
+		document.getElementById('people-box-3').style.backgroundColor = "#F1F2EC";
+		document.getElementById('people-box--text-3').style.color = "#A9A9A5";
+		document.getElementById('people-box-1').style.backgroundColor = "#F1F2EC";
+		document.getElementById('people-box--text-1').style.color = "#A9A9A5";
+
+	}
+
+	function colorChangeHotel_1() {
+		document.getElementById('hotel-box-1').style.backgroundColor = "#7E9C9D";
+		document.getElementById('hotel-box--text-1').style.color = "#ffffff";
+		document.getElementById('hotel-box-2').style.backgroundColor = "#F1F2EC";
+		document.getElementById('hotel-box--text-2').style.color = "#A9A9A5";
+		document.getElementById('hotel-box-3').style.backgroundColor = "#F1F2EC";
+		document.getElementById('hotel-box--text-3').style.color = "#A9A9A5";
+
+	}
+
+	function colorChangeHotel_2() {
+		document.getElementById('hotel-box-2').style.backgroundColor = "#7E9C9D";
+		document.getElementById('hotel-box--text-2').style.color = "#ffffff";
+		document.getElementById('hotel-box-1').style.backgroundColor = "#F1F2EC";
+		document.getElementById('hotel-box--text-1').style.color = "#A9A9A5";
+		document.getElementById('hotel-box-3').style.backgroundColor = "#F1F2EC";
+		document.getElementById('hotel-box--text-3').style.color = "#A9A9A5";
+
+	}
+
+	function colorChangeHotel_3() {
+		document.getElementById('hotel-box-3').style.backgroundColor = "#7E9C9D";
+		document.getElementById('hotel-box--text-3').style.color = "#ffffff";
+		document.getElementById('hotel-box-2').style.backgroundColor = "#F1F2EC";
+		document.getElementById('hotel-box--text-2').style.color = "#A9A9A5";
+		document.getElementById('hotel-box-1').style.backgroundColor = "#F1F2EC";
+		document.getElementById('hotel-box--text-1').style.color = "#A9A9A5";
+
+	}
+
+	function colorChangeMaldives_1() {
+		document.getElementById('maldives-box-1').style.backgroundColor = "#7E9C9D";
+		document.getElementById('maldives-box-text-1').style.color = "#ffffff";
+		document.getElementById('maldives-box-2').style.backgroundColor = "#F1F2EC";
+		document.getElementById('maldives-box-text-2').style.color = "#A9A9A5";
+	}
+
+	function colorChangeMaldives_2() {
+		document.getElementById('maldives-box-2').style.backgroundColor = "#7E9C9D";
+		document.getElementById('maldives-box-text-2').style.color = "#ffffff";
+		document.getElementById('maldives-box-1').style.backgroundColor = "#F1F2EC";
+		document.getElementById('maldives-box-text-1').style.color = "#A9A9A5";
+	}
+
+	let firstBoxCheck = true;
+	let secoundBoxCheck = true;
+	let thirdBoxCheck = true;
+	let fourthBoxCheck = true;
+	let fifthBoxCheck = true;
+	let sixethBoxCheck = true;
+
+	// let label = document.getElementById('culture-label')
+
+	let firstBox = document.getElementById('checkbox-box-1');
+	let secoundBox = document.getElementById('checkbox-box-2');
+	let thirdBox = document.getElementById('checkbox-box-3');
+	let fourthBox = document.getElementById('checkbox-box-4');
+	let fifthBox = document.getElementById('checkbox-box-5');
+	let sixethBox = document.getElementById('checkbox-box-6');
+
+	function checkboxColorChange_1() {
+		if (firstBoxCheck) {
+			firstBox.style.backgroundColor = "#7E9C9D";
+			let box = firstBox.querySelector('#radio-box--text');
+			box.style.color = '#ffffff';
+			firstBoxCheck = false;
+		} else {
+			firstBox.style.backgroundColor = "#F1F2EC";
+			let box = firstBox.querySelector('#radio-box--text');
+			box.style.color = "#A9A9A5";
+			firstBoxCheck = true;
+		}
+	}
+
+	function checkboxColorChange_2() {
+		if (secoundBoxCheck) {
+			secoundBox.style.backgroundColor = "#7E9C9D";
+			let box = secoundBox.querySelector('#radio-box--text');
+			box.style.color = '#ffffff';
+			secoundBoxCheck = false;
+		} else {
+			secoundBox.style.backgroundColor = "#F1F2EC";
+			let box = secoundBox.querySelector('#radio-box--text');
+			box.style.color = "#A9A9A5";
+			secoundBoxCheck = true;
+		}
+	}
+
+	function checkboxColorChange_3() {
+		if (thirdBoxCheck) {
+			thirdBox.style.backgroundColor = "#7E9C9D";
+			let box = thirdBox.querySelector('#radio-box--text');
+			box.style.color = '#ffffff';
+			thirdBoxCheck = false;
+		} else {
+			thirdBox.style.backgroundColor = "#F1F2EC";
+			let box = thirdBox.querySelector('#radio-box--text');
+			box.style.color = "#A9A9A5";
+			thirdBoxCheck = true;
+		}
+	}
+
+	function checkboxColorChange_4() {
+		if (fourthBoxCheck) {
+			fourthBox.style.backgroundColor = "#7E9C9D";
+			let box = fourthBox.querySelector('#radio-box--text');
+			box.style.color = '#ffffff';
+			fourthBoxCheck = false;
+		} else {
+			fourthBox.style.backgroundColor = "#F1F2EC";
+			let box = fourthBox.querySelector('#radio-box--text');
+			box.style.color = "#A9A9A5";
+			fourthBoxCheck = true;
+		}
+	}
+
+	function checkboxColorChange_5() {
+		if (fifthBoxCheck) {
+			fifthBox.style.backgroundColor = "#7E9C9D";
+			let box = fifthBox.querySelector('#radio-box--text');
+			box.style.color = '#ffffff';
+			fifthBoxCheck = false;
+		} else {
+			fifthBox.style.backgroundColor = "#F1F2EC";
+			let box = fifthBox.querySelector('#radio-box--text');
+			box.style.color = "#A9A9A5";
+			fifthBoxCheck = true;
+		}
+	}
+
+	function checkboxColorChange_6() {
+		if (sixethBoxCheck) {
+			sixethBox.style.backgroundColor = "#7E9C9D";
+			let box = sixethBox.querySelector('#radio-box--text');
+			box.style.color = '#ffffff';
+			sixethBoxCheck = false;
+		} else {
+			sixethBox.style.backgroundColor = "#F1F2EC";
+			let box = sixethBox.querySelector('#radio-box--text');
+			box.style.color = "#A9A9A5";
+			sixethBoxCheck = true;
+		}
+	}
+
+	
 	
 	$(function () {
 	    $('#datetimepicker1').datepicker({
@@ -104,7 +325,7 @@
 					<div class="col-lg-12 col-sm-offset-1" adult>
 					<div class="form-group">
 						<label>Adults</label>
-						<select class="form-control" name="children">
+						<select class="form-control" name="adults">
 							<option disabled="" selected=""></option>
 							<option value="1">1</option>
 							<option value="2">2</option>
@@ -186,6 +407,9 @@
 	$(document).ready(function () {
 		$('.inquiry_form').on('submit', function (e) {
 			e.preventDefault();
+
+			let data1 = $('.inquiry_form').serialize();
+			console.log(data1);
 
 
 			swal({
