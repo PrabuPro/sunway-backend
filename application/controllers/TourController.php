@@ -86,8 +86,8 @@ class TourController extends CI_Controller{
 
             //upload image and insert data into database
 
-            $photoResult = $this->imageUpload($imageName);
-            $imageResult = $this->imageUpload($mapName);
+            $photoResult = $this->imageUploadPhoto($imageName);
+            $imageResult = $this->imageUploadMap($mapName);
 
 
             if($photoResult && $imageResult){
@@ -146,7 +146,37 @@ class TourController extends CI_Controller{
     }
 
     //function for uploading images
-    public function imageUpload($temp){
+    public function imageUploadPhoto($temp){
+
+       
+
+        $config['upload_path']          = './assets/images/tours/';
+        $config['allowed_types']        = 'gif|jpg|png|jpeg';
+        $config['file_name']            = $temp;
+        $config['max_size']             = 200000;
+        $config['max_width']            = 1300;
+        $config['max_height']           = 900;
+
+        $this->load->library('upload', $config);
+
+        if (!$this->upload->do_upload('map_id'))
+        {
+            $errors = array('errors' => $this->upload->display_errors());
+            $this->session->set_flashdata($errors);
+            //  $data['site_view'] = 'addTours';
+            // $this->load->view('admin/dashboard', $data);
+            return FALSE;
+        }
+        else
+        {
+            $data = array('upload_data' => $this->upload->data());
+            // $this->load->view('success', $data);
+            return TRUE;
+        }
+    }
+
+    //Upload map
+    public function imageUploadMap($temp){
 
        
 
