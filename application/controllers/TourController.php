@@ -82,10 +82,15 @@ class TourController extends CI_Controller{
 
             $imageName = (int)$lastimage->tour_id + 1 ;
 
-            $mapName = $imageName . '-m';
+            $mapName = $imageName . '1';
 
             //upload image and insert data into database
-            if($this->imageUpload($imageName) && $this->imageUpload($mapName)){
+
+            $photoResult = $this->imageUpload($imageName);
+            $imageResult = $this->imageUpload($mapName);
+
+
+            if($photoResult && $imageResult){
 
             $path_photo = $_FILES['photo_id']['name'];
             $path_map = $_FILES['map_id']['name'];
@@ -141,11 +146,13 @@ class TourController extends CI_Controller{
     }
 
     //function for uploading images
-    public function imageUpload($imageName){
+    public function imageUpload($temp){
+
+       
 
         $config['upload_path']          = './assets/images/tours/';
         $config['allowed_types']        = 'gif|jpg|png|jpeg';
-        $config['file_name']            = $imageName;
+        $config['file_name']            = $temp;
         $config['max_size']             = 200000;
         $config['max_width']            = 1300;
         $config['max_height']           = 900;
