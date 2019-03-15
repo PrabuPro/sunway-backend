@@ -38,9 +38,9 @@
 							<a href="<?php echo site_url('tours/'.$recommended_tour->tour_id);?>" class="block-5" style="background-image: url('<?php echo base_url().'assets/images/tours/'.$recommended_tour->photo_id; ?>');">
 								<div class="text">
 									<span class="price">$
-										<?php echo $recommended_tour->price; ?></span>
-									<h3 class="heading">Tour in
-										<?php echo $recommended_tour->location; ?>
+										<?php echo $recommended_tour->name; ?></span>
+									<h3 class="heading">
+										<?php echo $recommended_tour->name; ?>
 									</h3>
 									<div class="post-meta">
 										<span>

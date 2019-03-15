@@ -59,12 +59,15 @@ class TourController extends CI_Controller{
         $this->form_validation->set_rules('introduction', 'Introduction', 'trim|required|max_length[700]');
         $this->form_validation->set_rules('tour_type', 'Tour_type', 'trim|required|max_length[15]');
         $this->form_validation->set_rules('suitable_for', 'Suitable_for', 'trim|required|max_length[15]');
-        $this->form_validation->set_rules('price', 'Price', 'trim|required|integer|max_length[15]');
-        $this->form_validation->set_rules('location', 'Location', 'trim|required|max_length[15]');
         $this->form_validation->set_rules('day[]', 'Itinerary Day', 'trim|required|max_length[15]');
         $this->form_validation->set_rules('desc[]', 'Itinerary Desc', 'trim|required|max_length[500]');
         $this->form_validation->set_rules('duration', 'Duration', 'trim|required|max_length[5]');
-        $this->form_validation->set_rules('rating', 'Sunway Rating', 'trim|required|max_length[5]');
+        $this->form_validation->set_rules('hotelType[]', 'Hotel type of price', 'trim|required|max_length[1]');
+        $this->form_validation->set_rules('hotelPrice[]', 'Price', 'trim|required|numeric|max_length[6]');
+        $this->form_validation->set_rules('highlights[]', 'Highlights', 'trim|required|max_length[100]');
+        $this->form_validation->set_rules('includes[]', 'Includes', 'trim|max_length[100]');
+        $this->form_validation->set_rules('excludes[]', 'Excludes', 'trim|max_length[100]');
+        $this->form_validation->set_rules('options[]', 'Options', 'trim|max_length[100]');
 
 
         if($this->form_validation->run() == FALSE){
@@ -103,9 +106,7 @@ class TourController extends CI_Controller{
                 'description' => htmlspecialchars($this->input->post('description')),
                 'tour_type' => htmlspecialchars($this->input->post('tour_type')),
                 'suitable_for' => htmlspecialchars($this->input->post('suitable_for')),
-                'price' => htmlspecialchars($this->input->post('price')),
                 'photo_id' => $photo_url,
-                'location' => htmlspecialchars($this->input->post('location')),
                 'introduction' => htmlspecialchars($this->input->post('introduction')),
                 'ratings' => htmlspecialchars($this->input->post('rating')),
                 'duration' => htmlspecialchars($this->input->post('duration')),
@@ -116,9 +117,14 @@ class TourController extends CI_Controller{
             $tourId = $this->tour_model->insert_tours($databaseData);
 
 
-            $res = $this->tour_model->insert_itinerary($tourId);
+            $itinerary_result = $this->tour_model->insert_itinerary($tourId);
+            $price_result = $this->tour_model->insert_price($tourId);
+            $hightlight_result = $this->tour_model->insert_highlights($tourId);
+            $includes_result = $this->tour_model->insert_includes($tourId);
+            $excludes_result = $this->tour_model->insert_excludes($tourId);
+            $options_result = $this->tour_model->insert_options($tourId);
 
-            if($res){
+            if($itinerary_result && $price_result && $hightlight_result && $includes_result && $excludes_result && $options_result){
                 $dataflash = array(
                     'success' => 'Successfully Uploaded'
                 );

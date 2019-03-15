@@ -58,7 +58,7 @@ class AdminSunway extends CI_Controller{
 
         $this->form_validation->set_rules('username','Username','trim|required|max_length[15]');
         $this->form_validation->set_rules('password','Password','trim|required|max_length[15]');
-        $this->form_validation->set_rules('confirm_password','Confirm password','trim|required|max_length[8]|matches[password]');
+        $this->form_validation->set_rules('confirm_password','Confirm password','trim|required|max_length[15]|matches[password]');
     
         if($this->form_validation->run() == FALSE){
             $data = array(

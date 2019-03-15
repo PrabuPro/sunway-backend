@@ -100,7 +100,10 @@
 							</div>
 							<div class="field">
 								<div class="control">
-									<input class="column is-5 input is-info" name="price" type="text" placeholder="Price" value="<?php echo set_value('price');?>" required>
+								<hr>
+									Price
+									<div style="margin-bottom:20px; cursor:pointer;" id="pricetags"><p id="add_price" style="background-color:green; width:30%; color:white;">ADD PRICE</p></div>
+								<hr>
 								</div>
 							</div>
 
@@ -145,17 +148,13 @@
 							</div>
 
 
-							<div class="field">
-								<div class="control">
-									<input class="input is-info" name="location" type="text" placeholder="Location" value="<?php echo set_value('location');?>" required>
-								</div>
-							</div>
-
+					
+							<hr>
 							<h2>Itinerary</h2><br>
 				
 							<div class="counters" style="font-weight:700; font-size:1.2em;">Added Days - <span class="itinerary-counter">0</span></div>
 							<div style="margin-bottom:20px; cursor:pointer;" id="description"><p id="add_field" style="background-color:green; width:30%; color:white;">ADD DESCRIPTION</p></div>
-
+							<hr>
 							<div class="field">
 								<div class="control">
 									<div class="select is-info">
@@ -167,6 +166,30 @@
 											<option value="14+">14+</option>
 										</select>
 									</div>
+								</div>
+							</div>
+
+								<div class="field">
+								<div class="control">
+								<hr>
+									Highlights
+									<div class="counters" style="font-weight:700; font-size:1.2em;">Added Highlights - <span class="highlights-counter">0</span></div>
+									<div style="margin-bottom:20px; cursor:pointer;" id="highlights"><p id="add_highlights" style="background-color:green; width:30%; color:white;">ADD HIGHLIGHTS</p></div>
+								<hr>
+								</div>
+							</div>
+
+								<div class="field">
+								<div class="control">
+								<hr>
+									Services
+									<div class="counters" style="font-weight:700; font-size:1.2em;">Includes - <span class="includes-counter">0</span></div>
+									<div style="margin-bottom:20px; cursor:pointer;" id="includes"><p id="add_includes" style="background-color:green; width:30%; color:white;">ADD INCLUDES</p></div>
+									<div class="counters" style="font-weight:700; font-size:1.2em;">Excludes - <span class="excludes-counter">0</span></div>
+									<div style="margin-bottom:20px; cursor:pointer;" id="excludes"><p id="add_excludes" style="background-color:green; width:30%; color:white;">ADD EXCLUDES</p></div>
+									<div class="counters" style="font-weight:700; font-size:1.2em;">Options - <span class="options-counter">0</span></div>
+									<div style="margin-bottom:20px; cursor:pointer;" id="options"><p id="add_options" style="background-color:green; width:30%; color:white;">ADD OPTIONS</p></div>
+								<hr>
 								</div>
 							</div>
 
@@ -197,36 +220,17 @@
 	</div>
 </div>
 <script src="<?php echo base_url();?>assets/js/jquery.min.js"></script>
+<script src="<?php echo base_url();?>assets/js/jquery.min.js"></script>
+
 <script>
-	 
-	 var count = 0;
 
-    $(document).ready(function() {
-        $('p#add_field').click(function(){
-           count += 1;
-			var html=`<div class="columns is-mobile is-multiline ">
-								<div class="column is-11">
-									<strong>Itinarary Item  - `+ count +`  </strong>
-								</div>
-								<div class="column is-narrow">
-									<input class="column is-3 input is-info" name="day[]" type="text" placeholder="Day" >
-								</div>
-								<div class="column ">
-									<textarea class="textarea is-info is-12" name="desc[]" type="text" placeholder="Description"><?php echo set_value('desc[]');?></textarea>
-								</div>
-							</div>`;
-			$('#description').append(html);
-			$('.itinerary-counter').text(count);
-
-		});
-		
-		$('.btn-refresh').click(function(){
-			window.location.href = '<?php echo base_url();?>addhotelsview';
-			window.location.href = '<?php echo base_url();?>addtoursview';
-		});
-    });
+$('.btn-refresh').click(function () {
+		window.location.href = '<?php echo base_url();?>addhotelsview';
+		window.location.href = '<?php echo base_url();?>addtoursview';
+	});
 
 </script>
+
 <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script async type="text/javascript" src="<?php echo base_url(); ?>assets/js/form.js"></script>
 
