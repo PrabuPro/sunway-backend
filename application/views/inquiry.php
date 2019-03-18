@@ -664,7 +664,7 @@
 					 style="width:100%; height:auto; overflow:hidden;">
 					<div class="card-body">
 						<h5 class="card-title">
-							<?php echo $suggestion->location; ?>
+							<?php echo $suggestion->name; ?>
 						</h5>
 						<p class="card-text">
 							<?php echo $suggestion->description; ?>

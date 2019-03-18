@@ -237,6 +237,38 @@ class Tour_model extends CI_Model{
         
         return $result;
     }
+     public function highlights($number){
+        $result = $this->db->select('highlights')
+                           ->where('tour_id', $number)
+                           ->get('tour_highlights')
+                           ->result();
+        
+        return $result;
+    }
+     public function includes($number){
+        $result = $this->db->select('includes')
+                           ->where('tour_id', $number)
+                           ->get('tour_services_includes')
+                           ->result();
+        
+        return $result;
+    }
+     public function excludes($number){
+        $result = $this->db->select('excludes')
+                           ->where('tour_id', $number)
+                           ->get('tour_services_excludes')
+                           ->result();
+        
+        return $result;
+    }
+     public function options($number){
+        $result = $this->db->select('options')
+                           ->where('tour_id', $number)
+                           ->get('tour_services_option')
+                           ->result();
+        
+        return $result;
+    }
 
 
 }

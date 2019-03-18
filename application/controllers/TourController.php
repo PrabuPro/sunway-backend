@@ -83,6 +83,10 @@ class TourController extends CI_Controller{
 
             $lastimage = $this->tour_model->getLastPhoto();
 
+            if($lastimage == NULL){
+                $lastimage = 1;
+            }
+
             $imageName = (int)$lastimage->tour_id + 1 ;
 
             $mapName = $imageName . '1';
@@ -215,6 +219,10 @@ class TourController extends CI_Controller{
         $data['results'] = $this->tour_model->get_tourItem($pageid);
         $data['itineraries'] = $this->tour_model->get_itinerary($pageid);
         $data['suggestions'] = $this->tour_model->suggestions(1);
+        $data['hightlights'] = $this->tour_model->highlights($pageid);
+        $data['includes'] = $this->tour_model->includes($pageid);
+        $data['excludes'] = $this->tour_model->excludes($pageid);
+        $data['options'] = $this->tour_model->options($pageid);
         $data['site_view'] = 'TourItem';
         $data['site_title'] = 'Sunway Holidays - Tour Item';
         $this->load->view('main/main_view', $data);
