@@ -223,6 +223,7 @@ class TourController extends CI_Controller{
         $data['includes'] = $this->tour_model->includes($pageid);
         $data['excludes'] = $this->tour_model->excludes($pageid);
         $data['options'] = $this->tour_model->options($pageid);
+        $data['prices'] = $this->tour_model->prices($pageid);
         $data['site_view'] = 'TourItem';
         $data['site_title'] = 'Sunway Holidays - Tour Item';
         $this->load->view('main/main_view', $data);

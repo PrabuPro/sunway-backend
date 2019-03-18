@@ -96,9 +96,9 @@ input .name {
 }
 
 .send-btn:hover{
-	color:white!important;
-	background-color: #343242 !important;
-	border: 2px solid #ffffff !important;  
+	color:#000000!important;
+	background-color: #ffffff !important;
+	
 }
 
 .external-links{
@@ -135,16 +135,16 @@ input .name {
 
 				</div>
 			</div>
-			<div class="card" style="box-shadow: 0 2px 6px #000000 !important; margin-bottom: 10px; background-color: #303040;">
+			<div class="card" style="box-shadow: 0 2px 6px #000000 !important; margin-bottom: 10px; background-color: #ffc600;">
 
 				<div class="card-body">
-					<h3 class="sub--para-itenary" style="color:#ffffff !important;">
+					<h3 class="sub--para-itenary" style="color:#000000 !important;">
 						Have a question
 					</h3>
 					<form action="<?php echo site_url('inquirycontroller/inquire');?>" method="post" class="inquiry_form">
 						<div class="row">
 							<div class="col-md-12 form-group">
-								<label for="name" style="font-size:14px; margin-bottom:0px; color:#ffffff; font-weight:600;">Name</label>
+								<label for="name" style="font-size:14px; margin-bottom:0px; color:#000000; font-weight:600;">Name</label>
 								<input id="name" name="name" type="text" class="form-control" value="<?php echo set_value('name');?>"
 								 placeholder="" style="height: 35px !important; font-size: 12px; border-radius: 5px;" required>
 							</div>
@@ -152,7 +152,7 @@ input .name {
 						</div>
 						<div class="row">
 							<div class="col-md-12 form-group">
-								<label for="email" style="font-size:14px; margin-bottom:0px; color:#ffffff; font-weight:600;">Email</label>
+								<label for="email" style="font-size:14px; margin-bottom:0px; color:#000000; font-weight:600;">Email</label>
 								<input id="email" name="email" type="email" class="form-control" value="<?php echo set_value('email');?>"
 								 placeholder="" style="height: 35px !important; font-size: 12px; border-radius: 5px;" required>
 							</div>
@@ -160,7 +160,7 @@ input .name {
 
 						<div class="row">
 							<div class="col-md-12 form-group">
-								<label for="message" style="font-size:14px; margin-bottom:0px; color:#ffffff; font-weight:600;">Message</label>
+								<label for="message" style="font-size:14px; margin-bottom:0px; color:#000000; font-weight:600;">Message</label>
 								<textarea id="message" name="message" cols="120" rows="7" class="form-control" placeholder="" style="height: 100px !important; font-size: 12px; border-radius: 5px;"
 								 required><?php echo set_value('name');?></textarea>
 							</div>
@@ -182,7 +182,7 @@ input .name {
 						<div class="row">
 							<div class="col-md-12" style=" margin:auto; ">
 								<div class="form-group">
-									<input type="submit" value="Send" class="btn btn-primary py-2 px-4 send-btn" style="height: 50px !important; border-radius: 5px; margin-left: 60px; margin-top:20px; background-color: #ffffff; color: #343242; font-weight: 700; border: 2px solid transparant;">
+									<input type="submit" value="Send" class="btn btn-primary py-2 px-4 send-btn" style="height: 50px !important; border-radius: 5px; margin-left: 60px; margin-top:20px; background-color: #ffc600; color: #343242; font-weight: 700; border: 2px solid transparant;">
 								</div>
 							</div>
 						</div>
@@ -204,36 +204,36 @@ input .name {
 			<div class="tour_item-image" style="display:flex; justify-content:flex-end; align-items:flex-end; width:100%; margin-bottom:50px; height:30em; background-size:cover; background-image: url('<?php echo base_url().'assets/images/tours/'.$results->photo_id; ?>');">
 
 			
-					<div class="col-4" style="padding-bottom: 15px;">
-						<div class="card tab-card" style="float:right !important;">
-							<div class="card-header tab-card-header">
+					<div class="col-5" style="padding-bottom: 15px;">
+						<div class="card tab-card" style="float:right !important; border: none; box-shadow: 0 2px 6px #000000 !important;">
+							<div class="card-header tab-card-header" style="background-color:#ffc600;">
 								<ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
-									<li class="nav-item">
-										<a class="nav-link" id="one-tab" data-toggle="tab" href="#one" role="tab" aria-controls="One" aria-selected="true">One</a>
+									<li class="nav-item" >
+										<a  style="font-weight:600 !important; text-transform: uppercase;" class="nav-link active show" id="one-tab" data-toggle="tab" href="#one" role="tab" aria-controls="One" aria-selected="true">3 Star</a>
 									</li>
 									<li class="nav-item">
-										<a class="nav-link" id="two-tab" data-toggle="tab" href="#two" role="tab" aria-controls="Two" aria-selected="false">Two</a>
+										<a style="font-weight:600 !important; text-transform: uppercase;"  class="nav-link" id="two-tab" data-toggle="tab" href="#two" role="tab" aria-controls="Two" aria-selected="false">4 Star</a>
 									</li>
 									<li class="nav-item">
-										<a class="nav-link" id="three-tab" data-toggle="tab" href="#three" role="tab" aria-controls="Three"
-										 aria-selected="false">Three</a>
+										<a style="font-weight:600 !important; text-transform: uppercase;"  class="nav-link" id="three-tab" data-toggle="tab" href="#three" role="tab" aria-controls="Three"
+										 aria-selected="false">5 Star</a>
 									</li>
 								</ul>
 							</div>
 
-							<div class="tab-content" id="myTabContent">
+							<div class="tab-content" id="myTabContent" style="border-bottom: 5px solid #ffc600; border-left: 5px solid #ffc600; border-right: 5px solid #ffc600; border-bottom-left-radius: 5px !important;border-bottom-right-radius: 5px !important;">
 								<div class="tab-pane fade show active p-3" id="one" role="tabpanel" aria-labelledby="one-tab">
-									<h5 class="card-title">Tab Card One</h5>
+									<h5 class="card-title">Hotel Price $<?php echo $prices[0]->price;?></h5>
 									<p class="card-text"></p>
 
 								</div>
 								<div class="tab-pane fade p-3" id="two" role="tabpanel" aria-labelledby="two-tab">
-									<h5 class="card-title">Tab Card Two</h5>
+									<h5 class="card-title">Hotel Price $<?php echo $prices[1]->price;?></h5>
 									<p class="card-text"></p>
 
 								</div>
 								<div class="tab-pane fade p-3" id="three" role="tabpanel" aria-labelledby="three-tab">
-									<h5 class="card-title">Tab Card Three</h5>
+									<h5 class="card-title">Hotel Price $<?php echo $prices[2]->price;?></h5>
 									<p class="card-text"></p>
 
 								</div>
