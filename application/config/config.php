@@ -24,10 +24,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 //Local URL
-// $config['base_url'] = 'http://localhost/sunwayholidays/';
+$config['base_url'] = 'http://localhost/sunwayholidays/';
 
 //Distributed URL
-$config['base_url'] = 'http://192.168.1.13/sunwayholidays/';
+// $config['base_url'] = 'http://192.168.1.13/sunwayholidays/';
 
 /*
 |--------------------------------------------------------------------------

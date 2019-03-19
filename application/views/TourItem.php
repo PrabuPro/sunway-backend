@@ -119,7 +119,7 @@ input .name {
 	<div class="row">
 		<div class="col-lg-3">
 
-			<div class="card" style="box-shadow: 0 2px 6px #000000 !important; margin-bottom: 20px;">
+			<div class="card" style="box-shadow: 0 2px 6px #000000 !important; margin-bottom: 20px; background-color:#67E6DC;">
 
 				<div class="card-body">
 					<h5 class="card-title external-links">
@@ -223,17 +223,17 @@ input .name {
 
 							<div class="tab-content" id="myTabContent" style="border-bottom: 5px solid #ffc600; border-left: 5px solid #ffc600; border-right: 5px solid #ffc600; border-bottom-left-radius: 5px !important;border-bottom-right-radius: 5px !important;">
 								<div class="tab-pane fade show active p-3" id="one" role="tabpanel" aria-labelledby="one-tab">
-									<h5 class="card-title">Hotel Price $<?php echo $prices[0]->price;?></h5>
+									<h5 class="card-title" style="text-align:center;">Hotel Price $<?php echo $prices[0]->price;?></h5>
 									<p class="card-text"></p>
 
 								</div>
 								<div class="tab-pane fade p-3" id="two" role="tabpanel" aria-labelledby="two-tab">
-									<h5 class="card-title">Hotel Price $<?php echo $prices[1]->price;?></h5>
+									<h5 class="card-title" style="text-align:center;">Hotel Price $<?php echo $prices[1]->price;?></h5>
 									<p class="card-text"></p>
 
 								</div>
 								<div class="tab-pane fade p-3" id="three" role="tabpanel" aria-labelledby="three-tab">
-									<h5 class="card-title">Hotel Price $<?php echo $prices[2]->price;?></h5>
+									<h5 class="card-title" style="text-align:center;">Hotel Price $<?php echo $prices[2]->price;?></h5>
 									<p class="card-text"></p>
 
 								</div>
@@ -441,7 +441,7 @@ input .name {
 							</div>
 							<div class="tab-pane fade" id="inquire" role="tabpanel" aria-labelledby="contact-tab" style="width:80%; margin:auto;">
 
-								<form action="<?php echo site_url('inquirycontroller/inquire');?>" method="post" class="inquiry_form ftco-animate">
+								<form action="<?php echo site_url('inquirycontroller/tourInquire');?>" method="post" class="tourInquiry_form ftco-animate">
 									<div class="row">
 										<div class="col-md-6 form-group">
 											<label for="name" style="font-size:14px; margin-bottom:0px; color:#636363; font-weight:600;">Name</label>
@@ -529,8 +529,6 @@ input .name {
 												<option value="rent a house" class="form-control-option-white">Rent a House</option>
 											</select>
 										</div>
-
-
 									</div>
 
 
@@ -554,16 +552,10 @@ input .name {
 										</div>
 									</div>
 								</form>
-
-
 							</div>
 						</div>
 					</div>
 				</div>
-
-
-
-
 			</div>
 
 		</div>
@@ -613,7 +605,7 @@ input .name {
 <script src="<?php echo base_url();?>assets/js/jquery.min.js"></script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<script src="<?php echo base_url();?>assets/js/inquiry.js"></script>
+<script src="<?php echo base_url();?>assets/js/tourInquiry.js"></script>
 
 
 <script>
