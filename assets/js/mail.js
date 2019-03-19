@@ -13,11 +13,14 @@ $(document).ready(function(){
         		showConfirmButton: false,
         		allowOutsideClick: false
 
-            });
+			});
+			
+			let getUrl = window.location;
+			let baseUrl = getUrl.protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
             
             $.ajax({
                 type: 'POST',
-                url: 'MailController/mail',
+                url: baseUrl + '/mailController/mail',
                 data: $('.mail-form').serialize(),
                 datatype: 'html',
                 success: function (data){

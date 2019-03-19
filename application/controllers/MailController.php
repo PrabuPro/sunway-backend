@@ -31,6 +31,35 @@ class MailController extends CI_Controller{
             }
         }
     }
+    public function tourMail(){
+        $this->form_validation->set_rules('name','Name','trim|required|max_length[20]');
+        $this->form_validation->set_rules('email','Email','trim|required|valid_email|max_length[50]');
+        $this->form_validation->set_rules('message','Message','trim|required|max_length[200]');
+
+        if($this->form_validation->run() == FALSE) {
+            echo validation_errors();
+        } else {
+
+            $subject = 'Tour - Ask Question';
+            
+            $data = array(
+                'name' => htmlspecialchars($this->input->post('name')),
+                'email' => htmlspecialchars($this->input->post('email')),
+                'subject' => $subject,
+                'message' => htmlspecialchars($this->input->post('message')),
+                'tour_id' => htmlspecialchars($this->input->post('tour_id'))
+            );
+
+            $id = $this->mail_model->mail($data);
+
+            if($id > 0){
+                $this->sendMail($data, $id);
+                echo "Successfull";
+            } else {
+                echo "Data insertion faild";
+            }
+        }
+    }
 
     public function recaptcha($str='') {
         $google_url="https://www.google.com/recaptcha/api/siteverify";
@@ -65,13 +94,13 @@ class MailController extends CI_Controller{
         $name = 'Prabuddha';
         $subject = 'Sunway Holidays Message';
         $content = '<h1>Message Number - SHMG'. $id . '</h1>';
-        $content .= '<h3>Mail from customer</h3><br>';
+        $content .= (isset($data['tour_id'])) ? ('<h3>Direct Tour Questions</h3><br>') : ('<h3>Mail from customer</h3><br>');
         $content .= '<p>Name - '.$data['name'] . '</p>';
         $content .= '<p>Email - '.$data['email'] . '</p>';
         $content .= '<p>Mail subject - '.$data['subject'] . '</p>';
         $content .= '<p>Content - '.$data['message'] . '</p>';
-
-
+        $content .= (isset($data['tour_id'])) ? ('<p>Tour Id - '.$data['tour_id'] . '</p>') : (' ');
+      
         sendEmail($emailAddress,$name,$subject,$content);
 
     }

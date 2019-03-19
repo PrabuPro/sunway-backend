@@ -141,7 +141,7 @@ input .name {
 					<h3 class="sub--para-itenary" style="color:#000000 !important;">
 						Have a question
 					</h3>
-					<form action="<?php echo site_url('inquirycontroller/inquire');?>" method="post" class="inquiry_form">
+					<form action="mailcontroller/mail" method="post" class="inquiry_form  mail-form">
 						<div class="row">
 							<div class="col-md-12 form-group">
 								<label for="name" style="font-size:14px; margin-bottom:0px; color:#000000; font-weight:600;">Name</label>
@@ -606,7 +606,6 @@ input .name {
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="<?php echo base_url();?>assets/js/tourInquiry.js"></script>
-
 
 <script>
 	$(document).on('click', '.panel-heading ul li', function () {
