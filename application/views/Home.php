@@ -10,8 +10,8 @@
         <div class="overlay"></div>
         <div class="container">
           <div class="row slider-text align-items-center">
-            <div class="col-md-7 col-sm-12 ftco-animate">
-              <h1 class="mb-3">Experience the best trip ever</h1>
+            <div class="col-md-9 col-sm-12 ftco-animate">
+              <h1 class="mb-3">Exclusive Personalized Holidays</h1>
             </div>
           </div>
         </div>
@@ -186,9 +186,9 @@
       <div class="container">
         <div class="row pb-5">
           <div class="col-md-12 col-lg-12 text-center heading-section ftco-animate">
-            <h2>Our Services</h2>
+            <h2>We arrange exclusive personalized holidays with attention to detail that goes the extra mile. </h2>
             <h4 class="tailorMadePage__para" style='padding:0 4em 0 4em;'>
-“Ayubowan!” Greeting you from our traditional way wishing you a long life. The Therapy for happiness flows with the style of travel with your consciousness, your heart and your memories. Find your chance to add some excitement into your holiday to the promised island of Sri Lanka and embrace flexibility with us. Experience the island renowned real adventure, rich cultural heritage along with sun kissed golden beaches and amazing hospitality exclusively in Sri Lanka				</h4>
+                Based in Sri Lanka, our local experts knows just how to make your holiday unique & special. Whichever your interests are, we know how to make your dream holiday come true. Backed with first-hand local knowledge & professional experience of over 25 years, we take the time to listen to our clients first, so we how to design your vacation to be perfect each time. With local experts taking care of your holiday right here from Sri Lanka, you travel stress-free - first time, every time. 
           </div>
         </div>
       </div>
@@ -204,28 +204,25 @@
         <div class="row">
           <div class="col-md-6 col-lg-4 d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services d-block text-center">
-              <div class="d-flex justify-content-center"><div class="icon d-flex justify-content-center mb-3"><span class="align-self-center flaticon-sailboat"></span></div></div>
+              <div class="d-flex justify-content-center"><div class="icon d-flex justify-content-center mb-3"><span class="align-self-center"><img src="assets/images/personalized2.png" alt=""></span></div></div>
               <div class="media-body p-2">
-                <h3 class="heading">Special Activities</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                <h3 class="heading">&nbsp;&nbsp;&nbsp;&nbsp;Personalized unique Holidays &nbsp;&nbsp;&nbsp;&nbsp;</h3>
               </div>
             </div>      
           </div>
           <div class="col-md-6 col-lg-4 d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services d-block text-center">
-              <div class="d-flex justify-content-center"><div class="icon d-flex justify-content-center mb-3"><span class="align-self-center flaticon-around"></span></div></div>
+              <div class="d-flex justify-content-center"><div class="icon d-flex justify-content-center mb-3"><span class="align-self-center"><img src="assets/images/designer.png" alt=""></span></div></div>
               <div class="media-body p-2">
-                <h3 class="heading">Travel Arrangements</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                <h3 class="heading">Designed & arranged by local experts</h3>
               </div>
             </div>      
           </div>
           <div class="col-md-6 col-lg-4 d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services d-block text-center">
-              <div class="d-flex justify-content-center"><div class="icon d-flex justify-content-center mb-3"><span class="align-self-center flaticon-compass"></span></div></div>
+              <div class="d-flex justify-content-center"><div class="icon d-flex justify-content-center mb-3"><span class="align-self-center"><img src="assets/images/tie.png" alt=""></span></div></div>
               <div class="media-body p-2">
-                <h3 class="heading">Private Guide</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                <h3 class="heading">Trust & expertise from over 25 yrs</h3>
               </div>
             </div>    
           </div>         
@@ -233,31 +230,28 @@
         <div class="row">
           <div class="col-md-6 col-lg-4 d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services d-block text-center">
-              <div class="d-flex justify-content-center"><div class="icon d-flex justify-content-center mb-3"><span class="align-self-center flaticon-sailboat"></span></div></div>
+              <div class="d-flex justify-content-center"><div class="icon d-flex justify-content-center mb-3"><span class="align-self-center"><img src="assets/images/airplane.png" alt=""></span></div></div>
               <div class="media-body p-2">
-                <h3 class="heading">Special Activities</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                <h3 class="heading">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Travel with peace of mind&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3>
               </div>
             </div>      
           </div>
           <div class="col-md-6 col-lg-4 d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services d-block text-center">
-              <div class="d-flex justify-content-center"><div class="icon d-flex justify-content-center mb-3"><span class="align-self-center flaticon-around"></span></div></div>
-              <div class="media-body p-2">
-                <h3 class="heading">Travel Arrangements</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+              <div class="d-flex justify-content-center"><div class="icon d-flex justify-content-center mb-3"><span class="align-self-center"><img src="assets/images/label.png" alt=""></span></div></div>
+              <div class="media-body p-2" style="margin: auto !important;">
+                <h3 class="heading" style="margin: auto !important;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Middleman free prices&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3>
               </div>
             </div>      
           </div>
-          <div class="col-md-6 col-lg-4 d-flex align-self-stretch ftco-animate">
+          <div class="col-md-6 col-lg-4 d-flex align-self-stretch ftco-animate" style="padding:auto;">
             <div class="media block-6 services d-block text-center">
-              <div class="d-flex justify-content-center"><div class="icon d-flex justify-content-center mb-3"><span class="align-self-center flaticon-compass"></span></div></div>
+              <div class="d-flex justify-content-center"><div class="icon d-flex justify-content-center mb-3"><span class="align-self-center"><img src="assets/images/give-love.png" alt=""></span></div></div>
               <div class="media-body p-2">
-                <h3 class="heading">Private Guide</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                <h3 class="heading" style="margin:auto;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Responsible & Sustainable&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3>
               </div>
             </div>    
-          </div>         
+          </div>          
         </div>
       </div>
     </section>
@@ -366,11 +360,18 @@
       <div class="container-fluid">
         <div class="row no-gutters justify-content-center mb-4 pb-4 ftco-animate">
           <div class="col-md-7 text-center heading-section">
-            <h2>Type of Tours</h2>
+            <h2>Pick your passion</h2>
           </div>
         </div>
-        <h3 class="sub--para mb-5 ftco-animate" style="padding:0 6em;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam adipisci, labore amet commodi hic voluptatibus eum ipsa, harum, fugiat fugit porro tempora ut voluptas iusto.</h3>
+        <div class="row">
+        <h3 class="col-md-12 sub--para mb-5 ftco-animate" style="padding:0 6em;">We design each tour with passion and attention to detail, to make them spectacular and unique. To make it easy for you to select your forte, we have embedded collections of distinctive holiday plans to most sought after holiday themes. </h3>
+        <div class="col-md-9"></div>
+        <div class="col-md-3 group mb-3">
+						<input type="button" class="search-submit btn btn-primary" value="See All Categories" style="width:100%; font-size:1.5em;"
+						 onclick="window.location='<?php echo base_url(); ?>tours-list/0'">
+					</div>
         
+        </div>
         <div class="row no-gutters">
           <div class="col-md-6 col-lg-3 ftco-animate">
             <a href="<?php echo base_url(); ?>search-tours/common" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/trip.jpeg');">
@@ -536,11 +537,11 @@
 
 <div class="parallax-window mb-3" data-parallax="scroll" data-image-src="<?php echo base_url(); ?>assets/images/elephant.jpeg" style="min-height: 530px; background: transparent;">
   <div class="parallax-box">
-    <svg class="parallax-box--icon">  
+    <!-- <svg class="parallax-box--icon">  
       <use xlink:href="<?php echo base_url(); ?>assets/images/sprite.svg#icon-cloud-sun"></use>
-    </svg>
-    <h3 class="parallax-box--text">Lorem ipsum dolor sit amet.</h3>
-    <h3 class="parallax-box--para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae incidunt perspiciatis dolores, a ullam velit nostrum expedita quidem unde nesciunt pariatur, ex neque vitae voluptatibus.</h3>
+    </svg> -->
+    <h3 class="parallax-box--text">Maldives</h3>
+    <h3 class="parallax-box--para">Who doesn’t love Maldives, with its sun dipping horizons, sugar soft sandy beaches and crystal clear blue water? The perfect destination to combine your Sri Lankan holiday with, Maldives is spectacular and is considered as the go to beach stay for a luxury romantic gateway. This sophisticated epicure has also become a fine destination for the watersports. The top notch luxury beach resorts are a treat to your mind, body and soul. Less than 1 hour by air, your perfect holiday in Sri Lanka, could be followed by a few days at leisure in Maldives. Simply request for the extension for any of our <strong>tours</strong> or request a <strong>tailor made</strong> holiday.</h3>
   </div>
 </div>
 
@@ -551,8 +552,7 @@
             <h2>Group Tours</h2>
           </div>
         </div>
-                <h3 class="sub--para ftco-animate">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae incidunt perspiciatis
-                  dolores, a ullam velit nostrum expedita quidem unde nesciunt pariatur, ex neque vitae voluptatibus.</h3>
+                <h3 class="sub--para ftco-animate">Travelling solo or want to join a fixed tour? Hop on right in and join us. Select & book your favorite (details below) and you are ready to go. </h3>
         <div class="row ftco-animate">
           <div class="carousel owl-carousel ftco-owl">
           <a href="<?php echo base_url(); ?>search-for/group friends">

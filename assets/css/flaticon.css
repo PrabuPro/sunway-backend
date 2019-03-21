@@ -35,6 +35,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.flaticon-personalized:before {
+	content: "\f108";
+}
 .flaticon-car:before { content: "\f100"; }
 .flaticon-resort:before { content: "\f101"; }
 .flaticon-yatch:before { content: "\f102"; }

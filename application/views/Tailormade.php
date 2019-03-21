@@ -26,11 +26,7 @@
 					</div>
 				</div>
 				<h4 class="tailorMadePage__para" style='padding-right:2em;'>
-					“Ayubowan!” Greeting you from our traditional way wishing you a long life. The Therapy for happiness flows with
-					the style of travel with your consciousness, your heart and your memories. Find your chance to add some excitement
-					into your holiday to the promised island of Sri Lanka and embrace flexibility with us. Experience the island
-					renowned real adventure, rich cultural heritage along with sun kissed golden beaches and amazing hospitality
-					exclusively in Sri Lanka </h4>
+					Looking for something else? Feel free to tell us just how you would like your dream holiday to be. Our local experts are happy to listen to you, and with careful attention to detail design your personalized holiday. Still unsure of what you like? You can also talk to them for more information, suggestions and insider travel tips.</h4>
 
 			</div>
 			<div class="col-md-6 tailorMadePage__image">

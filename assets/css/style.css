@@ -6401,7 +6401,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 .parallax-box {
   background-color: #fff;
-  height: 22em;
+  height: 26em;
   width: 30em;
   position: relative;
   top: 5em;
@@ -8399,6 +8399,10 @@ textarea.form-control {
 
     .box .space {
       height: 30px;
+    }
+
+    .personalized {
+      
     }
 
     
