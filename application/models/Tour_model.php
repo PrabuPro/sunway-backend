@@ -277,6 +277,181 @@ class Tour_model extends CI_Model{
         
         return $result;
     }
+     public function getTourNames(){
+        $result = $this->db->select('tour_id,name')
+                            ->order_by('name','asc')
+                           ->get('tours')
+                           ->result();
+        
+        return $result;
+    }
+
+    //get update tour details
+     public function getTour($tourId){
+        
+        $result = $this->db->select('t.*,h.*, i.*, p.*, se.*, si.*, so.*')
+                           ->from('tours t')
+                           ->where('t.tour_id', $tourId)
+                           ->join('tour_highlights h', 'h.tour_id=t.tour_id', 'left')
+                           ->join('itinerary i', 'i.tour_id=t.tour_id', 'left')
+                           ->join('tour_item itm', 'itm.tour_id=t.tour_id', 'left')
+                           ->join('tour_price p', 'p.tour_id=t.tour_id', 'left')
+                           ->join('tour_services_excludes se', 'se.tour_id=t.tour_id', 'left')
+                           ->join('tour_services_includes si', 'si.tour_id=t.tour_id', 'left')
+                           ->join('tour_services_option so', 'so.tour_id=t.tour_id', 'left')
+                           ->group_by('t.tour_id')
+                           ->get()
+                           ->result();
+        return $result;
+    }
+     public function getTourImages($tourId){
+        
+        $result = $this->db->select('tour_id,photo_id,map_id')
+                           ->where('tour_id', $tourId)
+                           ->get('tours')
+                           ->result();
+        return $result;
+    }
+
+    public function getPrices($tourId){
+
+        $result = $this->db->select('*')
+                           ->where('tour_id',$tourId)
+                           ->get('tour_price')
+                           ->result();
+        return $result;
+    }
+
+    public function getItineraries($tourId){
+
+        $result = $this->db->select('*')
+                           ->where('tour_id',$tourId)
+                           ->get('itinerary')
+                           ->result();
+        return $result;
+
+
+    }
+
+    public function getIncludes($tourId){
+
+        $result = $this->db->select('*')
+                           ->where('tour_id',$tourId)
+                           ->get('tour_services_includes')
+                           ->result();
+        return $result;
+
+
+    }
+    public function getExcludes($tourId){
+
+        $result = $this->db->select('*')
+                           ->where('tour_id',$tourId)
+                           ->get('tour_services_excludes')
+                           ->result();
+        return $result;
+
+
+    }
+    public function getOptions($tourId){
+
+        $result = $this->db->select('*')
+                           ->where('tour_id',$tourId)
+                           ->get('tour_services_option')
+                           ->result();
+        return $result;
+
+
+    }
+    public function getHighlights($tourId){
+
+        $result = $this->db->select('*')
+                           ->where('tour_id',$tourId)
+                           ->get('tour_highlights')
+                           ->result();
+        return $result;
+
+
+    }
+
+    //Update
+    public function update_tours($id,$data){
+        $this->db->where('tour_id',$id);
+        $this->db->update('tours',$data);
+        
+        if ($this->db->affected_rows() == '1')
+        {
+            return TRUE;
+        }
+        return FALSE;
+    }
+
+    public function update_itinerary($id){
+
+        $day = $this->input->post("day");
+        $desc = $this->input->post("desc");
+        $i = 0;
+
+        $result = $this->db->select('itinerary_id')
+                           ->where('tour_id',$id)
+                           ->get('itinerary')
+                           ->result();
+
+        $itineraryId =  (int)(($result[0]->itinerary_id) - 1);
+
+        $data = array();
+
+        for($y=0; $y<sizeof($desc); $y++){
+            array(
+                    'itinerary_id' => $itineraryId++,
+                    'tour_id' => $id,
+                    'item_number' => $day[$i],
+                    'item_details' => $desc[$i]
+                );
+                $i++;
+        }
+
+        //   if($desc){
+        //     foreach($desc as $row){
+        //         array(
+        //             'itinerary_id' => $itineraryId++,
+        //             'tour_id' => $id,
+        //             'item_number' => $day[$i],
+        //             'item_details' => $desc[$i]
+        //         );
+        //         // $data['itinerary_id'] = $itineraryId++;
+        //         // $data['tour_id'] = $id;
+        //         // $data['item_number'] = $day[$i];
+        //         // $data['item_details'] = $desc[$i];
+        //         $i++;
+        //     }
+        // }
+
+        // $data = array(
+        //     array(
+        //         'itinerary_id' => $itineraryId,
+        //         'tour_id' => $id,
+        //         'item_number' => '3',
+        //         'item_details' => 'details 4'
+        //     ),
+        //     array(
+        //         'itinerary_id' => $itineraryId+1,
+        //         'tour_id' => $id,
+        //         'item_number' => '3',
+        //         'item_details' => 'details 2'
+        //     )
+        // );
+
+
+   
+        $this->db->update_batch('itinerary',$data,'itinerary_id');
+        
+       if ($this->db->affected_rows() == '1')
+        {
+            return TRUE;
+        }
+        return FALSE;
+    }
 
 
 }

@@ -43,7 +43,7 @@
     	<div class="col-xs-12 col-sm-6 col-lg-4">
 			<div class="box">							
 				<div class="icon">
-					<div class="image"><i class="fa fa-thumbs-o-up"></i></div>
+					<div class="image"><img src="assets/images/eye-1.png" style="margin-top:-16px;" alt=""></i></div>
 					<div class="info">
 						<h3 class="title">Vision</h3>
 						<p>
@@ -56,10 +56,10 @@
 			</div> 
 		</div>
 			
-        <div class="col-xs-12 col-sm-6 col-lg-4">
+    <div class="col-xs-12 col-sm-6 col-lg-4">
 			<div class="box">							
 				<div class="icon">
-					<div class="image"><i class="fa fa-flag"></i></div>
+					<div class="image"><img src="assets/images/mission.png" style="margin-top:-25px; height:50px; width:auto;" alt=""></div>
 					<div class="info">
 						<h3 class="title">Mission</h3>
     					<p>
@@ -75,7 +75,7 @@
         <div class="col-xs-12 col-sm-6 col-lg-4">
 			<div class="box">							
 				<div class="icon">
-					<div class="image"><i class="fa fa-desktop"></i></div>
+					<div class="image"><img src="assets/images/values.png" style="margin-top:-25px; height:50px; width:auto;" alt=""></div>
 					<div class="info">
 						<h3 class="title">Values</h3>
     					<p>

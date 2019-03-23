@@ -22,6 +22,9 @@
 				<a class="navbar-item" href="<?php echo site_url('addtoursview');?>">
 					Add Tour
 				</a>
+				<a class="navbar-item" href="<?php echo site_url('update-tours');?>">
+					Update Tours
+				</a>
 				<a class="navbar-item" href="<?php echo site_url('addhotelsview');?>">
 					Add Hotel
 				</a>

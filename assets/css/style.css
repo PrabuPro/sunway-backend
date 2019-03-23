@@ -6685,7 +6685,7 @@ h1, h2, h3, h4, h5,
       top: 0;
       position: relative; } }
   .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
-    font-size: 18px;
+    font-size: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 12px;
@@ -6776,7 +6776,7 @@ h1, h2, h3, h4, h5,
       font-size: 16px;
       letter-spacing: .1em; }
     .ftco-navbar-light.scrolled .navbar-nav > .nav-item > .nav-link {
-      font-size: 18px;
+      font-size: 20px;
       padding-top: 10px;
       padding-bottom: 10px;
       padding-left: 12px;
@@ -8402,7 +8402,7 @@ textarea.form-control {
     }
 
     .personalized {
-      
+
     }
 
     

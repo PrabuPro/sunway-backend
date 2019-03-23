@@ -51,6 +51,174 @@ class TourController extends CI_Controller{
         $data['site_title'] = 'Add Tours';
         $this->load->view('admin/dashboard', $data);
     }
+    public function updateToursView(){
+        $data['site_view'] = 'UpdateTours';
+        $data['site_title'] = 'Update Tours';
+        $data['tour_names'] = $this->tour_model->getTourNames();
+        $this->load->view('admin/dashboard', $data);
+    }
+
+    public function updatetours($tourId){
+        $this->form_validation->set_rules('name', 'Name', 'trim|max_length[15]');
+        $this->form_validation->set_rules('description', 'Description', 'trim|max_length[50]');
+        $this->form_validation->set_rules('introduction', 'Introduction', 'trim|max_length[700]');
+        $this->form_validation->set_rules('tour_type', 'Tour_type', 'trim|max_length[15]');
+        $this->form_validation->set_rules('suitable_for', 'Suitable_for', 'trim|max_length[15]');
+        $this->form_validation->set_rules('day[]', 'Itinerary Day', 'trim|max_length[15]');
+        $this->form_validation->set_rules('desc[]', 'Itinerary Desc', 'trim|max_length[500]');
+        $this->form_validation->set_rules('duration', 'Duration', 'trim|max_length[5]');
+        $this->form_validation->set_rules('hotelType[]', 'Hotel type of price', 'trim|max_length[1]');
+        $this->form_validation->set_rules('hotelPrice[]', 'Price', 'trim|numeric|max_length[6]');
+        $this->form_validation->set_rules('highlights[]', 'Highlights', 'trim|max_length[100]');
+        $this->form_validation->set_rules('includes[]', 'Includes', 'trim|max_length[100]');
+        $this->form_validation->set_rules('excludes[]', 'Excludes', 'trim|max_length[100]');
+        $this->form_validation->set_rules('options[]', 'Options', 'trim|max_length[100]');
+
+
+        if($this->form_validation->run() == FALSE){
+             $dataflash = array(
+                'errors' => validation_errors()
+            );
+            $this->session->set_flashdata($dataflash);
+            $data['site_view'] = 'updateTourItem';
+            $this->load->view('admin/dashboard', $data);
+        }
+
+        else {
+
+            $imageData = $this->tour_model->getTourImages($tourId);
+
+            $imageFileName = base_url().'assets/images/tours/'.$imageData[0]->photo_id;
+            $mapFileName = base_url().'assets/images/tours/'.$imageData[0]->photo_id;
+
+            if(file_exists($imageFileName)){
+                unlink($imageFileName);
+            } 
+
+            if(file_exists($mapFileName)){
+                unlink($mapFileName);
+            } 
+
+
+            $imageName = $imageData[0]->tour_id ;
+
+            $mapName = $imageName . '1';
+
+            //upload image and insert data into database
+
+            if(!empty($_FILES['photo_id']['name'])){
+                $photoResult = $this->imageUploadPhoto($imageName);
+                $path_photo = $_FILES['photo_id']['name'];
+            } else{
+                $path_photo = '0';
+                $photoResult = true;
+
+            }
+
+            if(!empty($_FILES['map_id']['name'])){
+                $imageResult = $this->imageUploadMap($mapName);
+                $path_map = $_FILES['map_id']['name'];
+            }else{
+                $path_map = '0';
+                $imageResult = true;
+            }
+
+
+            if($photoResult && $imageResult){
+
+                $photo_url = $imageName. '.'. pathinfo($path_photo, PATHINFO_EXTENSION);
+                $map_url = $mapName. '.'. pathinfo($path_map, PATHINFO_EXTENSION);
+
+                $databaseData = array(
+                    'name' => htmlspecialchars($this->input->post('name')),
+                    'description' => htmlspecialchars($this->input->post('description')),
+                    'tour_type' => htmlspecialchars($this->input->post('tour_type')),
+                    'suitable_for' => htmlspecialchars($this->input->post('suitable_for')),
+                    'photo_id' => $photo_url,
+                    'introduction' => htmlspecialchars($this->input->post('introduction')),
+                    'ratings' => htmlspecialchars($this->input->post('rating')),
+                    'duration' => htmlspecialchars($this->input->post('duration')),
+                    'map_id' => $map_url
+                );
+
+                //Update tour table
+                $id=$imageData[0]->tour_id ;
+                $tourUpdateResult = $this->tour_model->update_tours($id,$databaseData);
+
+
+                $updateItinerary_result = $this->tour_model->update_itinerary($id);
+                // $price_result = $this->tour_model->insert_price($tourId);
+                // $hightlight_result = $this->tour_model->insert_highlights($tourId);
+                // $includes_result = $this->tour_model->insert_includes($tourId);
+                // $excludes_result = $this->tour_model->insert_excludes($tourId);
+                // $options_result = $this->tour_model->insert_options($tourId);
+
+                if($tourUpdateResult && $updateItinerary_result){
+                    $dataflash = array(
+                        'success' => 'Successfully Updated'
+                    );
+        
+                    $this->session->set_flashdata($dataflash);
+                    $data['site_view'] = 'updateTourItem';
+                    $data['tour_details'] = $this->tour_model->getTour($tourId);
+                    $data['tour_prices'] = $this->tour_model->getPrices($tourId);
+                    $data['tour_itineraries'] = $this->tour_model->getItineraries($tourId);
+                    $data['tour_highlights'] = $this->tour_model->getHighlights($tourId);
+                    $data['tour_includes'] = $this->tour_model->getIncludes($tourId);
+                    $data['tour_excludes'] = $this->tour_model->getExcludes($tourId);
+                    $data['tour_options'] = $this->tour_model->getOptions($tourId);
+                    $this->load->view('admin/dashboard', $data);
+                    
+                } else {
+                        $dataflash = array(
+                            'error' => 'Database error'
+                        );
+            
+                        $this->session->set_flashdata($dataflash);
+                        $data['site_view'] = 'updateTourItem';
+                        $data['tour_details'] = $this->tour_model->getTour($tourId);
+                        $data['tour_prices'] = $this->tour_model->getPrices($tourId);
+                        $data['tour_itineraries'] = $this->tour_model->getItineraries($tourId);
+                        $data['tour_highlights'] = $this->tour_model->getHighlights($tourId);
+                        $data['tour_includes'] = $this->tour_model->getIncludes($tourId);
+                        $data['tour_excludes'] = $this->tour_model->getExcludes($tourId);
+                        $data['tour_options'] = $this->tour_model->getOptions($tourId);
+                        $this->load->view('admin/dashboard', $data);
+
+                }
+
+                } else {
+                    $data['site_view'] = 'updateTourItem';
+                    $data['tour_details'] = $this->tour_model->getTour($tourId);
+                    $data['tour_prices'] = $this->tour_model->getPrices($tourId);
+                    $data['tour_itineraries'] = $this->tour_model->getItineraries($tourId);
+                    $data['tour_highlights'] = $this->tour_model->getHighlights($tourId);
+                    $data['tour_includes'] = $this->tour_model->getIncludes($tourId);
+                    $data['tour_excludes'] = $this->tour_model->getExcludes($tourId);
+                    $data['tour_options'] = $this->tour_model->getOptions($tourId);
+                    $this->load->view('admin/dashboard', $data);
+                }
+            
+            }
+    }
+
+    public function updateToursItemView($tourId){
+        $imageData = $this->tour_model->getTourImages($tourId);
+
+            print_r($imageData);
+        $data['site_view'] = 'updateTourItem';
+        $data['site_title'] = 'Update Tour Item';
+        $data['tour_details'] = $this->tour_model->getTour($tourId);
+        $data['tour_prices'] = $this->tour_model->getPrices($tourId);
+        $data['tour_itineraries'] = $this->tour_model->getItineraries($tourId);
+        $data['tour_highlights'] = $this->tour_model->getHighlights($tourId);
+        $data['tour_includes'] = $this->tour_model->getIncludes($tourId);
+        $data['tour_excludes'] = $this->tour_model->getExcludes($tourId);
+        $data['tour_options'] = $this->tour_model->getOptions($tourId);
+        $this->load->view('admin/dashboard', $data);
+    }
+
+    
 
     public function addTours(){
 

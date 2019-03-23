@@ -6,7 +6,7 @@
       </style>
 
     <section class="home-slider owl-carousel">
-      <div class="slider-item" style="background-image: url('<?php echo base_url();?>assets/images/beach.jpeg');">
+      <div class="slider-item" style="background-image: url('<?php echo base_url();?>assets/images/personalized-bg.jpg'); background-position:bottom;">
         <div class="overlay"></div>
         <div class="container">
           <div class="row slider-text align-items-center">
@@ -28,7 +28,7 @@
         </div>
       </div>
 
-      <div class="slider-item" style="background-image: url('<?php echo base_url();?>assets/images/tour-3.jpg');">
+      <div class="slider-item" style="background-image: url('<?php echo base_url();?>assets/images/beach-4.jpg');">
         <div class="overlay"></div>
         <div class="container">
           <div class="row slider-text align-items-center">
@@ -256,104 +256,7 @@
       </div>
     </section>
 
-    <section class="ftco-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-5">
-          <div class="col-md-7 text-center heading-section ftco-animate">
-            <h2>Our Famouse itinerary</h2>
-          </div>
-        </div>
-        <div class="row ftco-animate">
-          <div class="carousel1 owl-carousel ftco-owl">
-            <div class="item">
-              <div class="blog-entry">
-                <a href="blog-single.html" class="block-20" style="background-image: url('<?php echo base_url();?>assets/images/image_5.jpg');">
-                </a>
-                <div class="text p-4">
-                  <div class="meta">
-                    <div><a href="#">July 7, 2018</a></div>
-                    <div><a href="#">Admin</a></div>
-                  </div>
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-                  <p class="clearfix">
-                    <a href="#" class="float-left">Read more</a>
-                    <a href="#" class="float-right meta-chat"><span class="icon-chat"></span> 3</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="blog-entry" data-aos-delay="100">
-                <a href="blog-single.html" class="block-20" style="background-image: url('<?php echo base_url();?>assets/images/image_6.jpg');">
-                </a>
-                <div class="text p-4">
-                  <div class="meta">
-                    <div><a href="#">July 7, 2018</a></div>
-                    <div><a href="#">Admin</a></div>
-                  </div>
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-                  <p class="clearfix">
-                    <a href="#" class="float-left">Read more</a>
-                    <a href="#" class="float-right meta-chat"><span class="icon-chat"></span> 3</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="blog-entry" data-aos-delay="200">
-                <a href="blog-single.html" class="block-20" style="background-image: url('<?php echo base_url();?>assets/images/image_7.jpg');">
-                </a>
-                <div class="text p-4">
-                  <div class="meta">
-                    <div><a href="#">July 7, 2018</a></div>
-                    <div><a href="#">Admin</a></div>
-                  </div>
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-                  <p class="clearfix">
-                    <a href="#" class="float-left">Read more</a>
-                    <a href="#" class="float-right meta-chat"><span class="icon-chat"></span> 3</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="blog-entry" data-aos-delay="200">
-                <a href="blog-single.html" class="block-20" style="background-image: url('<?php echo base_url();?>assets/images/image_8.jpg');">
-                </a>
-                <div class="text p-4">
-                  <div class="meta">
-                    <div><a href="#">July 7, 2018</a></div>
-                    <div><a href="#">Admin</a></div>
-                  </div>
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-                  <p class="clearfix">
-                    <a href="#" class="float-left">Read more</a>
-                    <a href="#" class="float-right meta-chat"><span class="icon-chat"></span> 3</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="blog-entry" data-aos-delay="200">
-                <a href="blog-single.html" class="block-20" style="background-image: url('<?php echo base_url();?>assets/images/image_9.jpg');">
-                </a>
-                <div class="text p-4">
-                  <div class="meta">
-                    <div><a href="#">July 7, 2018</a></div>
-                    <div><a href="#">Admin</a></div>
-                  </div>
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-                  <p class="clearfix">
-                    <a href="#" class="float-left">Read more</a>
-                    <a href="#" class="float-right meta-chat"><span class="icon-chat"></span> 3</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+   
 
 
     <section class="ftco-section">
@@ -454,6 +357,105 @@
             </a>
           </div>
          
+        </div>
+      </div>
+    </section>
+
+     <section class="ftco-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 text-center heading-section ftco-animate">
+            <h2>Our Famouse itinerary</h2>
+          </div>
+        </div>
+        <div class="row ftco-animate">
+          <div class="carousel1 owl-carousel ftco-owl">
+            <div class="item">
+              <div class="blog-entry">
+                <a href="blog-single.html" class="block-20" style="background-image: url('<?php echo base_url();?>assets/images/image_5.jpg');">
+                </a>
+                <div class="text p-4">
+                  <div class="meta">
+                    <div><a href="#">July 7, 2018</a></div>
+                    <div><a href="#">Admin</a></div>
+                  </div>
+                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                  <p class="clearfix">
+                    <a href="#" class="float-left">Read more</a>
+                    <a href="#" class="float-right meta-chat"><span class="icon-chat"></span> 3</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="blog-entry" data-aos-delay="100">
+                <a href="blog-single.html" class="block-20" style="background-image: url('<?php echo base_url();?>assets/images/image_6.jpg');">
+                </a>
+                <div class="text p-4">
+                  <div class="meta">
+                    <div><a href="#">July 7, 2018</a></div>
+                    <div><a href="#">Admin</a></div>
+                  </div>
+                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                  <p class="clearfix">
+                    <a href="#" class="float-left">Read more</a>
+                    <a href="#" class="float-right meta-chat"><span class="icon-chat"></span> 3</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="blog-entry" data-aos-delay="200">
+                <a href="blog-single.html" class="block-20" style="background-image: url('<?php echo base_url();?>assets/images/image_7.jpg');">
+                </a>
+                <div class="text p-4">
+                  <div class="meta">
+                    <div><a href="#">July 7, 2018</a></div>
+                    <div><a href="#">Admin</a></div>
+                  </div>
+                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                  <p class="clearfix">
+                    <a href="#" class="float-left">Read more</a>
+                    <a href="#" class="float-right meta-chat"><span class="icon-chat"></span> 3</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="blog-entry" data-aos-delay="200">
+                <a href="blog-single.html" class="block-20" style="background-image: url('<?php echo base_url();?>assets/images/image_8.jpg');">
+                </a>
+                <div class="text p-4">
+                  <div class="meta">
+                    <div><a href="#">July 7, 2018</a></div>
+                    <div><a href="#">Admin</a></div>
+                  </div>
+                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                  <p class="clearfix">
+                    <a href="#" class="float-left">Read more</a>
+                    <a href="#" class="float-right meta-chat"><span class="icon-chat"></span> 3</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="blog-entry" data-aos-delay="200">
+                <a href="blog-single.html" class="block-20" style="background-image: url('<?php echo base_url();?>assets/images/image_9.jpg');">
+                </a>
+                <div class="text p-4">
+                  <div class="meta">
+                    <div><a href="#">July 7, 2018</a></div>
+                    <div><a href="#">Admin</a></div>
+                  </div>
+                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                  <p class="clearfix">
+                    <a href="#" class="float-left">Read more</a>
+                    <a href="#" class="float-right meta-chat"><span class="icon-chat"></span> 3</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
