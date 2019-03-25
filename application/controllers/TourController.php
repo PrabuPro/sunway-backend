@@ -147,13 +147,13 @@ class TourController extends CI_Controller{
 
 
                 $updateItinerary_result = $this->tour_model->update_itinerary($id);
-                // $price_result = $this->tour_model->insert_price($tourId);
-                // $hightlight_result = $this->tour_model->insert_highlights($tourId);
-                // $includes_result = $this->tour_model->insert_includes($tourId);
-                // $excludes_result = $this->tour_model->insert_excludes($tourId);
-                // $options_result = $this->tour_model->insert_options($tourId);
+                $updatePrice_result = $this->tour_model->update_price($tourId);
+                $updateHightlight_result = $this->tour_model->update_highlights($tourId);
+                $updateIncludes_result = isset($_POST['includes']) ? $this->tour_model->update_includes($tourId) : TRUE ;
+                $updateExcludes_result = isset($_POST['excludes']) ? $this->tour_model->update_excludes($tourId) : TRUE ;
+                $updateOptions_result = isset($_POST['options']) ? $this->tour_model->update_options($tourId) : TRUE ;
 
-                if($tourUpdateResult && $updateItinerary_result){
+                if($tourUpdateResult && $updateItinerary_result && $updatePrice_result && $updateHightlight_result && $updateIncludes_result && $updateIncludes_result && $updateOptions_result){
                     $dataflash = array(
                         'success' => 'Successfully Updated'
                     );
@@ -203,9 +203,7 @@ class TourController extends CI_Controller{
     }
 
     public function updateToursItemView($tourId){
-        $imageData = $this->tour_model->getTourImages($tourId);
-
-            print_r($imageData);
+        
         $data['site_view'] = 'updateTourItem';
         $data['site_title'] = 'Update Tour Item';
         $data['tour_details'] = $this->tour_model->getTour($tourId);

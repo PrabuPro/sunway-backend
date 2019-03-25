@@ -390,69 +390,183 @@ class Tour_model extends CI_Model{
 
         $day = $this->input->post("day");
         $desc = $this->input->post("desc");
-        $i = 0;
 
         $result = $this->db->select('itinerary_id')
                            ->where('tour_id',$id)
                            ->get('itinerary')
                            ->result();
 
-        $itineraryId =  (int)(($result[0]->itinerary_id) - 1);
+        $itineraryId =  (int)(($result[0]->itinerary_id));
 
         $data = array();
 
-        for($y=0; $y<sizeof($desc); $y++){
-            array(
-                    'itinerary_id' => $itineraryId++,
-                    'tour_id' => $id,
-                    'item_number' => $day[$i],
-                    'item_details' => $desc[$i]
-                );
-                $i++;
+        foreach($desc as $key => $value){
+            $data[] = array(
+                'itinerary_id' => $itineraryId++,
+                'tour_id' => $id,
+                'item_number' => $day[$key],
+                'item_details' => $desc[$key]
+            );
         }
 
-        //   if($desc){
-        //     foreach($desc as $row){
-        //         array(
-        //             'itinerary_id' => $itineraryId++,
-        //             'tour_id' => $id,
-        //             'item_number' => $day[$i],
-        //             'item_details' => $desc[$i]
-        //         );
-        //         // $data['itinerary_id'] = $itineraryId++;
-        //         // $data['tour_id'] = $id;
-        //         // $data['item_number'] = $day[$i];
-        //         // $data['item_details'] = $desc[$i];
-        //         $i++;
-        //     }
-        // }
-
-        // $data = array(
-        //     array(
-        //         'itinerary_id' => $itineraryId,
-        //         'tour_id' => $id,
-        //         'item_number' => '3',
-        //         'item_details' => 'details 4'
-        //     ),
-        //     array(
-        //         'itinerary_id' => $itineraryId+1,
-        //         'tour_id' => $id,
-        //         'item_number' => '3',
-        //         'item_details' => 'details 2'
-        //     )
-        // );
-
-
-   
         $this->db->update_batch('itinerary',$data,'itinerary_id');
         
-       if ($this->db->affected_rows() == '1')
+       if ($this->db->affected_rows() >= '1')
         {
             return TRUE;
         }
         return FALSE;
     }
 
+    public function update_price($id){
+
+        $hotelType = $this->input->post("hotelType");
+        $hotelPrice = $this->input->post("hotelPrice");
+       
+
+        $result = $this->db->select('tour_price_id')
+                           ->where('tour_id',$id)
+                           ->get('tour_price')
+                           ->result();
+
+        $priceId =  (int)(($result[0]->tour_price_id));
+
+        $data = array();
+
+        foreach($hotelType as $key => $value){
+            $data[] = array(
+                'tour_price_id' => $priceId++,
+                'tour_id' => $id,
+                'hotel_type' => $hotelType[$key],
+                'price' => $hotelPrice[$key]
+            );
+        }
+
+        $this->db->update_batch('tour_price',$data,'tour_price_id');
+        
+       if ($this->db->affected_rows() >= '1')
+        {
+            return TRUE;
+        }
+        return FALSE;
+    }
+    public function update_highlights($id){
+
+        $highlights = $this->input->post("highlights");
+       
+        $result = $this->db->select('tour_highlights_id')
+                           ->where('tour_id',$id)
+                           ->get('tour_highlights')
+                           ->result();
+
+        $highlightsId =  (int)(($result[0]->tour_highlights_id));
+
+        $data = array();
+
+        foreach($highlights as $key => $value){
+            $data[] = array(
+                'tour_highlights_id' => $highlightsId++,
+                'tour_id' => $id,
+                'highlights' => $highlights[$key]
+            );
+        }
+
+        $this->db->update_batch('tour_highlights',$data,'tour_highlights_id');
+        
+       if ($this->db->affected_rows() >= '1')
+        {
+            return TRUE;
+        }
+        return FALSE;
+    }
+    public function update_includes($id){
+
+        $includes = $this->input->post("includes");
+       
+        $result = $this->db->select('tour_services_includes_id')
+                           ->where('tour_id',$id)
+                           ->get('tour_services_includes')
+                           ->result();
+
+        $includesId =  (int)(($result[0]->tour_services_includes_id));
+
+        $data = array();
+
+        foreach($includes as $key => $value){
+            $data[] = array(
+                'tour_services_includes_id' => $includesId++,
+                'tour_id' => $id,
+                'includes' => $includes[$key]
+            );
+        }
+
+        $this->db->update_batch('tour_services_includes',$data,'tour_services_includes_id');
+        
+       if ($this->db->affected_rows() >= '1')
+        {
+            return TRUE;
+        }
+        return FALSE;
+    }
+
+    public function update_excludes($id){
+
+        $excludes = $this->input->post("excludes");
+       
+        $result = $this->db->select('tour_services_excludes_id')
+                           ->where('tour_id',$id)
+                           ->get('tour_services_excludes')
+                           ->result();
+
+        $excludesId =  (int)(($result[0]->tour_services_excludes_id));
+
+        $data = array();
+
+        foreach($excludes as $key => $value){
+            $data[] = array(
+                'tour_services_excludes_id' => $excludesId++,
+                'tour_id' => $id,
+                'excludes' => $excludes[$key]
+            );
+        }
+
+        $this->db->update_batch('tour_services_excludes',$data,'tour_services_excludes_id');
+        
+       if ($this->db->affected_rows() >= '1')
+        {
+            return TRUE;
+        }
+        return FALSE;
+    }
+    public function update_options($id){
+
+        $options = $this->input->post("options");
+       
+        $result = $this->db->select('tour_services_option')
+                           ->where('tour_id',$id)
+                           ->get('tour_services_option')
+                           ->result();
+
+        $optionId =  (int)(($result[0]->tour_services_option));
+
+        $data = array();
+
+        foreach($options as $key => $value){
+            $data[] = array(
+                'tour_services_option' => $optionId++,
+                'tour_id' => $id,
+                'options' => $options[$key]
+            );
+        }
+
+        $this->db->update_batch('tour_services_option',$data,'tour_services_option');
+        
+       if ($this->db->affected_rows() >= '1')
+        {
+            return TRUE;
+        }
+        return FALSE;
+    }
 
 }
 
