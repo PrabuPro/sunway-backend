@@ -47,10 +47,7 @@
 			<section class="hero">
 				<div class="columns">
 					<div class="column is-6" style="margin-top:30px;">
-						<?php print('<pre>'.print_r($tour_details,true).'</pre>') ?>
-						<?php print('<pre>'.print_r($tour_prices,true).'</pre>') ?>
-						<?php print('<pre>'.print_r($tour_itineraries,true).'</pre>') ?>
-
+			
 						<form action="<?php echo site_url('tourcontroller/updatetours/'.$tour_details[0]->tour_id);?>" method="post"
 							enctype="multipart/form-data">
 							<div class="field">
@@ -179,8 +176,8 @@
 								<div class="control">
 									<div class="file">
 										<label class="file-label">
-											<input class="file-input input-photo" type="file" name="photo_id"
-												accept="image/jpg, image/jpeg, image/png" onchange="readURL(this);"
+											<input class="file-input input-photo" type="file" name="photo_id" class="photo1" required="false"
+												accept="image/jpg, image/jpeg, image/png" onchange="readURL(this);" 
 											>
 											<span class="file-cta">
 												<span class="file-icon">
@@ -203,8 +200,8 @@
 								<div class="control">
 									<div class="file">
 										<label class="file-label">
-											<input class="file-input input-map" type="file" name="map_id"
-												accept="image/jpg, image/jpeg, image/png" onchange="readURLMap(this);"
+											<input class="file-input input-map" type="file" name="map_id" id="photo2" required="false"
+												accept="image/jpg, image/jpeg, image/png" onchange="readURLMap(this);" 
 											>
 											<span class="file-cta">
 												<span class="file-icon">
@@ -221,6 +218,15 @@
 										alt="your image" class="thumbnail-image" />
 								</div>
 							</div>
+
+							<script>
+								let photo = document.getElementById('photo1');
+								let map = document.getElementById('photo2');
+
+								photo.required = false;
+								map.required = false;
+
+							</script>
 
 
 

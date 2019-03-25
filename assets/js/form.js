@@ -31,6 +31,14 @@ function readURLMap(input) {
 }
 
 
+function disablePhoto() {
+	let photo = document.getElementById('photo_id');
+	let map = document.getElementById('map_id');
+
+	photo.required = false;
+	map.required = false;
+}
+
 var count = 0;
 let priceCount = 0;
 let hCount = 0;

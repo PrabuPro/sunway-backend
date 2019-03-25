@@ -279,7 +279,7 @@ class Tour_model extends CI_Model{
     }
      public function getTourNames(){
         $result = $this->db->select('tour_id,name')
-                            ->order_by('name','asc')
+                            ->order_by('tour_id','asc')
                            ->get('tours')
                            ->result();
         

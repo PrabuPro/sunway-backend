@@ -88,17 +88,18 @@ class TourController extends CI_Controller{
 
             $imageData = $this->tour_model->getTourImages($tourId);
 
-            $imageFileName = base_url().'assets/images/tours/'.$imageData[0]->photo_id;
-            $mapFileName = base_url().'assets/images/tours/'.$imageData[0]->photo_id;
+            $imageFileName = 'assets/images/tours/'.$imageData[0]->photo_id;
+            $mapFileName = 'assets/images/tours/'.$imageData[0]->map_id;
 
-            if(file_exists($imageFileName)){
-                unlink($imageFileName);
-            } 
+                if(file_exists($imageFileName)){
+                    unlink($imageFileName);
+                } 
 
-            if(file_exists($mapFileName)){
-                unlink($mapFileName);
-            } 
-
+                if(file_exists($mapFileName)){
+                    unlink($mapFileName);
+                } 
+            
+          
 
             $imageName = $imageData[0]->tour_id ;
 
@@ -153,7 +154,7 @@ class TourController extends CI_Controller{
                 $updateExcludes_result = isset($_POST['excludes']) ? $this->tour_model->update_excludes($tourId) : TRUE ;
                 $updateOptions_result = isset($_POST['options']) ? $this->tour_model->update_options($tourId) : TRUE ;
 
-                if($tourUpdateResult && $updateItinerary_result && $updatePrice_result && $updateHightlight_result && $updateIncludes_result && $updateIncludes_result && $updateOptions_result){
+                if($tourUpdateResult && $updateItinerary_result && $updatePrice_result && $updateHightlight_result && $updateIncludes_result && $updateIncludes_result && $updateOptions_result && $photoResult && $imageResult){
                     $dataflash = array(
                         'success' => 'Successfully Updated'
                     );
@@ -220,17 +221,17 @@ class TourController extends CI_Controller{
 
     public function addTours(){
 
-        $this->form_validation->set_rules('name', 'Name', 'trim|required|max_length[15]');
-        $this->form_validation->set_rules('description', 'Description', 'trim|required|max_length[50]');
-        $this->form_validation->set_rules('introduction', 'Introduction', 'trim|required|max_length[700]');
-        $this->form_validation->set_rules('tour_type', 'Tour_type', 'trim|required|max_length[15]');
-        $this->form_validation->set_rules('suitable_for', 'Suitable_for', 'trim|required|max_length[15]');
-        $this->form_validation->set_rules('day[]', 'Itinerary Day', 'trim|required|max_length[15]');
-        $this->form_validation->set_rules('desc[]', 'Itinerary Desc', 'trim|required|max_length[500]');
-        $this->form_validation->set_rules('duration', 'Duration', 'trim|required|max_length[5]');
-        $this->form_validation->set_rules('hotelType[]', 'Hotel type of price', 'trim|required|max_length[1]');
-        $this->form_validation->set_rules('hotelPrice[]', 'Price', 'trim|required|numeric|max_length[6]');
-        $this->form_validation->set_rules('highlights[]', 'Highlights', 'trim|required|max_length[100]');
+        $this->form_validation->set_rules('name', 'Name', 'trim|max_length[15]');
+        $this->form_validation->set_rules('description', 'Description', 'trim|max_length[50]');
+        $this->form_validation->set_rules('introduction', 'Introduction', 'trim|max_length[700]');
+        $this->form_validation->set_rules('tour_type', 'Tour_type', 'trim|max_length[15]');
+        $this->form_validation->set_rules('suitable_for', 'Suitable_for', 'trim|max_length[15]');
+        $this->form_validation->set_rules('day[]', 'Itinerary Day', 'trim|max_length[15]');
+        $this->form_validation->set_rules('desc[]', 'Itinerary Desc', 'trim|max_length[500]');
+        $this->form_validation->set_rules('duration', 'Duration', 'trim|max_length[5]');
+        $this->form_validation->set_rules('hotelType[]', 'Hotel type of price', 'trim|max_length[1]');
+        $this->form_validation->set_rules('hotelPrice[]', 'Price', 'trim|numeric|max_length[6]');
+        $this->form_validation->set_rules('highlights[]', 'Highlights', 'trim|max_length[100]');
         $this->form_validation->set_rules('includes[]', 'Includes', 'trim|max_length[100]');
         $this->form_validation->set_rules('excludes[]', 'Excludes', 'trim|max_length[100]');
         $this->form_validation->set_rules('options[]', 'Options', 'trim|max_length[100]');
@@ -259,8 +260,26 @@ class TourController extends CI_Controller{
 
             //upload image and insert data into database
 
-            $photoResult = $this->imageUploadPhoto($imageName);
-            $imageResult = $this->imageUploadMap($mapName);
+             if(!empty($_FILES['photo_id']['name'])){
+                $photoResult = $this->imageUploadPhoto($imageName);
+                $path_photo = $_FILES['photo_id']['name'];
+            } else{
+                $path_photo = '0';
+                $photoResult = true;
+
+            }
+
+            if(!empty($_FILES['map_id']['name'])){
+                $imageResult = $this->imageUploadMap($mapName);
+                $path_map = $_FILES['map_id']['name'];
+            }else{
+                $path_map = '0';
+                $imageResult = true;
+            }
+
+
+            // $photoResult = $this->imageUploadPhoto($imageName);
+            // $imageResult = $this->imageUploadMap($mapName);
 
 
             if($photoResult && $imageResult){
@@ -335,7 +354,7 @@ class TourController extends CI_Controller{
 
         $this->load->library('upload', $config);
 
-        if (!$this->upload->do_upload('map_id'))
+        if (!$this->upload->do_upload('photo_id'))
         {
             $errors = array('errors' => $this->upload->display_errors());
             $this->session->set_flashdata($errors);
@@ -365,7 +384,7 @@ class TourController extends CI_Controller{
 
         $this->load->library('upload', $config);
 
-        if (!$this->upload->do_upload('photo_id'))
+        if (!$this->upload->do_upload('map_id'))
         {
             $errors = array('errors' => $this->upload->display_errors());
             $this->session->set_flashdata($errors);

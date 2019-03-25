@@ -50,24 +50,24 @@
 						<form action="<?php echo site_url('tourcontroller/addtours');?>" method="post" enctype="multipart/form-data">
 							<div class="field">
 								<div class="control">
-									<input class="input is-info" name="name" type="text" value="<?php echo set_value('name');?>" placeholder="Tour Name" required>
+									<input class="input is-info" name="name" type="text" value="<?php echo set_value('name');?>" placeholder="Tour Name">
 								</div>
 							</div>
 							<div class="field">
 								<div class="control">
 									<input class="input is-info" name="description" type="text" value="<?php echo set_value('description');?>"
-									 placeholder="Description" required>
+									 placeholder="Description">
 								</div>
 							</div>
 							<div class="field">
 								<div class="control">
-									<textarea class="textarea is-info" placeholder="Introduction" name="introduction" required><?php echo set_value('introduction');?></textarea>
+									<textarea class="textarea is-info" placeholder="Introduction" name="introduction"><?php echo set_value('introduction');?></textarea>
 								</div>
 							</div>
 							<div class="field">
 								<div class="control">
 									<div class="select is-info">
-										<select name="tour_type" required>
+										<select name="tour_type">
 											<option value="">Tour Type</option>
 											<option value="common">Common</option>
 											<option value="beach">Beach</option>
@@ -84,7 +84,7 @@
 							<div class="field">
 								<div class="control">
 									<div class="select is-info">
-										<select name="suitable_for" required>
+										<select name="suitable_for">
 											<option value="">Suitable for</option>
 											<option value="seniors">Seniors</option>
 											<option value="couples">Couples</option>
@@ -112,7 +112,7 @@
 								<div class="control">
 									<div class="file">
 										<label class="file-label">
-											<input class="file-input input-photo" type="file" name="photo_id" accept="image/jpg, image/jpeg, image/png" onchange="readURL(this);" required>
+											<input class="file-input input-photo" type="file" name="photo_id" accept="image/jpg, image/jpeg, image/png" onchange="readURL(this);">
 											<span class="file-cta">
 												<span class="file-icon">
 													<i class="fas fa-upload"></i>
@@ -132,7 +132,7 @@
 								<div class="control">
 									<div class="file">
 										<label class="file-label">
-											<input class="file-input input-map" type="file" name="map_id" accept="image/jpg, image/jpeg, image/png" onchange="readURLMap(this);" required>
+											<input class="file-input input-map" type="file" name="map_id" accept="image/jpg, image/jpeg, image/png" onchange="readURLMap(this);">
 											<span class="file-cta">
 												<span class="file-icon">
 													<i class="fas fa-upload"></i>
@@ -158,7 +158,7 @@
 							<div class="field">
 								<div class="control">
 									<div class="select is-info">
-										<select name="duration" required>
+										<select name="duration">
 											<option value="">Duration</option>
 											<option value="7">7 Days</option>
 											<option value="10-12">10-12 Days</option>
@@ -197,7 +197,7 @@
 							<div class="field">
 								<div class="control">
 									<div class="select is-info">
-										<select name="rating" required>
+										<select name="rating">
 											<option value="">Sunway Rating</option>
 											<option value="0">0</option>
 											<option value="1">1</option>

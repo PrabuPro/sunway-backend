@@ -223,17 +223,17 @@ input .name {
 
 							<div class="tab-content" id="myTabContent" style="border-bottom: 5px solid #ffc600; border-left: 5px solid #ffc600; border-right: 5px solid #ffc600; border-bottom-left-radius: 5px !important;border-bottom-right-radius: 5px !important;">
 								<div class="tab-pane fade show active p-3" id="one" role="tabpanel" aria-labelledby="one-tab">
-									<h5 class="card-title" style="text-align:center;">Hotel Price $<?php echo $prices[0]->price;?></h5>
+									<h5 class="card-title" style="text-align:center;">Hotel Price $<?php echo (isset($prices[0]->price) ? $prices[0]->price : 'Unavailable');?></h5>
 									<p class="card-text"></p>
 
 								</div>
 								<div class="tab-pane fade p-3" id="two" role="tabpanel" aria-labelledby="two-tab">
-									<h5 class="card-title" style="text-align:center;">Hotel Price $<?php echo $prices[1]->price;?></h5>
+									<h5 class="card-title" style="text-align:center;">Hotel Price $<?php echo (isset($prices[1]->price) ? $prices[1]->price : 'Unavailable');?></h5>
 									<p class="card-text"></p>
 
 								</div>
 								<div class="tab-pane fade p-3" id="three" role="tabpanel" aria-labelledby="three-tab">
-									<h5 class="card-title" style="text-align:center;">Hotel Price $<?php echo $prices[2]->price;?></h5>
+									<h5 class="card-title" style="text-align:center;">Hotel Price $<?php echo (isset($prices[2]->price) ? $prices[2]->price : 'Unavailable');?></h5>
 									<p class="card-text"></p>
 
 								</div>
