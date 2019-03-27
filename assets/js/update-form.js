@@ -1,4 +1,3 @@
-
 function readURL(input) {
 	if (input.files && input.files[0]) {
 		var reader = new FileReader();
@@ -50,10 +49,10 @@ $(document).ready(function () {
                             <strong>Itinarary Item  - ` + count + `  </strong>
                         </div>
                         <div class="column is-narrow">
-                            <input class="column is-3 input is-info" name="day[]" type="text" placeholder="Day" >
+                            <input class="column is-3 input is-info" name="day_new[]" type="text" placeholder="Day" >
                         </div>
                         <div class="column ">
-                            <textarea class="textarea is-info is-12" name="desc[]" type="text" placeholder="Description"></textarea>
+                            <textarea class="textarea is-info is-12" name="desc_new[]" type="text" placeholder="Description"></textarea>
                         </div>
                     </div>`;
 		$('#description').append(html);
@@ -62,9 +61,9 @@ $(document).ready(function () {
 	});
 	$('p#add_price').click(function () {
 
-        var html = `<div class="columns is-mobile is-multiline ">
+		var html = `<div class="columns is-mobile is-multiline">
                         <div class="column select is-info is-3">
-                            <select name="hotelType[]" required>
+                            <select name="hotelType_new[]" required>
                                 <option value="">Hotel Type</option>
                                 <option value="3">3 star</option>
                                 <option value="4">4 star</option>
@@ -73,7 +72,7 @@ $(document).ready(function () {
                         </div>
                         
 						<div class="column ">
-							<input class="column is-7 input is-info" name="hotelPrice[]" type="text" placeholder="price" value="">
+							<input class="column is-7 input is-info" name="hotelPrice_new[]" type="text" placeholder="price" value="">
 						</div>
 					</div>`;
 
@@ -93,7 +92,7 @@ $(document).ready(function () {
                             <strong>Highlight count - ` + hCount + `  </strong>
                         </div>
                         <div class="column is-12 ">
-                            <input class="column is-12 input is-info" name="highlights[]" type="text" placeholder="Description" value="">
+                            <input class="column is-12 input is-info" name="highlights_new[]" type="text" placeholder="Description" value="">
                         </div>
                     </div>`;
 		$('#highlights').append(html);
@@ -110,7 +109,7 @@ $(document).ready(function () {
                             <strong>Includes count - ` + iCount + `  </strong>
                         </div>
                         <div class="column is-12 ">
-                            <input class="column is-12 input is-info" name="includes[]" type="text" placeholder="Description" value="">
+                            <input class="column is-12 input is-info" name="includes_new[]" type="text" placeholder="Description" value="">
                         </div>
                     </div>`;
 		$('#includes').append(html);
@@ -127,7 +126,7 @@ $(document).ready(function () {
                             <strong>Excludes count - ` + eCount + `  </strong>
                         </div>
                         <div class="column is-12 ">
-                            <input class="column is-12 input is-info" name="excludes[]" type="text" placeholder="Description" value="">
+                            <input class="column is-12 input is-info" name="excludes_new[]" type="text" placeholder="Description" value="">
                         </div>
                     </div>`;
 		$('#excludes').append(html);
@@ -143,7 +142,7 @@ $(document).ready(function () {
                             <strong>Option count - ` + oCount + `  </strong>
                         </div>
                         <div class="column is-12 ">
-                            <input class="column is-12 input is-info" name="options[]" type="text" placeholder="Description" value="">
+                            <input class="column is-12 input is-info" name="options_new[]" type="text" placeholder="Description" value="">
                         </div>
                     </div>`;
 		$('#options').append(html);

@@ -68,6 +68,12 @@ class PageController extends CI_Controller{
         $this->load->view('main/main_view', $data);
     }
 
+    public function notFound(){
+        $data['site_view'] = 'NotFound';
+        $data['site_title'] = 'Sunway Holidays - Page Not Found';
+        $this->load->view('main/main_view', $data);
+    }
+
 }
 
 ?>

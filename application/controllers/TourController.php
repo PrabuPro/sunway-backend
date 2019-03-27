@@ -8,7 +8,7 @@ class TourController extends CI_Controller{
        $config = array();
        $config["base_url"] = base_url() . "tours-list";
        $config["total_rows"] = $this->tour_model->record_count();
-       $config["per_page"] = 8;
+       $config["per_page"] = 10;
        $config["uri_segment"] = 1;
        $this->pagination->initialize($config);
        $page = ($this->uri->segment(1)) ? $this->uri->segment(1) : 0;
@@ -59,20 +59,28 @@ class TourController extends CI_Controller{
     }
 
     public function updatetours($tourId){
-        $this->form_validation->set_rules('name', 'Name', 'trim|max_length[15]');
-        $this->form_validation->set_rules('description', 'Description', 'trim|max_length[50]');
+        $this->form_validation->set_rules('name', 'Name', 'trim|max_length[50]');
+        $this->form_validation->set_rules('description', 'Description', 'trim|max_length[100]');
         $this->form_validation->set_rules('introduction', 'Introduction', 'trim|max_length[700]');
         $this->form_validation->set_rules('tour_type', 'Tour_type', 'trim|max_length[15]');
         $this->form_validation->set_rules('suitable_for', 'Suitable_for', 'trim|max_length[15]');
-        $this->form_validation->set_rules('day[]', 'Itinerary Day', 'trim|max_length[15]');
-        $this->form_validation->set_rules('desc[]', 'Itinerary Desc', 'trim|max_length[500]');
+        $this->form_validation->set_rules('day[]', 'Itinerary Day', 'trim|max_length[70]');
+        $this->form_validation->set_rules('day_new[]', 'Itinerary Day', 'trim|max_length[70]');
+        $this->form_validation->set_rules('desc[]', 'Itinerary Desc', 'trim|max_length[5000]');
+        $this->form_validation->set_rules('desc_new[]', 'Itinerary Desc', 'trim|max_length[5000]');
         $this->form_validation->set_rules('duration', 'Duration', 'trim|max_length[5]');
         $this->form_validation->set_rules('hotelType[]', 'Hotel type of price', 'trim|max_length[1]');
+        $this->form_validation->set_rules('hotelType_new[]', 'Hotel type of price', 'trim|max_length[1]');
         $this->form_validation->set_rules('hotelPrice[]', 'Price', 'trim|numeric|max_length[6]');
-        $this->form_validation->set_rules('highlights[]', 'Highlights', 'trim|max_length[100]');
-        $this->form_validation->set_rules('includes[]', 'Includes', 'trim|max_length[100]');
-        $this->form_validation->set_rules('excludes[]', 'Excludes', 'trim|max_length[100]');
-        $this->form_validation->set_rules('options[]', 'Options', 'trim|max_length[100]');
+        $this->form_validation->set_rules('hotelPrice_new[]', 'Price', 'trim|numeric|max_length[6]');
+        $this->form_validation->set_rules('highlights[]', 'Highlights', 'trim|max_length[1000]');
+        $this->form_validation->set_rules('highlights_new[]', 'Highlights', 'trim|max_length[1000]');
+        $this->form_validation->set_rules('includes[]', 'Includes', 'trim|max_length[1000]');
+        $this->form_validation->set_rules('includes_new[]', 'Includes', 'trim|max_length[1000]');
+        $this->form_validation->set_rules('excludes[]', 'Excludes', 'trim|max_length[1000]');
+        $this->form_validation->set_rules('excludes_new[]', 'Excludes', 'trim|max_length[1000]');
+        $this->form_validation->set_rules('options[]', 'Options', 'trim|max_length[1000]');
+        $this->form_validation->set_rules('options_new[]', 'Options', 'trim|max_length[1000]');
 
 
         if($this->form_validation->run() == FALSE){
@@ -107,21 +115,21 @@ class TourController extends CI_Controller{
 
             //upload image and insert data into database
 
-            if(!empty($_FILES['photo_id']['name'])){
-                $photoResult = $this->imageUploadPhoto($imageName);
-                $path_photo = $_FILES['photo_id']['name'];
-            } else{
+            if(empty($_FILES['photo_id']['name'])){
                 $path_photo = '0';
                 $photoResult = true;
+            } else{
+                $photoResult = $this->imageUploadPhoto($imageName);
+                $path_photo = $_FILES['photo_id']['name'];
 
             }
 
-            if(!empty($_FILES['map_id']['name'])){
-                $imageResult = $this->imageUploadMap($mapName);
-                $path_map = $_FILES['map_id']['name'];
-            }else{
+            if(empty($_FILES['map_id']['name'])){
                 $path_map = '0';
                 $imageResult = true;
+            }else{
+                $imageResult = $this->imageUploadMap($mapName);
+                $path_map = $_FILES['map_id']['name'];
             }
 
 
@@ -148,13 +156,22 @@ class TourController extends CI_Controller{
 
 
                 $updateItinerary_result = $this->tour_model->update_itinerary($id);
-                $updatePrice_result = $this->tour_model->update_price($tourId);
+                $updatePrice_result = (isset($_POST['hotelPrice'])) ? $this->tour_model->update_price($tourId) : TRUE;
                 $updateHightlight_result = $this->tour_model->update_highlights($tourId);
                 $updateIncludes_result = isset($_POST['includes']) ? $this->tour_model->update_includes($tourId) : TRUE ;
                 $updateExcludes_result = isset($_POST['excludes']) ? $this->tour_model->update_excludes($tourId) : TRUE ;
                 $updateOptions_result = isset($_POST['options']) ? $this->tour_model->update_options($tourId) : TRUE ;
 
-                if($tourUpdateResult && $updateItinerary_result && $updatePrice_result && $updateHightlight_result && $updateIncludes_result && $updateIncludes_result && $updateOptions_result && $photoResult && $imageResult){
+
+                $itinerary_result = isset($_POST['day_new']) ? $this->tour_model->insert_itinerary($tourId) : TRUE;
+                $price_result = isset($_POST['hotelType_new']) ? $this->tour_model->insert_price($tourId) : TRUE;
+                $hightlight_result = isset($_POST['highlights_new']) ? $this->tour_model->insert_highlights($tourId) : TRUE;
+                $includes_result = isset($_POST['includes_new']) ? $this->tour_model->insert_includes($tourId) : TRUE;
+                $excludes_result = isset($_POST['excludes_new']) ? $this->tour_model->insert_excludes($tourId) : TRUE;
+                $options_result = isset($_POST['options_new']) ? $this->tour_model->insert_options($tourId) : TRUE;
+
+
+                if($tourUpdateResult && $updateItinerary_result && $updatePrice_result && $updateHightlight_result && $updateIncludes_result && $updateIncludes_result && $updateOptions_result && $photoResult && $imageResult && $itinerary_result && $price_result && $hightlight_result && $includes_result && $excludes_result && $options_result){
                     $dataflash = array(
                         'success' => 'Successfully Updated'
                     );
@@ -201,6 +218,8 @@ class TourController extends CI_Controller{
                 }
             
             }
+
+            
     }
 
     public function updateToursItemView($tourId){
@@ -221,20 +240,20 @@ class TourController extends CI_Controller{
 
     public function addTours(){
 
-        $this->form_validation->set_rules('name', 'Name', 'trim|max_length[15]');
+        $this->form_validation->set_rules('name', 'Name', 'trim|max_length[50]');
         $this->form_validation->set_rules('description', 'Description', 'trim|max_length[50]');
         $this->form_validation->set_rules('introduction', 'Introduction', 'trim|max_length[700]');
         $this->form_validation->set_rules('tour_type', 'Tour_type', 'trim|max_length[15]');
         $this->form_validation->set_rules('suitable_for', 'Suitable_for', 'trim|max_length[15]');
-        $this->form_validation->set_rules('day[]', 'Itinerary Day', 'trim|max_length[15]');
-        $this->form_validation->set_rules('desc[]', 'Itinerary Desc', 'trim|max_length[500]');
+        $this->form_validation->set_rules('day[]', 'Itinerary Day', 'trim|max_length[70]');
+        $this->form_validation->set_rules('desc[]', 'Itinerary Desc', 'trim|max_length[5000]');
         $this->form_validation->set_rules('duration', 'Duration', 'trim|max_length[5]');
         $this->form_validation->set_rules('hotelType[]', 'Hotel type of price', 'trim|max_length[1]');
         $this->form_validation->set_rules('hotelPrice[]', 'Price', 'trim|numeric|max_length[6]');
-        $this->form_validation->set_rules('highlights[]', 'Highlights', 'trim|max_length[100]');
-        $this->form_validation->set_rules('includes[]', 'Includes', 'trim|max_length[100]');
-        $this->form_validation->set_rules('excludes[]', 'Excludes', 'trim|max_length[100]');
-        $this->form_validation->set_rules('options[]', 'Options', 'trim|max_length[100]');
+        $this->form_validation->set_rules('highlights[]', 'Highlights', 'trim|max_length[1000]');
+        $this->form_validation->set_rules('includes[]', 'Includes', 'trim|max_length[1000]');
+        $this->form_validation->set_rules('excludes[]', 'Excludes', 'trim|max_length[1000]');
+        $this->form_validation->set_rules('options[]', 'Options', 'trim|max_length[1000]');
 
 
         if($this->form_validation->run() == FALSE){
@@ -254,89 +273,112 @@ class TourController extends CI_Controller{
                 $lastimage = 1;
             }
 
-            $imageName = (int)$lastimage->tour_id + 1 ;
+            $imageName = ($lastimage == 1 ) ? (int)1 : (int)$lastimage->tour_id + 1 ;
 
             $mapName = $imageName . '1';
 
             //upload image and insert data into database
 
-             if(!empty($_FILES['photo_id']['name'])){
-                $photoResult = $this->imageUploadPhoto($imageName);
-                $path_photo = $_FILES['photo_id']['name'];
-            } else{
-                $path_photo = '0';
-                $photoResult = true;
+            //  if(empty($_FILES['photo_id']['name'])){
+            //      $path_photo = '0';
+            //      $photoResult = true;
+            // } else{
+            //     $photoResult = $this->imageUploadPhoto($imageName);
+            //     $path_photo = $_FILES['photo_id']['name'];
 
-            }
+            // }
 
-            if(!empty($_FILES['map_id']['name'])){
-                $imageResult = $this->imageUploadMap($mapName);
-                $path_map = $_FILES['map_id']['name'];
-            }else{
-                $path_map = '0';
-                $imageResult = true;
-            }
+            // if(empty($_FILES['map_id']['name'])){
+            //     $path_map = '0';
+            //     $imageResult = true;
+            // }else{
+            //     $imageResult = $this->imageUploadMap($mapName);
+            //     $path_map = $_FILES['map_id']['name'];
+            // }
 
 
-            // $photoResult = $this->imageUploadPhoto($imageName);
-            // $imageResult = $this->imageUploadMap($mapName);
+            $photoResult = $this->imageUploadPhoto($imageName);
+            $imageResult = $this->imageUploadMap($mapName);
 
 
             if($photoResult && $imageResult){
 
-            $path_photo = $_FILES['photo_id']['name'];
-            $path_map = $_FILES['map_id']['name'];
+                    // if(empty($_FILES['photo_id']['name'])){
+                    //     $path_photo = '0';
+                    // } else{
+                    //     $path_photo = $_FILES['photo_id']['name'];
+                        
+                        
+                    // }
+                    
+                    // if(empty($_FILES['map_id']['name'])){
+                    //     $path_map = '0';
+                    // }else{
+                    //     $path_map = $_FILES['map_id']['name'];
+                        
+                    // }
+                    
+                $path_photo = $_FILES['photo_id']['name'];
+                $path_map = $_FILES['map_id']['name'];
+        
 
-            $photo_url = $imageName. '.'. pathinfo($path_photo, PATHINFO_EXTENSION);
-            $map_url = $mapName. '.'. pathinfo($path_map, PATHINFO_EXTENSION);
+                $photo_url = $imageName. '.'. pathinfo($path_photo, PATHINFO_EXTENSION);
+                $map_url = $mapName. '.'. pathinfo($path_map, PATHINFO_EXTENSION);
 
-            $databaseData = array(
-                'name' => htmlspecialchars($this->input->post('name')),
-                'description' => htmlspecialchars($this->input->post('description')),
-                'tour_type' => htmlspecialchars($this->input->post('tour_type')),
-                'suitable_for' => htmlspecialchars($this->input->post('suitable_for')),
-                'photo_id' => $photo_url,
-                'introduction' => htmlspecialchars($this->input->post('introduction')),
-                'ratings' => htmlspecialchars($this->input->post('rating')),
-                'duration' => htmlspecialchars($this->input->post('duration')),
-                'map_id' => $map_url
-            );
-
-            //insert tour table
-            $tourId = $this->tour_model->insert_tours($databaseData);
-
-
-            $itinerary_result = $this->tour_model->insert_itinerary($tourId);
-            $price_result = $this->tour_model->insert_price($tourId);
-            $hightlight_result = $this->tour_model->insert_highlights($tourId);
-            $includes_result = $this->tour_model->insert_includes($tourId);
-            $excludes_result = $this->tour_model->insert_excludes($tourId);
-            $options_result = $this->tour_model->insert_options($tourId);
-
-            if($itinerary_result && $price_result && $hightlight_result && $includes_result && $excludes_result && $options_result){
-                $dataflash = array(
-                    'success' => 'Successfully Uploaded'
+                $databaseData = array(
+                    'name' => htmlspecialchars($this->input->post('name')),
+                    'description' => htmlspecialchars($this->input->post('description')),
+                    'tour_type' => htmlspecialchars($this->input->post('tour_type')),
+                    'suitable_for' => htmlspecialchars($this->input->post('suitable_for')),
+                    'photo_id' => $photo_url,
+                    'introduction' => htmlspecialchars($this->input->post('introduction')),
+                    'ratings' => htmlspecialchars($this->input->post('rating')),
+                    'duration' => htmlspecialchars($this->input->post('duration')),
+                    'map_id' => $map_url
                 );
-    
-                $this->session->set_flashdata($dataflash);
-                $data['site_view'] = 'addTours';
-                $this->load->view('admin/dashboard', $data);
-                
-            } else {
+
+                //insert tour table
+                $tourId = $this->tour_model->insert_tours($databaseData);
+
+
+                $itinerary_result = $this->tour_model->insert_itinerary($tourId);
+                $price_result = (isset($_POST['hotelPrice'])) ? $this->tour_model->insert_price($tourId) : TRUE;
+                $hightlight_result = $this->tour_model->insert_highlights($tourId);
+                $includes_result = (isset($_POST['includes'])) ? $this->tour_model->insert_includes($tourId) : TRUE;
+                $excludes_result = (isset($_POST['excludes'])) ? $this->tour_model->insert_excludes($tourId) : TRUE;
+                $options_result = (isset($_POST['options'])) ? $this->tour_model->insert_options($tourId) : TRUE;
+
+                if($itinerary_result && $price_result && $hightlight_result && $includes_result && $excludes_result && $options_result){
                     $dataflash = array(
-                        'error' => 'Database error'
+                        'success' => 'Successfully Uploaded'
                     );
+
+                    // $message = "Successfull";
         
                     $this->session->set_flashdata($dataflash);
                     $data['site_view'] = 'addTours';
                     $this->load->view('admin/dashboard', $data);
+                    
+                } else {
 
-            }
+                    // $message = "Error";
+                        $dataflash = array(
+                            'error' => 'Database error'
+                        );
+            
+                        $this->session->set_flashdata($dataflash);
+                        $data['site_view'] = 'addTours';
+                        $this->load->view('admin/dashboard', $data);
+
+                }
 
             } else {
+                //  $message = "Error 2";
                 $data['site_view'] = 'addTours';
                 $this->load->view('admin/dashboard', $data);
             }
+
+            // echo $message;
         }
     }
 
@@ -353,6 +395,8 @@ class TourController extends CI_Controller{
         $config['max_height']           = 900;
 
         $this->load->library('upload', $config);
+
+     
 
         if (!$this->upload->do_upload('photo_id'))
         {
@@ -373,8 +417,6 @@ class TourController extends CI_Controller{
     //Upload map
     public function imageUploadMap($temp){
 
-       
-
         $config['upload_path']          = './assets/images/tours/';
         $config['allowed_types']        = 'gif|jpg|png|jpeg';
         $config['file_name']            = $temp;
@@ -383,6 +425,8 @@ class TourController extends CI_Controller{
         $config['max_height']           = 900;
 
         $this->load->library('upload', $config);
+
+
 
         if (!$this->upload->do_upload('map_id'))
         {
@@ -402,16 +446,22 @@ class TourController extends CI_Controller{
 
     public function touritem($pageid){
         $data['results'] = $this->tour_model->get_tourItem($pageid);
-        $data['itineraries'] = $this->tour_model->get_itinerary($pageid);
-        $data['suggestions'] = $this->tour_model->suggestions(1);
-        $data['hightlights'] = $this->tour_model->highlights($pageid);
-        $data['includes'] = $this->tour_model->includes($pageid);
-        $data['excludes'] = $this->tour_model->excludes($pageid);
-        $data['options'] = $this->tour_model->options($pageid);
-        $data['prices'] = $this->tour_model->prices($pageid);
-        $data['site_view'] = 'TourItem';
-        $data['site_title'] = 'Sunway Holidays - Tour Item';
-        $this->load->view('main/main_view', $data);
+        if($data['results'] == FALSE){
+            $data['site_view'] = 'NotFound';
+            $data['site_title'] = 'Sunway Holidays - Page Not Found';
+            $this->load->view('main/main_view', $data);
+        } else{
+            $data['itineraries'] = $this->tour_model->get_itinerary($pageid);
+            $data['suggestions'] = $this->tour_model->suggestions(1);
+            $data['hightlights'] = $this->tour_model->highlights($pageid);
+            $data['includes'] = $this->tour_model->includes($pageid);
+            $data['excludes'] = $this->tour_model->excludes($pageid);
+            $data['options'] = $this->tour_model->options($pageid);
+            $data['prices'] = $this->tour_model->prices($pageid);
+            $data['site_view'] = 'TourItem';
+            $data['site_title'] = 'Sunway Holidays - Tour Item';
+            $this->load->view('main/main_view', $data);
+        }
     }
 
     public function getSearch() {

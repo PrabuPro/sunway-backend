@@ -176,7 +176,7 @@
 								<div class="control">
 									<div class="file">
 										<label class="file-label">
-											<input class="file-input input-photo" type="file" name="photo_id" class="photo1" required="false"
+											<input class="file-input input-photo" type="file" name="photo_id" class="photo1"
 												accept="image/jpg, image/jpeg, image/png" onchange="readURL(this);" 
 											>
 											<span class="file-cta">
@@ -200,7 +200,7 @@
 								<div class="control">
 									<div class="file">
 										<label class="file-label">
-											<input class="file-input input-map" type="file" name="map_id" id="photo2" required="false"
+											<input class="file-input input-map" type="file" name="map_id" id="photo2" 
 												accept="image/jpg, image/jpeg, image/png" onchange="readURLMap(this);" 
 											>
 											<span class="file-cta">

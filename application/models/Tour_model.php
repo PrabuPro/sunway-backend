@@ -4,11 +4,19 @@ class Tour_model extends CI_Model{
 
 
     public function get_tours($limit, $start){
-        $this->db->select('tour_id,name,description, tour_type,suitable_for,photo_id');
-        $this->db->limit($limit, $start);
-        $tours = $this->db->get('tours');
+        $result = $this->db->select('t.tour_id,t.name,t.description, t.tour_type,t.suitable_for,t.photo_id,p.price')
+                           ->from('tours t')
+                           ->join('tour_price p', 'p.tour_id=t.tour_id', 'left')
+                           ->limit($limit, $start)
+                           ->group_by('t.tour_id')
+                           ->get()
+                           ->result();
+        return $result;
+        // $this->db->select('tour_id,name,description, tour_type,suitable_for,photo_id');
+        // $this->db->limit($limit, $start);
+        // $tours = $this->db->get('tours');
 
-        return $tours->result() ;
+        // return $tours->result() ;
     }
 
     public function get_tour($tourId){
@@ -35,7 +43,12 @@ class Tour_model extends CI_Model{
         $this->db->where('tour_id',$pageId);
         $query = $this->db->get('tours');
 
-        return $query->row();
+        if($query->num_rows() == 1){
+            return $query->row();
+        } else {
+            return FALSE;
+        }
+
     }
 
     public function get_itinerary($id){
@@ -49,15 +62,21 @@ class Tour_model extends CI_Model{
 
     public function insert_itinerary($id){
 
-        $day = $this->input->post("day");
-        $desc = $this->input->post("desc");
+        if(isset($_POST['day_new'])){
+            $day = $this->input->post("day_new");
+            $desc = $this->input->post("desc_new");
+        } else if(isset($_POST['day'])) {
+            $day = $this->input->post("day");
+            $desc = $this->input->post("desc");
+        }
+      
         $i = 0;
 
         if($desc){
             foreach($desc as $row){
                 $data['tour_id'] = $id;
-                $data['item_number'] = $day[$i];
-                $data['item_details'] = $desc[$i];
+                $data['item_number'] = htmlspecialchars($day[$i]);
+                $data['item_details'] = $this->stripScript($desc[$i]);
                 $this->db->insert("itinerary",$data);
                 $i++;
             }
@@ -70,10 +89,19 @@ class Tour_model extends CI_Model{
         return FALSE;
     }
 
+  
+
     public function insert_price($id){
 
-        $hotelType = $this->input->post("hotelType");
-        $hotelPrice = $this->input->post("hotelPrice");
+        if(isset($_POST['hotelType_new'])){
+            $hotelType = $this->input->post("hotelType_new");
+            $hotelPrice = $this->input->post("hotelPrice_new");
+        } else if (isset($_POST['hotelType'])){
+            $hotelType = $this->input->post("hotelType");
+            $hotelPrice = $this->input->post("hotelPrice");
+        }
+    
+
         $i = 0;
 
         if($hotelPrice){
@@ -95,13 +123,18 @@ class Tour_model extends CI_Model{
 
     public function insert_highlights($id){
 
-        $highlights = $this->input->post("highlights");
+        if(isset($_POST['highlights_new'])){
+            $highlights = $this->input->post("highlights_new");
+        } else if(isset($_POST['highlights'])){
+            $highlights = $this->input->post("highlights");
+        }
+      
         $i = 0;
 
         if($highlights){
             foreach($highlights as $row){
                 $data['tour_id'] = $id;
-                $data['highlights'] = $highlights[$i];
+                $data['highlights'] = htmlspecialchars($highlights[$i]);
                 $this->db->insert("tour_highlights",$data);
                 $i++;
             }
@@ -116,13 +149,19 @@ class Tour_model extends CI_Model{
 
     public function insert_includes($id){
 
-        $includes = $this->input->post("includes");
+        if(isset($_POST['includes_new'])){
+            $includes = $this->input->post("includes_new");
+        } else if(isset($_POST['includes'])){
+            $includes = $this->input->post("includes");
+        }
+  
+
         $i = 0;
 
         if($includes){
             foreach($includes as $row){
                 $data['tour_id'] = $id;
-                $data['includes'] = $includes[$i];
+                $data['includes'] = htmlspecialchars($includes[$i]);
                 $this->db->insert("tour_services_includes",$data);
                 $i++;
             }
@@ -136,13 +175,19 @@ class Tour_model extends CI_Model{
     }
     public function insert_excludes($id){
 
-        $excludes = $this->input->post("excludes");
+         if(isset($_POST['excludes_new'])){
+            $excludes = $this->input->post("excludes_new");
+        } else if(isset($_POST['excludes'])){
+            $excludes = $this->input->post("excludes");
+        }
+       
+
         $i = 0;
 
         if($excludes){
             foreach($excludes as $row){
                 $data['tour_id'] = $id;
-                $data['excludes'] = $excludes[$i];
+                $data['excludes'] = htmlspecialchars($excludes[$i]);
                 $this->db->insert("tour_services_excludes",$data);
                 $i++;
             }
@@ -156,13 +201,19 @@ class Tour_model extends CI_Model{
     }
     public function insert_options($id){
 
-        $options = $this->input->post("options");
+         if(isset($_POST['options_new'])){
+            $options = $this->input->post("options_new");
+        } else if(isset($_POST['options'])){
+            $options = $this->input->post("options");
+        }
+        
+
         $i = 0;
 
         if($options){
             foreach($options as $row){
                 $data['tour_id'] = $id;
-                $data['options'] = $options[$i];
+                $data['options'] = htmlspecialchars($options[$i]);
                 $this->db->insert("tour_services_option",$data);
                 $i++;
             }
@@ -210,20 +261,38 @@ class Tour_model extends CI_Model{
 
     public function suggestions($selection){
         if($selection == 1){
-            $this->db->select('tour_id,name,description, tour_type,suitable_for,photo_id');
-            $this->db->order_by('tour_id','RANDOM');
-            $this->db->limit(3);
-            $suggestions = $this->db->get('tours');
+            $result = $this->db->select('t.tour_id,t.name,t.description, t.tour_type,t.suitable_for,t.photo_id,p.price')
+                           ->from('tours t')
+                           ->join('tour_price p', 'p.tour_id=t.tour_id', 'left')
+                           ->limit(3)
+                           ->order_by('t.tour_id','RANDOM')
+                           ->group_by('t.tour_id')
+                           ->get()
+                           ->result();
+            return $result;
+            // $this->db->select('tour_id,name,description, tour_type,suitable_for,photo_id');
+            // $this->db->order_by('tour_id','RANDOM');
+            // $this->db->limit(3);
+            // $suggestions = $this->db->get('tours');
 
-            return $suggestions->result();
+            // return $suggestions->result();
 
         } else if ($selection == 2){
-            $this->db->select('tour_id,name,description, tour_type,suitable_for,photo_id');
-            $this->db->order_by('tour_id','RANDOM');
-            $this->db->limit(2);
-            $suggestions = $this->db->get('tours');
+            $result = $this->db->select('t.tour_id,t.name,t.description, t.tour_type,t.suitable_for,t.photo_id,p.price')
+                        ->from('tours t')
+                        ->join('tour_price p', 'p.tour_id=t.tour_id', 'left')
+                        ->limit(2)
+                        ->order_by('t.tour_id','RANDOM')
+                        ->group_by('t.tour_id')
+                        ->get()
+                        ->result();
+        return $result;
+            // $this->db->select('tour_id,name,description, tour_type,suitable_for,photo_id');
+            // $this->db->order_by('tour_id','RANDOM');
+            // $this->db->limit(2);
+            // $suggestions = $this->db->get('tours');
 
-            return $suggestions->result();
+            // return $suggestions->result();
         }
     }
 
@@ -322,6 +391,14 @@ class Tour_model extends CI_Model{
         return $result;
     }
 
+    public function getPricesOne($tourId){
+
+        $result = $this->db->select('*')
+                           ->where('tour_id',$tourId)
+                           ->get('tour_price');
+        return $result->row();
+    }
+
     public function getItineraries($tourId){
 
         $result = $this->db->select('*')
@@ -404,8 +481,8 @@ class Tour_model extends CI_Model{
             $data[] = array(
                 'itinerary_id' => $itineraryId++,
                 'tour_id' => $id,
-                'item_number' => $day[$key],
-                'item_details' => $desc[$key]
+                'item_number' => htmlspecialchars($day[$key]),
+                'item_details' => $this->stripScript($desc[$key])
             );
         }
 
@@ -467,7 +544,7 @@ class Tour_model extends CI_Model{
             $data[] = array(
                 'tour_highlights_id' => $highlightsId++,
                 'tour_id' => $id,
-                'highlights' => $highlights[$key]
+                'highlights' => htmlspecialchars($highlights[$key])
             );
         }
 
@@ -496,7 +573,7 @@ class Tour_model extends CI_Model{
             $data[] = array(
                 'tour_services_includes_id' => $includesId++,
                 'tour_id' => $id,
-                'includes' => $includes[$key]
+                'includes' => htmlspecialchars($includes[$key])
             );
         }
 
@@ -526,7 +603,7 @@ class Tour_model extends CI_Model{
             $data[] = array(
                 'tour_services_excludes_id' => $excludesId++,
                 'tour_id' => $id,
-                'excludes' => $excludes[$key]
+                'excludes' => htmlspecialchars($excludes[$key])
             );
         }
 
@@ -555,7 +632,7 @@ class Tour_model extends CI_Model{
             $data[] = array(
                 'tour_services_option' => $optionId++,
                 'tour_id' => $id,
-                'options' => $options[$key]
+                'options' => htmlspecialchars($options[$key])
             );
         }
 
@@ -566,6 +643,24 @@ class Tour_model extends CI_Model{
             return TRUE;
         }
         return FALSE;
+    }
+
+    public function stripScript($content){
+
+        
+        $dom = new \DOMDocument('1.0', 'UTF-8');
+        $internalErrors = libxml_use_internal_errors(true);
+        $dom->loadHTML($content);
+        libxml_use_internal_errors($internalErrors);
+        $script = $dom->getElementsByTagName('script');
+        $remove = [];
+        foreach($script as $item){
+            $remove[] = $item;
+        }
+        foreach ($remove as $item){
+            $item->parentNode->removeChild($item); 
+        }
+        return $html = $dom->saveHTML();
     }
 
 }
