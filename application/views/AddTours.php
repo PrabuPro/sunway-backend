@@ -9,8 +9,6 @@
 
 </style>
 
-<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-
 <div class="container">
 	<div class="columns">
 		<div class="column is-12">
@@ -49,7 +47,7 @@
 			<section class="hero">
 				<div class="columns">
 					<div class="column is-6" style="margin-top:30px;">
-						<form action="<?php echo site_url('tourcontroller/addtours');?>" method="post" enctype="multipart/form-data" class="addTour_form">
+						<form action="<?php echo site_url('tourcontroller/addtours');?>" method="post" enctype="multipart/form-data">
 							<div class="field">
 								<div class="control">
 									<input class="input is-info" name="name" type="text" value="<?php echo set_value('name');?>" placeholder="Tour Name">
@@ -63,11 +61,7 @@
 							</div>
 							<div class="field">
 								<div class="control">
-								<label for="editor">Introduction</label>
-								<input name="introduction" type="hidden">
-								<div id="editor-container">
-								</div>
-									<!-- <textarea class="textarea is-info" placeholder="Introduction" name="introduction"><?php echo set_value('introduction');?></textarea> -->
+									<textarea class="textarea is-info" placeholder="Introduction" name="introduction"><?php echo set_value('introduction');?></textarea>
 								</div>
 							</div>
 							<div class="field">
@@ -225,30 +219,8 @@
 		</div>
 	</div>
 </div>
-
 <script src="<?php echo base_url();?>assets/js/jquery.min.js"></script>
-
-<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
-	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
-<!-- Initialize Quill editor -->
-<script>
-  var quill = new Quill('#editor-container', {
-    theme: 'snow'
-  });
-
- 
-
-//  let uploadIntro = (event) => {
-// 	event.preventDefault();
-
-	// let about = document.querySelector('input[name=introduction]');
-  	// about.value = JSON.stringify(quill.getContents());
-  
-	// console.log("Submitted", $(form).serialize(), $(form).serializeArray());
-//   }
-
-</script>
+<script src="<?php echo base_url();?>assets/js/jquery.min.js"></script>
 
 <script>
 

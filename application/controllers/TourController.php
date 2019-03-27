@@ -284,22 +284,8 @@ class TourController extends CI_Controller{
 
             if($photoResult && $imageResult){
 
-                if(!empty($_FILES['photo_id']['name'])){
-                    $path_photo = $_FILES['photo_id']['name'];
-                } else{
-                    $path_photo = '0';
-                    
-
-                }
-
-                if(!empty($_FILES['map_id']['name'])){
-                    $path_map = $_FILES['map_id']['name'];
-                }else{
-                    $path_map = '0';
-                
-                }
-
-       
+            $path_photo = $_FILES['photo_id']['name'];
+            $path_map = $_FILES['map_id']['name'];
 
             $photo_url = $imageName. '.'. pathinfo($path_photo, PATHINFO_EXTENSION);
             $map_url = $mapName. '.'. pathinfo($path_map, PATHINFO_EXTENSION);
@@ -331,33 +317,26 @@ class TourController extends CI_Controller{
                 $dataflash = array(
                     'success' => 'Successfully Uploaded'
                 );
-
-                $message = "Successfull";
     
-                // $this->session->set_flashdata($dataflash);
-                // $data['site_view'] = 'addTours';
-                // $this->load->view('admin/dashboard', $data);
+                $this->session->set_flashdata($dataflash);
+                $data['site_view'] = 'addTours';
+                $this->load->view('admin/dashboard', $data);
                 
             } else {
-
-                 $message = "Error";
-                    // $dataflash = array(
-                    //     'error' => 'Database error'
-                    // );
+                    $dataflash = array(
+                        'error' => 'Database error'
+                    );
         
-                    // $this->session->set_flashdata($dataflash);
-                    // $data['site_view'] = 'addTours';
-                    // $this->load->view('admin/dashboard', $data);
+                    $this->session->set_flashdata($dataflash);
+                    $data['site_view'] = 'addTours';
+                    $this->load->view('admin/dashboard', $data);
 
             }
 
             } else {
-                 $message = "Error";
-                // $data['site_view'] = 'addTours';
-                // $this->load->view('admin/dashboard', $data);
+                $data['site_view'] = 'addTours';
+                $this->load->view('admin/dashboard', $data);
             }
-
-            echo $message;
         }
     }
 
