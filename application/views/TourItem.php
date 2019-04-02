@@ -1,4 +1,5 @@
 <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+<META http-equiv='Content-Type' content='text/html; charset=UTF-8'>
 <style>
 	body {
 		background-color: #F5F5F5;
@@ -347,14 +348,37 @@
 										<ul class="tours-itinerary">
 
 											<?php foreach($hightlights as $hightlights) : ?>
-
-											<li class="tours-itinerary-item-details">
-												<img src="<?php echo base_url(); ?>assets/images/checkmark.png"
-													class="tours-itinerary-icon" alt="">
-												<?php echo $hightlights->highlights; ?>
-											</li>
+											<div class="point" style="display:flex; flex-direction:row;">
+												<li class="tours-itinerary-item">
+													<img src="<?php echo base_url(); ?>assets/images/checkmark.png"
+														class="tours-itinerary-icon" alt="">
+													
+												</li>
+												<li class="tours-itinerary-item-details" style="margin-left:0px; font-size:18px;">
+													<?php echo $hightlights->highlights; ?>
+												</li>
+											</div>
 											<?php endforeach; ?>
 										</ul>
+												<?php if(!empty($options)) : ?>
+										<h1 class="mb-3">Options</h1>
+
+										<ul class="tours-itinerary">
+
+											<?php foreach($options as $option) : ?>
+											<div class="point" style="display:flex; flex-direction:row;">
+												<li class="tours-itinerary-item" >
+													<img src="<?php echo base_url(); ?>assets/images/checkmark.png"
+														class="tours-itinerary-icon" alt="">
+												</li>
+												<li class="tours-itinerary-item-details" style="margin-left:0px; font-size:18px;">
+													<?php echo $option->options; ?>
+												</li>
+											</div>
+											<?php endforeach; ?>
+										</ul>
+
+										<?php endif; ?>
 									</div>
 								</div>
 
@@ -374,7 +398,7 @@
 												<?php echo $itinerary->item_number; ?>
 											</li>
 											<li class="tours-itinerary-item-details" style="font-size:16px; margin-bottom:40px;">
-												<?php echo htmlspecialchars_decode($itinerary->item_details); ?>
+												<?php echo str_replace(chr(194)," ",$itinerary->item_details); ?>
 											</li>
 											<?php endforeach; ?>
 										</ul>
@@ -395,18 +419,20 @@
 										<?php if(!empty($includes)) : ?>
 										<h1 class="mb-3">Includes</h1>
 
-										<ul class="tours-itinerary" style="display:flex; flex-direction:row;">
+										<ul class="tours-itinerary" >
 
 											<?php foreach($includes as $include) : ?>
 
-											<li class="tours-itinerary-item">
-												<img src="<?php echo base_url(); ?>assets/images/checkmark.png"
-													class="tours-itinerary-icon" alt="">
-												
-											</li>
-											<li class="tours-itinerary-item-details" style="margin-left:0px; font-size:18px; margin-bottom:40px;">
-												<?php echo $include->includes; ?>
-											</li>
+											<div class="point" style="display:flex; flex-direction:row;">		
+												<li class="tours-itinerary-item">
+													<img src="<?php echo base_url(); ?>assets/images/checkmark.png"
+														class="tours-itinerary-icon" alt="">
+													
+												</li>
+												<li class="tours-itinerary-item-details" style="margin-left:0px; font-size:18px;">
+													<?php echo $include->includes; ?>
+												</li>
+											</div>
 											<?php endforeach; ?>
 										</ul>
 
@@ -416,18 +442,21 @@
 										<?php if(!empty($excludes)) : ?>
 										<h1 class="mb-3">Excludes</h1>
 
-										<ul class="tours-itinerary" style="display:flex; flex-direction:row;">
+										<ul class="tours-itinerary" >
 
 											<?php foreach($excludes as $exclude) : ?>
 
-											<li class="tours-itinerary-item">
-												<img src="<?php echo base_url(); ?>assets/images/checkmark.png"
-													class="tours-itinerary-icon" alt="">
-												
-											</li>
-											<li class="tours-itinerary-item-details" style="margin-left:0px; font-size:18px; margin-bottom:40px;">
-												<?php echo $exclude->excludes; ?>
-											</li>
+											<div class="point" style="display:flex; flex-direction:row;">
+
+												<li class="tours-itinerary-item">
+													<img src="<?php echo base_url(); ?>assets/images/checkmark.png"
+														class="tours-itinerary-icon" alt="">
+													
+												</li>
+												<li class="tours-itinerary-item-details" style="margin-left:0px; font-size:18px;">
+													<?php echo $exclude->excludes; ?>
+												</li>
+											</div>
 											<?php endforeach; ?>
 										</ul>
 
@@ -437,17 +466,18 @@
 										<?php if(!empty($options)) : ?>
 										<h1 class="mb-3">Options</h1>
 
-										<ul class="tours-itinerary" style="display:flex; flex-direction:row;">
+										<ul class="tours-itinerary">
 
 											<?php foreach($options as $option) : ?>
-
-											<li class="tours-itinerary-item" >
-												<img src="<?php echo base_url(); ?>assets/images/checkmark.png"
-													class="tours-itinerary-icon" alt="">
-											</li>
-											<li class="tours-itinerary-item-details" style="margin-left:0px; font-size:18px; margin-bottom:40px;">
-												<?php echo $option->options; ?>
-											</li>
+											<div class="point" style="display:flex; flex-direction:row;">
+												<li class="tours-itinerary-item" >
+													<img src="<?php echo base_url(); ?>assets/images/checkmark.png"
+														class="tours-itinerary-icon" alt="">
+												</li>
+												<li class="tours-itinerary-item-details" style="margin-left:0px; font-size:18px;">
+													<?php echo $option->options; ?>
+												</li>
+											</div>
 											<?php endforeach; ?>
 										</ul>
 

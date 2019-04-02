@@ -41,7 +41,7 @@
 	<div class="container">
 		<div class="row justify-content-center mb-5 pb-5">
 			<div class="col-md-7 text-center heading-section ftco-animate">
-				<h2>Tailor Made Process</h2>
+				<h2>How to create my Personal Holiday</h2>
 			</div>
 		</div>
 		<div class="row">
@@ -53,7 +53,7 @@
 					<svg class="tailorMadePage__box--icon">
 						<use xlink:href="<?php echo base_url(); ?>assets/images/sprite.svg#icon-paper-plane"></use>
 					</svg>
-					<div class="tailorMadePage__box--text">Send us a Inquiry</div>
+					<div class="tailorMadePage__box--text">Tell us about your dream holiday </div>
 				</div>
 			</div>
 			<div class="col-md-3 tailorMadePage ftco-animate">
@@ -64,7 +64,7 @@
 					<svg class="tailorMadePage__box--icon">
 						<use xlink:href="<?php echo base_url(); ?>assets/images/sprite.svg#icon-phone"></use>
 					</svg>
-					<div class="tailorMadePage__box--text">We call you back</div>
+					<div class="tailorMadePage__box--text">We design your exclusive itinerary together with you.</div>
 				</div>
 			</div>
 			<div class="col-md-3 tailorMadePage ftco-animate">
@@ -75,7 +75,7 @@
 					<svg class="tailorMadePage__box--icon">
 						<use xlink:href="<?php echo base_url(); ?>assets/images/sprite.svg#icon-document-checked"></use>
 					</svg>
-					<div class="tailorMadePage__box--text">Confrim tour</div>
+					<div class="tailorMadePage__box--text">We make all arrangements for your holiday right from arrival to departure</div>
 				</div>
 			</div>
 			<div class="col-md-3 tailorMadePage ftco-animate">
@@ -86,7 +86,7 @@
 					<svg class="tailorMadePage__box--icon">
 						<use xlink:href="<?php echo base_url(); ?>assets/images/sprite.svg#icon-airplane"></use>
 					</svg>
-					<div class="tailorMadePage__box--text">Begin Travel</div>
+					<div class="tailorMadePage__box--text">You enjoy your DREAM HOLIDAY.</div>
 				</div>
 			</div>
 
@@ -94,17 +94,17 @@
 	</div>
 </section>
 
-<section class="ftco-section" style="background-image: url('<?php echo base_url();?>assets/images/bg_3.jpg');">
+<section class="ftco-section">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 col-md-12">
-				  <div class="row justify-content-center mb-5 pb-5">
-          <div class="col-md-7 text-center heading-section ftco-animate">
-            <h2>Send a inquiry Now</h2>
+				  <div class="row justify-content-center mb-2">
+          <div class="col-md-7 text-center heading-section ">
+            <h2>Start Design My Tour Now</h2>
           </div>
         </div>
 		<div class="col-sm-4 group mb-3 justify-content-center" style="margin:auto;">
-						<input type="button" class="search-submit btn btn-primary" value="Inquiry" style="width:100%; font-size:1.5em;"
+						<input type="button" class="search-submit btn btn-primary inquiry-button" value="Start Now!" style="width:100%; font-size:1.5em;"
 						 onclick="window.location='<?php echo base_url(); ?>inquiry'">
 					</div>
 

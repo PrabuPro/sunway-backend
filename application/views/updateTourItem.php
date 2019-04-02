@@ -48,25 +48,26 @@
 				<div class="columns">
 					<div class="column is-6" style="margin-top:30px;">
 			
-						<form action="<?php echo site_url('tourcontroller/updatetours/'.$tour_details[0]->tour_id);?>" method="post"
+						<form action="<?php echo site_url('tourcontroller/updatetours/'.$tour_detail->tour_id);?>" method="post"
 							enctype="multipart/form-data">
 							<div class="field">
 								<div class="control">
+								
 									<input class="input is-info" name="name" type="text"
-										value="<?php echo $tour_details[0]->name;?>" placeholder="Tour Name">
+										value="<?php echo $tour_detail->name;?>" placeholder="Tour Name">
 								</div>
 							</div>
 							<div class="field">
 								<div class="control">
 									<input class="input is-info" name="description" type="text"
-										value="<?php echo $tour_details[0]->description;?>" placeholder="Description"
+										value="<?php echo $tour_detail->description;?>" placeholder="Description"
 									>
 								</div>
 							</div>
 							<div class="field">
 								<div class="control">
 									<textarea class="textarea is-info" placeholder="Introduction" name="introduction"
-									><?php echo $tour_details[0]->introduction;?></textarea>
+									><?php echo $tour_detail->introduction;?></textarea>
 								</div>
 							</div>
 							<div class="field">
@@ -75,29 +76,38 @@
 										<select name="tour_type">
 											<option value="">Tour Type</option>
 											<option value="common"
-												<?php echo ($tour_details[0]->tour_type == 'common') ? 'selected': '' ?>>
+												<?php echo ($tour_detail->tour_type == 'common') ? 'selected': '' ?>>
 												Common</option>
+											<option value="culture"
+												<?php echo ($tour_detail->tour_type == 'culture') ? 'selected': '' ?>>
+												Culture</option>
+											<option value="family"
+												<?php echo ($tour_detail->tour_type == 'family') ? 'selected': '' ?>>
+												Family</option>
 											<option value="beach"
-												<?php echo ($tour_details[0]->tour_type == 'beach') ? 'selected': '' ?>>
-												Beach</option>
+												<?php echo ($tour_detail->tour_type == 'classical beach') ? 'selected': '' ?>>
+												Classical Beach</option>
 											<option value="eco"
-												<?php echo ($tour_details[0]->tour_type == 'eco') ? 'selected': '' ?>>
+												<?php echo ($tour_detail->tour_type == 'eco') ? 'selected': '' ?>>
 												Eco</option>
 											<option value="nature"
-												<?php echo ($tour_details[0]->tour_type == 'nature') ? 'selected': '' ?>>
+												<?php echo ($tour_detail->tour_type == 'nature') ? 'selected': '' ?>>
 												Nature</option>
 											<option value="wild life"
-												<?php echo ($tour_details[0]->tour_type == 'wild life') ? 'selected': '' ?>>
+												<?php echo ($tour_detail->tour_type == 'wild life') ? 'selected': '' ?>>
 												Wild Life</option>
 											<option value="adventure"
-												<?php echo ($tour_details[0]->tour_type == 'adventure') ? 'selected': '' ?>>
+												<?php echo ($tour_detail->tour_type == 'adventure') ? 'selected': '' ?>>
 												Adventure</option>
-											<option value="action"
-												<?php echo ($tour_details[0]->tour_type == 'action') ? 'selected': '' ?>>
-												Action</option>
+											<option value="active"
+												<?php echo ($tour_detail->tour_type == 'active') ? 'selected': '' ?>>
+												Active</option>
 											<option value="ayurweda"
-												<?php echo ($tour_details[0]->tour_type == 'ayurweda') ? 'selected': '' ?>>
+												<?php echo ($tour_detail->tour_type == 'ayurweda') ? 'selected': '' ?>>
 												Ayurweda</option>
+											<option value="ramayana"
+												<?php echo ($tour_detail->tour_type == 'ramayana') ? 'selected': '' ?>>
+												Ramayana</option>
 										</select>
 									</div>
 								</div>
@@ -108,28 +118,28 @@
 										<select name="suitable_for">
 											<option value="">Suitable for</option>
 											<option value="seniors"
-												<?php echo ($tour_details[0]->suitable_for == 'seniors') ? 'selected': '' ?>>
+												<?php echo ($tour_detail->suitable_for == 'seniors') ? 'selected': '' ?>>
 												Seniors</option>
 											<option value="couples"
-												<?php echo ($tour_details[0]->suitable_for == 'couples') ? 'selected': '' ?>>
+												<?php echo ($tour_detail->suitable_for == 'couples') ? 'selected': '' ?>>
 												Couples</option>
 											<option value="family"
-												<?php echo ($tour_details[0]->suitable_for == 'family') ? 'selected': '' ?>>
+												<?php echo ($tour_detail->suitable_for == 'family') ? 'selected': '' ?>>
 												Family</option>
 											<option value="honeymooners"
-												<?php echo ($tour_details[0]->suitable_for == 'honeymooners') ? 'selected': '' ?>>
+												<?php echo ($tour_detail->suitable_for == 'honeymooners') ? 'selected': '' ?>>
 												Honeymooners</option>
 											<option value="small group"
-												<?php echo ($tour_details[0]->suitable_for == 'small group') ? 'selected': '' ?>>
+												<?php echo ($tour_detail->suitable_for == 'small group') ? 'selected': '' ?>>
 												Small Group </option>
 											<option value="researchers"
-												<?php echo ($tour_details[0]->suitable_for == 'researchers') ? 'selected': '' ?>>
+												<?php echo ($tour_detail->suitable_for == 'researchers') ? 'selected': '' ?>>
 												Researchers</option>
 											<option value="singles + kids"
-												<?php echo ($tour_details[0]->suitable_for == 'singles + kids') ? 'selected': '' ?>>
+												<?php echo ($tour_detail->suitable_for == 'singles + kids') ? 'selected': '' ?>>
 												Singles + kids</option>
 											<option value="pilgrims"
-												<?php echo ($tour_details[0]->suitable_for == 'pilgrims') ? 'selected': '' ?>>
+												<?php echo ($tour_detail->suitable_for == 'pilgrims') ? 'selected': '' ?>>
 												Pilgrims</option>
 										</select>
 									</div>
@@ -190,7 +200,7 @@
 										</label>
 									</div>
 									<img id="thumbnail"
-										src="<?php echo base_url().'assets/images/tours/'.$tour_details[0]->photo_id; ?>"
+										src="<?php echo base_url().'assets/images/tours/'.$tour_detail->photo_id; ?>"
 										alt="your image" class="thumbnail-image" />
 								</div>
 							</div>
@@ -214,7 +224,7 @@
 										</label>
 									</div>
 									<img id="thumbnail-map"
-										src="<?php echo base_url().'assets/images/tours/'.$tour_details[0]->map_id; ?>"
+										src="<?php echo base_url().'assets/images/tours/'.$tour_detail->map_id; ?>"
 										alt="your image" class="thumbnail-image" />
 								</div>
 							</div>
@@ -263,17 +273,20 @@
 									<div class="select is-info">
 										<select name="duration">
 											<option value="">Duration</option>
+											<option value="5"
+												<?php echo ($tour_detail->duration == '5') ? 'selected': '' ?>>5
+												Days</option>
 											<option value="7"
-												<?php echo ($tour_details[0]->duration == '7') ? 'selected': '' ?>>7
+												<?php echo ($tour_detail->duration == '7') ? 'selected': '' ?>>7
 												Days</option>
 											<option value="10-12"
-												<?php echo ($tour_details[0]->duration == '10-12') ? 'selected': '' ?>>
+												<?php echo ($tour_detail->duration == '10-12') ? 'selected': '' ?>>
 												10-12 Days</option>
 											<option value="14"
-												<?php echo ($tour_details[0]->duration == '14') ? 'selected': '' ?>>14
+												<?php echo ($tour_detail->duration == '14') ? 'selected': '' ?>>14
 												Days</option>
 											<option value="14+"
-												<?php echo ($tour_details[0]->duration == '14+') ? 'selected': '' ?>>14+
+												<?php echo ($tour_detail->duration == '14+') ? 'selected': '' ?>>14+
 											</option>
 										</select>
 									</div>
@@ -388,8 +401,8 @@
 									<div class="select is-info">
 										<select name="rating">
 											<option value="">Sunway Rating</option>
-											<option value="0" <?php echo ($tour_details[0]->ratings == '0') ? 'selected': '' ?>>0</option>
-											<option value="1"<?php echo ($tour_details[0]->ratings == '1') ? 'selected': '' ?>>1</option>
+											<option value="0" <?php echo ($tour_detail->ratings == '0') ? 'selected': '' ?>>0</option>
+											<option value="1"<?php echo ($tour_detail->ratings == '1') ? 'selected': '' ?>>1</option>
 										</select>
 									</div>
 								</div>

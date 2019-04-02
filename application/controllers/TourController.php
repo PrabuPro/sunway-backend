@@ -157,7 +157,7 @@ class TourController extends CI_Controller{
 
                 $updateItinerary_result = $this->tour_model->update_itinerary($id);
                 $updatePrice_result = (isset($_POST['hotelPrice'])) ? $this->tour_model->update_price($tourId) : TRUE;
-                $updateHightlight_result = $this->tour_model->update_highlights($tourId);
+                $updateHightlight_result = (isset($_POST['highlights'])) ? $this->tour_model->insert_highlights($tourId) : TRUE;
                 $updateIncludes_result = isset($_POST['includes']) ? $this->tour_model->update_includes($tourId) : TRUE ;
                 $updateExcludes_result = isset($_POST['excludes']) ? $this->tour_model->update_excludes($tourId) : TRUE ;
                 $updateOptions_result = isset($_POST['options']) ? $this->tour_model->update_options($tourId) : TRUE ;
@@ -178,7 +178,8 @@ class TourController extends CI_Controller{
         
                     $this->session->set_flashdata($dataflash);
                     $data['site_view'] = 'updateTourItem';
-                    $data['tour_details'] = $this->tour_model->getTour($tourId);
+                    $data['tour_detail'] = $this->tour_model->get_tourItem($tourId);
+                    // $data['tour_details'] = $this->tour_model->getTour($tourId);
                     $data['tour_prices'] = $this->tour_model->getPrices($tourId);
                     $data['tour_itineraries'] = $this->tour_model->getItineraries($tourId);
                     $data['tour_highlights'] = $this->tour_model->getHighlights($tourId);
@@ -194,7 +195,8 @@ class TourController extends CI_Controller{
             
                         $this->session->set_flashdata($dataflash);
                         $data['site_view'] = 'updateTourItem';
-                        $data['tour_details'] = $this->tour_model->getTour($tourId);
+                        $data['tour_detail'] = $this->tour_model->get_tourItem($tourId);
+                        // $data['tour_details'] = $this->tour_model->getTour($tourId);
                         $data['tour_prices'] = $this->tour_model->getPrices($tourId);
                         $data['tour_itineraries'] = $this->tour_model->getItineraries($tourId);
                         $data['tour_highlights'] = $this->tour_model->getHighlights($tourId);
@@ -207,7 +209,8 @@ class TourController extends CI_Controller{
 
                 } else {
                     $data['site_view'] = 'updateTourItem';
-                    $data['tour_details'] = $this->tour_model->getTour($tourId);
+                    $data['tour_detail'] = $this->tour_model->get_tourItem($tourId);
+                    // $data['tour_details'] = $this->tour_model->getTour($tourId);
                     $data['tour_prices'] = $this->tour_model->getPrices($tourId);
                     $data['tour_itineraries'] = $this->tour_model->getItineraries($tourId);
                     $data['tour_highlights'] = $this->tour_model->getHighlights($tourId);
@@ -226,7 +229,8 @@ class TourController extends CI_Controller{
         
         $data['site_view'] = 'updateTourItem';
         $data['site_title'] = 'Update Tour Item';
-        $data['tour_details'] = $this->tour_model->getTour($tourId);
+        // $data['tour_details'] = $this->tour_model->getTour($tourId);
+        $data['tour_detail'] = $this->tour_model->get_tourItem($tourId);
         $data['tour_prices'] = $this->tour_model->getPrices($tourId);
         $data['tour_itineraries'] = $this->tour_model->getItineraries($tourId);
         $data['tour_highlights'] = $this->tour_model->getHighlights($tourId);
@@ -273,7 +277,9 @@ class TourController extends CI_Controller{
                 $lastimage = 1;
             }
 
-            $imageName = ($lastimage == 1 ) ? (int)1 : (int)$lastimage->tour_id + 1 ;
+            $tempInt = (int)$lastimage;
+
+            $imageName = ($lastimage == 1 ) ? (int)1 : ($tempInt + 1) ;
 
             $mapName = $imageName . '1';
 
@@ -343,7 +349,7 @@ class TourController extends CI_Controller{
 
                 $itinerary_result = $this->tour_model->insert_itinerary($tourId);
                 $price_result = (isset($_POST['hotelPrice'])) ? $this->tour_model->insert_price($tourId) : TRUE;
-                $hightlight_result = $this->tour_model->insert_highlights($tourId);
+                $hightlight_result = (isset($_POST['highlights'])) ? $this->tour_model->insert_highlights($tourId) : TRUE;
                 $includes_result = (isset($_POST['includes'])) ? $this->tour_model->insert_includes($tourId) : TRUE;
                 $excludes_result = (isset($_POST['excludes'])) ? $this->tour_model->insert_excludes($tourId) : TRUE;
                 $options_result = (isset($_POST['options'])) ? $this->tour_model->insert_options($tourId) : TRUE;
@@ -470,11 +476,19 @@ class TourController extends CI_Controller{
         $tour_type = $this->input->post('tour_type');
         $check_in_date = $this->input->post('check-in-date');
         $check_out_date = $this->input->post('check-out-date');
-
-        if(empty($suitable) || empty($tour_type))
+        
+        
+        if(empty($suitable)){
+            $data['results'] = $this->tour_model->homeSearch($tour_type);
+        } else if(empty($tour_type)) {
+            $data['results'] = $this->tour_model->homeSearchFor($suitable); 
+        } else if(empty($suitable) || empty($tour_type)){
             redirect('tours-list/0'); 
+        } else{
+            $data['results'] = $this->tour_model->homeSearchAll($suitable,$tour_type); 
+        }
 
-        $data['results'] = $this->tour_model->search($suitable,$tour_type);
+        // $data['results'] = $this->tour_model->search($suitable,$tour_type);
 
         $data['site_view'] = 'Tours';
         $data['site_title'] = 'Sunway Holidaya - Tours';
@@ -489,6 +503,8 @@ class TourController extends CI_Controller{
     public function getHomeSearch() {
      
         $searchVal = $this->uri->segment(2);
+
+        $searchVal = urldecode($searchVal);
 
         $data['results'] = $this->tour_model->homeSearch($searchVal);
         $data['total_pagination'] = 0;

@@ -114,13 +114,16 @@
                         <select name="tour_type" id="" class="form-control" required>
                           <option value="">Tour Type</option>
                           <option value="common" class="form-control-option-white" >Common</option>
+                          <option value="culture" class="form-control-option-white" >Culture</option>
                           <option value="beach" class="form-control-option-white"  >Beach</option>
-                          <option value="echo" class="form-control-option-white">Eco</option>
+                          <option value="family" class="form-control-option-white"  >Family</option>
+                          <option value="eco" class="form-control-option-white">Eco</option>
                           <option value="nature" class="form-control-option-white" >Nature</option>
                           <option value="wild life" class="form-control-option-white">Wild Life</option>
                           <option value="advanture" class="form-control-option-white">Adventure</option>
-                          <option value="action" class="form-control-option-white">Action</option>
+                          <option value="active" class="form-control-option-white">Active </option>
                           <option value="ayurweda" class="form-control-option-white">Ayurweda</option>
+                          <option value="ramayana" class="form-control-option-white">Ramayana</option>
                         </select>
                       </div>
                     </div>
@@ -184,7 +187,7 @@
 
     <div class="ftco-section">
       <div class="container">
-        <div class="row pb-5">
+        <div class="row ">
           <div class="col-md-12 col-lg-12 text-center heading-section ftco-animate">
             <h2>We arrange exclusive personalized holidays with attention to detail that goes the extra mile. </h2>
             <h4 class="tailorMadePage__para" style='padding:0 4em 0 4em;'>
@@ -196,7 +199,7 @@
 
     <section class="ftco-section bg-light">
       <div class="container">
-        <div class="row justify-content-center mb-5 pb-5">
+        <div class="row justify-content-center pb-5">
           <div class="col-md-7 text-center heading-section ftco-animate">
             <h2>Our Services</h2>
           </div>
@@ -464,72 +467,64 @@
       <div class="container">
         <div class="row justify-content-center mb-1 pb-1">
           <div class="col-md-12 text-center heading-section ftco-animate">
-            <h2>Process</h2>
+            <h2>How to make your dream holiday happen</h2>
           </div>
         </div>
                 
         <div class="row ftco-animate justify-content-center">
           <div class="carousel owl-carousel ftco-owl" style="margin: 4em;">
-          <a href="<?php echo base_url(); ?>search-for/group friends">
             <div class="item">
               <div class="box_card "> 
                 <div class="box_card__text">
                   <div class="box_card__text--number">
                     <h3 class="box_card__text--number-text">1</h3>
                   </div>
-                  <h3 class="box_card__text--heading">Lorem, ipsum dolor. Friends</h3>
+                  <h3 class="box_card__text--heading">Step 1</h3>
                   <div class="box_card__text--post-meta">
-                      <span style="margin-bottom:4em;">Lorem ipsum, dolor sit amet consectetur</span>
+                      <span style="margin-bottom:4em; color:#000000;">Browse our tour collection for inspiration & select your favourite</span>
                   </div>
                 </div>
               </div>
             </div>
-            </a>
-            <a href="<?php echo base_url(); ?>search-for/group family">
             <div class="item">
               <div class="box_card ">
                 <div class="box_card__text">
                   <div class="box_card__text--number">
                     <h3 class="box_card__text--number-text">2</h3>
                   </div>
-                  <h3 class="box_card__text--heading">Lorem, ipsum dolor. Family</h3>
+                  <h3 class="box_card__text--heading">Step 2</h3>
                   <div class="box_card__text--post-meta">
-                      <span style="margin-bottom:4em;">Lorem ipsum, dolor sit amet consectetur</span>
+                      <span style="margin-bottom:4em; color:#000000;">Book it as it is, request for customization of selected tour, </span>
                   </div>
               </div>
             </div>
             </div>
-            </a>
-            <a href="<?php echo base_url(); ?>search-for/group lovers">
             <div class="item">
               <div class="box_card ">
                 <div class="box_card__text">
                   <div class="box_card__text--number">
                     <h3 class="box_card__text--number-text">3</h3>
                   </div>
-                  <h3 class="box_card__text--heading">Lorem, ipsum dolor. Lovers</h3>
+                  <h3 class="box_card__text--heading">Step 3</h3>
                   <div class="box_card__text--post-meta">
-                      <span style="margin-bottom:4em;">Lorem ipsum, dolor sit amet consectetur</span>
+                      <span style="margin-bottom:4em; color:#000000;">Book your trip securely with Sunway & let us do the work.</span>
                   </div>
                 </div>
               </div>
             </div>
-            </a>
-            <a href="<?php echo base_url(); ?>search-for/group singles">
             <div class="item">
               <div class="box_card ">
                 <div class="box_card__text">
                   <div class="box_card__text--number">
                     <h3 class="box_card__text--number-text">4</h3>
                   </div>
-                  <h3 class="box_card__text--heading">Lorem, ipsum dolor. Singles</h3>
+                  <h3 class="box_card__text--heading">Step 4</h3>
                   <div class="box_card__text--post-meta">
-                      <span style="margin-bottom:4em;">Lorem ipsum, dolor sit amet consectetur</span>
+                      <span style="margin-bottom:4em; color:#000000;">Travel stress few & enjoy your fabulous holiday </span>
                   </div>
                 </div>
               </div>
             </div>
-            </a>            
           </div>
         </div>
       </div>

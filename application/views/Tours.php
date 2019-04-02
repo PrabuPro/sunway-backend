@@ -92,10 +92,40 @@
 
 									<div class="check-out col-sm-12 group mb-3"><input type="text" id="checkout_date" class="form-control" name="check-out-date"
 										 placeholder="Check-out date" <?php if(isset($check_out_date)) echo 'value=' . $check_out_date; ?> ></div>
+											<div class="select-wrap col-sm-12 group mb-3">
+												<div class="icon"><span class="ion-ios-arrow-down"></span></div>
+												<select name="tour_type" class="form-control">
+													<option value="" class="form-control-option-white">Tour Type</option>
+													<option value="common" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type=='common'
+													 ) echo 'selected' ; } ?> >Common</option>
+													<option value="culture" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type=='culture'
+													 ) echo 'selected' ; } ?> >Culture</option>
+													<option value="family" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type=='family'
+													 ) echo 'selected' ; } ?> >Family</option>
+													<option value="classical beach" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type=='classical%20beach'
+													 ) echo 'selected' ; } ?> >Classical Beach</option>
+													<option value="echo" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type=='eco' )
+													 echo 'selected' ; } ?> >Eco</option>
+													<option value="nature" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type=='nature'
+													 ) echo 'selected' ; } ?> >Nature</option>
+													<option value="wild life" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type=='wild life'
+													 ) echo 'selected' ; } ?>>Wild Life</option>
+													<option value="advanture" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type=='adventure'
+													 ) echo 'selected' ; } ?>>Adventure</option>
+													<option value="active" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type=='active'
+													 ) echo 'selected' ; } ?> >Active</option>
+													<option value="ayurweda" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type=='ayurweda'
+													 ) echo 'selected' ; } ?> >Ayurweda</option>
+													<option value="ramayana" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type=='remayana'
+													 ) echo 'selected' ; } ?> >Ramayana</option>
+												</select>
+											</div>
 									<div class="select-wrap col-sm-12 group mb-3">
 										<div class="icon"><span class="ion-ios-arrow-down"></span></div>
 										<select name="suitable_for" class="form-control">
 											<option value="" class="form-control-option-white">Suitable for</option>
+											<option value="any" class="form-control-option-white" <?php if(isset($suitable)){ if($suitable=='seniors'
+											 ) echo 'selected' ; } ?> >Any</option>
 											<option value="seniors" class="form-control-option-white" <?php if(isset($suitable)){ if($suitable=='seniors'
 											 ) echo 'selected' ; } ?> >Seniors</option>
 											<option value="couples" class="form-control-option-white" <?php if(isset($suitable)){ if($suitable=='couples'
@@ -112,28 +142,6 @@
 											 ) echo 'selected' ; } ?> >Singles + kids</option>
 											<option value="pilgrims" class="form-control-option-white" <?php if(isset($suitable)){ if($suitable=='pilgrims'
 											 ) echo 'selected' ; } ?> >Pilgrims</option>
-										</select>
-									</div>
-									<div class="select-wrap col-sm-12 group mb-3">
-										<div class="icon"><span class="ion-ios-arrow-down"></span></div>
-										<select name="tour_type" class="form-control">
-											<option value="" class="form-control-option-white">Tour Type</option>
-											<option value="common" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type=='common'
-											 ) echo 'selected' ; } ?> >Common</option>
-											<option value="beach" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type=='beach'
-											 ) echo 'selected' ; } ?> >Beach</option>
-											<option value="echo" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type=='eco' )
-											 echo 'selected' ; } ?> >Eco</option>
-											<option value="nature" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type=='nature'
-											 ) echo 'selected' ; } ?> >Nature</option>
-											<option value="wild life" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type=='wild life'
-											 ) echo 'selected' ; } ?>>Wild Life</option>
-											<option value="advanture" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type=='adventure'
-											 ) echo 'selected' ; } ?>>Adventure</option>
-											<option value="action" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type=='action'
-											 ) echo 'selected' ; } ?> >Action</option>
-											<option value="ayurweda" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type=='ayurweda'
-											 ) echo 'selected' ; } ?> >Ayurweda</option>
 										</select>
 									</div>
 									<div class="col-sm-12 group mb-3">
@@ -156,13 +164,16 @@
 					<h3>Tag Cloud</h3>
 					<div class="tagcloud">
 						<a href="<?php echo base_url(); ?>search-tours/common" class="tag-cloud-link" <?php if(current_url() == base_url().'search-tours/common') echo "style='background-color:#000000; color:#ffffff;'"?>>Common</a>
-						<a href="<?php echo base_url(); ?>search-tours/beach" <?php if(current_url() == base_url().'search-tours/beach') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Beach</a>
+						<a href="<?php echo base_url(); ?>search-tours/culture" class="tag-cloud-link" <?php if(current_url() == base_url().'search-tours/culture') echo "style='background-color:#000000; color:#ffffff;'"?>>Cluture</a>
+						<a href="<?php echo base_url(); ?>search-tours/family" class="tag-cloud-link" <?php if(current_url() == base_url().'search-tours/family') echo "style='background-color:#000000; color:#ffffff;'"?>>Family</a>
+						<a href="<?php echo base_url(); ?>search-tours/classical%20beach" <?php if(current_url() == base_url().'search-tours/classical%20beach') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Classical Beach</a>
 						<a href="<?php echo base_url(); ?>search-tours/eco" <?php if(current_url() == base_url().'search-tours/eco') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Eco</a>
 						<a href="<?php echo base_url(); ?>search-tours/nature" <?php if(current_url() == base_url().'search-tours/nature') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Nature</a>
 						<a href="<?php echo base_url(); ?>search-tours/wild life" <?php if(current_url() == base_url().'search-tours/wild%20life') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Wild Life</a>
 						<a href="<?php echo base_url(); ?>search-tours/adventure" <?php if(current_url() == base_url().'search-tours/adventure') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Adventure</a>
-						<a href="<?php echo base_url(); ?>search-tours/action" <?php if(current_url() == base_url().'search-tours/action') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Action</a>
+						<a href="<?php echo base_url(); ?>search-tours/active" <?php if(current_url() == base_url().'search-tours/active') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Active</a>
 						<a href="<?php echo base_url(); ?>search-tours/ayurweda" <?php if(current_url() == base_url().'search-tours/ayurweda') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Ayurweda</a>
+						<a href="<?php echo base_url(); ?>search-tours/ramayana" <?php if(current_url() == base_url().'search-tours/ramayana') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Ramayana</a>
 					</div>
 				</div>
 

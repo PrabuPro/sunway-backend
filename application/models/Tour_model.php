@@ -39,7 +39,7 @@ class Tour_model extends CI_Model{
     }
 
     public function get_tourItem($pageId){
-        $this->db->select('tour_id, name, tour_type,suitable_for,photo_id,introduction,map_id');
+        $this->db->select('*');
         $this->db->where('tour_id',$pageId);
         $query = $this->db->get('tours');
 
@@ -235,17 +235,49 @@ class Tour_model extends CI_Model{
     }
 
     public function homeSearch($searchVal) {
-        $this->db->where('tour_type', $searchVal);
-        $query = $this->db->get('tours');
+        $result = $this->db->select('t.tour_id,t.name,t.description, t.tour_type,t.suitable_for,t.photo_id,p.price')
+                           ->from('tours t')
+                           ->where('t.tour_type', $searchVal)
+                           ->join('tour_price p', 'p.tour_id=t.tour_id', 'left')
+                           ->group_by('t.tour_id')
+                           ->get()
+                           ->result();
+        return $result;
+        // $this->db->where('tour_type', $searchVal);
+        // $query = $this->db->get('tours');
 
-        return $query->result();
+        // return $query->result();
     }
 
     public function homeSearchFor($searchVal) {
-        $this->db->where('suitable_for', $searchVal);
-        $query = $this->db->get('tours');
+        $result = $this->db->select('t.tour_id,t.name,t.description, t.tour_type,t.suitable_for,t.photo_id,p.price')
+                           ->from('tours t')
+                           ->where('t.suitable_for', $searchVal)
+                           ->join('tour_price p', 'p.tour_id=t.tour_id', 'left')
+                           ->group_by('t.tour_id')
+                           ->get()
+                           ->result();
+        return $result;
+        // $this->db->where('suitable_for', $searchVal);
+        // $query = $this->db->get('tours');
 
-        return $query->result();
+        // return $query->result();
+    }
+
+    public function homeSearchAll($suitable, $tour_type) {
+        $result = $this->db->select('t.tour_id,t.name,t.description, t.tour_type,t.suitable_for,t.photo_id,p.price')
+                           ->from('tours t')
+                           ->where('t.suitable_for', $suitable)
+                           ->where('t.tour_type', $tour_type)
+                           ->join('tour_price p', 'p.tour_id=t.tour_id', 'left')
+                           ->group_by('t.tour_id')
+                           ->get()
+                           ->result();
+        return $result;
+        // $this->db->where('suitable_for', $searchVal);
+        // $query = $this->db->get('tours');
+
+        // return $query->result();
     }
 
     public function getLastPhoto(){
@@ -253,8 +285,8 @@ class Tour_model extends CI_Model{
                               ->order_by('tour_id','desc')
                               ->limit(1)
                               ->get('tours')  
-                              ->row();
-                              
+                              ->row()
+                              ->tour_id;
         return $lastImage ;
 
     }
@@ -647,7 +679,8 @@ class Tour_model extends CI_Model{
 
     public function stripScript($content){
 
-        
+
+        $content = str_replace(chr(194)," ",$content);
         $dom = new \DOMDocument('1.0', 'UTF-8');
         $internalErrors = libxml_use_internal_errors(true);
         $dom->loadHTML($content);
@@ -660,7 +693,9 @@ class Tour_model extends CI_Model{
         foreach ($remove as $item){
             $item->parentNode->removeChild($item); 
         }
-        return $html = $dom->saveHTML();
+        $html = $dom->saveHTML();
+
+        return str_replace(chr(194)," ",$html);
     }
 
 }

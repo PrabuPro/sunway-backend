@@ -70,13 +70,16 @@
 										<select name="tour_type">
 											<option value="">Tour Type</option>
 											<option value="common">Common</option>
-											<option value="beach">Beach</option>
+											<option value="culture">Culture</option>
+											<option value="family">Family</option>
+											<option value="classical beach">Classical Beach</option>
 											<option value="eco">Eco</option>
 											<option value="nature">Nature</option>
 											<option value="wild life">Wild Life</option>
 											<option value="adventure">Adventure</option>
-											<option value="action">Action</option>
+											<option value="active">Active</option>
 											<option value="ayurweda">Ayurweda</option>
+											<option value="ramayana">Ramayana</option>
 										</select>
 									</div>
 								</div>
@@ -160,6 +163,7 @@
 									<div class="select is-info">
 										<select name="duration">
 											<option value="">Duration</option>
+											<option value="5">5 Days</option>
 											<option value="7">7 Days</option>
 											<option value="10-12">10-12 Days</option>
 											<option value="14">14 Days</option>

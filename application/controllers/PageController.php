@@ -14,8 +14,8 @@ class PageController extends CI_Controller{
         $this->load->view('main/main_view', $data);
     }
     public function experts_in(){
-        $data['site_view'] = 'experts-in';
-        $data['site_title'] = 'Experts In';
+        $data['site_view'] = 'how-it-works';
+        $data['site_title'] = 'How It Works';
         $this->load->view('main/main_view', $data);
     }
     public function aboutUs(){
@@ -71,6 +71,12 @@ class PageController extends CI_Controller{
     public function notFound(){
         $data['site_view'] = 'NotFound';
         $data['site_title'] = 'Sunway Holidays - Page Not Found';
+        $this->load->view('main/main_view', $data);
+    }
+
+    public function review(){
+        $data['site_view'] = 'review';
+        $data['site_title'] = 'Sunway Holidays - Reviews';
         $this->load->view('main/main_view', $data);
     }
 
