@@ -42,7 +42,6 @@
                     <li class="nav-item"><a href="<?php echo base_url(); ?>tailormade" class="nav-link">Tailor Made</a></li>
                     <li class="nav-item"><a href="<?php echo base_url(); ?>tour" class="nav-link">Tours</a></li>
                     <li class="nav-item"><a href="<?php echo base_url(); ?>experts-in" class="nav-link">How It Works</a></li>
-                    <!-- <li class="nav-item"><a href="<?php echo base_url(); ?>sustainale-responsible" class="nav-link">Sustainable</a></li> -->
                     <li class="nav-item"><a href="<?php echo base_url(); ?>about-us" class="nav-link">About Us</a></li>
                     <li class="nav-item"><a href="<?php echo base_url(); ?>blog" class="nav-link">Blog</a></li>
                     <li class="nav-item"><a href="<?php echo base_url(); ?>contacts" class="nav-link">Contacts</a></li>
@@ -59,38 +58,36 @@
                 <div class="col-md">
                     <div class="ftco-footer-widget mb-4">
                         <h2 class="ftco-heading-2">Sunway Holidays</h2>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                            there live the
-                            blind texts.</p>
+                        <p></p>
                     </div>
                 </div>
                 <div class="col-md">
                     <div class="ftco-footer-widget mb-4">
                         <h2 class="ftco-heading-2">Book Now</h2>
                         <ul class="list-unstyled">
-                            <li><a href="#" class="py-2 d-block">Tour</a></li>
-                            <li><a href="#" class="py-2 d-block">Accomadations</a></li>
-                            <li><a href="#" class="py-2 d-block">Car Rent</a></li>
-                            <li><a href="#" class="py-2 d-block">Beach &amp; Resorts</a></li>
-                            <li><a href="#" class="py-2 d-block">Mountains</a></li>
-                            <li><a href="#" class="py-2 d-block">Cruises</a></li>
-                            <li><a href="#" class="py-2 d-block">MICE</a></li>
-                            <li><a href="#" class="py-2 d-block">Tailor Made</a></li>
+                            <li><a href="<?php echo base_url(); ?>search-tours/culture" class="py-2 d-block">Cluture</a></li>
+                            <li><a href="<?php echo base_url(); ?>search-tours/family" >Family</a></li>
+                            <li><a href="<?php echo base_url(); ?>search-tours/beach" class="py-2 d-block">Classical Beach</a></li>
+                            <li><a href="<?php echo base_url(); ?>search-tours/eco" class="py-2 d-block">Eco</a></li>
+                            <li><a href="<?php echo base_url(); ?>search-tours/adventure" class="py-2 d-block">Adventure</a></li>
+                            <li><a href="<?php echo base_url(); ?>search-tours/active" class="py-2 d-block">Active</a></li>
+                            <li><a href="<?php echo base_url(); ?>search-tours/ramayana" class="py-2 d-block">Ramayana</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md">
                     <div class="ftco-footer-widget mb-4">
-                        <h2 class="ftco-heading-2">Top Deals</h2>
+                        <h2 class="ftco-heading-2">Read More</h2>
                         <ul class="list-unstyled">
-                            <li><a href="#" class="py-2 d-block">Luxe Hotel</a></li>
-                            <li><a href="#" class="py-2 d-block">Venice Tours</a></li>
-                            <li><a href="#" class="py-2 d-block">Deluxe Hotels</a></li>
-                            <li><a href="#" class="py-2 d-block">Boracay Beach &amp; Resorts</a></li>
-                            <li><a href="#" class="py-2 d-block">Beach &amp; Resorts</a></li>
-                            <li><a href="#" class="py-2 d-block">Fuente Villa</a></li>
-                            <li><a href="#" class="py-2 d-block">Japan Tours</a></li>
-                            <li><a href="#" class="py-2 d-block">Maldives Tours</a></li>
+                                <li class="nav-item "><a href="<?php echo base_url(); ?>home">Home</a></li>
+                    <li class="nav-item"><a href="<?php echo base_url(); ?>tailormade" class="py-2 d-block">Tailor Made</a></li>
+                    <li class="nav-item"><a href="<?php echo base_url(); ?>tour" class="py-2 d-block">Tours</a></li>
+                    <li class="nav-item"><a href="<?php echo base_url(); ?>experts-in" class="py-2 d-block">How It Works</a></li>
+                    <li class="nav-item"><a href="<?php echo base_url(); ?>about-us" class="py-2 d-block">About Us</a></li>
+                    <li class="nav-item"><a href="<?php echo base_url(); ?>blog" class="py-2 d-block">Blog</a></li>
+                    <li class="nav-item"><a href="<?php echo base_url(); ?>contacts" class="py-2 d-block">Contacts</a></li>
+                    <li class="nav-item"><a href="<?php echo base_url(); ?>contacts" class="py-2 d-block">Tailor Made inquiry</a></li>
+                
                         </ul>
                     </div>
                 </div>

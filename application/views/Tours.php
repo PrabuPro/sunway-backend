@@ -157,9 +157,8 @@
 					<div class="tagcloud">
 						<a href="<?php echo base_url(); ?>search-tours/culture" class="tag-cloud-link" <?php if(current_url() == base_url().'search-tours/culture') echo "style='background-color:#000000; color:#ffffff;'"?>>Cluture</a>
 						<a href="<?php echo base_url(); ?>search-tours/family" class="tag-cloud-link" <?php if(current_url() == base_url().'search-tours/family') echo "style='background-color:#000000; color:#ffffff;'"?>>Family</a>
-						<a href="<?php echo base_url(); ?>search-tours/classical%20beach" <?php if(current_url() == base_url().'search-tours/classical%20beach') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Classical Beach</a>
+						<a href="<?php echo base_url(); ?>search-tours/beach" <?php if(current_url() == base_url().'search-tours/classical%20beach') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Classical Beach</a>
 						<a href="<?php echo base_url(); ?>search-tours/eco" <?php if(current_url() == base_url().'search-tours/eco') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Eco</a>
-						<a href="<?php echo base_url(); ?>search-tours/nature" <?php if(current_url() == base_url().'search-tours/nature') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Nature</a>
 						<a href="<?php echo base_url(); ?>search-tours/adventure" <?php if(current_url() == base_url().'search-tours/adventure') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Adventure</a>
 						<a href="<?php echo base_url(); ?>search-tours/active" <?php if(current_url() == base_url().'search-tours/active') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Active</a>
 						<a href="<?php echo base_url(); ?>search-tours/ramayana" <?php if(current_url() == base_url().'search-tours/ramayana') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Ramayana</a>

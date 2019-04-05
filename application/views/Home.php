@@ -289,7 +289,7 @@
             </a>
           </div>
           <div class="col-md-6 col-lg-3 ftco-animate">
-            <a href="<?php echo base_url(); ?>search-tours/classical%20beach" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/trinco.jpg');">
+            <a href="<?php echo base_url(); ?>search-tours/beach" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/trinco.jpg');">
               <div class="text">
                 <h3 class="heading">Classical Beach</h3>
                 <div class="post-meta">
@@ -309,7 +309,7 @@
             </a>
           </div>
           <div class="col-md-6 col-lg-3 ftco-animate">
-            <a href="<?php echo base_url(); ?>search-for/ramayana" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/ramayana.jpg');">
+            <a href="<?php echo base_url(); ?>search-tours/ramayana" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/ramayana.jpg');">
               <div class="text">
                 <h3 class="heading">Ramayana</h3>
                 <div class="post-meta">
@@ -319,7 +319,7 @@
             </a>
           </div>
           <div class="col-md-6 col-lg-3 ftco-animate">
-            <a href="<?php echo base_url(); ?>search-for/adventure" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/adventure.jpg');">
+            <a href="<?php echo base_url(); ?>search-tours/adventure" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/adventure.jpg');">
               <div class="text">
                 <h3 class="heading">Adventure</h3>
                 <div class="post-meta">
@@ -329,7 +329,7 @@
             </a>
           </div>
           <div class="col-md-6 col-lg-3 ftco-animate">
-            <a href="<?php echo base_url(); ?>search-for/active" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/active.jpg');">
+            <a href="<?php echo base_url(); ?>search-tours/active" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/active.jpg');">
               <div class="text">
                 <h3 class="heading">Active</h3>
                 <div class="post-meta">
@@ -339,7 +339,7 @@
             </a>
           </div>
           <div class="col-md-6 col-lg-3 ftco-animate">
-            <a href="<?php echo base_url(); ?>search-for/eco" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/eco.jpg');">
+            <a href="<?php echo base_url(); ?>search-tours/eco" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/eco.jpg');">
               <div class="text">
                 <h3 class="heading">Eco & Wild Life Tours</h3>
                 <div class="post-meta">

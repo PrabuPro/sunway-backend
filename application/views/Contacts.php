@@ -107,7 +107,7 @@
         
         </div>
         <div class="row mt-5">
-          <div class="col-md-12" id="map"></div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.3089497118485!2d79.85001522110362!3d7.205550516599301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2eef2ac6f2cc7%3A0xb36059915e4330e1!2sSunway+Holidays!5e0!3m2!1sen!2slk!4v1554449046878!5m2!1sen!2slk" width="1200" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
 
         <div class="row" style="margin-top:6em; margin-bottom: 2em;">
