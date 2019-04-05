@@ -29,7 +29,7 @@
     </style>
 
     <section class="home-slider owl-carousel">
-    	<div class="slider-item" style="background-image: url('<?php echo base_url();?>assets/images/bg_3.jpg');"
+    	<div class="slider-item" style="background-image: url('<?php echo base_url();?>assets/images/about-us.jpg');"
     		data-stellar-background-ratio="0.5">
     		<div class="overlay"></div>
     		<div class="container">
@@ -44,7 +44,7 @@
     </section>
     <!-- END slider -->
 
-        <section class="ftco-section">
+    <section class="ftco-section">
     	<div class="container">
     		<div class="row">
     			<!-- Boxes de Acoes -->
@@ -53,9 +53,10 @@
     					<div class="icon">
     						<div class="image"><img src="assets/images/eye-1.png" style="margin-top:-16px;" alt=""></i></div>
     						<div class="info">
-    							<h3 class="title">Vision</h3>
-    							<p style="padding:15px;">
-    								To be the most trusted, reputed, reliable & most sought for “DESTINATION MANAGEMENT COMPANY” in Sri Lanka by global tour operators and holiday makers. 
+    							<h3 class="title mt-4">Vision</h3>
+    							<p style="padding:15px; cursor: context-menu;">
+    								To be the most trusted, reputed, reliable & most sought for “DESTINATION MANAGEMENT COMPANY” in Sri
+    								Lanka by global tour operators and holiday makers.
     							</p>
 
     						</div>
@@ -70,9 +71,13 @@
     						<div class="image"><img src="assets/images/mission.png"
     								style="margin-top:-25px; height:50px; width:auto;" alt=""></div>
     						<div class="info">
-    							<h3 class="title">Mission</h3>
-    							<p style="padding:5px;">
-    								To understand the changing travel patterns and aspirations of the 21st century traveller, accommodate their wishes for a most satisfying, memorable holiday and to give them enjoyable, value filled great days of holidaying, in our paradise island, by treating them as the pinnacle of our business, and always trying to delight them, while protecting the culture and traditions of our country
+    							<h3 class="title mt-4">Mission</h3>
+    							<p style="padding:15px; cursor: context-menu;">
+    								To understand the changing travel patterns and aspirations of the 21st century traveller,
+    								accommodate their wishes for a most satisfying, memorable holiday and to give them enjoyable, value
+    								filled great days of holidaying, in our paradise island, by treating them as the pinnacle of our
+    								business, and always trying to delight them, while protecting the culture and traditions of our
+    								country
     							</p>
 
     						</div>
@@ -90,7 +95,7 @@
     	<div class="container-fluid d-flex">
     		<div class="section-2-blocks-wrapper row no-gutters">
     			<div class="img col-sm-12 col-lg-6"
-    				style="background-image: url('<?php echo base_url();?>assets/images/tour-1.jpg');">
+    				style="background-image: url('<?php echo base_url();?>assets/images/about-us-1.jpg');">
     			</div>
     			<div class="text col-lg-6 ftco-animate">
     				<div class="text-inner align-self-start">
@@ -129,7 +134,7 @@
     				</div>
     			</div>
     			<div class="img col-sm-12 col-lg-6"
-    				style="background-image: url('<?php echo base_url();?>assets/images/tour-1.jpg');">
+    				style="background-image: url('<?php echo base_url();?>assets/images/about-us-2.jpg');">
     			</div>
     		</div>
     	</div>
@@ -215,7 +220,19 @@
     	</div>
     </div>
 
-
+		<div class="parallax-window" data-parallax="scroll" data-image-src="<?php echo base_url(); ?>assets/images/grid.jpg"
+    	style="min-height: 580px; background: transparent; transform: scaleX(-1); ">
+    	<div class="parallax-box" style="transform: scaleX(-1);">
+    		<svg class="parallax-box--icon">
+    			<use xlink:href="<?php echo base_url(); ?>assets/images/sprite.svg#icon-home"></use>
+    		</svg>
+    		<h3 class="parallax-box--text">Accommodations</h3>
+    		<h3 class="parallax-box--para">A wide choice of accommodations to fit every tour operator, travel agent &
+    			customer, is available. Starting from simple but unique beach hotels, cabanas, villas, apartments, home stays,
+    			to star class luxury hotels, international chain hotels & resorts, boutique hotels are yours to select from.
+    		</h3>
+    	</div>
+    </div>
 
 
     <div class="row" style="background-color:#2C2E3E;">
@@ -237,49 +254,26 @@
 
     </div>
 
-    <div class="parallax-window" data-parallax="scroll" data-image-src="<?php echo base_url(); ?>assets/images/grid.jpg" style="min-height: 580px; background: transparent; transform: scaleX(-1); ">
-  <div class="parallax-box" style="transform: scaleX(-1);">
-    <svg class="parallax-box--icon">  
-      <use xlink:href="<?php echo base_url(); ?>assets/images/sprite.svg#icon-home"></use>
-    </svg>
-    <h3 class="parallax-box--text">Accommodations</h3>
-    <h3 class="parallax-box--para">A wide choice of accommodations to fit every tour operator, travel agent & customer, is available.  Starting from simple but unique beach hotels, cabanas, villas, apartments, home stays, to star class luxury hotels, international chain hotels & resorts, boutique hotels are yours to select from.</h3>
-  </div>
-</div>
     
+
     </div>
-    <div class="parallax-window mb-3" data-parallax="scroll" data-image-src="<?php echo base_url(); ?>assets/images/view_1.jpg" style="min-height: 580px; background: transparent; ">
-  <div class="parallax-box" >
-    <svg class="parallax-box--icon">  
-      <use xlink:href="<?php echo base_url(); ?>assets/images/sprite.svg#icon-home"></use>
-    </svg>
-    <h3 class="parallax-box--text">Transportation</h3>
-    <h3 class="parallax-box--para">Sunway Holidays is proud of owning a very young fleet of air conditioned Cars, Passenger Vans, Luxury Busses, 4X4 Jeeps, SUV’s, Luxury Cars, & Limousines for your comfort & convenience. 
-The crew consists of licensed, professional, experienced, responsible, hand-picked tourism oriented personnel, who only offer their talent to Sunway Holidays. 
-Domestic Air Transfers & sightseeing trips are available.
-</h3>
-  </div>
-</div>
-    <div class="row">
-    	<div class="container">
-    		<div class="col-md-12 col-lg-12">
-    			<div class="row slider-text align-items-center">
-    				<div class="col-md-12 col-sm-12 mt-5 ftco-animate">
-    					<h1 class="" style="color:#ffffff;">Our Team</h1>
-    				</div>
-    			</div>
-    			<h4 class="tailorMadePage__para" style='color:#ffffff;'>
-    				Based in Sri Lanka, our local experts knows just how to make your holiday unique & special. Whichever your
-    				interests are, we know how to make your dream holiday come true. Backed with first-hand local knowledge &
-    				professional experience of over 25 years, we take the time to listen to our clients first, so we how to
-    				design your vacation to be perfect each time. With local experts taking care of your holiday right here from
-    				Sri Lanka, you travel stress-free - first time, every time.
-    		</div>
-
-
+    <div class="parallax-window" data-parallax="scroll"
+    	data-image-src="<?php echo base_url(); ?>assets/images/grid-2.jpg"
+    	style="min-height: 580px; background: transparent; ">
+    	<div class="parallax-box" style="height: 450px;">
+    		<svg class="parallax-box--icon">
+    			<use xlink:href="<?php echo base_url(); ?>assets/images/sprite.svg#icon-travel"></use>
+    		</svg>
+    		<h3 class="parallax-box--text">Transportation</h3>
+    		<h3 class="parallax-box--para">Sunway Holidays is proud of owning a very young fleet of air conditioned Cars,
+    			Passenger Vans, Luxury Busses, 4X4 Jeeps, SUV’s, Luxury Cars, & Limousines for your comfort & convenience.
+    			The crew consists of licensed, professional, experienced, responsible, hand-picked tourism oriented personnel,
+    			who only offer their talent to Sunway Holidays.
+    			Domestic Air Transfers & sightseeing trips are available.
+    		</h3>
     	</div>
-
     </div>
+   
     </div>
 
 

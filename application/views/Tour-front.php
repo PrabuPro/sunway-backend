@@ -1,11 +1,10 @@
 <section class="home-slider owl-carousel">
-	<div class="slider-item" style="background-image: url('<?php echo base_url();?>assets/images/bg_2.jpg');"
+	<div class="slider-item" style="background-image: url('<?php echo base_url();?>assets/images/tour-main.jpg');"
 		data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row slider-text align-items-center">
 				<div class="col-md-7 col-sm-12 ftco-animate">
-					<p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Tour</span></p>
 					<h1 class="mb-3">Tours Destination</h1>
 				</div>
 			</div>
@@ -59,106 +58,104 @@
 	</div>
 </section>
 
-<section class="ftco-section" style="padding-top:0; padding-bottom:0">
-	<div class="container-fluid">
-		<div class="row no-gutters justify-content-center mb-4 pb-4 ftco-animate">
-			<div class="col-md-7 text-center heading-section">
-				<h2>Type of Tours</h2>
-			</div>
-		</div>
-
-		<div class="row no-gutters">
-			<div class="col-md-6 col-lg-3 ftco-animate">
-				<a href="<?php echo base_url(); ?>search-tours/common" class="block-5"
-					style="background-image: url('<?php echo base_url();?>assets/images/trip.jpeg');">
-					<div class="text">
-						<h3 class="heading">Common - Classical Tour</h3>
-						<div class="post-meta">
-							<span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
-						</div>
-					</div>
-				</a>
-			</div>
-			<div class="col-md-6 col-lg-3 ftco-animate">
-				<a href="<?php echo base_url(); ?>search-tours/nature" class="block-5"
-					style="background-image: url('<?php echo base_url();?>assets/images/nature.jpg');">
-					<div class="text">
-						<h3 class="heading">Nature </h3>
-						<div class="post-meta">
-							<span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
-						</div>
-					</div>
-				</a>
-			</div>
-			<div class="col-md-6 col-lg-3 ftco-animate">
-				<a href="<?php echo base_url(); ?>search-tours/beach" class="block-5"
-					style="background-image: url('<?php echo base_url();?>assets/images/tour-3.jpg');">
-					<div class="text">
-						<h3 class="heading">Beach</h3>
-						<div class="post-meta">
-							<span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
-						</div>
-					</div>
-				</a>
-			</div>
-			<div class="col-md-6 col-lg-3 ftco-animate">
-				<a href="<?php echo base_url(); ?>search-tours/wild" class="block-5"
-					style="background-image: url('<?php echo base_url();?>assets/images/safari.jpg');">
-					<div class="text">
-						<h3 class="heading">Wild</h3>
-						<div class="post-meta">
-							<span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
-						</div>
-					</div>
-				</a>
-			</div>
-			<div class="col-md-6 col-lg-3 ftco-animate">
-				<a href="<?php echo base_url(); ?>search-for/honeymoon" class="block-5"
-					style="background-image: url('<?php echo base_url();?>assets/images/honeymoon.jpeg');">
-					<div class="text">
-						<h3 class="heading">Honeymoon</h3>
-						<div class="post-meta">
-							<span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
-						</div>
-					</div>
-				</a>
-			</div>
-			<div class="col-md-6 col-lg-3 ftco-animate">
-				<a href="<?php echo base_url(); ?>search-for/family" class="block-5"
-					style="background-image: url('<?php echo base_url();?>assets/images/family.jpeg');">
-					<div class="text">
-						<h3 class="heading">Family Trous</h3>
-						<div class="post-meta">
-							<span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
-						</div>
-					</div>
-				</a>
-			</div>
-			<div class="col-md-6 col-lg-3 ftco-animate">
-				<a href="<?php echo base_url(); ?>search-for/small group" class="block-5"
-					style="background-image: url('<?php echo base_url();?>assets/images/group.jpeg');">
-					<div class="text">
-						<h3 class="heading">Friends Tours</h3>
-						<div class="post-meta">
-							<span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
-						</div>
-					</div>
-				</a>
-			</div>
-			<div class="col-md-6 col-lg-3 ftco-animate">
-				<a href="<?php echo base_url(); ?>maldives" class="block-5"
-					style="background-image: url('<?php echo base_url();?>assets/images/tour-8.jpg');">
-					<div class="text">
-						<h3 class="heading">Group Tour in Maldives</h3>
-						<div class="post-meta">
-							<span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
-						</div>
-					</div>
-				</a>
-			</div>
-		</div>
-	</div>
-</section>
+<section class="ftco-section">
+      <div class="container-fluid">
+        <div class="row no-gutters justify-content-center mb-4 pb-4 ftco-animate">
+          <div class="col-md-7 text-center heading-section">
+            <h2>Pick your passion</h2>
+          </div>
+        </div>
+        <div class="row">
+        <h3 class="col-md-12 sub--para mb-5 ftco-animate" style="padding:0 6em;">We design each tour with passion and attention to detail, to make them spectacular and unique. To make it easy for you to select your forte, we have embedded collections of distinctive holiday plans to most sought after holiday themes. </h3>
+        <div class="col-md-9"></div>
+      
+        
+        </div>
+        <div class="row no-gutters">
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <a href="<?php echo base_url(); ?>search-tours/culture" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/anuradhapura.jpg');">
+              <div class="text">
+                <h3 class="heading">Culture & Heritage</h3>
+                <div class="post-meta">
+                  <span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <a href="<?php echo base_url(); ?>search-tours/family" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/family.jpg');">
+              <div class="text">
+                <h3 class="heading">Family</h3>
+                <div class="post-meta">
+                    <span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <a href="<?php echo base_url(); ?>search-tours/classical%20beach" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/trinco.jpg');">
+              <div class="text">
+                <h3 class="heading">Classical Beach</h3>
+                <div class="post-meta">
+                    <span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <a href="<?php echo base_url(); ?>search-tours/luxury" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/luxury_1.jpg');">
+              <div class="text">
+                <h3 class="heading">Luxury</h3>
+                <div class="post-meta">
+                    <span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <a href="<?php echo base_url(); ?>search-for/ramayana" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/ramayana.jpg');">
+              <div class="text">
+                <h3 class="heading">Ramayana</h3>
+                <div class="post-meta">
+                    <span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <a href="<?php echo base_url(); ?>search-for/adventure" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/adventure.jpg');">
+              <div class="text">
+                <h3 class="heading">Adventure</h3>
+                <div class="post-meta">
+                    <span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <a href="<?php echo base_url(); ?>search-for/active" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/active.jpg');">
+              <div class="text">
+                <h3 class="heading">Active</h3>
+                <div class="post-meta">
+                    <span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <a href="<?php echo base_url(); ?>search-for/eco" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/eco.jpg');">
+              <div class="text">
+                <h3 class="heading">Eco & Wild Life Tours</h3>
+                <div class="post-meta">
+                    <span style="margin-bottom:4em;" >Ameeru Ahmed Magu Male’, Maldives</span>
+                </div>
+              </div>
+            </a>
+          </div>
+         
+        </div>
+      </div>
+    </section>
 
 <style>
 	.feature-list {

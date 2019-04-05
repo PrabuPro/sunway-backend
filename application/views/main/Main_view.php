@@ -30,7 +30,7 @@
 
   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
         <div class="container">
-            <a class="navbar-brand" href="index.html"><img src="<?php echo base_url();?>/assets/images/logo.jpg" alt="" class="navbar-logo"></a>
+            <a class="navbar-brand" href="index.html"><img src="<?php echo base_url();?>/assets/images/logo_main.jpg" alt="" class="navbar-logo"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav"
                 aria-expanded="false" aria-label="Toggle navigation">
                 <span class="oi oi-menu"></span> Menu
@@ -42,7 +42,7 @@
                     <li class="nav-item"><a href="<?php echo base_url(); ?>tailormade" class="nav-link">Tailor Made</a></li>
                     <li class="nav-item"><a href="<?php echo base_url(); ?>tour" class="nav-link">Tours</a></li>
                     <li class="nav-item"><a href="<?php echo base_url(); ?>experts-in" class="nav-link">How It Works</a></li>
-                    <li class="nav-item"><a href="<?php echo base_url(); ?>sustainale-responsible" class="nav-link">Sustainable</a></li>
+                    <!-- <li class="nav-item"><a href="<?php echo base_url(); ?>sustainale-responsible" class="nav-link">Sustainable</a></li> -->
                     <li class="nav-item"><a href="<?php echo base_url(); ?>about-us" class="nav-link">About Us</a></li>
                     <li class="nav-item"><a href="<?php echo base_url(); ?>blog" class="nav-link">Blog</a></li>
                     <li class="nav-item"><a href="<?php echo base_url(); ?>contacts" class="nav-link">Contacts</a></li>

@@ -1,5 +1,5 @@
 <section class="home-slider owl-carousel">
-	<div class="slider-item" style="background-image: url('<?php echo base_url();?>assets/images/bg_3.jpg');"
+	<div class="slider-item" style="background-image: url('<?php echo base_url();?>assets/images/tailor-made.jpg');"
 	 data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
@@ -29,7 +29,7 @@
 					Looking for something else? Feel free to tell us just how you would like your dream holiday to be. Our local experts are happy to listen to you, and with careful attention to detail design your personalized holiday. Still unsure of what you like? You can also talk to them for more information, suggestions and insider travel tips.</h4>
 
 			</div>
-			<div class="col-md-6 tailorMadePage__image">
+			<div class="col-md-6 tailorMadePage__image" style="background-image: url('<?php echo base_url();?>assets/images/tailor-made-2.jpg');">
 
 			</div>
 
@@ -50,7 +50,7 @@
 					<h1 class="tailorMadePage__circle--number">1</h1>
 				</div>
 				<div class="tailorMadePage__box">
-					<svg class="tailorMadePage__box--icon">
+					<svg class="tailorMadePage__box--icon" >
 						<use xlink:href="<?php echo base_url(); ?>assets/images/sprite.svg#icon-paper-plane"></use>
 					</svg>
 					<div class="tailorMadePage__box--text">Tell us about your dream holiday </div>
@@ -62,7 +62,7 @@
 				</div>
 				<div class="tailorMadePage__box">
 					<svg class="tailorMadePage__box--icon">
-						<use xlink:href="<?php echo base_url(); ?>assets/images/sprite.svg#icon-phone"></use>
+						<use xlink:href="<?php echo base_url(); ?>assets/images/sprite.svg#icon-pencil"></use>
 					</svg>
 					<div class="tailorMadePage__box--text">We design your exclusive itinerary together with you.</div>
 				</div>
@@ -84,7 +84,7 @@
 				</div>
 				<div class="tailorMadePage__box">
 					<svg class="tailorMadePage__box--icon">
-						<use xlink:href="<?php echo base_url(); ?>assets/images/sprite.svg#icon-airplane"></use>
+						<use xlink:href="<?php echo base_url(); ?>assets/images/sprite.svg#icon-camera"></use>
 					</svg>
 					<div class="tailorMadePage__box--text">You enjoy your DREAM HOLIDAY.</div>
 				</div>

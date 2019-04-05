@@ -14,6 +14,9 @@ class TourController extends CI_Controller{
        $page = ($this->uri->segment(1)) ? $this->uri->segment(1) : 0;
 
         $data['results'] = $this->tour_model->get_tours($config['per_page'], $pagenum);
+        if(empty($data['results'])){
+            $data['results'] = $this->tour_model->get_tours($config['per_page'], 0);
+        }
         $data['links'] = $this->pagination->create_links();
         $data['total_pagination'] = $config["total_rows"]/$config["per_page"];
         $data['site_view'] = 'Tours';
@@ -59,7 +62,7 @@ class TourController extends CI_Controller{
     }
 
     public function updatetours($tourId){
-        $this->form_validation->set_rules('name', 'Name', 'trim|max_length[50]');
+        $this->form_validation->set_rules('name', 'Name', 'trim|max_length[100]');
         $this->form_validation->set_rules('description', 'Description', 'trim|max_length[100]');
         $this->form_validation->set_rules('introduction', 'Introduction', 'trim|max_length[700]');
         $this->form_validation->set_rules('tour_type', 'Tour_type', 'trim|max_length[15]');
@@ -244,7 +247,7 @@ class TourController extends CI_Controller{
 
     public function addTours(){
 
-        $this->form_validation->set_rules('name', 'Name', 'trim|max_length[50]');
+        $this->form_validation->set_rules('name', 'Name', 'trim|max_length[100]');
         $this->form_validation->set_rules('description', 'Description', 'trim|max_length[50]');
         $this->form_validation->set_rules('introduction', 'Introduction', 'trim|max_length[700]');
         $this->form_validation->set_rules('tour_type', 'Tour_type', 'trim|max_length[15]');
@@ -477,16 +480,17 @@ class TourController extends CI_Controller{
         $check_in_date = $this->input->post('check-in-date');
         $check_out_date = $this->input->post('check-out-date');
         
+        $data['results'] = $this->tour_model->homeSearch($tour_type);
         
-        if(empty($suitable)){
-            $data['results'] = $this->tour_model->homeSearch($tour_type);
-        } else if(empty($tour_type)) {
-            $data['results'] = $this->tour_model->homeSearchFor($suitable); 
-        } else if(empty($suitable) || empty($tour_type)){
-            redirect('tours-list/0'); 
-        } else{
-            $data['results'] = $this->tour_model->homeSearchAll($suitable,$tour_type); 
-        }
+        // if(empty($suitable)){
+        //     $data['results'] = $this->tour_model->homeSearch($tour_type);
+        // } else if(empty($tour_type)) {
+        //     $data['results'] = $this->tour_model->homeSearchFor($suitable); 
+        // } else if(empty($suitable) || empty($tour_type)){
+        //     redirect('tours-list/0'); 
+        // } else{
+        //     $data['results'] = $this->tour_model->homeSearchAll($suitable,$tour_type); 
+        // }
 
         // $data['results'] = $this->tour_model->search($suitable,$tour_type);
 

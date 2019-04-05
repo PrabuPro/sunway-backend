@@ -72,6 +72,7 @@
 											<option value="common">Common</option>
 											<option value="culture">Culture</option>
 											<option value="family">Family</option>
+											<option value="luxury">Luxury</option>
 											<option value="classical beach">Classical Beach</option>
 											<option value="eco">Eco</option>
 											<option value="nature">Nature</option>

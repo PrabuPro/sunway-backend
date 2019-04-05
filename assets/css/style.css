@@ -2843,7 +2843,7 @@ input[type="button"].btn-block {
     text-decoration: none; }
 
 .navbar-logo {
-  height: 4em; }
+  height: 6em; }
 
 .navbar-nav {
   display: flex;
@@ -6402,7 +6402,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .parallax-box {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.8);
   height: 26em;
   width: 30em;
   position: relative;
@@ -6500,23 +6500,38 @@ a.text-dark:hover, a.text-dark:focus {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 15em;
+  height: 18em;
   border: 2px #303040 solid;
   padding: 0 20px;
-  border-radius: 5px; }
+  border-radius: 5px;
+  transition: all .2s;
+}
   .tailorMadePage__box--icon {
-    margin: 3em auto 2em auto;
-    height: 10em;
-    width: 10em;
+    width: 100px !important;
+    height: 100px !important;
+    margin: 50px auto 30px auto;
     fill: #303040; }
   .tailorMadePage__box--text {
     margin: 0 auto 2em auto;
-    line-height: 1;
+    line-height: 1.2;
     font-size: 1.2em;
     color: #000;
     font-weight: 600;
-    text-align: justify;
+    text-align: center;
   }
+
+  .tailorMadePage__box:hover{
+    background-color: #303040;
+    color:#ffffff;
+    cursor: pointer;
+  }
+  .tailorMadePage__box:hover .tailorMadePage__box--icon, 
+  .tailorMadePage__box:hover .tailorMadePage__box--text {
+    fill: #ffffff;
+    color:#ffffff;
+  }
+
+
 
     @media (max-width: 767.98px) {
     	.tailorMadePage__box {
@@ -6542,6 +6557,8 @@ a.text-dark:hover, a.text-dark:focus {
     text-align: center;
    }
 
+
+
     
     @media (max-width: 767.98px) {
     	.tailorMadePage__circle {
@@ -6561,6 +6578,15 @@ a.text-dark:hover, a.text-dark:focus {
  		display: none;
  	}
  }
+.partner {
+  background-image: url(../images/bg_4.jpg);
+  background-size: cover; 
+  height:9em;
+  width:100%;
+  margin-top: 100px;
+  padding:0 10px;
+}
+
 
 .tailorMadePage__para {
   font-size: 1.2em;
@@ -8346,6 +8372,7 @@ textarea.form-control {
     .box>.icon {
       text-align: center;
       position: relative;
+      
     }
 
     .box>.icon>.image {
@@ -8377,21 +8404,30 @@ textarea.form-control {
     .box>.icon>.info {
       margin-top: -24px;
       background: rgba(0, 0, 0, 0.04);
+      color: #000000;
       border: 1px solid #e0e0e0;
       padding: 15px 0 10px 0;
-      height: 16em;
+      height: 20em;
+      transition: all .2s;
+    }
+
+    
+
+    .box>.icon>.info:hover{
+ 
     }
 
     .box>.icon:hover>.info {
       background: rgba(0, 0, 0, 0.04);
-      border-color: #e0e0e0;
-      color: white;
+         background-color: #303040;
+         color: #ffffff;
     }
 
     .box>.icon:hover>.info>h3.title,
     .box>.icon:hover>.info>p,
     .box>.icon:hover>.info>.more>a {
-      color: #222;
+
+       color: #ffffff;
     }
 
     .box>.icon>.info>.more a {}

@@ -281,7 +281,7 @@
 												<div class="col-lg-3 col-md-3 col-sm-offset-1">
 													<label for="culture" class="culture-label" id="culture-label">
 														<div class="radio-box" id="checkbox-box-1">
-															<div class="radio-box--image">
+															<div class="radio-box--image" style="background-image: url('<?php echo base_url()?>assets/images/culture-inquiry.jpg')">
 																<h2 class="radio-box--text" id="radio-box--text">culture & heritage</h2>
 															</div>
 														</div>
@@ -293,7 +293,7 @@
 												<div class="col-lg-3 col-md-3">
 													<label for="tea" class="tea-label">
 														<div class="radio-box" id="checkbox-box-2">
-															<div class="radio-box--image">
+															<div class="radio-box--image" style="background-image: url('<?php echo base_url()?>assets/images/tea.jpg')">
 																<h2 class="radio-box--text" id="radio-box--text">tea country & landscape</h2>
 															</div>
 														</div>
@@ -305,7 +305,7 @@
 												<div class="col-lg-3 col-md-3">
 													<label for="animals" class="animal-label">
 														<div class="radio-box" id="checkbox-box-3">
-															<div class="radio-box--image">
+															<div class="radio-box--image" style="background-image: url('<?php echo base_url()?>assets/images/wild-life.jpg')">
 																<h2 class="radio-box--text" id="radio-box--text">animals & wildlife</h2>
 															</div>
 														</div>
@@ -316,7 +316,7 @@
 												<div class="col-lg-3 col-md-3 col-sm-offset-1">
 													<label for="beach" class="beach-label" id="beach-label">
 														<div class="radio-box" id="checkbox-box-4">
-															<div class="radio-box--image">
+															<div class="radio-box--image" style="background-image: url('<?php echo base_url()?>assets/images/trinco.jpg')">
 																<h2 class="radio-box--text" id="radio-box--text">beach leasure time</h2>
 															</div>
 														</div>
@@ -327,7 +327,7 @@
 												<div class="col-lg-3 col-md-3">
 													<label for="colombo" class="pace-label">
 														<div class="radio-box" id="checkbox-box-5">
-															<div class="radio-box--image">
+															<div class="radio-box--image" style="background-image: url('<?php echo base_url()?>assets/images/colombo.jpg')">
 																<h2 class="radio-box--text" id="radio-box--text">colombo & shopping</h2>
 															</div>
 														</div>
@@ -339,7 +339,7 @@
 												<div class="col-lg-3 col-md-3">
 													<label for="local" class="local-label">
 														<div class="radio-box" id="checkbox-box-6">
-															<div class="radio-box--image">
+															<div class="radio-box--image" style="background-image: url('<?php echo base_url()?>assets/images/local.jpg')">
 																<h2 class="radio-box--text" id="radio-box--text">local experience</h2>
 															</div>
 														</div>
@@ -359,7 +359,7 @@
 												<div class="col-lg-3 col-md-3 col-sm-offset-1">
 													<label for="active" class="pace-label">
 														<div class="radio-box" id="pace-box-1">
-															<div class="radio-box--image">
+															<div class="radio-box--image" style="background-image: url('<?php echo base_url()?>assets/images/active-i.jpg')">
 																<h2 class="radio-box--text" id="radio-box--text-1">Active</h2>
 															</div>
 														</div>
@@ -369,7 +369,7 @@
 												<div class="col-lg-3 col-md-3">
 													<label for="soft" class="pace-label">
 														<div class="radio-box" id="pace-box-2">
-															<div class="radio-box--image">
+															<div class="radio-box--image" style="background-image: url('<?php echo base_url()?>assets/images/soft-active.jpg')">
 																<h2 class="radio-box--text" id="radio-box--text-2">soft adventure</h2>
 															</div>
 														</div>
@@ -379,7 +379,7 @@
 												<div class="col-lg-3 col-md-3">
 													<label for="relaxing" class="pace-label">
 														<div class="radio-box" id="pace-box-3">
-															<div class="radio-box--image">
+															<div class="radio-box--image" style="background-image: url('<?php echo base_url()?>assets/images/relax.jpg')">
 																<h2 class="radio-box--text" id="radio-box--text-3">relaxing</h2>
 															</div>
 														</div>

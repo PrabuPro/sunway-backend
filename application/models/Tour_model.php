@@ -325,6 +325,16 @@ class Tour_model extends CI_Model{
             // $suggestions = $this->db->get('tours');
 
             // return $suggestions->result();
+        } else if($selection == 5){
+            $result = $this->db->select('t.tour_id,t.name,t.description, t.tour_type,t.suitable_for,t.photo_id,p.price')
+                        ->from('tours t')
+                        ->join('tour_price p', 'p.tour_id=t.tour_id', 'left')
+                        ->limit(5)
+                        ->order_by('t.tour_id','RANDOM')
+                        ->group_by('t.tour_id')
+                        ->get()
+                        ->result();
+        return $result;
         }
     }
 

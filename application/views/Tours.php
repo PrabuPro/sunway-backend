@@ -1,5 +1,5 @@
 <section class="home-slider owl-carousel">
-	<div class="slider-item" style="background-image: url('<?php echo base_url();?>assets/images/bg_2.jpg');"
+	<div class="slider-item" style="background-image: url('<?php echo base_url();?>assets/images/tour-main-2.jpg');  background-position: center;"
 	 data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
@@ -57,13 +57,13 @@
 								<!-- <li><a href="#">&lt;</a></li> -->
 								<!-- <li><a href="http://localhost/sunwayholidays/tours-list/0" data-ci-pagination-page="2" rel="previous">&gt;</a></li> -->
 								<?php if($total_pagination > 1) : ?>
-								<li><a href="<?php echo base_url(); ?>tours-list/0" data-ci-pagination-page="2" rel="previous">&lt;</a></li>
+								<li><a href="<?php echo base_url(); ?>tours-list/0" data-ci-pagination-page="2" rel="previous" <?php echo (current_url()==base_url().'tours-list/0') ? 'class="active"' : ' '?>>&lt;</a></li>
                 <?php endif; ?>
                 
 								<?php for($i = 0; $i < $total_pagination ; $i++) : ?>
-								<li <?php if(current_url()==base_url().'tours-list/'.$i*8) { $last = ($i+1)*8;  echo 'class="active"'; } ?>><span><a href="<?php echo base_url(); ?>tours-list/<?php echo $i*8; ?>"
+								<li <?php if(current_url()==base_url().'tours-list/'.$i*10) { $last = ($i+1)*10;  echo 'class="active"'; } ?>><span><a href="<?php echo base_url(); ?>tours-list/<?php echo $i*10; ?>"
 										 data-ci-pagination-page="1">
-                      <?php echo $i+1; ?></a></span></li>
+                      <?php echo $i+1; $last ?></a></span></li>
                 <?php endfor; ?>
                 
 								<?php if($total_pagination > 1) : ?>
@@ -96,8 +96,6 @@
 												<div class="icon"><span class="ion-ios-arrow-down"></span></div>
 												<select name="tour_type" class="form-control">
 													<option value="" class="form-control-option-white">Tour Type</option>
-													<option value="common" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type=='common'
-													 ) echo 'selected' ; } ?> >Common</option>
 													<option value="culture" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type=='culture'
 													 ) echo 'selected' ; } ?> >Culture</option>
 													<option value="family" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type=='family'
@@ -106,16 +104,10 @@
 													 ) echo 'selected' ; } ?> >Classical Beach</option>
 													<option value="echo" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type=='eco' )
 													 echo 'selected' ; } ?> >Eco</option>
-													<option value="nature" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type=='nature'
-													 ) echo 'selected' ; } ?> >Nature</option>
-													<option value="wild life" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type=='wild life'
-													 ) echo 'selected' ; } ?>>Wild Life</option>
 													<option value="advanture" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type=='adventure'
 													 ) echo 'selected' ; } ?>>Adventure</option>
 													<option value="active" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type=='active'
-													 ) echo 'selected' ; } ?> >Active</option>
-													<option value="ayurweda" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type=='ayurweda'
-													 ) echo 'selected' ; } ?> >Ayurweda</option>
+													 ) echo 'selected' ; } ?> >Active</option>		
 													<option value="ramayana" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type=='remayana'
 													 ) echo 'selected' ; } ?> >Ramayana</option>
 												</select>
@@ -163,16 +155,13 @@
 				<div class="sidebar-box ftco-animate">
 					<h3>Tag Cloud</h3>
 					<div class="tagcloud">
-						<a href="<?php echo base_url(); ?>search-tours/common" class="tag-cloud-link" <?php if(current_url() == base_url().'search-tours/common') echo "style='background-color:#000000; color:#ffffff;'"?>>Common</a>
 						<a href="<?php echo base_url(); ?>search-tours/culture" class="tag-cloud-link" <?php if(current_url() == base_url().'search-tours/culture') echo "style='background-color:#000000; color:#ffffff;'"?>>Cluture</a>
 						<a href="<?php echo base_url(); ?>search-tours/family" class="tag-cloud-link" <?php if(current_url() == base_url().'search-tours/family') echo "style='background-color:#000000; color:#ffffff;'"?>>Family</a>
 						<a href="<?php echo base_url(); ?>search-tours/classical%20beach" <?php if(current_url() == base_url().'search-tours/classical%20beach') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Classical Beach</a>
 						<a href="<?php echo base_url(); ?>search-tours/eco" <?php if(current_url() == base_url().'search-tours/eco') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Eco</a>
 						<a href="<?php echo base_url(); ?>search-tours/nature" <?php if(current_url() == base_url().'search-tours/nature') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Nature</a>
-						<a href="<?php echo base_url(); ?>search-tours/wild life" <?php if(current_url() == base_url().'search-tours/wild%20life') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Wild Life</a>
 						<a href="<?php echo base_url(); ?>search-tours/adventure" <?php if(current_url() == base_url().'search-tours/adventure') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Adventure</a>
 						<a href="<?php echo base_url(); ?>search-tours/active" <?php if(current_url() == base_url().'search-tours/active') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Active</a>
-						<a href="<?php echo base_url(); ?>search-tours/ayurweda" <?php if(current_url() == base_url().'search-tours/ayurweda') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Ayurweda</a>
 						<a href="<?php echo base_url(); ?>search-tours/ramayana" <?php if(current_url() == base_url().'search-tours/ramayana') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Ramayana</a>
 					</div>
 				</div>

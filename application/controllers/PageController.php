@@ -5,12 +5,14 @@ class PageController extends CI_Controller{
     public function index(){
         $data['site_view'] = 'Home';
         $data['site_title'] = 'Home';
-        $data['recommended_hotels'] = $this->hotel_model->getRecommendedHotels(1);
+        $data['recommended_hotels'] = $this->hotel_model->getRecommendedHotels(5);
+        $data['suggestions'] = $this->tour_model->suggestions(5);
         $this->load->view('main/main_view', $data);
     }
     public function home(){
         $data['site_view'] = 'Home';
         $data['site_title'] = 'Home';
+        $data['suggestions'] = $this->tour_model->suggestions(5);
         $this->load->view('main/main_view', $data);
     }
     public function experts_in(){

@@ -6,7 +6,7 @@
       </style>
 
     <section class="home-slider owl-carousel">
-      <div class="slider-item" style="background-image: url('<?php echo base_url();?>assets/images/personalized-bg.jpg'); background-position:bottom;">
+      <div class="slider-item" style="background-image: url('<?php echo base_url();?>assets/images/hbg_1.jpg');  background-size:cover;">
         <div class="overlay"></div>
         <div class="container">
           <div class="row slider-text align-items-center">
@@ -17,7 +17,7 @@
         </div>
       </div>
 
-      <div class="slider-item" style="background-image: url('<?php echo base_url();?>assets/images/leopard.jpeg');">
+      <div class="slider-item" style="background-image: url('<?php echo base_url();?>assets/images/hbg_2.jpg');  background-size:cover;">
         <div class="overlay"></div>
         <div class="container">
           <div class="row slider-text align-items-center">
@@ -28,7 +28,7 @@
         </div>
       </div>
 
-      <div class="slider-item" style="background-image: url('<?php echo base_url();?>assets/images/beach-4.jpg');">
+      <div class="slider-item" style="background-image: url('<?php echo base_url();?>assets/images/hbg_3.jpg'); background-size:cover;">
         <div class="overlay"></div>
         <div class="container">
           <div class="row slider-text align-items-center">
@@ -51,7 +51,7 @@
                     <svg class="nav-pills__social--icon">
                         <a href="#" class="nav-pills__social--link">
                             <use xlink:href="<?php echo base_url(); ?>assets/images/sprite2.svg#icon-thumb-tack"></use>
-                        </a>
+                        
                     </svg>Tour</a>
                 <!-- <a class="nav-link p-3" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false"><span>03</span> Car Rent</a>
                 <a class="nav-link p-3" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false"><span>04</span> Cruises</a> -->
@@ -67,7 +67,7 @@
                       
                     <div class="select-wrap one-third">
                         <div class="icon"></div>
-                        <select name="duration" id="" class="form-control" required>
+                        <select name="duration" id="" class="form-control">
                           <option value="">Tour Duration</option>
                           <option value="7" class="form-control-option-white" >7 Days</option>
                           <option value="10-12" class="form-control-option-white"  >10 to 12 Days</option>
@@ -78,27 +78,19 @@
 
                       <div class="select-wrap one-third">
                         <div class="icon"></div>
-                        <select name="mounth"  id="" class="form-control form-control-select" required>
-                          <option value="" class="form-control-option-white">Month</option>
-                          <option value="jan" class="form-control-option-white"  >January</option>
-                          <option value="feb" class="form-control-option-white"  >February</option>
-                          <option value="mar" class="form-control-option-white"  >March</option>
-                          <option value="apr" class="form-control-option-white"  >April</option>
-                          <option value="may" class="form-control-option-white"  >May</option>
-                          <option value="june" class="form-control-option-white"  >June</option>
-                          <option value="july" class="form-control-option-white"  >July</option>
-                          <option value="aug" class="form-control-option-white"  >August</option>
-                          <option value="sep" class="form-control-option-white"  >September</option>
-                          <option value="oct" class="form-control-option-white"  >October</option>
-                          <option value="nov" class="form-control-option-white"  >November</option>
-                          <option value="dec" class="form-control-option-white"  >December</option>
+                        <select name="mounth"  id="" class="form-control form-control-select">
+                          <option value="" class="form-control-option-white">Hotel Category</option>
+                          <option value="3" class="form-control-option-white"  >3 Star</option>
+                          <option value="4" class="form-control-option-white"  >4 Star</option>
+                          <option value="5" class="form-control-option-white"  >5 Star</option>
+
                         </select>
                       </div>
 
                       <div class="select-wrap one-third">
                         <div class="icon"></div>
-                        <select name="suitable_for"  id="" class="form-control form-control-select" required>
-                          <option value="" class="form-control-option-white">Suitable For</option>
+                        <select name="suitable_for"  id="" class="form-control form-control-select">
+                          <option value="" class="form-control-option-white">Traveling with</option>
                           <option value="seniors" class="form-control-option-white"  >Seniors</option>
                           <option value="couples" class="form-control-option-white"  >Couples</option>
                           <option value="family" class="form-control-option-white"  >Family</option>
@@ -112,14 +104,11 @@
                       <div class="select-wrap one-third">
                         <div class="icon"></div>
                         <select name="tour_type" id="" class="form-control" required>
-                          <option value="">Tour Type</option>
-                          <option value="common" class="form-control-option-white" >Common</option>
+                          <option value="">Interest</option>
                           <option value="culture" class="form-control-option-white" >Culture</option>
-                          <option value="beach" class="form-control-option-white"  >Beach</option>
+                          <option value="classical beach" class="form-control-option-white"  >Classical Beach</option>
                           <option value="family" class="form-control-option-white"  >Family</option>
                           <option value="eco" class="form-control-option-white">Eco</option>
-                          <option value="nature" class="form-control-option-white" >Nature</option>
-                          <option value="wild life" class="form-control-option-white">Wild Life</option>
                           <option value="advanture" class="form-control-option-white">Adventure</option>
                           <option value="active" class="form-control-option-white">Active </option>
                           <option value="ayurweda" class="form-control-option-white">Ayurweda</option>
@@ -189,7 +178,7 @@
       <div class="container">
         <div class="row ">
           <div class="col-md-12 col-lg-12 text-center heading-section ftco-animate">
-            <h2>We arrange exclusive personalized holidays with attention to detail that goes the extra mile. </h2>
+            <h2>We arrange exclusive personalized holidays with <br> attention to detail that goes the extra mile. </h2>
             <h4 class="tailorMadePage__para" style='padding:0 4em 0 4em;'>
                 Based in Sri Lanka, our local experts knows just how to make your holiday unique & special. Whichever your interests are, we know how to make your dream holiday come true. Backed with first-hand local knowledge & professional experience of over 25 years, we take the time to listen to our clients first, so we how to design your vacation to be perfect each time. With local experts taking care of your holiday right here from Sri Lanka, you travel stress-free - first time, every time. 
           </div>
@@ -280,7 +269,7 @@
         </div>
         <div class="row no-gutters">
           <div class="col-md-6 col-lg-3 ftco-animate">
-            <a href="<?php echo base_url(); ?>search-tours/common" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/trip.jpeg');">
+            <a href="<?php echo base_url(); ?>search-tours/culture" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/anuradhapura.jpg');">
               <div class="text">
                 <h3 class="heading">Culture & Heritage</h3>
                 <div class="post-meta">
@@ -290,9 +279,9 @@
             </a>
           </div>
           <div class="col-md-6 col-lg-3 ftco-animate">
-            <a href="<?php echo base_url(); ?>search-tours/nature" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/nature.jpg');">
+            <a href="<?php echo base_url(); ?>search-tours/family" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/family.jpg');">
               <div class="text">
-                <h3 class="heading">Romantic</h3>
+                <h3 class="heading">Family</h3>
                 <div class="post-meta">
                     <span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
                 </div>
@@ -300,9 +289,9 @@
             </a>
           </div>
           <div class="col-md-6 col-lg-3 ftco-animate">
-            <a href="<?php echo base_url(); ?>search-tours/beach" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/tour-3.jpg');">
+            <a href="<?php echo base_url(); ?>search-tours/classical%20beach" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/trinco.jpg');">
               <div class="text">
-                <h3 class="heading">Active</h3>
+                <h3 class="heading">Classical Beach</h3>
                 <div class="post-meta">
                     <span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
                 </div>
@@ -310,37 +299,7 @@
             </a>
           </div>
           <div class="col-md-6 col-lg-3 ftco-animate">
-            <a href="<?php echo base_url(); ?>search-tours/wild" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/safari.jpg');">
-              <div class="text">
-                <h3 class="heading">Adventure</h3>
-                <div class="post-meta">
-                    <span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-3 ftco-animate">
-            <a href="<?php echo base_url(); ?>search-for/honeymoon" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/honeymoon.jpeg');">
-              <div class="text">
-                <h3 class="heading">Classical Beach Holidays</h3>
-                <div class="post-meta">
-                    <span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-3 ftco-animate">
-            <a href="<?php echo base_url(); ?>search-for/family" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/family.jpeg');">
-              <div class="text">
-                <h3 class="heading">Family with Children</h3>
-                <div class="post-meta">
-                    <span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-3 ftco-animate">
-            <a href="<?php echo base_url(); ?>search-for/small group" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/group.jpeg');">
+            <a href="<?php echo base_url(); ?>search-tours/luxury" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/luxury_1.jpg');">
               <div class="text">
                 <h3 class="heading">Luxury</h3>
                 <div class="post-meta">
@@ -350,9 +309,39 @@
             </a>
           </div>
           <div class="col-md-6 col-lg-3 ftco-animate">
-            <a href="<?php echo base_url(); ?>maldives" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/tour-8.jpg');">
+            <a href="<?php echo base_url(); ?>search-for/ramayana" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/ramayana.jpg');">
               <div class="text">
-                <h3 class="heading">Relaxing</h3>
+                <h3 class="heading">Ramayana</h3>
+                <div class="post-meta">
+                    <span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <a href="<?php echo base_url(); ?>search-for/adventure" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/adventure.jpg');">
+              <div class="text">
+                <h3 class="heading">Adventure</h3>
+                <div class="post-meta">
+                    <span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <a href="<?php echo base_url(); ?>search-for/active" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/active.jpg');">
+              <div class="text">
+                <h3 class="heading">Active</h3>
+                <div class="post-meta">
+                    <span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <a href="<?php echo base_url(); ?>search-for/eco" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/eco.jpg');">
+              <div class="text">
+                <h3 class="heading">Eco & Wild Life Tours</h3>
                 <div class="post-meta">
                     <span style="margin-bottom:4em;" >Ameeru Ahmed Magu Male’, Maldives</span>
                 </div>
@@ -373,91 +362,22 @@
         </div>
         <div class="row ftco-animate">
           <div class="carousel1 owl-carousel ftco-owl">
-            <div class="item">
+          <?php foreach($suggestions as $suggestion) : ?>
+          <div class="item">
               <div class="blog-entry">
-                <a href="blog-single.html" class="block-20" style="background-image: url('<?php echo base_url();?>assets/images/image_5.jpg');">
+                <a href="<?php echo site_url('tours/'.$suggestion->tour_id);?>" class="block-20" style="background-image: url('<?php echo base_url().'assets/images/tours/'.$suggestion->photo_id; ?>');">
                 </a>
                 <div class="text p-4">
-                  <div class="meta">
-                    <div><a href="#">July 7, 2018</a></div>
-                    <div><a href="#">Admin</a></div>
-                  </div>
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-                  <p class="clearfix">
-                    <a href="#" class="float-left">Read more</a>
-                    <a href="#" class="float-right meta-chat"><span class="icon-chat"></span> 3</a>
-                  </p>
+                  
+                  <h3 class="heading"><a href="<?php echo site_url('tours/'.$suggestion->tour_id);?>"><?php echo $suggestion->name; ?></a></h3>
+                
                 </div>
               </div>
             </div>
-            <div class="item">
-              <div class="blog-entry" data-aos-delay="100">
-                <a href="blog-single.html" class="block-20" style="background-image: url('<?php echo base_url();?>assets/images/image_6.jpg');">
-                </a>
-                <div class="text p-4">
-                  <div class="meta">
-                    <div><a href="#">July 7, 2018</a></div>
-                    <div><a href="#">Admin</a></div>
-                  </div>
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-                  <p class="clearfix">
-                    <a href="#" class="float-left">Read more</a>
-                    <a href="#" class="float-right meta-chat"><span class="icon-chat"></span> 3</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="blog-entry" data-aos-delay="200">
-                <a href="blog-single.html" class="block-20" style="background-image: url('<?php echo base_url();?>assets/images/image_7.jpg');">
-                </a>
-                <div class="text p-4">
-                  <div class="meta">
-                    <div><a href="#">July 7, 2018</a></div>
-                    <div><a href="#">Admin</a></div>
-                  </div>
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-                  <p class="clearfix">
-                    <a href="#" class="float-left">Read more</a>
-                    <a href="#" class="float-right meta-chat"><span class="icon-chat"></span> 3</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="blog-entry" data-aos-delay="200">
-                <a href="blog-single.html" class="block-20" style="background-image: url('<?php echo base_url();?>assets/images/image_8.jpg');">
-                </a>
-                <div class="text p-4">
-                  <div class="meta">
-                    <div><a href="#">July 7, 2018</a></div>
-                    <div><a href="#">Admin</a></div>
-                  </div>
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-                  <p class="clearfix">
-                    <a href="#" class="float-left">Read more</a>
-                    <a href="#" class="float-right meta-chat"><span class="icon-chat"></span> 3</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="blog-entry" data-aos-delay="200">
-                <a href="blog-single.html" class="block-20" style="background-image: url('<?php echo base_url();?>assets/images/image_9.jpg');">
-                </a>
-                <div class="text p-4">
-                  <div class="meta">
-                    <div><a href="#">July 7, 2018</a></div>
-                    <div><a href="#">Admin</a></div>
-                  </div>
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-                  <p class="clearfix">
-                    <a href="#" class="float-left">Read more</a>
-                    <a href="#" class="float-right meta-chat"><span class="icon-chat"></span> 3</a>
-                  </p>
-                </div>
-              </div>
-            </div>
+
+		
+				<?php endforeach; ?>
+         
           </div>
         </div>
       </div>
@@ -532,7 +452,7 @@
 
  
 
-<div class="parallax-window mb-3" data-parallax="scroll" data-image-src="<?php echo base_url(); ?>assets/images/elephant.jpeg" style="min-height: 530px; background: transparent;">
+<div class="parallax-window mb-3" data-parallax="scroll" data-image-src="<?php echo base_url(); ?>assets/images/maldives.jpg" style="min-height: 530px; background: transparent;">
   <div class="parallax-box">
     <!-- <svg class="parallax-box--icon">  
       <use xlink:href="<?php echo base_url(); ?>assets/images/sprite.svg#icon-cloud-sun"></use>
@@ -623,6 +543,28 @@
         </div>
       </div>
     </section>
+
+    <section class="ftco-section" style='padding-top:0 !important;'>
+	<div class="container">
+		<div class="row" style="margin-top:6em; margin-bottom: 2em;">
+
+			<div class="col-md-12 col-lg-8 col-sm-12">
+				<div class="row slider-text align-items-center">
+					<div class="col-md-12 col-sm-12">
+						<h1 class="mb-3 ">Our sustainability policy</h1>
+					</div>
+				</div>
+				<h4 class="tailorMadePage__para" style='padding-right:2em;'>
+          To understand the changing travel patterns and aspirations of the 21st century traveller, accommodate their wishes for a most satisfying, memorable holiday for enjoyable, value filled holidays, by treating them as the pinnacle of our business, and always trying to delight them, while protecting the culture and traditions of our country. We are committed to minimise the environmental impact of each holiday while contributing to the sustainability of our destinations
+
+			</div>
+			<div class="col-lg-4 col-sm-12 partner" style="background-image: url('<?php echo base_url();?>assets/images/partner.jpg'); background-size:cover;">
+
+			</div>
+
+		</div>
+	</div>
+</section>
 
     <!-- <div class="ftco-section">
       <div class="container-flex">
