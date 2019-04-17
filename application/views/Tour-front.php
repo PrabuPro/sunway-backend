@@ -18,7 +18,7 @@
 		<div class="row pb-5 no-gutters">
 			<div class="col-lg-4 bg-light p-3 p-md-5 d-flex align-items-center heading-section ftco-animate">
 				<div>
-					<h2 class="mb-5 pb-3" style="font-size:24px;">Want to get our hottest travel deals top tips and advice? Click
+					<h2 class="mb-5 pb-3" style="font-size:24px;">Want to get our hottest travel deals, top tips and advice? Click
 						below!</h2>
 					<div class="col-sm-12 group mb-3">
 						<input type="button" class="search-submit btn btn-primary" value="Find Tours"
@@ -34,11 +34,10 @@
 					<?php foreach($recommended_tours as $recommended_tour) : ?>
 
 					<div class="col-md-6 col-lg-4 mb-4 ftco-animate">
-						<a href="<?php echo site_url('tours/'.$recommended_tour->tour_id);?>" class="block-5"
+						<a href="<?php echo base_url() . 'tours/'.$recommended_tour->tour_id ;?>" class="block-5"
 							style="background-image: url('<?php echo base_url().'assets/images/tours/'.$recommended_tour->photo_id; ?>');">
 							<div class="text">
-								<span class="price">$
-									<?php echo $recommended_tour->name; ?></span>
+								
 								<h3 class="heading">
 									<?php echo $recommended_tour->name; ?>
 								</h3>
@@ -62,7 +61,7 @@
       <div class="container-fluid">
         <div class="row no-gutters justify-content-center mb-4 pb-4 ftco-animate">
           <div class="col-md-7 text-center heading-section">
-            <h2>Pick your passion</h2>
+            <h2>Pick Your Passion</h2>
           </div>
         </div>
         <div class="row">
@@ -72,12 +71,12 @@
         
         </div>
         <div class="row no-gutters">
-          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="col-md-6 col-lg-3 ftco-animate">
             <a href="<?php echo base_url(); ?>search-tours/culture" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/anuradhapura.jpg');">
               <div class="text">
                 <h3 class="heading">Culture & Heritage</h3>
                 <div class="post-meta">
-                  <span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
+                  
                 </div>
               </div>
             </a>
@@ -87,17 +86,17 @@
               <div class="text">
                 <h3 class="heading">Family</h3>
                 <div class="post-meta">
-                    <span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
+                    
                 </div>
               </div>
             </a>
           </div>
           <div class="col-md-6 col-lg-3 ftco-animate">
-            <a href="<?php echo base_url(); ?>search-tours/classical%20beach" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/trinco.jpg');">
+            <a href="<?php echo base_url(); ?>search-tours/beach" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/trinco.jpg');">
               <div class="text">
                 <h3 class="heading">Classical Beach</h3>
                 <div class="post-meta">
-                    <span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
+                   
                 </div>
               </div>
             </a>
@@ -107,47 +106,47 @@
               <div class="text">
                 <h3 class="heading">Luxury</h3>
                 <div class="post-meta">
-                    <span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
+                   
                 </div>
               </div>
             </a>
           </div>
           <div class="col-md-6 col-lg-3 ftco-animate">
-            <a href="<?php echo base_url(); ?>search-for/ramayana" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/ramayana.jpg');">
+            <a href="<?php echo base_url(); ?>search-tours/ramayana" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/ramayana.jpg');">
               <div class="text">
                 <h3 class="heading">Ramayana</h3>
                 <div class="post-meta">
-                    <span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
+                    
                 </div>
               </div>
             </a>
           </div>
           <div class="col-md-6 col-lg-3 ftco-animate">
-            <a href="<?php echo base_url(); ?>search-for/adventure" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/adventure.jpg');">
+            <a href="<?php echo base_url(); ?>search-tours/adventure" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/adventure.jpg');">
               <div class="text">
                 <h3 class="heading">Adventure</h3>
                 <div class="post-meta">
-                    <span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
+                    
                 </div>
               </div>
             </a>
           </div>
           <div class="col-md-6 col-lg-3 ftco-animate">
-            <a href="<?php echo base_url(); ?>search-for/active" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/active.jpg');">
+            <a href="<?php echo base_url(); ?>search-tours/active" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/active.jpg');">
               <div class="text">
                 <h3 class="heading">Active</h3>
                 <div class="post-meta">
-                    <span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
+                    
                 </div>
               </div>
             </a>
           </div>
           <div class="col-md-6 col-lg-3 ftco-animate">
-            <a href="<?php echo base_url(); ?>search-for/eco" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/eco.jpg');">
+            <a href="<?php echo base_url(); ?>search-tours/eco" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/eco.jpg');">
               <div class="text">
                 <h3 class="heading">Eco & Wild Life Tours</h3>
                 <div class="post-meta">
-                    <span style="margin-bottom:4em;" >Ameeru Ahmed Magu Male’, Maldives</span>
+                    
                 </div>
               </div>
             </a>
@@ -192,11 +191,11 @@
 
 </style>
 
-<section class="ftco-section ">
+<section class="ftco-section " style="display:none;">
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-md-7 text-center heading-section ftco-animate">
-				<h2>point section</h2>
+				<h2>Point Section</h2>
 			</div>
 		</div>
 		<div class="row">
@@ -266,70 +265,32 @@
 
 		<div class="well">
 			<div class="list-group mt-5 mb-5 pb-5">
+				
 				<div class="list-group-item review_item">
 					<div class="col-md-12">
-						<h4 class="list-group-item-heading"> List group heading </h4>
-						<p class="list-group-item-text"> Qui diam libris ei, vidisse incorrupte at mel. His euismod
-							salutandi dissentiunt eu. Habeo offendit ea mea. Nostro blandit sea ea, viris timeam
-							molestiae an has. At nisl platonem eum.
-							Vel et nonumy gubergren, ad has tota facilis probatus. Ea legere legimus tibique cum, sale
-							tantas vim ea, eu vivendo expetendis vim. Voluptua vituperatoribus et mel, ius no elitr
-							deserunt mediocrem. Mea facilisi torquatos ad.
+						<h4 class="list-group-item-heading"> Susan Steward </h4>
+						<p class="list-group-item-text"> I have enjoyed my holiday and visited the places I wanted. The hotels were good and the places we stopped were interesting. The local guide assigned has been very supportive to me as I have a difficulty in walking up steps etc. Would recommend highly recommend you.. 
 						</p>
 					</div>
 					<div class="col-md-12  bottom-review">
-						<div class="stars" style="margin-right: 20px;">
-							<svg class="review--icon">
-								<use xlink:href="<?php echo base_url();?>assets/images/sprite.svg#icon-star"></use>
-							</svg>
-							<svg class="review--icon">
-								<use xlink:href="<?php echo base_url();?>assets/images/sprite.svg#icon-star"></use>
-							</svg>
-							<svg class="review--icon">
-								<use xlink:href="<?php echo base_url();?>assets/images/sprite.svg#icon-star"></use>
-							</svg>
-							<svg class="review--icon">
-								<use xlink:href="<?php echo base_url();?>assets/images/sprite.svg#icon-star"></use>
-							</svg>
-							<svg class="review--icon">
-								<use xlink:href="<?php echo base_url();?>assets/images/sprite.svg#icon-star-outlined"></use>
-							</svg>
-						</div>
-						<h5><small> from </small> Country </h5>
+						
+						<h5><small> from </small> UK </h5>
+						<h6> &nbsp; @ 23.03.2019 </h6>
 					</div>
 				</div>
 				<div class="list-group-item review_item">
 					<div class="col-md-12">
-						<h4 class="list-group-item-heading"> List group heading </h4>
-						<p class="list-group-item-text"> Qui diam libris ei, vidisse incorrupte at mel. His euismod
-							salutandi dissentiunt eu. Habeo offendit ea mea. Nostro blandit sea ea, viris timeam
-							molestiae an has. At nisl platonem eum.
-							Vel et nonumy gubergren, ad has tota facilis probatus. Ea legere legimus tibique cum, sale
-							tantas vim ea, eu vivendo expetendis vim. Voluptua vituperatoribus et mel, ius no elitr
-							deserunt mediocrem. Mea facilisi torquatos ad.
+						<h4 class="list-group-item-heading"> Mr. & Mrs. Mayer </h4>
+						<p class="list-group-item-text"> Good planning, enough time for the planned excursion. Very good!
 						</p>
 					</div>
-					<div class="col-md-8  bottom-review">
-						<div class="stars" style="margin-right: 20px;">
-							<svg class="review--icon">
-								<use xlink:href="<?php echo base_url();?>assets/images/sprite.svg#icon-star"></use>
-							</svg>
-							<svg class="review--icon">
-								<use xlink:href="<?php echo base_url();?>assets/images/sprite.svg#icon-star"></use>
-							</svg>
-							<svg class="review--icon">
-								<use xlink:href="<?php echo base_url();?>assets/images/sprite.svg#icon-star"></use>
-							</svg>
-							<svg class="review--icon">
-								<use xlink:href="<?php echo base_url();?>assets/images/sprite.svg#icon-star"></use>
-							</svg>
-							<svg class="review--icon">
-								<use xlink:href="<?php echo base_url();?>assets/images/sprite.svg#icon-star-outlined"></use>
-							</svg>
-						</div>
-						<h5><small> from </small> Country </h5>
+					<div class="col-md-12  bottom-review">
+						
+						<h5><small> from </small> Switzerland </h5>
+						<h6> &nbsp; @ 22.03.2019 </h6>
 					</div>
 				</div>
+			
 				
 				<h5 class="mt-4 review-link col-md-2" onclick="window.location='<?php echo base_url(); ?>reviews'">Read More</h5>
 					

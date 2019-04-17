@@ -81,6 +81,7 @@
 											<option value="active">Active</option>
 											<option value="ayurweda">Ayurweda</option>
 											<option value="ramayana">Ramayana</option>
+											<option value="ramadan">Ramadan</option>
 										</select>
 									</div>
 								</div>
@@ -151,8 +152,6 @@
 								</div>
 							</div>
 
-
-					
 							<hr>
 							<h2>Itinerary</h2><br>
 				

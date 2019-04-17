@@ -20,7 +20,7 @@ $(document).ready(function(){
      
 		$.ajax({
 			type: 'POST',
-			url:  baseUrl +'/inquirycontroller/tourInquire',
+			url:  baseUrl +'/InquiryController/tourInquire',
 			data: $('.tourInquiry_form').serialize(),
 			datatype: "html",
 			success: function (data) {

@@ -5,7 +5,7 @@ $(document).ready(function(){
 		swal({
 			title: "Hang on!",
 			text: "Your Inquiry is sending....",
-			imageUrl: "http://localhost/sunwayholidays/assets/images/rolling2.gif",
+			imageUrl: "http:///sunwayholidays.lk/assets/images/rolling2.gif",
 			showSpinner: true,
 			button: false,
 			showCancelButton: false,
@@ -16,7 +16,7 @@ $(document).ready(function(){
 
 		$.ajax({
 			type: 'POST',
-			url: 'inquirycontroller/inquire',
+			url: 'inquiryController/inquire',
 			data: $('.inquiry_form').serialize(),
 			datatype: "html",
 			success: function (data) {

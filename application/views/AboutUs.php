@@ -134,7 +134,7 @@
     				</div>
     			</div>
     			<div class="img col-sm-12 col-lg-6"
-    				style="background-image: url('<?php echo base_url();?>assets/images/about-us-2.jpg');">
+    				style="background-image: url('<?php echo base_url();?>assets/images/about-us-3.jpg');">
     			</div>
     		</div>
     	</div>
@@ -143,11 +143,11 @@
     </style>
 
     <div class="row">
-    	<div class="container">
+    	<div class="container"  id="whysunway">
     		<div class="col-md-12 col-lg-12 mb-5 pb-5 pt-5">
     			<div class="row slider-text align-items-center">
     				<div class="col-md-12 col-sm-12 mt-5 ftco-animate">
-    					<h1 class="mb-5">Why travel Holidays </h1>
+    					<h1 class="mb-5">Why travel with Sunway Holidays </h1>
     				</div>
     			</div>
     			<div class="before">
@@ -222,7 +222,7 @@
 
 		<div class="parallax-window" data-parallax="scroll" data-image-src="<?php echo base_url(); ?>assets/images/grid.jpg"
     	style="min-height: 580px; background: transparent; transform: scaleX(-1); ">
-    	<div class="parallax-box" style="transform: scaleX(-1);">
+    	<div class="parallax-box" style="transform: scaleX(-1); height: 25em;">
     		<svg class="parallax-box--icon">
     			<use xlink:href="<?php echo base_url(); ?>assets/images/sprite.svg#icon-home"></use>
     		</svg>

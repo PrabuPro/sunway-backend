@@ -30,7 +30,7 @@
 
   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
         <div class="container">
-            <a class="navbar-brand" href="index.html"><img src="<?php echo base_url();?>/assets/images/logo_main.jpg" alt="" class="navbar-logo"></a>
+            <a class="navbar-brand" href="<?php echo base_url();?>home"><img src="<?php echo base_url();?>/assets/images/logo_main.jpg" alt="" class="navbar-logo"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav"
                 aria-expanded="false" aria-label="Toggle navigation">
                 <span class="oi oi-menu"></span> Menu
@@ -41,9 +41,8 @@
                     <li class="nav-item "><a href="<?php echo base_url(); ?>home" class="nav-link ">Home</a></li>
                     <li class="nav-item"><a href="<?php echo base_url(); ?>tailormade" class="nav-link">Tailor Made</a></li>
                     <li class="nav-item"><a href="<?php echo base_url(); ?>tour" class="nav-link">Tours</a></li>
-                    <li class="nav-item"><a href="<?php echo base_url(); ?>experts-in" class="nav-link">How It Works</a></li>
+                    <li class="nav-item"><a href="<?php echo base_url(); ?>how-it-works" class="nav-link">How It Works</a></li>
                     <li class="nav-item"><a href="<?php echo base_url(); ?>about-us" class="nav-link">About Us</a></li>
-                    <li class="nav-item"><a href="<?php echo base_url(); ?>blog" class="nav-link">Blog</a></li>
                     <li class="nav-item"><a href="<?php echo base_url(); ?>contacts" class="nav-link">Contacts</a></li>
                 </ul>
             </div>
@@ -96,9 +95,8 @@
                         <h2 class="ftco-heading-2">Contact Information</h2>
                         <ul class="list-unstyled">
                             <li><a href="#" class="py-2 d-block">Sunway House, No 25, Kimbulapitiya Road, Negombo.</a></li>
-                            <li><a href="#" class="py-2 d-block">+94315 312 444</a></li>
-                            <li><a href="#" class="py-2 d-block">info@yoursite.com</a></li>
-                            <li><a href="#" class="py-2 d-block">email@email.com</a></li>
+                            <li><a href="#" class="py-2 d-block">+94 777 262824</a></li>
+                            <li><a href="#" class="py-2 d-block">info@sunwayholidays.lk</a></li>
                         </ul>
                     </div>
                 </div>

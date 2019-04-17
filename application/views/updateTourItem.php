@@ -48,7 +48,7 @@
 				<div class="columns">
 					<div class="column is-6" style="margin-top:30px;">
 			
-						<form action="<?php echo site_url('tourcontroller/updatetours/'.$tour_detail->tour_id);?>" method="post"
+						<form action="<?php echo site_url('tourController/updateTours/'.$tour_detail->tour_id);?>" method="post"
 							enctype="multipart/form-data">
 							<div class="field">
 								<div class="control">

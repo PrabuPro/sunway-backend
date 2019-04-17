@@ -2,11 +2,13 @@ $(document).ready(function(){
     $('.mail-form').on('submit', function(e){
         e.preventDefault();
         console.log('submited');
+        
+        	
 
         	swal({
         		title: "Hang on!",
         		text: "Your Inquiry is sending....",
-        		imageUrl: "http://localhost/sunwayholidays/assets/images/rolling2.gif",
+        		imageUrl: "http://sunwayholidays.lk/assets/images/rolling2.gif",
         		showSpinner: true,
         		button: false,
         		showCancelButton: false,
@@ -15,12 +17,12 @@ $(document).ready(function(){
 
 			});
 			
-			let getUrl = window.location;
-			let baseUrl = getUrl.protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
+		    let getUrl = window.location;
+            let baseUrl = getUrl.protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
             
             $.ajax({
                 type: 'POST',
-                url: baseUrl + '/mailController/mail',
+                url:  'http://sunwayholidays.lk/MailController/mail',
                 data: $('.mail-form').serialize(),
                 datatype: 'html',
                 success: function (data){

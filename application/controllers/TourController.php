@@ -19,13 +19,13 @@ class TourController extends CI_Controller{
         }
         $data['links'] = $this->pagination->create_links();
         $data['total_pagination'] = $config["total_rows"]/$config["per_page"];
-        $data['site_view'] = 'Tours';
+        $data['site_view'] = 'tours';
         $data['site_title'] = 'Sunway Holidays - Tours';
         $this->load->view('main/main_view', $data);
     }
 
     public function tourPage(){
-        $data['site_view'] = 'Tour-front';
+        $data['site_view'] = 'tour-front';
         $data['site_title'] = 'Sunway Holidays - Tours';
         $data['recommended_tours'] = $this->tour_model->getRecommendedTours(1);
         $this->load->view('main/main_view', $data);
@@ -43,19 +43,19 @@ class TourController extends CI_Controller{
 
         $data['results'] = $this->tour_model->get_tours($config['per_page'], $page);
         $data['links'] = $this->pagination->create_links();
-        $data['site_view'] = 'Tours';
+        $data['site_view'] = 'tours';
         $data['site_title'] = 'Sunway Holidays - Tours';
         $this->load->view('main/main_view', $data);
         
     }
     
     public function addToursView(){
-        $data['site_view'] = 'AddTours';
+        $data['site_view'] = 'addTours';
         $data['site_title'] = 'Add Tours';
         $this->load->view('admin/dashboard', $data);
     }
     public function updateToursView(){
-        $data['site_view'] = 'UpdateTours';
+        $data['site_view'] = 'updateTours';
         $data['site_title'] = 'Update Tours';
         $data['tour_names'] = $this->tour_model->getTourNames();
         $this->load->view('admin/dashboard', $data);
@@ -122,15 +122,17 @@ class TourController extends CI_Controller{
                 $path_photo = '0';
                 $photoResult = true;
             } else{
+                // $photoResult = (is_uploaded_file($_FILES['photo_id']['name'])) ? TRUE : $this->imageUploadPhoto($imageName);
                 $photoResult = $this->imageUploadPhoto($imageName);
                 $path_photo = $_FILES['photo_id']['name'];
-
+                
             }
-
+            
             if(empty($_FILES['map_id']['name'])){
                 $path_map = '0';
                 $imageResult = true;
             }else{
+                // $imageResult = (is_uploaded_file($_FILES['map_id']['name'])) ? TRUE : $this->imageUploadMap($mapName);
                 $imageResult = $this->imageUploadMap($mapName);
                 $path_map = $_FILES['map_id']['name'];
             }
@@ -160,7 +162,7 @@ class TourController extends CI_Controller{
 
                 $updateItinerary_result = $this->tour_model->update_itinerary($id);
                 $updatePrice_result = (isset($_POST['hotelPrice'])) ? $this->tour_model->update_price($tourId) : TRUE;
-                $updateHightlight_result = (isset($_POST['highlights'])) ? $this->tour_model->insert_highlights($tourId) : TRUE;
+                $updateHightlight_result = (isset($_POST['highlights'])) ? $this->tour_model->update_highlights($tourId) : TRUE;
                 $updateIncludes_result = isset($_POST['includes']) ? $this->tour_model->update_includes($tourId) : TRUE ;
                 $updateExcludes_result = isset($_POST['excludes']) ? $this->tour_model->update_excludes($tourId) : TRUE ;
                 $updateOptions_result = isset($_POST['options']) ? $this->tour_model->update_options($tourId) : TRUE ;
@@ -456,7 +458,7 @@ class TourController extends CI_Controller{
     public function touritem($pageid){
         $data['results'] = $this->tour_model->get_tourItem($pageid);
         if($data['results'] == FALSE){
-            $data['site_view'] = 'NotFound';
+            $data['site_view'] = 'notFound';
             $data['site_title'] = 'Sunway Holidays - Page Not Found';
             $this->load->view('main/main_view', $data);
         } else{
@@ -467,7 +469,7 @@ class TourController extends CI_Controller{
             $data['excludes'] = $this->tour_model->excludes($pageid);
             $data['options'] = $this->tour_model->options($pageid);
             $data['prices'] = $this->tour_model->prices($pageid);
-            $data['site_view'] = 'TourItem';
+            $data['site_view'] = 'tourItem';
             $data['site_title'] = 'Sunway Holidays - Tour Item';
             $this->load->view('main/main_view', $data);
         }
@@ -494,7 +496,7 @@ class TourController extends CI_Controller{
 
         // $data['results'] = $this->tour_model->search($suitable,$tour_type);
 
-        $data['site_view'] = 'Tours';
+        $data['site_view'] = 'tours';
         $data['site_title'] = 'Sunway Holidaya - Tours';
         $data['suitable'] = $suitable;
         $data['tour_type'] = $tour_type;
@@ -513,7 +515,7 @@ class TourController extends CI_Controller{
         $data['results'] = $this->tour_model->homeSearch($searchVal);
         $data['total_pagination'] = 0;
         $data['tour_type'] = $searchVal;
-        $data['site_view'] = 'Tours';
+        $data['site_view'] = 'tours';
         $data['site_title'] = 'Sunway Holidays - Tours';
 
         $this->load->view('main/main_view', $data);
@@ -527,7 +529,7 @@ class TourController extends CI_Controller{
         $data['results'] = $this->tour_model->homeSearchFor($searchVal);
         $data['total_pagination'] = 0;
         $data['tour_type'] = $searchVal;
-        $data['site_view'] = 'Tours';
+        $data['site_view'] = 'tours';
         $data['site_title'] = 'Sunway Holidays - Tours';
 
         $this->load->view('main/main_view', $data);

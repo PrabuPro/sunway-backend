@@ -94,7 +94,7 @@
 	</div>
 </section>
 
-<section class="ftco-section">
+<section class="ftco-section" style="background-color: #DAE0E2 !important;">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 col-md-12">

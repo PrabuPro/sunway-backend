@@ -81,7 +81,7 @@
 							<h4>&bull; Does the tour prices displayed on the website include international flights?
 							</h4>
 							<div class="panel-body-sub" style="margin-left:20px">
-								<p class="panel-body-para">E includes, excludes and possible optional excursions are
+								<p class="panel-body-para">It includes, excludes and possible optional excursions are
 									stated clearly with each tour. International flights, though not included in the
 									package, could be arranged upon request. </p>
 							</div>
@@ -364,7 +364,7 @@
       <div class="container">
         <div class="row justify-content-center mb-5 pb-5">
           <div class="col-md-7 text-center heading-section ftco-animate">
-            <h2>Truly unique, by local destination specialists.</h2>
+            <h2>Truly unique holidays, by local destination specialists.</h2>
           </div>
         </div>
         <div class="row">
@@ -406,7 +406,7 @@
             <div class="media block-6 services d-block text-center">
               <div class="d-flex justify-content-center"><div class="icon d-flex justify-content-center mb-3"><span class="align-self-center"><img src="assets/images/eco.png" alt=""></span></div></div>
               <div class="media-body p-2" style="margin: auto !important;">
-                <h3 class="heading" style="margin: auto !important;">Responsible & sustainable: Travel-life member, committed to sustainability.</h3>
+                <h3 class="heading" style="margin: auto !important;">Responsible & sustainable: Travel-life member company, committed to sustainability.</h3>
               </div>
             </div>      
           </div>

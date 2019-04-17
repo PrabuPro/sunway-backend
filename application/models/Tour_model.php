@@ -381,7 +381,7 @@ class Tour_model extends CI_Model{
         return $result;
     }
      public function prices($number){
-        $result = $this->db->select('price')
+        $result = $this->db->select('hotel_type,price')
                            ->where('tour_id', $number)
                            ->get('tour_price')
                            ->result();

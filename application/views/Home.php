@@ -33,7 +33,7 @@
         <div class="container">
           <div class="row slider-text align-items-center">
             <div class="col-md-7 col-sm-12 ftco-animate">
-              <h1 class="mb-3">Beach Holidays</h1>
+              <h1 class="mb-3">Family Holidays</h1>
             </div>
           </div>
         </div>
@@ -80,6 +80,7 @@
                         <div class="icon"></div>
                         <select name="mounth"  id="" class="form-control form-control-select">
                           <option value="" class="form-control-option-white">Hotel Category</option>
+                          <option value="3" class="form-control-option-white"  >Standerd</option>
                           <option value="3" class="form-control-option-white"  >3 Star</option>
                           <option value="4" class="form-control-option-white"  >4 Star</option>
                           <option value="5" class="form-control-option-white"  >5 Star</option>
@@ -94,11 +95,7 @@
                           <option value="seniors" class="form-control-option-white"  >Seniors</option>
                           <option value="couples" class="form-control-option-white"  >Couples</option>
                           <option value="family" class="form-control-option-white"  >Family</option>
-                          <option value="honeymooners" class="form-control-option-white"  >Honeymooners</option>
-                          <option value="small gourp" class="form-control-option-white"  >Small Group </option>
-                          <option value="researchers" class="form-control-option-white"  >Researchers</option>
                           <option value="singles + kids" class="form-control-option-white"  >Singles + kids</option>
-                          <option value="pilgrims" class="form-control-option-white"  >Pilgrims</option>
                         </select>
                       </div>
                       <div class="select-wrap one-third">
@@ -106,13 +103,13 @@
                         <select name="tour_type" id="" class="form-control" required>
                           <option value="">Interest</option>
                           <option value="culture" class="form-control-option-white" >Culture</option>
-                          <option value="classical beach" class="form-control-option-white"  >Classical Beach</option>
+                          <option value="beach" class="form-control-option-white"  >Classical Beach</option>
                           <option value="family" class="form-control-option-white"  >Family</option>
                           <option value="eco" class="form-control-option-white">Eco</option>
-                          <option value="advanture" class="form-control-option-white">Adventure</option>
+                          <option value="adventure" class="form-control-option-white">Adventure</option>
                           <option value="active" class="form-control-option-white">Active </option>
-                          <option value="ayurweda" class="form-control-option-white">Ayurweda</option>
                           <option value="ramayana" class="form-control-option-white">Ramayana</option>
+                          <option value="luxury" class="form-control-option-white">Luxury</option>
                         </select>
                       </div>
                     </div>
@@ -180,7 +177,7 @@
           <div class="col-md-12 col-lg-12 text-center heading-section ftco-animate">
             <h2>We arrange exclusive personalized holidays with <br> attention to detail that goes the extra mile. </h2>
             <h4 class="tailorMadePage__para" style='padding:0 4em 0 4em;'>
-                Based in Sri Lanka, our local experts knows just how to make your holiday unique & special. Whichever your interests are, we know how to make your dream holiday come true. Backed with first-hand local knowledge & professional experience of over 25 years, we take the time to listen to our clients first, so we how to design your vacation to be perfect each time. With local experts taking care of your holiday right here from Sri Lanka, you travel stress-free - first time, every time. 
+                Based in Sri Lanka, our local experts know just how to make your holiday unique & special. Whichever your interests are, we know how to make your dream holiday come true. Backed with first-hand local knowledge & professional experience of over 25 years, we take the time to listen to our clients first, so we how to design your vacation to be perfect each time. With local experts taking care of your holiday right here from Sri Lanka, you travel stress-free - first time, every time. 
           </div>
         </div>
       </div>
@@ -255,11 +252,11 @@
       <div class="container-fluid">
         <div class="row no-gutters justify-content-center mb-4 pb-4 ftco-animate">
           <div class="col-md-7 text-center heading-section">
-            <h2>Pick your passion</h2>
+            <h2>Pick Your Passion</h2>
           </div>
         </div>
         <div class="row">
-        <h3 class="col-md-12 sub--para mb-5 ftco-animate" style="padding:0 6em;">We design each tour with passion and attention to detail, to make them spectacular and unique. To make it easy for you to select your forte, we have embedded collections of distinctive holiday plans to most sought after holiday themes. </h3>
+        <h3 class="col-lg-12 sub--para mb-5 ftco-animate">We design each tour with passion and attention to detail, to make them spectacular and unique. To make it easy for you to select your forte, we have embedded collections of distinctive holiday plans to most sought after holiday themes. </h3>
         <div class="col-md-9"></div>
         <div class="col-md-3 group mb-3">
 						<input type="button" class="search-submit btn btn-primary" value="See All Categories" style="width:100%; font-size:1.5em;"
@@ -273,7 +270,7 @@
               <div class="text">
                 <h3 class="heading">Culture & Heritage</h3>
                 <div class="post-meta">
-                  <span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
+                 
                 </div>
               </div>
             </a>
@@ -283,7 +280,7 @@
               <div class="text">
                 <h3 class="heading">Family</h3>
                 <div class="post-meta">
-                    <span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
+                   
                 </div>
               </div>
             </a>
@@ -293,7 +290,7 @@
               <div class="text">
                 <h3 class="heading">Classical Beach</h3>
                 <div class="post-meta">
-                    <span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
+                    
                 </div>
               </div>
             </a>
@@ -303,7 +300,7 @@
               <div class="text">
                 <h3 class="heading">Luxury</h3>
                 <div class="post-meta">
-                    <span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
+                    
                 </div>
               </div>
             </a>
@@ -313,7 +310,7 @@
               <div class="text">
                 <h3 class="heading">Ramayana</h3>
                 <div class="post-meta">
-                    <span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
+                    
                 </div>
               </div>
             </a>
@@ -323,7 +320,7 @@
               <div class="text">
                 <h3 class="heading">Adventure</h3>
                 <div class="post-meta">
-                    <span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
+                   
                 </div>
               </div>
             </a>
@@ -333,7 +330,7 @@
               <div class="text">
                 <h3 class="heading">Active</h3>
                 <div class="post-meta">
-                    <span style="margin-bottom:4em;">Ameeru Ahmed Magu Male’, Maldives</span>
+                    
                 </div>
               </div>
             </a>
@@ -343,7 +340,7 @@
               <div class="text">
                 <h3 class="heading">Eco & Wild Life Tours</h3>
                 <div class="post-meta">
-                    <span style="margin-bottom:4em;" >Ameeru Ahmed Magu Male’, Maldives</span>
+                    
                 </div>
               </div>
             </a>
@@ -357,7 +354,7 @@
       <div class="container">
         <div class="row justify-content-center mb-5 pb-5">
           <div class="col-md-7 text-center heading-section ftco-animate">
-            <h2>Our Famouse itinerary</h2>
+            <h2>Our Top Picks</h2>
           </div>
         </div>
         <div class="row ftco-animate">
@@ -365,11 +362,11 @@
           <?php foreach($suggestions as $suggestion) : ?>
           <div class="item">
               <div class="blog-entry">
-                <a href="<?php echo site_url('tours/'.$suggestion->tour_id);?>" class="block-20" style="background-image: url('<?php echo base_url().'assets/images/tours/'.$suggestion->photo_id; ?>');">
+                <a href="<?php echo base_url() .'tours/'.$suggestion->tour_id;?>" class="block-20" style="background-image: url('<?php echo base_url().'assets/images/tours/'.$suggestion->photo_id; ?>');">
                 </a>
                 <div class="text p-4">
                   
-                  <h3 class="heading"><a href="<?php echo site_url('tours/'.$suggestion->tour_id);?>"><?php echo $suggestion->name; ?></a></h3>
+                  <h3 class="heading"><a href="<?php echo base_url() .'tours/'.$suggestion->tour_id;?>"><?php echo $suggestion->name; ?></a></h3>
                 
                 </div>
               </div>
@@ -382,19 +379,45 @@
         </div>
       </div>
     </section>
+    
+    <section class="ftco-section" style='padding-top:0 !important; background-color:#B83227; '>
+	<div class="container">
+		<div class="row justify-content-center mb-5">
+			<div class="col-md-7 text-center heading-section ftco-animate">
+				<h2 style="margin-top: 40px; color:white;">Special Offers!</h2>
+			</div>
+		</div>
+		<div class="row">
 
-       <section class="ftco-section testimony-section" style="padding-top:0; padding-bottom:0;">
+			<div class="col-md-12 col-lg-6 col-sm-12" >
+
+			<a href="<?php echo base_url(); ?>search-tours/family"><div class="banner-image" style="background-image: url('<?php echo base_url();?>assets/images/uk.jpg'); "></div></a>
+				
+			</div>
+			
+			<div class="col-md-12 col-lg-6 col-sm-12" >
+				
+				<a href="<?php echo base_url(); ?>search-tours/ramadan"><div class="banner-image" style="background-image: url('<?php echo base_url();?>assets/images/ramadan.jpg');"></div></a>
+
+			</div>
+	
+
+		</div>
+	</div>
+</section>
+
+       <section class="ftco-section testimony-section bg-light" style="padding-top:0; padding-bottom:0;">
       <div class="container">
-        <div class="row justify-content-center mb-1 pb-1">
-          <div class="col-md-12 text-center heading-section ftco-animate">
-            <h2>How to make your dream holiday happen</h2>
+        <div class="row justify-content-center">
+          <div class="col-md-12 text-center heading-section ftco-animate  mt-5">
+            <h2>How To Make Your Dream Holiday Happen</h2>
           </div>
         </div>
                 
         <div class="row ftco-animate justify-content-center">
           <div class="carousel owl-carousel ftco-owl" style="margin: 4em;">
-            <div class="item">
-              <div class="box_card "> 
+            <div class="item" >
+              <div class="box_card " style="background-color: #f9ca24;"> 
                 <div class="box_card__text">
                   <div class="box_card__text--number">
                     <h3 class="box_card__text--number-text">1</h3>
@@ -407,40 +430,40 @@
               </div>
             </div>
             <div class="item">
-              <div class="box_card ">
+              <div class="box_card " style="background-color: #f0932b;">
                 <div class="box_card__text">
                   <div class="box_card__text--number">
                     <h3 class="box_card__text--number-text">2</h3>
                   </div>
                   <h3 class="box_card__text--heading">Step 2</h3>
                   <div class="box_card__text--post-meta">
-                      <span style="margin-bottom:4em; color:#000000;">Book it as it is, request for customization of selected tour, </span>
+                      <span style="margin-bottom:4em; color:#000000;">Book it as it is or request for customization of selected tour, </span>
                   </div>
               </div>
             </div>
             </div>
             <div class="item">
-              <div class="box_card ">
+              <div class="box_card " style="background-color: #eb4d4b;">
                 <div class="box_card__text">
                   <div class="box_card__text--number">
                     <h3 class="box_card__text--number-text">3</h3>
                   </div>
                   <h3 class="box_card__text--heading">Step 3</h3>
                   <div class="box_card__text--post-meta">
-                      <span style="margin-bottom:4em; color:#000000;">Book your trip securely with Sunway & let us do the work.</span>
+                      <span style="margin-bottom:4em; color:#000000;">Book your trip securely with Sunway Holidays & let us do the work.</span>
                   </div>
                 </div>
               </div>
             </div>
             <div class="item">
-              <div class="box_card ">
+              <div class="box_card " style="background-color: #6ab04c;">
                 <div class="box_card__text">
                   <div class="box_card__text--number">
                     <h3 class="box_card__text--number-text">4</h3>
                   </div>
                   <h3 class="box_card__text--heading">Step 4</h3>
                   <div class="box_card__text--post-meta">
-                      <span style="margin-bottom:4em; color:#000000;">Travel stress few & enjoy your fabulous holiday </span>
+                      <span style="margin-bottom:4em; color:#000000;">Travel stress free & enjoy your fabulous holiday </span>
                   </div>
                 </div>
               </div>
@@ -454,11 +477,8 @@
 
 <div class="parallax-window mb-3" data-parallax="scroll" data-image-src="<?php echo base_url(); ?>assets/images/maldives.jpg" style="min-height: 530px; background: transparent;">
   <div class="parallax-box">
-    <!-- <svg class="parallax-box--icon">  
-      <use xlink:href="<?php echo base_url(); ?>assets/images/sprite.svg#icon-cloud-sun"></use>
-    </svg> -->
-    <h3 class="parallax-box--text">Maldives</h3>
-    <h3 class="parallax-box--para">Who doesn’t love Maldives, with its sun dipping horizons, sugar soft sandy beaches and crystal clear blue water? The perfect destination to combine your Sri Lankan holiday with, Maldives is spectacular and is considered as the go to beach stay for a luxury romantic gateway. This sophisticated epicure has also become a fine destination for the watersports. The top notch luxury beach resorts are a treat to your mind, body and soul. Less than 1 hour by air, your perfect holiday in Sri Lanka, could be followed by a few days at leisure in Maldives. Simply request for the extension for any of our <strong>tours</strong> or request a <strong>tailor made</strong> holiday.</h3>
+    <h2 class="parallax-box--text" style="font-size:2.5em;">Maldives</h2>
+    <h3 class="parallax-box--para">Who doesn’t love Maldives, with its sun dipping horizons, sugar soft sandy beaches and crystal clear blue water? The perfect destination to combine your Sri Lankan holiday with. It’s also a fine destination for watersports. The top notch luxury beach resorts are a treat to your mind, body and soul.  Simply request for the extension for any of our tours or request a tailor made holiday. Simply request for the extension for any of our <strong><a href="<?php echo base_url();?>tour">tours</a></strong> or request a <strong><a href="<?php base_url();?>tailormade">tailor made holiday.</a></strong></h3>
   </div>
 </div>
 
@@ -538,7 +558,7 @@
           <h1 class="tailorMade__container--heading ftco-animate">Tailor Made</h1>    
           <h1 class="tailorMade__container--sub ftco-animate">You design your tour, We help you to make it awesome</h1>    
           <div class="col-sm-12 group " style="margin-left:auto; margin-right:auto;">
-            <a href="<?php echo site_url(); ?>tailormade" class="search-submit btn btn-primary-white bt-4 ftco-animate" style="width:220px; font-size:1.5em; margin: auto;">Learn More</a>
+            <a href="<?php echo base_url(); ?>tailormade" class="search-submit btn btn-primary-white bt-4 ftco-animate" style="width:220px; font-size:1.5em; margin: auto;">Learn More</a>
           </div>
         </div>
       </div>
@@ -551,7 +571,7 @@
 			<div class="col-md-12 col-lg-8 col-sm-12">
 				<div class="row slider-text align-items-center">
 					<div class="col-md-12 col-sm-12">
-						<h1 class="mb-3 ">Our sustainability policy</h1>
+						<h1 class="mb-3 ">Our Sustainability Policy</h1>
 					</div>
 				</div>
 				<h4 class="tailorMadePage__para" style='padding-right:2em;'>

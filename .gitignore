@@ -1,5 +1,9 @@
 user_guide/
 application/vendor/
+web_admin.txt
+sub_folder_website/
+htaccess_sub_folder/
+updated_application_and_assets/
 
 .DS_Store
 

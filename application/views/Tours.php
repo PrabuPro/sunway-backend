@@ -5,7 +5,6 @@
 		<div class="container">
 			<div class="row slider-text align-items-center">
 				<div class="col-md-7 col-sm-12 ftco-animate">
-					<p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Tour</span></p>
 					<h1 class="mb-3">Tours Destination</h1>
 				</div>
 			</div>
@@ -27,11 +26,10 @@
 
 					<?php foreach($results as $result) : ?>
 					<div class="col-md-6 col-lg-6 mb-4 ftco-animate">
-						<a href="<?php echo site_url('tours/'.$result->tour_id);?>" class="block-5" style="background-image: url('<?php echo base_url().'assets/images/tours/'.$result->photo_id; ?>');">
+						<a href="<?php echo base_url() . 'tours/'.$result->tour_id ;?>" class="block-5" style="background-image: url('<?php echo base_url().'assets/images/tours/'.$result->photo_id; ?>');">
 							<div class="text">
-								<span class="price">$
-									<?php echo $result->price; ?></span>
-								<h3 class="heading">Tour in
+								
+								<h3 class="heading">
 									<?php echo $result->name; ?>
 								</h3>
 								<div class="post-meta">
@@ -63,6 +61,11 @@
 								<?php for($i = 0; $i < $total_pagination ; $i++) : ?>
 								<li <?php if(current_url()==base_url().'tours-list/'.$i*10) { $last = ($i+1)*10;  echo 'class="active"'; } ?>><span><a href="<?php echo base_url(); ?>tours-list/<?php echo $i*10; ?>"
 										 data-ci-pagination-page="1">
+					  <?php if( $i > $total_pagination - 1 ) :?>
+					  <?php $last = 0; ?>
+					 
+						<?php endif;?>
+								
                       <?php echo $i+1; $last ?></a></span></li>
                 <?php endfor; ?>
                 
@@ -100,16 +103,18 @@
 													 ) echo 'selected' ; } ?> >Culture</option>
 													<option value="family" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type=='family'
 													 ) echo 'selected' ; } ?> >Family</option>
-													<option value="classical beach" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type=='classical%20beach'
+													<option value="beach" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type=='beach'
 													 ) echo 'selected' ; } ?> >Classical Beach</option>
-													<option value="echo" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type=='eco' )
+													<option value="eco" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type=='eco' )
 													 echo 'selected' ; } ?> >Eco</option>
-													<option value="advanture" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type=='adventure'
+													<option value="adventure" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type=='adventure'
 													 ) echo 'selected' ; } ?>>Adventure</option>
 													<option value="active" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type=='active'
 													 ) echo 'selected' ; } ?> >Active</option>		
-													<option value="ramayana" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type=='remayana'
+													<option value="ramayana" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type=='ramayana'
 													 ) echo 'selected' ; } ?> >Ramayana</option>
+													 <option value="luxury" class="form-control-option-white" <?php if(isset($tour_type)){ if($tour_type=='luxury'
+													 ) echo 'selected' ; } ?> >Luxury</option>
 												</select>
 											</div>
 									<div class="select-wrap col-sm-12 group mb-3">
@@ -162,6 +167,7 @@
 						<a href="<?php echo base_url(); ?>search-tours/adventure" <?php if(current_url() == base_url().'search-tours/adventure') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Adventure</a>
 						<a href="<?php echo base_url(); ?>search-tours/active" <?php if(current_url() == base_url().'search-tours/active') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Active</a>
 						<a href="<?php echo base_url(); ?>search-tours/ramayana" <?php if(current_url() == base_url().'search-tours/ramayana') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Ramayana</a>
+						<a href="<?php echo base_url(); ?>search-tours/luxury" <?php if(current_url() == base_url().'search-tours/luxury') echo "style='background-color:#000000; color:#ffffff;'"?> class="tag-cloud-link">Luxury</a>
 					</div>
 				</div>
 

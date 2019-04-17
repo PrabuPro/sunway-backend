@@ -3,14 +3,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class PageController extends CI_Controller{
     public function index(){
-        $data['site_view'] = 'Home';
+        $data['site_view'] = 'home';
         $data['site_title'] = 'Home';
         $data['recommended_hotels'] = $this->hotel_model->getRecommendedHotels(5);
         $data['suggestions'] = $this->tour_model->suggestions(5);
         $this->load->view('main/main_view', $data);
     }
     public function home(){
-        $data['site_view'] = 'Home';
+        $data['site_view'] = 'home';
         $data['site_title'] = 'Home';
         $data['suggestions'] = $this->tour_model->suggestions(5);
         $this->load->view('main/main_view', $data);
@@ -21,28 +21,28 @@ class PageController extends CI_Controller{
         $this->load->view('main/main_view', $data);
     }
     public function aboutUs(){
-        $data['site_view'] = 'AboutUs';
+        $data['site_view'] = 'aboutUs';
         $data['site_title'] = 'About Us';
         $this->load->view('main/main_view', $data);
     }
     public function maldives(){
-        $data['site_view'] = 'Maldives';
+        $data['site_view'] = 'maldives';
         $data['site_title'] = 'Maldives';
         $this->load->view('main/main_view', $data);
     }
     public function holidays(){
-        $data['site_view'] = 'Holidays';
+        $data['site_view'] = 'holidays';
         $data['site_title'] = 'Holidays';
         $this->load->view('main/main_view', $data);
     }
     public function contacts(){
-        $data['site_view'] = 'Contacts';
+        $data['site_view'] = 'contacts';
         $data['site_title'] = 'Contacts';
         $this->load->view('main/main_view', $data);
     }
 
     public function tailormade(){
-        $data['site_view'] = 'Tailormade';
+        $data['site_view'] = 'tailormade';
         $data['site_title'] = 'Tailormade';
         $data['suggestions'] = $this->tour_model->suggestions(2);
         $this->load->view('main/main_view', $data);
@@ -71,7 +71,7 @@ class PageController extends CI_Controller{
     }
 
     public function notFound(){
-        $data['site_view'] = 'NotFound';
+        $data['site_view'] = 'notFound';
         $data['site_title'] = 'Sunway Holidays - Page Not Found';
         $this->load->view('main/main_view', $data);
     }

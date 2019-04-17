@@ -1,3 +1,38 @@
+<?php
+function getUserIpAddr(){
+    if(!empty($_SERVER['HTTP_CLIENT_IP'])){
+        //ip from share internet
+        $ip = $_SERVER['HTTP_CLIENT_IP'];
+    }elseif(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
+        //ip pass from proxy
+        $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    }else{
+        $ip = $_SERVER['REMOTE_ADDR'];
+    }
+    return $ip;
+}
+
+echo 'User Real IP - '.getUserIpAddr();
+$IPaddress=getUserIpAddr(); 
+$two_letter_country_code=iptocountry($IPaddress);
+
+echo $two_letter_country_code;
+
+
+function iptocountry($ip) {    
+    $numbers = preg_split( "/\./", $ip);    
+    require("ip_files/".$numbers[0].".php");
+    $code=($numbers[0] * 16777216) + ($numbers[1] * 65536) + ($numbers[2] * 256) + ($numbers[3]);    
+    foreach($ranges as $key => $value){
+        if($key<=$code){
+            if($ranges[$key][0]>=$code){$two_letter_country_code=$ranges[$key][1];break;}
+            }
+    }
+    if ($two_letter_country_code==""){$two_letter_country_code="unkown";}
+    return $two_letter_country_code;
+}
+?>
+
 <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
 <META http-equiv='Content-Type' content='text/html; charset=UTF-8'>
 <style>
@@ -141,19 +176,19 @@
 	<div class="row">
 		<div class="col-lg-3">
 
-			<div class="card"
+			<div class="card mt-5"
 				style="box-shadow: 0 2px 6px #777 !important; !important; margin-bottom: 20px; background-color:#67E6DC;">
 
 				<div class="card-body">
 					<h5 class="card-title external-links">
 
-						<a href="">&#10219; Why travel with us</a>
+						<a href="<?php echo base_url();?>about-us/#whysunway">&#10219; Why travel with us</a>
 					</h5>
 					<h5 class="card-title external-links">
-						<a href="">&#10219; How to book your tour</a>
+						<a href="<?php echo base_url();?>how-it-works">&#10219; How to book your tour</a>
 					</h5>
 					<h5 class="card-title external-links">
-						<a href="">&#10219; FAQ</a>
+						<a href="<?php echo base_url();?>how-it-works">&#10219; FAQ</a>
 					</h5>
 
 				</div>
@@ -222,7 +257,7 @@
 
 		<div class="col-lg-9">
 
-			<h1 class="mb-3" style="font-size:50px; font-weigh:800 !important;">
+			<h1 class="mb-3 mt-5" style="font-size:50px; font-weigh:800 !important;">
 				<?php echo ucwords($results->name); ?>
 			</h1>
 
@@ -230,25 +265,25 @@
 				style="display:flex; justify-content:flex-end; align-items:flex-end; width:100%; margin-bottom:50px; height:30em; background-size:cover; background-image: url('<?php echo base_url().'assets/images/tours/'.$results->photo_id; ?>');">
 
 
-				<div class="col-5" style="padding-bottom: 15px;">
+				<div class="col-5" style="padding-bottom: 15px; <?php echo ($two_letter_country_code == 'LK') ? 'display:none;' : ' ';?>" >
 					<div class="card tab-card"
 						style="float:right !important; border: none; box-shadow: 0 2px 6px #000000 !important;">
 						<div class="card-header tab-card-header" style="background-color:#ffc600;">
 							<ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
-								<li class="nav-item">
+								<li class="nav-item" style="<?php echo (isset($prices[0]->hotel_type)) ? '' : 'display:none;' ?>">
 									<a style="font-weight:600 !important; text-transform: uppercase;"
 										class="nav-link active show" id="one-tab" data-toggle="tab" href="#one"
-										role="tab" aria-controls="One" aria-selected="true">3 Star</a>
+										role="tab" aria-controls="One" aria-selected="true"><?php echo $prices[0]->hotel_type;?> Star</a>
 								</li>
-								<li class="nav-item">
+								<li class="nav-item" style="<?php echo (isset($prices[1]->hotel_type) ) ? '' : 'display:none;' ?>">
 									<a style="font-weight:600 !important; text-transform: uppercase;" class="nav-link"
 										id="two-tab" data-toggle="tab" href="#two" role="tab" aria-controls="Two"
-										aria-selected="false">4 Star</a>
+										aria-selected="false"><?php echo $prices[1]->hotel_type;?> Star</a>
 								</li>
-								<li class="nav-item">
+								<li class="nav-item"  style="<?php echo (isset($prices[2]->hotel_type) ) ? '' : 'display:none;' ?>">
 									<a style="font-weight:600 !important; text-transform: uppercase;" class="nav-link"
 										id="three-tab" data-toggle="tab" href="#three" role="tab" aria-controls="Three"
-										aria-selected="false">5 Star</a>
+										aria-selected="false"><?php echo $prices[2]->hotel_type;?> Star</a>
 								</li>
 							</ul>
 						</div>
@@ -256,7 +291,7 @@
 						<div class="tab-content" id="myTabContent"
 							style="border-bottom: 5px solid #ffc600; border-left: 5px solid #ffc600; border-right: 5px solid #ffc600; border-bottom-left-radius: 5px !important;border-bottom-right-radius: 5px !important;">
 							<div class="tab-pane fade show active p-3" id="one" role="tabpanel"
-								aria-labelledby="one-tab">
+								aria-labelledby="one-tab" style="<?php echo (isset($prices[0]->hotel_type) ) ? '' : 'display:none;' ?>">
 								<h5 class="card-title"
 									style="text-align:center; font-family: 'Kaushan Script', cursive; font-size:28px;">
 									Tour Price :
@@ -265,7 +300,7 @@
 								<p class="card-text"></p>
 
 							</div>
-							<div class="tab-pane fade p-3" id="two" role="tabpanel" aria-labelledby="two-tab">
+							<div class="tab-pane fade p-3" id="two" role="tabpanel" aria-labelledby="two-tab" style="<?php echo (isset($prices[1]->hotel_type) ) ? '' : 'display:none;' ?>">
 								<h5 class="card-title"
 									style="text-align:center; font-family: 'Kaushan Script', cursive; font-size:28px;">
 									Tour Price :
@@ -274,7 +309,7 @@
 								<p class="card-text"></p>
 
 							</div>
-							<div class="tab-pane fade p-3" id="three" role="tabpanel" aria-labelledby="three-tab">
+							<div class="tab-pane fade p-3" id="three" role="tabpanel" aria-labelledby="three-tab" style="<?php echo (isset($prices[2]->hotel_type)) ? '' : 'display:none;' ?>">
 								<h5 class="card-title"
 									style="text-align:center; font-family: 'Kaushan Script', cursive; font-size:28px;">
 									Tour Price :
@@ -324,7 +359,7 @@
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" id="inquiry-tab" data-toggle="tab" href="#inquire" role="tab"
-									aria-controls="contact" aria-selected="false">Inquiry</a>
+									aria-controls="contact" aria-selected="false">Book Now</a>
 							</li>
 						</ul>
 
@@ -355,7 +390,7 @@
 													
 												</li>
 												<li class="tours-itinerary-item-details" style="margin-left:0px; font-size:18px;">
-													<?php echo $hightlights->highlights; ?>
+													<?php echo str_replace(array('.'), '' , $hightlights->highlights); ?>
 												</li>
 											</div>
 											<?php endforeach; ?>
@@ -372,7 +407,7 @@
 														class="tours-itinerary-icon" alt="">
 												</li>
 												<li class="tours-itinerary-item-details" style="margin-left:0px; font-size:18px;">
-													<?php echo $option->options; ?>
+													<?php echo str_replace(array('.'), '' , $option->options); ?>
 												</li>
 											</div>
 											<?php endforeach; ?>
@@ -430,7 +465,7 @@
 													
 												</li>
 												<li class="tours-itinerary-item-details" style="margin-left:0px; font-size:18px;">
-													<?php echo $include->includes; ?>
+													<?php echo str_replace(array('.'), '' , $include->includes); ?>
 												</li>
 											</div>
 											<?php endforeach; ?>
@@ -454,7 +489,7 @@
 													
 												</li>
 												<li class="tours-itinerary-item-details" style="margin-left:0px; font-size:18px;">
-													<?php echo $exclude->excludes; ?>
+													<?php echo str_replace(array('.'), '' , $exclude->excludes); ?>
 												</li>
 											</div>
 											<?php endforeach; ?>
@@ -475,7 +510,7 @@
 														class="tours-itinerary-icon" alt="">
 												</li>
 												<li class="tours-itinerary-item-details" style="margin-left:0px; font-size:18px;">
-													<?php echo $option->options; ?>
+													<?php echo str_replace(array('.'), '' , $option->options); ?>
 												</li>
 											</div>
 											<?php endforeach; ?>
@@ -629,7 +664,7 @@
 										name="tour_type-item" />
 
 									<div class="g-recaptcha" style="margin-bottom: 20px;"
-										data-sitekey="6Le8HJEUAAAAAHg1eHa0e7U5Fw3O9djmgn9agkvc"></div>
+										data-sitekey="6LemjJwUAAAAAPc8tk1lLITLs2K6iMcdpJXUISw6"></div>
 									<div class="row">
 										<div class="col-md-10">
 											<div class="form-group">
@@ -664,8 +699,6 @@
 					<a href="<?php echo site_url('tours/'.$suggestion->tour_id);?>" class="block-5"
 						style="background-image: url('<?php echo base_url().'assets/images/tours/'.$suggestion->photo_id; ?>');">
 						<div class="text">
-							<span class="price">$
-								<?php echo $suggestion->price; ?></span>
 							<h3 class="heading">
 								<?php echo $suggestion->name; ?>
 							</h3>
@@ -686,6 +719,8 @@
 		</div>
 	</div>
 </div>
+
+
 
 
 

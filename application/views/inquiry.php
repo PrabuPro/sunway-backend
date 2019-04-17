@@ -208,12 +208,11 @@
 	</style>
 
 
-	<div class="jumbotron jumbotron-fluid" style="height: 400px; background-image: linear-gradient(to right bottom, rgba(77, 79, 84, 0.3), rgba(41, 41, 41, 0.3)),url('<?php echo base_url();?>assets/images/maldives.jpeg'); background-position:middle; background-size:cover; background-repeat: no-repeat;">
+	<div class="jumbotron jumbotron-fluid" style="height: 400px; background-image: linear-gradient(to right bottom, rgba(77, 79, 84, 0.3), rgba(41, 41, 41, 0.3)),url('<?php echo base_url();?>assets/images/tailor-made.jpg'); background-position:bottom; background-size:cover; background-repeat: no-repeat;">
 		<div class="container">
-			<a href="<?php echo base_url(); ?>home"><img src="<?php echo base_url();?>/assets/images/logo.jpg" alt="" style="height:100px; width:200px;"></a>
-			<h1 class="display-4" style="color:#ffffff;">Tailor Made Inquiry</h1>
-			<p class="lead" style="color:#ffffff;">This is a modified jumbotron that occupies the entire horizontal space of its
-				parent.</p>
+			<a href="<?php echo base_url(); ?>home"><img src="<?php echo base_url();?>/assets/images/logo_main.jpg" alt="" style="height:100px; width:200px;"></a>
+			<h1 class="display-4" style="color:#ffffff; margin-top:40px;">Tailor Made Inquiry</h1>
+			
 		</div>
 	</div>
 
@@ -614,7 +613,7 @@
 												<div class="input-group">
 													<input id="phone" name="phone" type="tel" class="form-control" required>
 												</div>
-												<p class="description">If you share your contact number, our local travel consult could contact you at a
+												<p class="description">If you share your contact number, our destination specialist could contact you at a
 													time
 													convenient for you, to further discuss your holiday plans, and provide first-hand information and travel
 													tips to Sri

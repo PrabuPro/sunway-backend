@@ -36,7 +36,7 @@
 					<figure class="avatar">
 						<img src="<?php echo base_url();?>/assets/images/logo.jpg">
 					</figure>
-					<form action="adminsunway/login" method="post" class="form">
+					<form action="adminSunway/login" method="post" class="form">
 						<div class="field">
 							<div class="control">
 								<input class="input is-large" name="username" type="text" placeholder="Your Name" autofocus="">

@@ -94,5 +94,6 @@ $route['inquirycontroller/inquire'] = 'inquirycontroller/inquire';
 $route['blog'] = 'blogcontroller/blog';
 $route['blog/title1'] = 'blogcontroller/title1';
 $route['reviews'] = 'pagecontroller/review';
+$route['login'] = 'adminsunway/login';
 
 
