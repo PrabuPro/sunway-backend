@@ -66,11 +66,11 @@
 					 
 						<?php endif;?>
 								
-                      <?php echo $i+1; $last ?></a></span></li>
+                      <?php echo $i+1; ?></a></span></li>
                 <?php endfor; ?>
                 
 								<?php if($total_pagination > 1) : ?>
-								<li><a href="<?php echo base_url(); ?>tours-list/<?php echo $last; ?>" data-ci-pagination-page="2" rel="previous">&gt;</a></li>
+								<li><a href="<?php echo base_url(); ?>tours-list/<?php echo ($last+1)*10; ?>" data-ci-pagination-page="2" rel="previous">&gt;</a></li>
 								<?php endif; ?>
 
 							</ul>

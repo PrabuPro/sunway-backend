@@ -95,5 +95,12 @@ $route['blog'] = 'blogcontroller/blog';
 $route['blog/title1'] = 'blogcontroller/title1';
 $route['reviews'] = 'pagecontroller/review';
 $route['login'] = 'adminsunway/login';
+$route['payments'] = 'paymentController/index';
+$route['news'] = 'pageController/news';
+$route['add-news'] = 'pageController/news';
+$route['payments/checkout'] = 'paymentController/payment';
+$route['payments/receipt'] = 'paymentController/receipt';
+$route['payments/tour-details'] = 'paymentController/tour_details';
+
 
 

@@ -1,23 +1,11 @@
 <?php
 function getUserIpAddr(){
-    if(!empty($_SERVER['HTTP_CLIENT_IP'])){
-        //ip from share internet
-        $ip = $_SERVER['HTTP_CLIENT_IP'];
-    }elseif(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
-        //ip pass from proxy
-        $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
-    }else{
-        $ip = $_SERVER['REMOTE_ADDR'];
-    }
+   	$ip = $_SERVER['REMOTE_ADDR'];
     return $ip;
 }
 
-echo 'User Real IP - '.getUserIpAddr();
 $IPaddress=getUserIpAddr(); 
 $two_letter_country_code=iptocountry($IPaddress);
-
-echo $two_letter_country_code;
-
 
 function iptocountry($ip) {    
     $numbers = preg_split( "/\./", $ip);    
@@ -36,6 +24,10 @@ function iptocountry($ip) {
 <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
 <META http-equiv='Content-Type' content='text/html; charset=UTF-8'>
 <style>
+
+	.top-email {
+		top:0;
+	}
 	body {
 		background-color: #F5F5F5;
 	}

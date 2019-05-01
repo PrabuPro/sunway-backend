@@ -13,6 +13,26 @@
 </section>
 <!-- END slider -->
 
+<section class="ftco-section" style='padding-top:0 !important;'>
+	<div class="container">
+		<div class="row" style="margin-top:6em; margin-bottom: 2em;">
+
+			<div class="col-md-12 col-lg-12">
+				<div class="row slider-text align-items-center">
+					<div class="col-md-12 col-sm-12 ftco-animate">
+						<h1 class="mb-3 ">Tailor Made Tours</h1>
+					</div>
+				</div>
+				<h4 class="tailorMadePage__para" style='padding-right:2em;'>
+					Looking for something else? Feel free to tell us just how you would like your dream holiday to be. Our local experts are happy to listen to you, and with careful attention to detail design your personalized holiday. Still unsure of what you like? You can also talk to them for more information, suggestions and insider travel tips.</h4>
+
+			</div>
+			
+
+		</div>
+	</div>
+</section>
+
 <section class="ftco-section">
 	<div class="container-fluid">
 		<div class="row pb-5 no-gutters">
@@ -299,68 +319,3 @@
 		</div>
 	</div>
 </div>
-
-<style>
-@media (min-width: 576px){
-	.modal-dialog {
-			max-width: 1000px;
-			margin: 1.75rem auto;
-	}
-}
-</style>
-<div class="container">
-  <h2>Modal Example</h2>
-  <!-- Trigger the modal with a button -->
-  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
-
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title" style="color:#17a2b8;">Most Recommended Tours</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        <div class="modal-body">
-					<p></p>
-					<div class="row ">
-					<?php foreach($recommended_tours as $recommended_tour) :?>
-					<div class="card" style="width: 19.2rem; margin:10px; padding:10px; background-color:#17a2b8">
-					<img class="card-img-top" src="<?php echo base_url().'assets/images/tours/'.$recommended_tour->photo_id; ?>" alt="Card image cap"
-					 style="width:100%; height:auto; overflow:hidden;">
-					<div class="card-body">
-						<h5 class="card-title">
-							<?php echo $recommended_tour->name; ?>
-						</h5>
-						<p class="card-text">
-							<?php echo $recommended_tour->description; ?>
-						</p>
-						<a href="<?php echo site_url('tours/'.$recommended_tour->tour_id);?>" class="btn btn-primary" style="margin-left:45px;">See
-							More Details</a>
-					</div>
-				</div>
-					<?php endforeach; ?>
-
-
-				</div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  
-</div>
-<script src="<?php echo base_url();?>assets/js/jquery.min.js"></script>
-
-<script>
-
-setTimeout(function () {
-	$('#myModal').modal('show');
-}, 4000);
-
-</script>

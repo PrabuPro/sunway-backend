@@ -5,6 +5,8 @@
 
       </style>
 
+      
+
     <section class="home-slider owl-carousel">
       <div class="slider-item" style="background-image: url('<?php echo base_url();?>assets/images/hbg_1.jpg');  background-size:cover;">
         <div class="overlay"></div>
@@ -51,7 +53,6 @@
                     <svg class="nav-pills__social--icon">
                         <a href="#" class="nav-pills__social--link">
                             <use xlink:href="<?php echo base_url(); ?>assets/images/sprite2.svg#icon-thumb-tack"></use>
-                        
                     </svg>Tour</a>
                 <!-- <a class="nav-link p-3" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false"><span>03</span> Car Rent</a>
                 <a class="nav-link p-3" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false"><span>04</span> Cruises</a> -->
@@ -585,6 +586,34 @@
 		</div>
 	</div>
 </section>
+
+   <section class="ftco-section bg-light">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 text-center heading-section ftco-animate">
+            <h2>News Feed</h2>
+          </div>
+        </div>
+        <div class="row ftco-animate">
+          <div class="carousel1 owl-carousel ftco-owl">
+          <?php //foreach($suggestions as $suggestion) : ?>
+          <div class="item">
+              <div class="blog-entry">
+                <a href="<?php echo base_url() .'tours/'.$suggestion->tour_id;?>" class="block-20" style="background-image: url('<?php echo base_url().'assets/images/tours/'.$suggestion->photo_id; ?>');">
+                </a>
+                <div class="text p-4">
+                  
+                  <h3 class="heading"><a href="<?php echo base_url() .'tours/'.$suggestion->tour_id;?>"><?php echo $suggestion->name; ?></a></h3>
+                
+                </div>
+              </div>
+            </div>		
+				<?php //endforeach; ?>
+          </div>
+        </div>
+      </div>
+    </section> 
+
 
     <!-- <div class="ftco-section">
       <div class="container-flex">

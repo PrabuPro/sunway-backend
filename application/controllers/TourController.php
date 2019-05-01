@@ -31,7 +31,8 @@ class TourController extends CI_Controller{
         $this->load->view('main/main_view', $data);
     }
 
-    public function getTours(){
+    public function 
+    s(){
 
        $config = array();
        $config["base_url"] = base_url() . "tours";

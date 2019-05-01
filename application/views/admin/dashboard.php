@@ -32,6 +32,9 @@
 				<a class="navbar-item" href="admin.html">
 					Add Transport
 				</a>
+				<a class="navbar-item" href="<?php echo site_url('add-news');?>">
+					Add News
+				</a>
 			</div>
 			<div class="navbar-end">
 				<p class="has-text-grey">

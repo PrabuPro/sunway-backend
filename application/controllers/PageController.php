@@ -82,6 +82,12 @@ class PageController extends CI_Controller{
         $this->load->view('main/main_view', $data);
     }
 
+    public function news(){
+        $data['site_view'] = 'news';
+        $data['site_title'] = 'Sunway Holidays - News';
+        $this->load->view('main/main_view', $data);
+    }
+
 }
 
 ?>

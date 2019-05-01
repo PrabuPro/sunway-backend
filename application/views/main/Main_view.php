@@ -28,6 +28,95 @@
   </head>
   <body>
 
+     <!-- <div class="ftco-section">
+      <div class="container">
+        <div class="row ">
+          <div class="col-md-12 col-lg-12 text-center heading-section ftco-animate">
+           
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <style>
+        .top-email{
+            width:100%;
+            height: 30px;
+            background-color: #303040;
+            display:flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items:center;
+            position:fixed;
+            z-index:1000;
+            
+        }
+
+         @media (max-width: 438px) {
+            .top-email {
+              flex-direction: column;
+              height: 60px;
+              justify-content: flex-end;
+              align-items:flex-end;
+            } }
+
+        .top-email p{
+            margin: 0;
+        }
+
+        .top-col{
+            display: flex;
+            flex-direction:row;
+            justify-content: flex-start;
+            align-items:center;
+            padding: 0 10px;
+            transition: all .2s;
+
+        }
+
+          @media (max-width: 438px) {
+            .top-col {
+                margin-right: 20px;
+            } }
+
+        .top-col:hover{
+            background-color:#26ae60;
+        }
+        .top-icon{
+            width: 25px;
+            height: 25px;
+            fill: #ffffff;
+            margin: 0;
+            padding:0 10px 0 0 ;
+        }
+        @media (max-width: 438px) {
+            .top-icon {
+              font-size: 15px; } }
+
+        .top-content{
+            color: #ffffff!important;
+            font-size: 16px !important;
+            
+        }
+  
+        
+    
+    </style>
+
+        <div class="top-email">
+         <div class="top-col">
+            <svg class="top-icon">
+              <use xlink:href="<?php echo base_url();?>assets/images/sprite.svg#icon-phone-call"></use>
+            </svg>
+            <a href="tel:+94777262824" class="top-content">+94 777 262824</a>
+         </div>
+         <div class="top-col" style="margin-right: 20px;">
+            <svg class="top-icon">
+              <use xlink:href="<?php echo base_url();?>assets/images/sprite.svg#icon-paper-plane"></use>
+            </svg>
+            <a href="mailto:info@sunwayholidays.lk" class="top-content">info@sunwayholidays.lk</a>
+         </div>
+        </div>
   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
         <div class="container">
             <a class="navbar-brand" href="<?php echo base_url();?>home"><img src="<?php echo base_url();?>/assets/images/logo_main.jpg" alt="" class="navbar-logo"></a>
@@ -95,8 +184,8 @@
                         <h2 class="ftco-heading-2">Contact Information</h2>
                         <ul class="list-unstyled">
                             <li><a href="#" class="py-2 d-block">Sunway House, No 25, Kimbulapitiya Road, Negombo.</a></li>
-                            <li><a href="#" class="py-2 d-block">+94 777 262824</a></li>
-                            <li><a href="#" class="py-2 d-block">info@sunwayholidays.lk</a></li>
+                            <li><a href="tel:+94777262824" class="py-2 d-block">+94 777 262824</a></li>
+                            <li><a href="mailto:info@sunwayholidays.lk" class="py-2 d-block">info@sunwayholidays.lk</a></li>
                         </ul>
                     </div>
                 </div>
