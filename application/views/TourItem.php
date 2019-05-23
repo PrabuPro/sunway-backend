@@ -9,7 +9,7 @@ $two_letter_country_code=iptocountry($IPaddress);
 
 function iptocountry($ip) {    
     $numbers = preg_split( "/\./", $ip);    
-    require("ip_files/".$numbers[0].".php");
+    // require("ip_files/".$numbers[0].".php");
     $code=($numbers[0] * 16777216) + ($numbers[1] * 65536) + ($numbers[2] * 256) + ($numbers[3]);    
     foreach($ranges as $key => $value){
         if($key<=$code){
@@ -255,8 +255,6 @@ function iptocountry($ip) {
 
 			<div class="tour_item-image"
 				style="display:flex; justify-content:flex-end; align-items:flex-end; width:100%; margin-bottom:50px; height:30em; background-size:cover; background-image: url('<?php echo base_url().'assets/images/tours/'.$results->photo_id; ?>');">
-
-
 				<div class="col-5" style="padding-bottom: 15px; <?php echo ($two_letter_country_code == 'LK') ? 'display:none;' : ' ';?>" >
 					<div class="card tab-card"
 						style="float:right !important; border: none; box-shadow: 0 2px 6px #000000 !important;">
@@ -308,9 +306,7 @@ function iptocountry($ip) {
 									<?php echo (isset($prices[2]->price) ? '$'.$prices[2]->price.'/-' : 'Unavailable');?>
 								</h5>
 								<p class="card-text"></p>
-
 							</div>
-
 						</div>
 					</div>
 				</div>
@@ -327,11 +323,7 @@ function iptocountry($ip) {
 						<?php echo $results->introduction;?>
 					</h3><br>
 				</div>
-
-
 				<div class="container">
-
-
 				</div>
 				<div class="panel with-nav-tabs panel-primary" style="box-shadow: 0 2px 6px #777 !important;">
 					<div class="panel-heading">
@@ -410,6 +402,88 @@ function iptocountry($ip) {
 								</div>
 
 							</div>
+
+
+										<style>
+							.hotels{
+								color:#684967;
+								font-size: 1.2rem;
+								font-weight: 900;
+								width:100px;
+								height: 50px;
+								padding: 8px 15px 2px 10px;
+								-webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 49%, 75% 100%, 0% 100%);
+								clip-path: polygon(0% 0%, 75% 0%, 100% 49%, 75% 100%, 0% 100%);
+								margin-bottom:10px;
+								
+
+							}
+
+							.hotelItinerary{
+								display:flex;
+								flex-direction: row;
+								justify-content:start;
+								align-items:center;
+								margin-left:35px;	
+								position: relative;
+								top: -25px;	
+							}
+
+							p {
+								margin: 0 !important;
+							}
+
+							.hotel-star{
+								display:flex;
+								flex-direction:row;
+								align-items:center;
+								width:auto;
+								height: 40px;
+								margin:0px 15px 10px 15px;
+								color:#ffffff;
+								font-size:12px;
+								font-weight: 900;
+								padding: 0px 15px 2px 5px;
+								line-height:1;
+							}
+
+							.hotel-star-number{
+								background-color: #f1c40f;
+								min-width:30px;
+								height:30px;
+								color:#000000;
+								-webkit-clip-path: polygon(50% 6%, 61% 35%, 93% 37%, 68% 57%, 75% 86%, 50% 70%, 23% 85%, 32% 57%, 7% 35%, 39% 35%);
+								clip-path: polygon(50% 6%, 61% 35%, 93% 37%, 68% 57%, 75% 86%, 50% 70%, 23% 85%, 32% 57%, 7% 35%, 39% 35%);
+							}
+							
+							.hotel-star-number p {
+								    margin-left: 11px !important;
+									margin-top: 10px !important;
+									font-size: 11px;
+									font-weight:600;
+							}
+
+							.hotel-type{
+								background-color: #f1c40f;
+								height:16px;
+								width:auto;
+								margin:0px 15px 0 15px;
+								font-size: .8rem;
+								border-top-left-radius: 5px;
+								border-top-right-radius: 5px;
+
+								
+							}
+
+							.hotel-type p {
+								line-height:1;
+								margin: auto;
+								text-align:center;
+								padding-top:2px;
+								font-weight: 700;
+							}
+							
+							</style>
 							<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"
 								style="width:80%; margin:auto;">
 
@@ -418,6 +492,9 @@ function iptocountry($ip) {
 										<h1 class="mb-3">Things You Can Do</h1>
 										<ul class="tours-itinerary">
 
+
+											<?php $countItinerary = count($itineraries); ?>
+											<?php $currrentItinerary = 0; ?>
 											<?php foreach($itineraries as $itinerary) : ?>
 											<li class="tours-itinerary-item"> <img
 													src="<?php echo base_url(); ?>assets/images/checkmark.png"
@@ -427,16 +504,32 @@ function iptocountry($ip) {
 											<li class="tours-itinerary-item-details" style="font-size:16px; margin-bottom:40px;">
 												<?php echo str_replace(chr(194)," ",$itinerary->item_details); ?>
 											</li>
+
+											<div class="hotelItinerary" style="<?php echo (++$currrentItinerary === $countItinerary) ? 'display:none' : ' '; ?>">
+												<div class="hotels" style="background-color:#f1c40f">Hotels</div>
+												
+												
+												<a href="<?php echo $itinerary->regular_url;?>" target="_blank" style="<?php echo empty($itinerary->regular) ? 'display:none' : ' '; ?>"> <div class="hotel-type"><p>Regular</p></div><div class="hotel-star" style="background-color: #684967;">
+													<div class="hotel-star-number"> <p>R</p> </div>
+												<?php echo $itinerary->regular;?></div></a>
+												<a href="<?php echo $itinerary->standard_url;?>" target="_blank" style="<?php echo empty($itinerary->standard) ? 'display:none' : ' '; ?>"><div class="hotel-type"><p>Standard</p></div> <div class="hotel-star" style="background-color: #684967;">
+													<div class="hotel-star-number"> <p>S</p> </div>
+												<?php echo $itinerary->standard;?></div></a>
+												<a href="<?php echo $itinerary->comfort_url;?>" target="_blank" style="<?php echo empty($itinerary->comfort) ? 'display:none' : ' '; ?>"><div class="hotel-type"><p>Comfort</p></div> <div class="hotel-star" style="background-color: #684967;">
+													<div class="hotel-star-number"> <p>C</p> </div>
+												<?php echo $itinerary->comfort;?></div></a>
+												<a href="<?php echo $itinerary->luxury_url;?>" target="_blank" style="<?php echo empty($itinerary->luxury) ? 'display:none' : ' '; ?>"><div class="hotel-type"><p>Luxury</p></div> <div class="hotel-star" style="background-color: #684967;">
+													<div class="hotel-star-number"> <p>L</p> </div>
+												<?php echo $itinerary->luxury;?></div></a>
+												
+											</div>
 											<?php endforeach; ?>
 										</ul>
 									</div>
 								</div>
-
-
-
-
-
 							</div>
+
+
 							<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"
 								style="width:80%; margin:auto;">
 
@@ -635,6 +728,17 @@ function iptocountry($ip) {
 												</option>
 												<option value="rent a house" class="form-control-option-white">Rent a
 													House</option>
+											</select>
+										</div>
+										<div class="select-wrap col-md-6 group mb-3">
+											<label for="hotel_type"
+												style="font-size:14px; margin-bottom:0px; color:#636363; font-weight:600;">Transport
+												Type</label>
+											<select id="hotel_type" name="hotel_type" class="form-control" required>
+												<option value="" class="form-control-option-white">Transport Type</option>
+												<option value="regular" class="form-control-option-white">Regular
+												</option>
+												<option value="luxury" class="form-control-option-white">Luxury</option>
 											</select>
 										</div>
 									</div>

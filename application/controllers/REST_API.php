@@ -2,6 +2,14 @@
 use Restserver\Libraries\REST_Controller;
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+header('Access-Control-Allow-Origin: *');
+
+if($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+	header('Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS');
+	header('Access-Control-Allow-Headers: Content-Type');
+	exit;
+}
+
 // This can be removed if you use __autoload() in config.php OR use Modular Extensions
 /** @noinspection PhpIncludeInspection */
 //To Solve File REST_Controller not found
@@ -36,11 +44,25 @@ class REST_API extends REST_Controller {
 
     public function tours_get(){
         
-        $temp = $this->tour_model->get_tours();
+        $temp = $this->tour_model->get_toursFilter(8,1);
 
-        $results = $temp;
+        foreach($temp as $row){
+            $data[$row->tour_id] = array (
+                'title' => $row->name,
+                'description' => $row->introduction,
+                'duration' => $row->duration,
+                'image' => base_url().'assets/images/tours/'.$row->photo_id
+            );
+        }
 
-        $this->set_response($results, REST_Controller::HTTP_OK);
+        if (count($data) > 0) {
+            $data['status'] = 'OK';
+            $this->response($data, REST_Controller::HTTP_OK);
+        } else {
+            $this->response(array('status' => 'NO_RECORDS'), REST_Controller::HTTP_OK);
+        }
+
+        
     }
 
 }

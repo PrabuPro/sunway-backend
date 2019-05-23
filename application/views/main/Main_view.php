@@ -1,3 +1,7 @@
+    <?php
+header("Access-Control-Allow-Origin: *");
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -25,7 +29,8 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/flaticon.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/icomoon.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css">
-  </head>
+
+</head>
   <body>
 
      <!-- <div class="ftco-section">
@@ -106,7 +111,10 @@
         <div class="top-email">
          <div class="top-col">
             <svg class="top-icon">
-              <use xlink:href="<?php echo base_url();?>assets/images/sprite.svg#icon-phone-call"></use>
+              <use xlink:href="<?php echo base_url();?>assets/images/sprite.svg#icon-whatsapp"></use>
+            </svg>
+            <svg class="top-icon">
+              <use xlink:href="<?php echo base_url();?>assets/images/sprite.svg#icon-viber"></use>
             </svg>
             <a href="tel:+94777262824" class="top-content">+94 777 262824</a>
          </div>
@@ -237,6 +245,7 @@
   <script src="<?php echo base_url();?>assets/js/google-map.js"></script>
   <script src="<?php echo base_url();?>assets/js/parallax.min.js"></script>
   <script src="<?php echo base_url();?>assets/js/main.js"></script>
+  
  
 
 </body>

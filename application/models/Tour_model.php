@@ -12,11 +12,28 @@ class Tour_model extends CI_Model{
                            ->get()
                            ->result();
         return $result;
-        // $this->db->select('tour_id,name,description, tour_type,suitable_for,photo_id');
-        // $this->db->limit($limit, $start);
-        // $tours = $this->db->get('tours');
 
-        // return $tours->result() ;
+    }
+
+    public function get_toursFilter($limit, $start){
+        $result = $this->db->select('
+                                t.tour_id,
+                                t.name,
+                                t.description, 
+                                t.tour_type,
+                                t.suitable_for,
+                                t.photo_id,
+                                t.introduction,
+                                t.duration,
+                                p.price')
+                           ->from('tours t')
+                           ->join('tour_price p', 'p.tour_id=t.tour_id', 'left')
+                           ->limit($limit, $start)
+                           ->group_by('t.tour_id')
+                           ->get()
+                           ->result();
+        return $result;
+
     }
 
     public function get_tour($tourId){
@@ -199,6 +216,7 @@ class Tour_model extends CI_Model{
         }
         return FALSE;
     }
+
     public function insert_options($id){
 
          if(isset($_POST['options_new'])){
@@ -206,7 +224,6 @@ class Tour_model extends CI_Model{
         } else if(isset($_POST['options'])){
             $options = $this->input->post("options");
         }
-        
 
         $i = 0;
 
@@ -218,7 +235,30 @@ class Tour_model extends CI_Model{
                 $i++;
             }
         }
+       if ($this->db->affected_rows() == '1')
+        {
+            return TRUE;
+        }
+        return FALSE;
+    }
 
+    public function insert_itinerary_hotel($id){
+
+        $itineraryHotelType = $this->input->post("itinerary_hotelType");
+        $itineraryHotelName = $this->input->post("itinerary_hotelName");
+        $itineraryHotelLink = $this->input->post("itinerary_hotelLink");
+         $i = 0;
+
+        if($itineraryHotelType){
+            foreach($itineraryHotelType as $row){
+                $data['tour_id'] = $id;
+                $data['hotel_type'] = htmlspecialchars($itineraryHotelType[$i]);
+                $data['hotel_name'] = htmlspecialchars($itineraryHotelName[$i]);
+                $data['hotel_url'] = htmlspecialchars($itineraryHotelLink[$i]);
+                $this->db->insert("tour_itinerary_hotel",$data);
+                $i++;
+            }
+        }
        if ($this->db->affected_rows() == '1')
         {
             return TRUE;
@@ -348,6 +388,16 @@ class Tour_model extends CI_Model{
         
         return $result;
     }
+     public function getRecommendedTours_2($number){
+        $result = $this->db->select('tour_id,name,description, tour_type,suitable_for,photo_id')
+                           ->where('ratings', $number)
+                           ->order_by('ratings', 'desc')
+                           ->limit(3)
+                           ->get('tours')
+                           ->result();
+        
+        return $result;
+    }
      public function highlights($number){
         $result = $this->db->select('highlights')
                            ->where('tour_id', $number)
@@ -384,6 +434,14 @@ class Tour_model extends CI_Model{
         $result = $this->db->select('hotel_type,price')
                            ->where('tour_id', $number)
                            ->get('tour_price')
+                           ->result();
+        
+        return $result;
+    }
+     public function hotels($number){
+        $result = $this->db->select('hotel_type,hotel_name,hotel_url')
+                           ->where('tour_id', $number)
+                           ->get('tour_itinerary_hotel')
                            ->result();
         
         return $result;
@@ -492,6 +550,16 @@ class Tour_model extends CI_Model{
 
 
     }
+    public function getHotels($tourId){
+
+        $result = $this->db->select('*')
+                           ->where('tour_id',$tourId)
+                           ->get('tour_itinerary_hotel')
+                           ->result();
+        return $result;
+
+
+    }
 
     //Update
     public function update_tours($id,$data){
@@ -509,6 +577,14 @@ class Tour_model extends CI_Model{
 
         $day = $this->input->post("day");
         $desc = $this->input->post("desc");
+        $regularName = $this->input->post('regularName');
+        $regularUrl = $this->input->post('regularLink');
+        $standardName = $this->input->post('standardName');
+        $standardUrl = $this->input->post('standardLink');
+        $comfortName = $this->input->post('comfortName');
+        $comfortUrl = $this->input->post('comfortLink');
+        $luxuryName = $this->input->post('luxuryName');
+        $luxuryUrl = $this->input->post('luxuryLink');
 
         $result = $this->db->select('itinerary_id')
                            ->where('tour_id',$id)
@@ -524,7 +600,15 @@ class Tour_model extends CI_Model{
                 'itinerary_id' => $itineraryId++,
                 'tour_id' => $id,
                 'item_number' => htmlspecialchars($day[$key]),
-                'item_details' => $this->stripScript($desc[$key])
+                'item_details' => $this->stripScript($desc[$key]),
+                'regular' => $regularName[$key],
+                'regular_url' => $regularUrl[$key],
+                'standard' => $standardName[$key],
+                'standard_url' => $standardUrl[$key],
+                'comfort' => $comfortName[$key],
+                'comfort_url' => $comfortUrl[$key],
+                'luxury' => $luxuryName[$key],
+                'luxury_url' => $luxuryUrl[$key]
             );
         }
 
@@ -686,6 +770,40 @@ class Tour_model extends CI_Model{
         }
         return FALSE;
     }
+    public function update_itineraryHotel($id){
+
+        $hotelType = $this->input->post("itinerary_hotelType");
+        $hotelName = $this->input->post("itinerary_hotelName");
+        $hotelLink = $this->input->post("itinerary_hotelLink");
+       
+        $result = $this->db->select('tour_itinerary_hotel_id')
+                           ->where('tour_id',$id)
+                           ->get('tour_itinerary_hotel')
+                           ->result();
+
+        $itineraryHotelId =  (int)(($result[0]->tour_itinerary_hotel_id));
+
+        $data = array();
+
+        foreach($hotelType as $key => $value){
+            
+            $data[] = array(
+                'tour_itinerary_hotel_id' => $itineraryHotelId++,
+                'tour_id' => $id,
+                'hotel_type' => htmlspecialchars($hotelType[$key]),
+                'hotel_name' => htmlspecialchars($hotelName[$key]),
+                'hotel_url' => htmlspecialchars($hotelLink[$key]),
+            );
+        }
+
+        $this->db->update_batch('tour_itinerary_hotel',$data,'tour_itinerary_hotel_id');
+        
+       if ($this->db->affected_rows() >= '1')
+        {
+            return TRUE;
+        }
+        return FALSE;
+    }
 
     public function stripScript($content){
 
@@ -706,6 +824,15 @@ class Tour_model extends CI_Model{
         $html = $dom->saveHTML();
 
         return str_replace(chr(194)," ",$html);
+    }
+
+    public function get_hotels($name){
+        // $name = 'a';
+        $this->db->like('hotel_name', $name, 'both');
+        $this->db->order_by('hotel_name', 'ASC');
+        $this->db->limit(10);
+        // $this->db->where('hotel_name', $name);
+        return  $this->db->get('tour_hotels')->result();       
     }
 
 }

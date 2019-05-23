@@ -150,6 +150,34 @@ $(document).ready(function () {
 
 
 	});
+	$('p#add_hotels').click(function () {
+
+		oCount += 1;
+		var html = `
+					<div class="columns is-mobile is-multiline ">
+						<div class="column select is-info is-3">
+							<select name="itinerary_hotelTypeNew[]" >
+								<option value="">Hotel Type</option>
+								<option value="R" >Reguler</option>
+								<option value="3">3 star</option>
+								<option value="4">4 star</option>
+								<option value="5">5 star</option>
+							</select>
+						</div>
+						<div class="column ">
+							<input class="column is-12 input is-info" name="itinerary_hotelNameNew[]" type="text" placeholder="Hotel Name">
+						</div>
+						<div class="column ">
+							<input class="column is-12 input is-info" name="itinerary_hotelLink[]" type="text" placeholder="Website URL">
+						</div>
+					</div>
+		
+		`;
+		$('#hotels').append(html);
+		// $('.options-counter').text(oCount);
+
+
+	});
 
 
 });

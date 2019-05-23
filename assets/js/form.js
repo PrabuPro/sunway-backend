@@ -58,8 +58,79 @@ $(document).ready(function () {
                         </div>
                         <div class="column ">
                             <textarea class="textarea is-info is-12" name="desc[]" type="text" placeholder="Description"></textarea>
+						</div>
+					</div>
+					<div class="columns is-mobile is-multiline ">
+						<div class="column select is-info is-3">
+                            <select name="itinerary_hotelType[]" required>
+                                <option value="">Hotel Type</option>
+                                <option value="R">Reguler</option>
+                                <option value="3">3 star</option>
+                                <option value="4">4 star</option>
+                                <option value="5">5 star</option>
+                            </select>
                         </div>
-                    </div>`;
+						<div class="column ">
+							<input class="column is-12 input is-info" name="itinerary_hotelName[]" type="text" placeholder="Hotel Name" value="">
+						</div>
+						<div class="column ">
+							<input class="column is-12 input is-info" name="itinerary_hotelLink[]" type="text" placeholder="Website URL" value="">
+						</div>
+					</div>
+					<div class="columns is-mobile is-multiline ">
+						<div class="column select is-info is-3">
+                            <select name="itinerary_hotelType[]" required>
+                                <option value="">Hotel Type</option>
+                                <option value="R">Reguler</option>
+                                <option value="3">3 star</option>
+                                <option value="4">4 star</option>
+                                <option value="5">5 star</option>
+                            </select>
+                        </div>
+						<div class="column ">
+							<input class="column is-12 input is-info" name="itinerary_hotelName[]" type="text" placeholder="Hotel Name" value="">
+						</div>
+						<div class="column ">
+							<input class="column is-12 input is-info" name="itinerary_hotelLink[]" type="text" placeholder="Website URL" value="">
+						</div>
+					</div>
+					<div class="columns is-mobile is-multiline ">
+						<div class="column select is-info is-3">
+                            <select name="itinerary_hotelType[]" required>
+                                <option value="">Hotel Type</option>
+                                <option value="R">Reguler</option>
+                                <option value="3">3 star</option>
+                                <option value="4">4 star</option>
+                                <option value="5">5 star</option>
+                            </select>
+                        </div>
+						<div class="column ">
+							<input class="column is-12 input is-info" name="itinerary_hotelName[]" type="text" placeholder="Hotel Name" value="">
+						</div>
+						<div class="column ">
+							<input class="column is-12 input is-info" name="itinerary_hotelLink[]" type="text" placeholder="Website URL" value="">
+						</div>
+					</div>
+					<div class="columns is-mobile is-multiline ">
+						<div class="column select is-info is-3">
+                            <select name="itinerary_hotelType[]" required>
+                                <option value="">Hotel Type</option>
+                                <option value="R">Reguler</option>
+                                <option value="3">3 star</option>
+                                <option value="4">4 star</option>
+                                <option value="5">5 star</option>
+                            </select>
+                        </div>
+						<div class="column ">
+							<input class="column is-12 input is-info" name="itinerary_hotelName[]" type="text" placeholder="Hotel Name" value="">
+						</div>
+						<div class="column ">
+							<input class="column is-12 input is-info" name="itinerary_hotelLink[]" type="text" placeholder="Website URL" value="">
+						</div>
+					</div>
+					
+					`
+                    ;
 		$('#description').append(html);
 		$('.itinerary-counter').text(count);
 

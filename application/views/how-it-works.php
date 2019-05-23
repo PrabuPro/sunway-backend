@@ -388,7 +388,7 @@
             <div class="media block-6 services d-block text-center">
               <div class="d-flex justify-content-center"><div class="icon d-flex justify-content-center mb-3"><span class="align-self-center"><img src="assets/images/trust.png" alt=""></span></div></div>
               <div class="media-body p-2">
-                <h3 class="heading">Stability & Trust: Established in 1992</h3>
+                <h3 class="heading">Stability & Trust: Established in 1992, more than 27 years</h3>
               </div>
             </div>    
           </div>         

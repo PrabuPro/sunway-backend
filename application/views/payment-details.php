@@ -20,6 +20,40 @@
  .input-block{
 	 margin-bottom: 10px;
  }
+
+ .payment-methodes{
+	 display: flex;
+	 flex-direction: row;
+	 justify-content: center;
+	 align-items:center;
+	 margin-bottom:0;
+	 /* align-content:center; */
+
+ }
+ 
+ .payment-card-image{
+	 width: 50px;
+	 height: 50px;
+	 margin-left: 20px;
+ }
+
+ .radio-input{
+	 width: 15px;
+	 height: 15px;
+ }
+
+ .payment-row{
+	 display: flex;
+	 flex-direction: column;
+ }
+
+ .dropdown-toggle, .dropdown-menu { width: 300px }
+.btn-group img { margin-right: 10px }
+.dropdown-toggle { padding-right: 50px }
+.dropdown-toggle .glyphicon { margin-left: 20px; margin-right: -40px }
+.dropdown-menu>li>a:hover { background: #f1f9fd } /* $search-blue */
+.dropdown-header { background: #ccc; font-size: 14px; font-weight: 700; padding-top: 5px; padding-bottom: 5px; margin-top: 10px; margin-bottom: 5px }
+ 
  
  </style>
 
@@ -46,31 +80,80 @@
 									<input type="text" name="last_name" class="form-control mb-2 mt-2" placeholder="Last name" required>
 								</div>
 								<div class="col-xs-12 col-lg-8 pl-ziro input-block">
-									<input type="text" class="form-control" placeholder="Email Address" required />
+									<input type="text" name="email" class="form-control" placeholder="Email Address" required />
 								</div>
 								<div class="col-xs-12 col-lg-6 pl-ziro input-block">
-									<input type="text" class="form-control" placeholder="Contact Number" required />
+									<input type="text" name="contact_number" class="form-control" placeholder="Contact Number" required />
 								</div>
 							</div>
 							<label for="cardNumber">
                             Address</label>
 							<div class="row">
 								<div class="col-xs-12 col-lg-6 pl-ziro input-block">
-									<input type="text" class="form-control" placeholder="Address line 1" required />
+									<input type="text" name="address_line_one" class="form-control" placeholder="Address line 1" required />
 								</div>
 								<div class="col-xs-12 col-lg-6 pl-ziro input-block">
-									<input type="text" class="form-control" placeholder="City" required />
+									<input type="text" name="city" class="form-control" placeholder="City" required />
 								</div>
 								<div class="col-xs-12 col-lg-6 pl-ziro input-block">
-									<input type="text" class="form-control" placeholder="State" required />
+									<input type="text" name="state" class="form-control" placeholder="State" required />
 								</div>
 								<div class="col-xs-12 col-lg-6 pl-ziro input-block">
-									<input type="text" class="form-control" placeholder="Postal Code" required />
+									<input type="text" name="postal_code" class="form-control" placeholder="Postal Code" required />
 								</div>
 								<div class="col-xs-12 col-lg-6 pl-ziro input-block">
-									<input type="text" class="form-control" placeholder="Country" required />
+									<input type="text"  name="country" class="form-control" placeholder="Country" required />
 								</div>
   							</div>
+							<label for="cardNumber">
+                            Payment Method</label>
+							<div class="btn-group">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <img src="http://lorempixel.com/75/50/abstract/">
+      0123 4567 8912 3456
+      <span class="glyphicon glyphicon-chevron-down"></span>
+    </button>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="#" title="Select this card"><img src="http://lorempixel.com/75/50/abstract/3">0123 4567 8912 3456</a>
+      </li>
+      <li>
+        <a href="#" title="Select this card"><img src="http://lorempixel.com/75/50/abstract/2">0123 4567 8912 3456</a>
+      </li>
+      <li>
+        <a href="#" title="Select this card"><img src="http://lorempixel.com/75/50/abstract/1">0123 4567 8912 3456</a>
+      </li>
+    </ul>
+  </div>
+
+  <select title="Select your surfboard" class="selectpicker">
+  <option>Select...</option>
+  <option data-thumbnail="<?php echo base_url();?>assets/images/visa.png">Chrome</option>
+  <option data-thumbnail="images/icon-firefox.png">Firefox</option>
+  <option data-thumbnail="images/icon-ie.png">IE</option>
+  <option data-thumbnail="images/icon-opera.png">Opera</option>
+  <option data-thumbnail="images/icon-safari.png">Safari</option>
+</select>
+							<!-- <div class="row payment-row">
+								<div class="col-xs-6 col-lg-2 input-block payment-methodes">
+									<input name="payment_gateway_id" type="radio" class="form-control radio-input" id="payment-card-1" placeholder="" required />
+									<label for="payment-card-1">
+ 										<img src="<?php echo base_url();?>assets/images/visa.png" class="payment-card-image" alt="">
+									</label>
+								</div>
+								<div class="col-xs-6 col-lg-2 input-block payment-methodes">
+									<input type="radio" name="payment_gateway_id" class="form-control radio-input" id="payment-card-2" placeholder="" required />
+									<label for="payment-card-2">
+ 										<img src="<?php echo base_url();?>assets/images/master.png" class="payment-card-image" alt="">
+									</label>
+								</div>
+								<div class="col-xs-6 col-lg-2 input-block payment-methodes">
+									<input type="radio" name="payment_gateway_id" class="form-control radio-input" id="payment-card-3" placeholder="" required />
+									<label for="payment-card-3">
+ 										<img src="<?php echo base_url();?>assets/images/amex.png" class="payment-card-image" alt="">
+									</label>
+								</div>
+  							</div> -->
 							<label for="cardNumber">
                             Amount</label>
 							<div class="row">
@@ -78,20 +161,11 @@
 									<input type="text" class="form-control" placeholder="" required />
 								</div>
   							</div>
-                        <div class="input-group">
-                            <input type="text" class="form-control" id="cardNumber" placeholder="Valid Card Number"
-                                required autofocus />
-                            <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-                        </div>
                     </div>
                     
                     </form>
                 </div>
             </div>
-            <ul class="nav nav-pills nav-stacked">
-                <li class="active"><a href="#"><span class="badge pull-right"><span class="glyphicon glyphicon-usd"></span>4200</span> Final Payment</a>
-                </li>
-            </ul>
             <br/>
             <a href="http://www.jquery2dotnet.com" class="btn btn-success btn-lg btn-block" role="button">Pay</a>
         </div>

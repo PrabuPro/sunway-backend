@@ -76,8 +76,8 @@ body {
 <div class="vertical-container background" id="main">
   <div class="vertical-body">
     <div class="container">
-      <h2 class="title">Comming Soon</h2>
-      <p>Sunway Holidays official website</p>
+      <h2 class="title">Tours</h2>
+      <p>Comming soon</p>
     </div>
   </div>
 </div>

@@ -2,11 +2,13 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class PageController extends CI_Controller{
+
     public function index(){
         $data['site_view'] = 'home';
         $data['site_title'] = 'Home';
         $data['recommended_hotels'] = $this->hotel_model->getRecommendedHotels(5);
         $data['suggestions'] = $this->tour_model->suggestions(5);
+        
         $this->load->view('main/main_view', $data);
     }
     public function home(){
@@ -86,6 +88,10 @@ class PageController extends CI_Controller{
         $data['site_view'] = 'news';
         $data['site_title'] = 'Sunway Holidays - News';
         $this->load->view('main/main_view', $data);
+    }
+
+    public function comming(){
+        $this->load->view('commingSoon');
     }
 
 }

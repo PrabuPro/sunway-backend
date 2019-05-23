@@ -26,8 +26,7 @@
 					</div>
 				</div>
 				<h4 class="tailorMadePage__para" style='padding-right:2em;'>
-					Looking for something else? Feel free to tell us just how you would like your dream holiday to be. Our local experts are happy to listen to you, and with careful attention to detail design your personalized holiday. Still unsure of what you like? You can also talk to them for more information, suggestions and insider travel tips.</h4>
-
+					Want to design your own tour? Feel free to tell us how you would like your dream holiday to be. Our local experts are happy to hear from you, with careful attention to detail our travel consultant will design your customize holiday trip to Sri Lanka. Still Have doubts? You can also talk to them for further information, suggestions and insider travel tips. 
 			</div>
 			<div class="col-md-6 tailorMadePage__image" style="background-image: url('<?php echo base_url();?>assets/images/tailor-made-2.jpg');">
 

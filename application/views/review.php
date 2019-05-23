@@ -34,26 +34,25 @@
 	<div class="row">
 		<div class="well">
 			<div class="list-group mt-5 mb-5">
-				
-				<div class="list-group-item review_item">
-					<div class="col-md-12">
+				<div class="list-group-item review_item col-md-4 col-ls-4">
+					<div class="">
 						<h4 class="list-group-item-heading"> Mrs. Meril Schulmap & Mrs. Laura Flynn </h4>
 						<p class="list-group-item-text"> Excellent. Everything we wanted to see!
 						</p>
 					</div>
-					<div class="col-md-12  bottom-review">
+					<div class="bottom-review">
 						
 						<h5><small> from </small>  </h5>
 						<h6> &nbsp; @ 09.03.2019 </h6>
 					</div>
 				</div>
-				<div class="list-group-item review_item">
-					<div class="col-md-12">
+				<div class="list-group-item review_item col-md-4 col-ls-4">
+					<div class="">
 						<h4 class="list-group-item-heading"> Ms. Gail Haughton </h4>
 						<p class="list-group-item-text"> Our guide, on behalf of Sunway Holidays was great, he added so much to our experience. The itinerary planned was good but maybe an overnight stop at Ella after train ride would be good. All hotel recommendations were fine. Wonderful Trip. Saw so many things on the very full itinerary. Excellent value. Had a great tour while covering so much of your beautiful country. He went to the extra mile to make our trip memorable. . 
 						</p>
 					</div>
-					<div class="col-md-12  bottom-review">
+					<div class="bottom-review">
 						
 						<h5><small> from </small> UK </h5>
 						<h6> &nbsp; @ 15.03.2019 </h6>

@@ -101,6 +101,9 @@ $route['add-news'] = 'pageController/news';
 $route['payments/checkout'] = 'paymentController/payment';
 $route['payments/receipt'] = 'paymentController/receipt';
 $route['payments/tour-details'] = 'paymentController/tour_details';
-
+$route['comming'] = 'pageController/comming';
+$route['tour/acuto'] = 'pageController/comming';
+$route['tours/get'] = 'tourController/getTourHotels';
+$route['test'] = 'REST_API/tours';
 
 

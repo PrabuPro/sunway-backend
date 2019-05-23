@@ -28,6 +28,7 @@ class TourController extends CI_Controller{
         $data['site_view'] = 'tour-front';
         $data['site_title'] = 'Sunway Holidays - Tours';
         $data['recommended_tours'] = $this->tour_model->getRecommendedTours(1);
+        $data['recommended_tours_2'] = $this->tour_model->getRecommendedTours_2(2);
         $this->load->view('main/main_view', $data);
     }
 
@@ -85,6 +86,15 @@ class TourController extends CI_Controller{
         $this->form_validation->set_rules('excludes_new[]', 'Excludes', 'trim|max_length[1000]');
         $this->form_validation->set_rules('options[]', 'Options', 'trim|max_length[1000]');
         $this->form_validation->set_rules('options_new[]', 'Options', 'trim|max_length[1000]');
+        $this->form_validation->set_rules('itinerary_hotelNameRegular[]', 'Itinerary Hotel Name', 'trim|max_length[50]');
+        $this->form_validation->set_rules('itinerary_hotelLinkRegular[]', 'Itinerary Hotel Web site', 'trim|max_length[50]');
+        $this->form_validation->set_rules('itinerary_hotelNameStandard[]', 'Itinerary Hotel Name', 'trim|max_length[50]');
+        $this->form_validation->set_rules('itinerary_hotelLinkStandard[]', 'Itinerary Hotel Web site', 'trim|max_length[50]');
+        $this->form_validation->set_rules('itinerary_hotelNameComfort[]', 'Itinerary Hotel Name', 'trim|max_length[50]');
+        $this->form_validation->set_rules('itinerary_hotelLinkComfort[]', 'Itinerary Hotel Web site', 'trim|max_length[50]');
+        $this->form_validation->set_rules('itinerary_hotelNameLuxury[]', 'Itinerary Hotel Name', 'trim|max_length[50]');
+        $this->form_validation->set_rules('itinerary_hotelLinkLuxury[]', 'Itinerary Hotel Web site', 'trim|max_length[50]');
+
 
 
         if($this->form_validation->run() == FALSE){
@@ -111,8 +121,6 @@ class TourController extends CI_Controller{
                     unlink($mapFileName);
                 } 
             
-          
-
             $imageName = $imageData[0]->tour_id ;
 
             $mapName = $imageName . '1';
@@ -167,6 +175,7 @@ class TourController extends CI_Controller{
                 $updateIncludes_result = isset($_POST['includes']) ? $this->tour_model->update_includes($tourId) : TRUE ;
                 $updateExcludes_result = isset($_POST['excludes']) ? $this->tour_model->update_excludes($tourId) : TRUE ;
                 $updateOptions_result = isset($_POST['options']) ? $this->tour_model->update_options($tourId) : TRUE ;
+                // $updateOptions_result = isset($_POST['itinerary_hotelType']) ? $this->tour_model->update_itineraryHotel($tourId) : TRUE ;
 
 
                 $itinerary_result = isset($_POST['day_new']) ? $this->tour_model->insert_itinerary($tourId) : TRUE;
@@ -192,6 +201,7 @@ class TourController extends CI_Controller{
                     $data['tour_includes'] = $this->tour_model->getIncludes($tourId);
                     $data['tour_excludes'] = $this->tour_model->getExcludes($tourId);
                     $data['tour_options'] = $this->tour_model->getOptions($tourId);
+                    $data['tour_hotels'] = $this->tour_model->getHotels($tourId);
                     $this->load->view('admin/dashboard', $data);
                     
                 } else {
@@ -209,6 +219,7 @@ class TourController extends CI_Controller{
                         $data['tour_includes'] = $this->tour_model->getIncludes($tourId);
                         $data['tour_excludes'] = $this->tour_model->getExcludes($tourId);
                         $data['tour_options'] = $this->tour_model->getOptions($tourId);
+                        $data['tour_hotels'] = $this->tour_model->getHotels($tourId);
                         $this->load->view('admin/dashboard', $data);
 
                 }
@@ -223,6 +234,7 @@ class TourController extends CI_Controller{
                     $data['tour_includes'] = $this->tour_model->getIncludes($tourId);
                     $data['tour_excludes'] = $this->tour_model->getExcludes($tourId);
                     $data['tour_options'] = $this->tour_model->getOptions($tourId);
+                    $data['tour_hotels'] = $this->tour_model->getHotels($tourId);
                     $this->load->view('admin/dashboard', $data);
                 }
             
@@ -243,6 +255,7 @@ class TourController extends CI_Controller{
         $data['tour_includes'] = $this->tour_model->getIncludes($tourId);
         $data['tour_excludes'] = $this->tour_model->getExcludes($tourId);
         $data['tour_options'] = $this->tour_model->getOptions($tourId);
+        $data['tour_hotels'] = $this->tour_model->getHotels($tourId);
         $this->load->view('admin/dashboard', $data);
     }
 
@@ -264,6 +277,9 @@ class TourController extends CI_Controller{
         $this->form_validation->set_rules('includes[]', 'Includes', 'trim|max_length[1000]');
         $this->form_validation->set_rules('excludes[]', 'Excludes', 'trim|max_length[1000]');
         $this->form_validation->set_rules('options[]', 'Options', 'trim|max_length[1000]');
+        $this->form_validation->set_rules('itinerary_hotelType[]', 'Itinerary Hotel Type', 'trim|max_length[50]');
+        $this->form_validation->set_rules('itinerary_hotelName[]', 'Itinerary Hotel Name', 'trim|max_length[50]');
+        $this->form_validation->set_rules('itinerary_hotelLink[]', 'Itinerary Hotel Web site', 'trim|max_length[50]');
 
 
         if($this->form_validation->run() == FALSE){
@@ -359,6 +375,7 @@ class TourController extends CI_Controller{
                 $includes_result = (isset($_POST['includes'])) ? $this->tour_model->insert_includes($tourId) : TRUE;
                 $excludes_result = (isset($_POST['excludes'])) ? $this->tour_model->insert_excludes($tourId) : TRUE;
                 $options_result = (isset($_POST['options'])) ? $this->tour_model->insert_options($tourId) : TRUE;
+                $itinerary_hotel = (isset($_POST['itinerary_hotelType'])) ? $this->tour_model->insert_itinerary_hotel($tourId) : TRUE;
 
                 if($itinerary_result && $price_result && $hightlight_result && $includes_result && $excludes_result && $options_result){
                     $dataflash = array(
@@ -470,6 +487,7 @@ class TourController extends CI_Controller{
             $data['excludes'] = $this->tour_model->excludes($pageid);
             $data['options'] = $this->tour_model->options($pageid);
             $data['prices'] = $this->tour_model->prices($pageid);
+            $data['hotels'] = $this->tour_model->hotels($pageid);
             $data['site_view'] = 'tourItem';
             $data['site_title'] = 'Sunway Holidays - Tour Item';
             $this->load->view('main/main_view', $data);
@@ -537,12 +555,19 @@ class TourController extends CI_Controller{
 
     }
 
+    public function getTourHotels() {
+        if(isset($_GET['term'])){
+            $results = $this->tour_model->get_hotels($_GET['term']);
+            if(count($results) > 0){
+                // echo json_encode($results);
+                foreach($results as $result){
+                    $result_array = $result->hotel_name;
+                    echo json_encode($result_array);
+                }
+            }
+        }
 
-
-        
-
-    
-
+    }
 }
 
 ?>
