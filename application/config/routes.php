@@ -105,5 +105,6 @@ $route['comming'] = 'pageController/comming';
 $route['tour/acuto'] = 'pageController/comming';
 $route['tours/get'] = 'tourController/getTourHotels';
 $route['test'] = 'REST_API/tours';
+$route['test/(:any)'] = 'REST_API/toursUpdate/$1';
 
 
