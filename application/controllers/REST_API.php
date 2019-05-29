@@ -61,16 +61,15 @@ class REST_API extends REST_Controller {
         } else {
             $this->response(array('status' => 'NO_RECORDS'), REST_Controller::HTTP_OK);
         }
-
-        
     }
+
     public function toursUpdate_get(){
 
         $searchVal = $this->uri->segment(2);
 
         $searchVal = urldecode($searchVal);
 
-        $temp = $this->tour_model->homeSearch($searchVal);
+        $temp = $this->tour_model->tourSearch($searchVal);
 
         foreach($temp as $row){
             $data[$row->tour_id] = array (
@@ -80,6 +79,61 @@ class REST_API extends REST_Controller {
                 'image' => base_url().'assets/images/tours/'.$row->photo_id
             );
         }
+
+        if (count($data) > 0) {
+            $data['status'] = 'OK';
+            $this->response($data, REST_Controller::HTTP_OK);
+        } else {
+            $this->response(array('status' => 'NO_RECORDS'), REST_Controller::HTTP_OK);
+        }
+    }
+
+    // public function toursParams_get(){
+
+    //     $value = $this->input->get('a');
+
+    //     $data = array(
+    //         'test' => $value
+    //     );
+
+    //     // foreach($temp as $row){
+    //     //     $data[$row->tour_id] = array (
+    //     //         'title' => $row->name,
+    //     //         'description' => $row->introduction,
+    //     //         'duration' => $row->duration,
+    //     //         'image' => base_url().'assets/images/tours/'.$row->photo_id
+    //     //     );
+    //     // }
+
+    //     if (count($data) > 0) {
+    //         $data['status'] = 'OK';
+    //         $this->response($data, REST_Controller::HTTP_OK);
+    //     } else {
+    //         $this->response(array('status' => 'NO_RECORDS'), REST_Controller::HTTP_OK);
+    //     }        
+    // }
+
+    public function toursParams_post(){
+
+        $postData = json_decode(file_get_contents("php://input"), TRUE);
+        
+        $postReqToServer = array(
+             $postData['romanticHoliday'],
+             $postData['couplesFriends']
+        );
+
+        $result = $this->tour_model->testPost($postReqToServer);
+
+        $data = array(
+            'this' => $result
+        );
+
+        // foreach($result as $row){
+        //     $data[$row->tour_id] = array (
+        //         'title' => $row->name,
+        //     );
+            
+        // }
 
         if (count($data) > 0) {
             $data['status'] = 'OK';

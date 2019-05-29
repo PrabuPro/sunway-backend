@@ -33,7 +33,6 @@ class Tour_model extends CI_Model{
                            ->get()
                            ->result();
         return $result;
-
     }
 
     public function get_tour($tourId){
@@ -75,8 +74,6 @@ class Tour_model extends CI_Model{
         return $query->result();
     }
 
-   
-
     public function insert_itinerary($id){
 
         if(isset($_POST['day_new'])){
@@ -105,8 +102,6 @@ class Tour_model extends CI_Model{
         }
         return FALSE;
     }
-
-  
 
     public function insert_price($id){
 
@@ -276,6 +271,20 @@ class Tour_model extends CI_Model{
 
     public function homeSearch($searchVal) {
         $result = $this->db->select('t.tour_id,t.name,t.description, t.tour_type,t.suitable_for,t.photo_id,p.price')
+                           ->from('tours t')
+                           ->where('t.tour_type', $searchVal)
+                           ->join('tour_price p', 'p.tour_id=t.tour_id', 'left')
+                           ->group_by('t.tour_id')
+                           ->get()
+                           ->result();
+        return $result;
+        // $this->db->where('tour_type', $searchVal);
+        // $query = $this->db->get('tours');
+
+        // return $query->result();
+    }
+    public function tourSearch($searchVal) {
+        $result = $this->db->select('t.tour_id,t.name,t.description, t.tour_type,t.suitable_for,t.photo_id,t.introduction, t.duration,p.price')
                            ->from('tours t')
                            ->where('t.tour_type', $searchVal)
                            ->join('tour_price p', 'p.tour_id=t.tour_id', 'left')
@@ -833,6 +842,34 @@ class Tour_model extends CI_Model{
         $this->db->limit(10);
         // $this->db->where('hotel_name', $name);
         return  $this->db->get('tour_hotels')->result();       
+    }
+
+    public function testPost($name){
+        $selectTables = implode(",",$name);
+        $this->db->select($selectTables);
+        $tour_ids = $this->db->get('suitable_for')->result();
+
+        $tours = array();
+
+        foreach($tour_ids as $tour_id){
+            $this->db->select('*');
+            if(in_array("romanticHoliday",$name)){
+                $this->db->or_where('tour_id', $tour_id->romanticHoliday);
+            }
+            if(in_array("couplesFriends",$name)){
+                $this->db->or_where('tour_id', $tour_id->couplesFriends);
+            }
+            $tour = $this->db->get('tours')->result();
+           
+            if(empty($tour)){
+                continue;
+            }
+           
+            array_push($tours,$tour);
+        }
+
+        return $tours;
+
     }
 
 }
