@@ -847,10 +847,14 @@ class Tour_model extends CI_Model{
     public function testPost($name){
         $initialParameters = $name;
         $suitable_for = array();
+        $interests = array();
         $experience = array();
+        $beachStayIn = array();
+        $activityLevel = array();
         $categoryCounter = 0;
         $totalTours = array();
 
+        //getting array of tour_id in in suitable table column wise 
         if(in_array("suitable-for",$name)){
             $tableColumns = array(
                                 "romanticHoliday",
@@ -899,7 +903,7 @@ class Tour_model extends CI_Model{
             }
             $categoryCounter++;
         }
-        if(in_array("experience",$name)){
+        if(in_array("interests",$name)){
             $tableColumns = array(
                                 "culture",
                                 "unescoHeritage",
@@ -914,7 +918,7 @@ class Tour_model extends CI_Model{
             $columnNames = array_intersect($name,$tableColumns);
             $selectTables = implode(",",$columnNames);
             $this->db->select($selectTables);
-            $tour_ids = $this->db->get('experience')->result();
+            $tour_ids = $this->db->get('interests')->result();
     
     
             foreach($tour_ids as $tour_id){
@@ -954,23 +958,160 @@ class Tour_model extends CI_Model{
                 }
                 foreach($tour as $tourItem){
                     $tourId = $tourItem->tour_id;
+                    array_push($interests,$tourId);
+                }
+            }
+            $categoryCounter++;
+        }
+        if(in_array("experience",$name)){
+            $tableColumns = array(
+                                "localExperience",
+                                "meetLocals"
+                                );
+            $columnNames = array_intersect($name,$tableColumns);
+            $selectTables = implode(",",$columnNames);
+            $this->db->select($selectTables);
+            $tour_ids = $this->db->get('experience')->result();
+    
+    
+            foreach($tour_ids as $tour_id){
+                $this->db->select('*');
+                if(in_array("localExperience",$name)){
+                    $this->db->or_where('tour_id', $tour_id->localExperience);
+                }
+                if(in_array("meetLocals",$name)){
+                    $this->db->or_where('tour_id', $tour_id->meetLocals);
+                }
+
+                $tour = $this->db->get('tours')->result();
+               
+                if(empty($tour)){
+                    continue;
+                }
+                foreach($tour as $tourItem){
+                    $tourId = $tourItem->tour_id;
                     array_push($experience,$tourId);
+                }
+            }
+            $categoryCounter++;
+        }
+        if(in_array("beachStayIn",$name)){
+            $tableColumns = array(
+                                "northernPeninsular",
+                                "notthEasternCoast",
+                                "westernCoast",
+                                "southWesternCoast",
+                                "southernCoast",
+                                "easternCoast"
+                                );
+            $columnNames = array_intersect($name,$tableColumns);
+            $selectTables = implode(",",$columnNames);
+            $this->db->select($selectTables);
+            $tour_ids = $this->db->get('beach_stay_in')->result();
+    
+    
+            foreach($tour_ids as $tour_id){
+                $this->db->select('*');
+                if(in_array("northernPeninsular",$name)){
+                    $this->db->or_where('tour_id', $tour_id->northernPeninsular);
+                }
+                if(in_array("notthEasternCoast",$name)){
+                    $this->db->or_where('tour_id', $tour_id->notthEasternCoast);
+                }
+                if(in_array("westernCoast",$name)){
+                    $this->db->or_where('tour_id', $tour_id->westernCoast);
+                }
+                if(in_array("southWesternCoast",$name)){
+                    $this->db->or_where('tour_id', $tour_id->southWesternCoast);
+                }
+                if(in_array("southernCoast",$name)){
+                    $this->db->or_where('tour_id', $tour_id->southernCoast);
+                }
+                if(in_array("easternCoast",$name)){
+                    $this->db->or_where('tour_id', $tour_id->easternCoast);
+                }
+
+                $tour = $this->db->get('tours')->result();
+               
+                if(empty($tour)){
+                    continue;
+                }
+                foreach($tour as $tourItem){
+                    $tourId = $tourItem->tour_id;
+                    array_push($beachStayIn,$tourId);
+                }
+            }
+            $categoryCounter++;
+        }
+        if(in_array("activityLevel",$name)){
+            $tableColumns = array(
+                                "softAdventure",
+                                "activeHoliday",
+                                "relaxingHoliday",
+                                "leisureDayInBetween",
+                                "midlyActiveHoliday",
+                                "seeAsMuchAsPossible",
+                                "relaxingBeachTime"
+                                );
+            $columnNames = array_intersect($name,$tableColumns);
+            $selectTables = implode(",",$columnNames);
+            $this->db->select($selectTables);
+            $tour_ids = $this->db->get('activity_level')->result();
+    
+    
+            foreach($tour_ids as $tour_id){
+                $this->db->select('*');
+                if(in_array("softAdventure",$name)){
+                    $this->db->or_where('tour_id', $tour_id->softAdventure);
+                }
+                if(in_array("activeHoliday",$name)){
+                    $this->db->or_where('tour_id', $tour_id->activeHoliday);
+                }
+                if(in_array("relaxingHoliday",$name)){
+                    $this->db->or_where('tour_id', $tour_id->relaxingHoliday);
+                }
+                if(in_array("leisureDayInBetween",$name)){
+                    $this->db->or_where('tour_id', $tour_id->leisureDayInBetween);
+                }
+                if(in_array("midlyActiveHoliday",$name)){
+                    $this->db->or_where('tour_id', $tour_id->midlyActiveHoliday);
+                }
+                if(in_array("seeAsMuchAsPossible",$name)){
+                    $this->db->or_where('tour_id', $tour_id->seeAsMuchAsPossible);
+                }
+                if(in_array("relaxingBeachTime",$name)){
+                    $this->db->or_where('tour_id', $tour_id->relaxingBeachTime);
+                }
+
+                $tour = $this->db->get('tours')->result();
+               
+                if(empty($tour)){
+                    continue;
+                }
+                foreach($tour as $tourItem){
+                    $tourId = $tourItem->tour_id;
+                    array_push($activityLevel,$tourId);
                 }
             }
             $categoryCounter++;
         }
 
         if($categoryCounter > 1){
-            $totalToutIds = array_intersect($suitable_for,$experience);
+            $totalToutIds = array_intersect($suitable_for,$interests, $experience, $beachStayIn, $activityLevel);
             return $this->getTourForRest($totalToutIds);
         } else {
             if(in_array("suitable-for",$name)){
                 return $this->getTourForRest($suitable_for);
+            } else if(in_array("interests",$name)){
+                return $this->getTourForRest($interests);
             } else if(in_array("experience",$name)){
                 return $this->getTourForRest($experience);
+            } else if(in_array("beachStayIn",$name)){
+                return $this->getTourForRest($beachStayIn);
+            } else if(in_array("activityLevel",$name)){
+                return $this->getTourForRest($activityLevel);
             }
         }
-        
     }
     public function getTourForRest($totalToutIds){
         $totalTours = array();

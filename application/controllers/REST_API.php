@@ -118,30 +118,45 @@ class REST_API extends REST_Controller {
         $postData = json_decode(file_get_contents("php://input"), TRUE);
         
         $postReqToServer = array(
-             $postData['suitableFor'],
-             $postData['romanticHoliday'],
-             $postData['couplesFriends'],
-             $postData['travellingSolo'],
-             $postData['familiesTeenages'],
-             $postData['familiesKids'],
-             $postData['seniors'],
-             $postData['experience'],
-             $postData['culture'],
-             $postData['unescoHeritage'],
-             $postData['interactWithAnimals'],
-             $postData['wildlifeWatching'],
-             $postData['natureAndLandscapes'],
-             $postData['teaTrails'],
-             $postData['relaxingBeachTime'],
-             $postData['colomboCity'],
-             $postData['ecoLovers']
+            $postData['suitableFor'],
+            $postData['interests'],
+            $postData['experience'],
+            $postData['beachStayIn'],
+            $postData['activityLevel'],
+            $postData['romanticHoliday'],
+            $postData['couplesFriends'],
+            $postData['travellingSolo'],
+            $postData['familiesTeenages'],
+            $postData['familiesKids'],
+            $postData['seniors'],
+            $postData['culture'],
+            $postData['unescoHeritage'],
+            $postData['interactWithAnimals'],
+            $postData['wildlifeWatching'],
+            $postData['natureAndLandscapes'],
+            $postData['teaTrails'],
+            $postData['relaxingBeachTime'],
+            $postData['colomboCity'],
+            $postData['ecoLovers'],
+            $postData['localExperience'],
+            $postData['meetLocals'],
+            $postData['northernPeninsular'],
+            $postData['notthEasternCoast'],
+            $postData['westernCoast'],
+            $postData['southWesternCoast'],
+            $postData['southernCoast'],
+            $postData['easternCoast'],
+            $postData['softAdventure'],
+            $postData['activeHoliday'],
+            $postData['relaxingHoliday'],
+            $postData['leisureDayInBetween'],
+            $postData['midlyActiveHoliday'],
+            $postData['seeAsMuchAsPossible'],
+            $postData['relaxingBeachTime']
         );
 
         $result = $this->tour_model->testPost($postReqToServer);
 
-        // $data = array(
-        //     'test'=> $result
-        // );
 
         foreach($result as $row){
             $data[$row[0]->tour_id] = array (
@@ -152,7 +167,7 @@ class REST_API extends REST_Controller {
             );
         }
 
-        if (count($data) > 0) {
+        if ( !empty($data)) {
             // $data['status'] = 'OK';
             $this->response($data, REST_Controller::HTTP_OK);
         } else {
