@@ -56,7 +56,7 @@ class REST_API extends REST_Controller {
         }
 
         if (count($data) > 0) {
-            $data['status'] = 'OK';
+            // $data['status'] = 'OK';
             $this->response($data, REST_Controller::HTTP_OK);
         } else {
             $this->response(array('status' => 'NO_RECORDS'), REST_Controller::HTTP_OK);
@@ -81,7 +81,7 @@ class REST_API extends REST_Controller {
         }
 
         if (count($data) > 0) {
-            $data['status'] = 'OK';
+            // $data['status'] = 'OK';
             $this->response($data, REST_Controller::HTTP_OK);
         } else {
             $this->response(array('status' => 'NO_RECORDS'), REST_Controller::HTTP_OK);
@@ -118,31 +118,47 @@ class REST_API extends REST_Controller {
         $postData = json_decode(file_get_contents("php://input"), TRUE);
         
         $postReqToServer = array(
+             $postData['suitableFor'],
              $postData['romanticHoliday'],
-             $postData['couplesFriends']
+             $postData['couplesFriends'],
+             $postData['travellingSolo'],
+             $postData['familiesTeenages'],
+             $postData['familiesKids'],
+             $postData['seniors'],
+             $postData['experience'],
+             $postData['culture'],
+             $postData['unescoHeritage'],
+             $postData['interactWithAnimals'],
+             $postData['wildlifeWatching'],
+             $postData['natureAndLandscapes'],
+             $postData['teaTrails'],
+             $postData['relaxingBeachTime'],
+             $postData['colomboCity'],
+             $postData['ecoLovers']
         );
 
         $result = $this->tour_model->testPost($postReqToServer);
 
-        $data = array(
-            'this' => $result
-        );
+        // $data = array(
+        //     'test'=> $result
+        // );
 
-        // foreach($result as $row){
-        //     $data[$row->tour_id] = array (
-        //         'title' => $row->name,
-        //     );
-            
-        // }
+        foreach($result as $row){
+            $data[$row[0]->tour_id] = array (
+                'title' => $row[0]->name,
+                'description' => $row[0]->introduction,
+                'duration' => $row[0]->duration,
+                'image' => base_url().'assets/images/tours/'.$row[0]->photo_id
+            );
+        }
 
         if (count($data) > 0) {
-            $data['status'] = 'OK';
+            // $data['status'] = 'OK';
             $this->response($data, REST_Controller::HTTP_OK);
         } else {
             $this->response(array('status' => 'NO_RECORDS'), REST_Controller::HTTP_OK);
         }
 
-        
     }
 
 }
