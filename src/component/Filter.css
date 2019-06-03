@@ -1,0 +1,29 @@
+.filter-title {
+    padding-top: 20px;
+    padding-left: 20px;
+    font-size: 20px;
+
+}
+
+.card-divider{
+    margin: auto;
+    width: 90%;
+    height: auto;
+}
+
+.card>hr{
+    margin: 0 auto 20px auto;
+}
+
+.card-subtitle{
+    
+}
+
+@media (max-width: 575.98px) {
+    .filter-title {
+        padding-top: 10px;
+        padding-left: 5px;
+        font-size: 20px;
+
+    }
+}

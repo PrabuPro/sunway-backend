@@ -1,0 +1,26 @@
+.row-bar{
+    background-color: #182a65;
+}
+
+.logo{
+    width:150px;
+    height:auto;
+}
+
+.navbar-nav{
+    margin-left:auto;
+    margin-right: 5px!important;
+}
+
+.nav-link{
+    font-size:1.2rem;
+    color: #ffffff !important;
+}
+
+@media (max-width: 575.98px) {
+    .card-body {
+        padding:5px;
+        font-size: .85rem;
+        ;
+    }
+}

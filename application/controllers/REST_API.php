@@ -42,7 +42,7 @@ class REST_API extends REST_Controller {
     }
 
 
-    public function tours_get(){
+    public function initialTours_get(){
         
         $temp = $this->tour_model->get_toursFilter(8,1);
 
@@ -113,7 +113,7 @@ class REST_API extends REST_Controller {
     //     }        
     // }
 
-    public function toursParams_post(){
+    public function filterTours_post(){
 
         $postData = json_decode(file_get_contents("php://input"), TRUE);
         
@@ -166,6 +166,10 @@ class REST_API extends REST_Controller {
                 'image' => base_url().'assets/images/tours/'.$row[0]->photo_id
             );
         }
+
+        // $data = array(
+        //     'test' => $postReqToServer
+        // );
 
         if ( !empty($data)) {
             // $data['status'] = 'OK';

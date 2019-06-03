@@ -89,6 +89,7 @@ class PageController extends CI_Controller{
         $data['site_title'] = 'Sunway Holidays - News';
         $this->load->view('main/main_view', $data);
     }
+    
 
     public function comming(){
         $this->load->view('commingSoon');

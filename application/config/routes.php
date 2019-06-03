@@ -104,8 +104,9 @@ $route['payments/tour-details'] = 'paymentController/tour_details';
 $route['comming'] = 'pageController/comming';
 $route['tour/acuto'] = 'pageController/comming';
 $route['tours/get'] = 'tourController/getTourHotels';
-$route['test'] = 'REST_API/tours';
-$route['test/(:any)'] = 'REST_API/toursUpdate/$1';
-$route['testPost'] = 'REST_API/toursParams';
+$route['filterTour'] = 'REST_API/initialTours';
+$route['filterTourPost'] = 'REST_API/filterTours';
+$route['addTourCategories'] = 'tourController/addTourCategoryView';
+$route['filter-tours'] = 'tourController/filterTours';
 
 

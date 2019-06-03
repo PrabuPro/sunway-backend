@@ -38,6 +38,9 @@
 				<a class="navbar-item" href="<?php echo site_url('add-news');?>">
 					Add News
 				</a>
+				<a class="navbar-item" href="<?php echo site_url('addTourCategories');?>">
+					Add Tour Categories
+				</a>
 			</div>
 			<div class="navbar-end">
 				<p class="has-text-grey">
