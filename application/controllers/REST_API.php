@@ -160,6 +160,7 @@ class REST_API extends REST_Controller {
 
         foreach($result as $row){
             $data[$row[0]->tour_id] = array (
+                'tour_id' => $row[0]->tour_id,
                 'title' => $row[0]->name,
                 'description' => $row[0]->introduction,
                 'duration' => $row[0]->duration,
@@ -168,8 +169,91 @@ class REST_API extends REST_Controller {
         }
 
         // $data = array(
-        //     'test' => $postReqToServer
+        //     'test' => $result
         // );
+
+        if ( !empty($data)) {
+            // $data['status'] = 'OK';
+            $this->response($data, REST_Controller::HTTP_OK);
+        } else {
+            $this->response(array('status' => 'NO_RECORDS'), REST_Controller::HTTP_OK);
+        }
+
+    }
+    public function addCategoris_post(){
+
+        $postData = json_decode(file_get_contents("php://input"), TRUE);
+        
+        $suitableFor = array(
+            'tour_Id' => $postData['tourId'],
+            'romanticHoliday' => $postData['romanticHoliday'],
+            'couplesFriends' => $postData['couplesFriends'],
+            'travellingSolo' => $postData['travellingSolo'],
+            'familiesTeenages' => $postData['familiesTeenages'],
+            'familiesKids' => $postData['familiesKids'],
+            'seniors' => $postData['seniors']
+        );
+
+        $interest = array(
+            'tour_Id' => $postData['tourId'],
+            'culture' => $postData['culture'],
+            'unescoHeritage' => $postData['unescoHeritage'],
+            'interactWithAnimals' => $postData['interactWithAnimals'],
+            'wildlifeWatching' => $postData['wildlifeWatching'],
+            'natureAndLandscapes' => $postData['natureAndLandscapes'],
+            'teaTrails' => $postData['teaTrails'],
+            'relaxingBeachTime' => $postData['relaxingBeachTime'],
+            'colomboCity' => $postData['colomboCity'],
+            'ecoLovers' => $postData['ecoLovers']
+        );
+
+        $experience = array(
+            'tour_Id' => $postData['tourId'],
+            'localExperience' => $postData['localExperience'],
+            'meetLocals' => $postData['meetLocals']
+        );
+
+        //  $beachStayIn = array(
+        //     'tour_Id' => $postData['tourId'],
+        //     'northernPeninsular' => $postData['northernPeninsular'],
+        //     'notthEasternCoast' => $postData['notthEasternCoast'],
+        //     'westernCoast' => $postData['westernCoast'],
+        //     'southWesternCoast' => $postData['southWesternCoast'],
+        //     'southernCoast' => $postData['southernCoast'],
+        //     'easternCoast' => $postData['easternCoast']
+        // );
+
+        //  $activityLevel = array(
+        //     'tour_Id' => $postData['tourId'],
+        //     'softAdventure' => $postData['softAdventure'],
+        //     'activeHoliday' => $postData['activeHoliday'],
+        //     'relaxingHoliday' => $postData['relaxingHoliday'],
+        //     'leisureDayInBetween' => $postData['leisureDayInBetween'],
+        //     'midlyActiveHoliday' => $postData['midlyActiveHoliday'],
+        //     'seeAsMuchAsPossible' => $postData['seeAsMuchAsPossible'],
+        //     'relaxingBeachTime' => $postData['relaxingBeachTime']
+        // );
+
+        $suitableForResult = $this->tour_model->insertTourCategorySuitableFor($suitableFor);
+        $interestResult = $this->tour_model->insertTourCategoryInterest($interest);
+        $experienceResult = $this->tour_model->insertTourCategoryExperience($experience);
+        // $beachStayInResult = $this->tour_model->insertTourCategoryBeachStayIn($beachStayIn);
+        // $activityLevelResult = $this->tour_model->insertTourCategoryActivityLevel($activityLevel);
+
+        // $data = array(
+        //         'status' => $beachStayIn
+        //     );
+
+        if(!empty($suitableForResult) || !empty($interestResult) || !empty($experienceResult)){
+            $data = array(
+                'status' => 'OK'
+            );
+        } else {
+            $data = array(
+                'status' => 'ERROR'
+            );
+
+        }
 
         if ( !empty($data)) {
             // $data['status'] = 'OK';

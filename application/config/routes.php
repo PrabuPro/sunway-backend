@@ -108,5 +108,6 @@ $route['filterTour'] = 'REST_API/initialTours';
 $route['filterTourPost'] = 'REST_API/filterTours';
 $route['addTourCategories'] = 'tourController/addTourCategoryView';
 $route['filter-tours'] = 'tourController/filterTours';
+$route['addCategories'] = 'REST_API/addCategoris';
 
 

@@ -853,6 +853,7 @@ class Tour_model extends CI_Model{
         $activityLevel = array();
         $categoryCounter = 0;
         $totalTours = array();
+        $availableParameters = array();
 
         //getting array of tour_id in in suitable table column wise 
         if(in_array("suitable-for",$name)){
@@ -902,6 +903,7 @@ class Tour_model extends CI_Model{
                 }
             }
             $categoryCounter++;
+            array_push($availableParameters,$suitable_for);
         }
         if(in_array("interests",$name)){
             $tableColumns = array(
@@ -962,6 +964,7 @@ class Tour_model extends CI_Model{
                 }
             }
             $categoryCounter++;
+            array_push($availableParameters,$interests);
         }
         if(in_array("experience",$name)){
             $tableColumns = array(
@@ -994,6 +997,7 @@ class Tour_model extends CI_Model{
                 }
             }
             $categoryCounter++;
+            array_push($availableParameters,$experience);
         }
         if(in_array("beachStayIn",$name)){
             $tableColumns = array(
@@ -1042,6 +1046,7 @@ class Tour_model extends CI_Model{
                 }
             }
             $categoryCounter++;
+            array_push($availableParameters,$beachStayIn);
         }
         if(in_array("activityLevel",$name)){
             $tableColumns = array(
@@ -1094,10 +1099,41 @@ class Tour_model extends CI_Model{
                 }
             }
             $categoryCounter++;
+            array_push($availableParameters,$activityLevel);
         }
 
         if($categoryCounter > 1){
-            $totalToutIds = array_intersect($suitable_for,$interests, $experience, $beachStayIn, $activityLevel);
+            if(empty($suitable_for)){
+                foreach($availableParameters as $available){
+                    $suitable_for = $available;
+                    break;
+                }
+            }
+            if(empty($interests)){
+                foreach($availableParameters as $available){
+                    $interests= $available;
+                    break;
+                }
+            }
+            if(empty($experience)){
+                foreach($availableParameters as $available){
+                    $experience = $available;
+                    break;
+                }
+            }
+            if(empty($beachStayIn)){
+                foreach($availableParameters as $available){
+                    $beachStayIn = $available;
+                    break;
+                }
+            }
+            if(empty($activityLevel)){
+                foreach($availableParameters as $available){
+                    $activityLevel = $available;
+                    break;
+                }
+            }
+            $totalToutIds = array_intersect($suitable_for,$interests,$experience,$beachStayIn,$activityLevel);
             return $this->getTourForRest($totalToutIds);
         } else {
             if(in_array("suitable-for",$name)){
@@ -1122,6 +1158,27 @@ class Tour_model extends CI_Model{
                 array_push($totalTours,$oneTour);
             }
         return $totalTours;
+    }
+
+    public function insertTourCategorySuitableFor($data){
+        $query = $this->db->insert('suitable_for', $data);
+        return $this->db->insert_id();
+    }
+    public function insertTourCategoryInterest($data){
+        $query = $this->db->insert('interests', $data);
+        return $this->db->insert_id();
+    }
+    public function insertTourCategoryExperience($data){
+        $query = $this->db->insert('experience', $data);
+        return $this->db->insert_id();
+    }
+    public function insertTourCategoryBeachStayIn($data){
+        $query = $this->db->insert('beach_stay_in', $data);
+        return $this->db->insert_id();
+    }
+    public function insertTourCategoryActivityLevel($data){
+        $query = $this->db->insert('activity_level', $data);
+        return $this->db->insert_id();
     }
 
 }

@@ -570,7 +570,7 @@ class TourController extends CI_Controller{
     }
 
     public function addTourCategoryView(){
-        $data['site_view'] = 'addTourContollerView';
+        $data['site_view'] = 'addTourCategoryView';
         $data['site_title'] = 'Sunway Holidays - Add Tour Controller';
         $this->load->view('admin/dashboard', $data);
     }

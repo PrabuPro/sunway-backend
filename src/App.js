@@ -5,7 +5,7 @@ import Tour from './component/Tour';
 import axios from 'axios';
 import './App.css';
 import loading from './assets/image/search.gif';
-import {CSSTransition} from 'react-transition-group';
+
 
 class App extends Component {
 
@@ -47,8 +47,6 @@ class App extends Component {
   }
 
   componentWillMount(){
-    console.log('componentWillMount')
-
     axios.get('http://localhost/sunwayholidays/filterTour')
         .then(res => {
             this.setState({
@@ -144,6 +142,7 @@ class App extends Component {
                 isLoading: false,
               });
             }else{
+              // console.log(res);
             this.setState({
               tours: res.data,
               isLoading: false,
@@ -174,11 +173,7 @@ class App extends Component {
                   <img src={loading} className="loading-img" alt=""/>
                 <h3>Searching Your Tours...</h3>
                 </div> 
-                : 
-                //  <CSSTransition in={!this.state.noRecords} timeout={300} classNames="tour_box" appear={true}>
-                    <Tour tours={this.state.tours} noRecords={this.state.noRecords}/>
-                // </CSSTransition>
-                }
+                : <Tour tours={this.state.tours} noRecords={this.state.noRecords}/>}
               </div> 
             </div>    
         </div>
