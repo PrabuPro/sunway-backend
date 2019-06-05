@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Nav from'./component/Navbar';
 import Filter from './component/Filter';
 import Tour from './component/Tour';
+import Footer from './component/Footer';
 import axios from 'axios';
 import './App.css';
 import loading from './assets/image/search.gif';
@@ -177,6 +178,7 @@ class App extends Component {
               </div> 
             </div>    
         </div>
+        <Footer/>
       </div>
   );
   
