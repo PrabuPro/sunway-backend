@@ -18,8 +18,8 @@ const Tour = (props) =>{
             const url = "http://localhost/sunwayholidays/tours/"+ id;
             return(
                 <Spring
-                from={{ opacity: 0 }}
-                to={{ opacity: 1 }}
+                from={{ opacity: 0 , transform: `translateX(-50px )`}}
+                to={{ opacity: 1, transform: `translateX(0px)` }}
                 key={key}>
                 {props => <div style={props} key={key} className="card tour-card mt-4">
                     <div className="card-body d-flex">
