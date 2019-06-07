@@ -298,7 +298,7 @@
 			<div class="col-md-9"></div>
 			<div class="col-md-3 group mb-3">
 				<input type="button" class="search-submit btn btn-primary" value="See All Categories"
-					style="width:100%; font-size:1.5em;" onclick="window.location='<?php echo base_url(); ?>tours-list/0'">
+					style="width:100%; font-size:1.5em;" onclick="window.location='<?php echo base_url(); ?>filter-tours'">
 			</div>
 
 		</div>
@@ -307,7 +307,7 @@
 				<a href="<?php echo base_url(); ?>search-tours/culture" class="block-5"
 					style="background-image: url('<?php echo base_url();?>assets/images/anuradhapura.jpg');">
 					<div class="text">
-						<h3 class="heading">Culture & Heritage</h3>
+						<h3 class="heading">Culture & Heritage Tours</h3>
 						<div class="post-meta">
 
 						</div>
@@ -318,7 +318,7 @@
 				<a href="<?php echo base_url(); ?>search-tours/family" class="block-5"
 					style="background-image: url('<?php echo base_url();?>assets/images/family.jpg');">
 					<div class="text">
-						<h3 class="heading">Family</h3>
+						<h3 class="heading">Family Holidays</h3>
 						<div class="post-meta">
 
 						</div>
@@ -329,7 +329,7 @@
 				<a href="<?php echo base_url(); ?>search-tours/beach" class="block-5"
 					style="background-image: url('<?php echo base_url();?>assets/images/trinco.jpg');">
 					<div class="text">
-						<h3 class="heading">Classical Beach</h3>
+						<h3 class="heading">Classical Beach Holidays</h3>
 						<div class="post-meta">
 
 						</div>
@@ -340,7 +340,7 @@
 				<a href="<?php echo base_url(); ?>search-tours/luxury" class="block-5"
 					style="background-image: url('<?php echo base_url();?>assets/images/luxury_1.jpg');">
 					<div class="text">
-						<h3 class="heading">Luxury</h3>
+						<h3 class="heading">Luxury Holidays</h3>
 						<div class="post-meta">
 
 						</div>
@@ -351,7 +351,7 @@
 				<a href="<?php echo base_url(); ?>search-tours/ramayana" class="block-5"
 					style="background-image: url('<?php echo base_url();?>assets/images/ramayana.jpg');">
 					<div class="text">
-						<h3 class="heading">Ramayana</h3>
+						<h3 class="heading">Ramayana Trails</h3>
 						<div class="post-meta">
 
 						</div>
@@ -362,7 +362,7 @@
 				<a href="<?php echo base_url(); ?>search-tours/adventure" class="block-5"
 					style="background-image: url('<?php echo base_url();?>assets/images/adventure.jpg');">
 					<div class="text">
-						<h3 class="heading">Adventure</h3>
+						<h3 class="heading">Adventure Holidays</h3>
 						<div class="post-meta">
 
 						</div>
@@ -373,7 +373,7 @@
 				<a href="<?php echo base_url(); ?>search-tours/active" class="block-5"
 					style="background-image: url('<?php echo base_url();?>assets/images/active.jpg');">
 					<div class="text">
-						<h3 class="heading">Active</h3>
+						<h3 class="heading">Active Holidays</h3>
 						<div class="post-meta">
 
 						</div>
@@ -676,6 +676,9 @@
 	</div>
 </section>
 
+  <script src="<?php echo base_url();?>assets/js/jquery.min.js"></script>
+  <script src="<?php echo base_url();?>assets/js/jquery-migrate-3.0.1.min.js"></script>
+<script src="<?php echo base_url();?>assets/js/moment.js"></script>
 <script src="<?php echo base_url();?>assets/js/weather.js"></script>
 
 

@@ -5,7 +5,7 @@
 		<div class="container">
 			<div class="row slider-text align-items-center">
 				<div class="col-md-7 col-sm-12 ftco-animate">
-					<h1 class="mb-3">Tours Destination</h1>
+					<h1 class="mb-3">Tours</h1>
 				</div>
 			</div>
 		</div>
@@ -13,16 +13,45 @@
 </section>
 <!-- END slider -->
 
+<style>
+.tours--icon-rec{
+	  fill: #303040;
+    display: flex;
+    margin: 0em auto 0em auto;
+    height: 3em;
+    width: 3em;
+}
+.notice-board{
+	background-color: white;
+  box-shadow: 4px 4px 8px #808080;
+  padding: 8px;
+}
+</style>
+
 <section class="ftco-section">
 	<div class="container-fluid">
-		<div class="row pb-5 no-gutters">
-			<div class="col-lg-4 bg-light p-3 p-md-5 d-flex align-items-center heading-section ftco-animate">
-				<div>
-					<h2 class="mb-5 pb-3" style="font-size:24px;">Want to get our hottest travel deals, top tips and advice? Click
+		<div class="row no-gutters">
+			<div class="col-lg-4 bg-light p-3 p-md-5 d-flex flex-column align-items-center heading-section ftco-animate">
+				<div class="mb-5 notice-board">
+					<svg class="tours--icon-rec">
+						<use xlink:href="<?php echo base_url();?>assets/images/sprite.svg#icon-pin"></use>
+					</svg>
+					<h2 class="mb-3" style="font-size:24px;">Get the most suitable tour for you by Adcanced Filter.</h2>
+					<div class="col-sm-12 group mb-3 d-flex align-items-center">
+						<input type="button" class="search-submit btn btn-primary" value="Filter Tours"
+							style="width:100%; font-size:1.5em; margin:auto;" onclick="window.location='<?php echo base_url(); ?>filter-tours'">
+					</div>
+
+				</div>
+				<div class="notice-board">
+					<svg class="tours--icon-rec">
+						<use xlink:href="<?php echo base_url();?>assets/images/sprite.svg#icon-pin"></use>
+					</svg>
+					<h2 class="mb-3" style="font-size:24px;">Want to get our hottest tours, highlights and suggessions? Click
 						below!</h2>
-					<div class="col-sm-12 group mb-3">
-						<input type="button" class="search-submit btn btn-primary" value="Find Tours"
-							style="width:100%; font-size:1.5em;" onclick="window.location='<?php echo base_url(); ?>tours-list/0'">
+					<div class="col-sm-12 group mb-3 d-flex align-items-center">
+						<input type="button" class="search-submit btn btn-primary" value="Browse Tours"
+							style="width:100%; font-size:1.5em; margin:auto;" onclick="window.location='<?php echo base_url(); ?>tours-list/0'">
 					</div>
 
 				</div>
@@ -74,7 +103,7 @@
             <div class="col-md-6 col-lg-3 ftco-animate">
             <a href="<?php echo base_url(); ?>search-tours/culture" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/anuradhapura.jpg');">
               <div class="text">
-                <h3 class="heading">Culture & Heritage</h3>
+                <h3 class="heading">Culture & Heritage Tours</h3>
                 <div class="post-meta">
                   
                 </div>
@@ -84,7 +113,7 @@
           <div class="col-md-6 col-lg-3 ftco-animate">
             <a href="<?php echo base_url(); ?>search-tours/family" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/family.jpg');">
               <div class="text">
-                <h3 class="heading">Family</h3>
+                <h3 class="heading">Family Holidays</h3>
                 <div class="post-meta">
                     
                 </div>
@@ -94,7 +123,7 @@
           <div class="col-md-6 col-lg-3 ftco-animate">
             <a href="<?php echo base_url(); ?>search-tours/beach" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/trinco.jpg');">
               <div class="text">
-                <h3 class="heading">Classical Beach</h3>
+                <h3 class="heading">Classical Beach Holidays</h3>
                 <div class="post-meta">
                    
                 </div>
@@ -104,7 +133,7 @@
           <div class="col-md-6 col-lg-3 ftco-animate">
             <a href="<?php echo base_url(); ?>search-tours/luxury" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/luxury_1.jpg');">
               <div class="text">
-                <h3 class="heading">Luxury</h3>
+                <h3 class="heading">Luxury Holidays</h3>
                 <div class="post-meta">
                    
                 </div>
@@ -114,7 +143,7 @@
           <div class="col-md-6 col-lg-3 ftco-animate">
             <a href="<?php echo base_url(); ?>search-tours/ramayana" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/ramayana.jpg');">
               <div class="text">
-                <h3 class="heading">Ramayana</h3>
+                <h3 class="heading">Ramayana Trails</h3>
                 <div class="post-meta">
                     
                 </div>
@@ -124,7 +153,7 @@
           <div class="col-md-6 col-lg-3 ftco-animate">
             <a href="<?php echo base_url(); ?>search-tours/adventure" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/adventure.jpg');">
               <div class="text">
-                <h3 class="heading">Adventure</h3>
+                <h3 class="heading">Adventure Holidays</h3>
                 <div class="post-meta">
                     
                 </div>
@@ -134,7 +163,7 @@
           <div class="col-md-6 col-lg-3 ftco-animate">
             <a href="<?php echo base_url(); ?>search-tours/active" class="block-5" style="background-image: url('<?php echo base_url();?>assets/images/active.jpg');">
               <div class="text">
-                <h3 class="heading">Active</h3>
+                <h3 class="heading">Active Holidays</h3>
                 <div class="post-meta">
                     
                 </div>
@@ -308,13 +337,8 @@
 	}
 }
 </style>
-<div class="container">
-  <h2>Modal Example</h2>
-  <!-- Trigger the modal with a button -->
-  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
 
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
+<div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
     
       <!-- Modal content-->
@@ -326,7 +350,7 @@
         <div class="modal-body">
 					<p></p>
 					<div class="row ">
-					<?php foreach($recommended_tours as $recommended_tour) :?>
+					<?php foreach($recommended_tours_2 as $recommended_tour) :?>
 					<div class="card" style="width: 19.2rem; margin:10px; padding:10px; background-color:#17a2b8">
 					<img class="card-img-top" src="<?php echo base_url().'assets/images/tours/'.$recommended_tour->photo_id; ?>" alt="Card image cap"
 					 style="width:100%; height:auto; overflow:hidden;">
@@ -354,10 +378,7 @@
     </div>
   </div>
   
-</div>
-<script src="<?php echo base_url();?>assets/js/jquery.min.js"></script>
-
-<script>
+  <script>
 
 setTimeout(function () {
 	$('#myModal').modal('show');

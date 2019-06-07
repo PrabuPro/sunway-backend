@@ -29,12 +29,20 @@ function iptocountry($ip) {
 		top:0;
 	}
 	body {
-		background-color: #F5F5F5;
+		background-color: #ffffff;
 	}
 
 	.ftco-navbar-light {
-		background: #383C42 !important;
+		background: #182a65 !important;
 		top: 0px !important;
+	}
+
+	.navbar{
+		padding:2rem 1rem 0.5rem 1rem !important;
+	}
+
+	.navbar-logo{
+		height: 4em !important;
 	}
 
 
@@ -96,11 +104,17 @@ function iptocountry($ip) {
 	.panel-heading {
 		background-color: #303040;
 		border-radius: 5px;
+		box-shadow: 6px 13px 0px #303040 !important; 
+		border-top: 2px solid #303040;
+		border-left: 2px solid #303040;
+		border-right: 2px solid #303040;
 
 	}
 
 	.panel-primary {
-		border: 1px solid #303040;
+		border-bottom: 1px solid #303040;
+		border-left: 1px solid #303040;
+		border-right: 1px solid #303040;
 		border-color: #303040;
 	}
 
@@ -138,7 +152,7 @@ function iptocountry($ip) {
 
 	.external-links {
 		font-size: 16px;
-		font-weight: 500;
+		font-weight: 700;
 	}
 
 	.external-links:hover {
@@ -156,7 +170,9 @@ function iptocountry($ip) {
 		height: auto;
 		width: 100%;
 		border-radius: 5px;
-		box-shadow: 0 2px 6px #777 !important;
+		box-shadow: 5px 6px 0px #000000 !important; 
+		border: 2px solid #000000;
+		
 
 	}
 
@@ -169,7 +185,7 @@ function iptocountry($ip) {
 		<div class="col-lg-3">
 
 			<div class="card mt-5"
-				style="box-shadow: 0 2px 6px #777 !important; !important; margin-bottom: 20px; background-color:#67E6DC;">
+				style="box-shadow: 5px 6px 0px #000000 !important; border: 2px solid #000000; !important; margin-bottom: 20px;">
 
 				<div class="card-body">
 					<h5 class="card-title external-links">
@@ -186,7 +202,7 @@ function iptocountry($ip) {
 				</div>
 			</div>
 			<div class="card"
-				style="box-shadow: 0 2px 6px #777 !important; margin-bottom: 10px; background-color: #ffc600;">
+				style="box-shadow: 5px 6px 0px #000000 !important;border: 2px solid #000000; margin-bottom: 10px;">
 
 				<div class="card-body">
 					<h3 class="sub--para-itenary" style="color:#000000 !important;">
@@ -199,7 +215,7 @@ function iptocountry($ip) {
 									style="font-size:14px; margin-bottom:0px; color:#000000; font-weight:600;">Name</label>
 								<input id="name" name="name" type="text" class="form-control"
 									value="<?php echo set_value('name');?>" placeholder=""
-									style="height: 35px !important; font-size: 12px; border-radius: 5px;" required>
+									style="height: 35px !important; font-size: 12px; border-radius: 5px; border: 1.5px solid #000000;" required>
 							</div>
 
 						</div>
@@ -209,7 +225,7 @@ function iptocountry($ip) {
 									style="font-size:14px; margin-bottom:0px; color:#000000; font-weight:600;">Email</label>
 								<input id="email" name="email" type="email" class="form-control"
 									value="<?php echo set_value('email');?>" placeholder=""
-									style="height: 35px !important; font-size: 12px; border-radius: 5px;" required>
+									style="height: 35px !important; font-size: 12px; border-radius: 5px; border: 1.5px solid #000000;" required>
 							</div>
 						</div>
 
@@ -219,7 +235,7 @@ function iptocountry($ip) {
 									style="font-size:14px; margin-bottom:0px; color:#000000; font-weight:600;">Message</label>
 								<textarea id="message" name="message" cols="120" rows="7" class="form-control"
 									placeholder=""
-									style="height: 100px !important; font-size: 12px; border-radius: 5px;"
+									style="height: 100px !important; font-size: 12px; border-radius: 5px; border: 1.5px solid #000000;"
 									required><?php echo set_value('name');?></textarea>
 							</div>
 						</div>
@@ -234,7 +250,7 @@ function iptocountry($ip) {
 							<div class="col-md-12" style=" margin:auto; ">
 								<div class="form-group">
 									<input type="submit" value="Send" class="btn btn-primary py-2 px-4 send-btn"
-										style="height: 50px !important; border-radius: 5px; margin-left: 60px; margin-top:20px; background-color: #ffc600; color: #343242; font-weight: 700; border: 2px solid transparant;">
+										style="height: 50px !important; border-radius: 5px; margin-left: 60px; margin-top:20px; background-color: #000000; color: #ffffff; font-weight: 700; border: 2px solid transparant;">
 								</div>
 							</div>
 						</div>
@@ -254,11 +270,11 @@ function iptocountry($ip) {
 			</h1>
 
 			<div class="tour_item-image"
-				style="display:flex; justify-content:flex-end; align-items:flex-end; width:100%; margin-bottom:50px; height:30em; background-size:cover; background-image: url('<?php echo base_url().'assets/images/tours/'.$results->photo_id; ?>');">
+				style="display:flex; justify-content:flex-end; align-items:flex-end; width:100%; margin-bottom:50px; height:30em; background-size:cover; background-image: url('<?php echo base_url().'assets/images/tours/'.$results->photo_id; ?>'); box-shadow: 5px 6px 0px #000000; border-radius: 0.25rem; border: 2px solid #000000;">
 				<div class="col-5" style="padding-bottom: 15px; <?php echo ($two_letter_country_code == 'LK') ? 'display:none;' : ' ';?>" >
 					<div class="card tab-card"
 						style="float:right !important; border: none; box-shadow: 0 2px 6px #000000 !important;">
-						<div class="card-header tab-card-header" style="background-color:#ffc600;">
+						<div class="card-header tab-card-header" style="background-color:#45a9e0;">
 							<ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
 								<li class="nav-item" style="<?php echo (isset($prices[0]->hotel_type)) ? '' : 'display:none;' ?>">
 									<a style="font-weight:600 !important; text-transform: uppercase;"
@@ -279,7 +295,7 @@ function iptocountry($ip) {
 						</div>
 
 						<div class="tab-content" id="myTabContent"
-							style="border-bottom: 5px solid #ffc600; border-left: 5px solid #ffc600; border-right: 5px solid #ffc600; border-bottom-left-radius: 5px !important;border-bottom-right-radius: 5px !important;">
+							style="border-bottom: 5px solid #45a9e0; border-left: 5px solid #45a9e0; border-right: 5px solid #45a9e0; border-bottom-left-radius: 5px !important;border-bottom-right-radius: 5px !important;">
 							<div class="tab-pane fade show active p-3" id="one" role="tabpanel"
 								aria-labelledby="one-tab" style="<?php echo (isset($prices[0]->hotel_type) ) ? '' : 'display:none;' ?>">
 								<h5 class="card-title"
@@ -312,8 +328,8 @@ function iptocountry($ip) {
 				</div>
 
 			</div>
-			<div class="" style="margin-right:0 !important;">
-				<div class="intro-section">
+			<div class="" style="margin-right:0 !important; ">
+				<div class="intro-section" >
 					<div class=" slider-text align-items-center">
 						<div class=" ">
 							<h1 class="mb-3">Introduction</h1>
@@ -349,7 +365,7 @@ function iptocountry($ip) {
 
 					</div>
 				</div>
-				<div class="panel-body" style="box-shadow: 0 2px 6px #000000 !important;">
+				<div class="panel-body" style="box-shadow: 5px 6px 0px #303040 !important;">
 					<div class="tab-content">
 						<div class="tab-content" id="myTabContent">
 							<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"
@@ -437,7 +453,7 @@ function iptocountry($ip) {
 								display:flex;
 								flex-direction:row;
 								align-items:center;
-								width:auto;
+								width:110px;
 								height: 40px;
 								margin:0px 15px 10px 15px;
 								color:#ffffff;
@@ -495,34 +511,49 @@ function iptocountry($ip) {
 
 											<?php $countItinerary = count($itineraries); ?>
 											<?php $currrentItinerary = 0; ?>
+											<?php $countHotel = 0; ?>
 											<?php foreach($itineraries as $itinerary) : ?>
 											<li class="tours-itinerary-item"> <img
 													src="<?php echo base_url(); ?>assets/images/checkmark.png"
 													class="tours-itinerary-icon" alt="">Day
 												<?php echo $itinerary->item_number; ?>
 											</li>
-											<li class="tours-itinerary-item-details" style="font-size:16px; margin-bottom:40px;">
+											<li class="tours-itinerary-item-details" style="font-size:16px; margin-bottom:40px; text-align:justify;">
 												<?php echo str_replace(chr(194)," ",$itinerary->item_details); ?>
 											</li>
 
-											<div class="hotelItinerary" style="<?php echo (++$currrentItinerary === $countItinerary) ? 'display:none' : ' '; ?>">
-												<div class="hotels" style="background-color:#f1c40f">Hotels</div>
-												
-												
-												<a href="<?php echo $itinerary->regular_url;?>" target="_blank" style="<?php echo empty($itinerary->regular) ? 'display:none' : ' '; ?>"> <div class="hotel-type"><p>Regular</p></div><div class="hotel-star" style="background-color: #684967;">
-													<div class="hotel-star-number"> <p>R</p> </div>
+											<a data-toggle="collapse" data-parent="#accordion" class="faq-text" href="#collapse<?php echo $countHotel;?>" style="<?php echo (++$currrentItinerary === $countItinerary) ? 'display:none' : ' '; ?>">
+												<div class="panel-heading hotelItinerary d-flex justify-content-center" style="background-color: #000000; color:#ffffff;  margin: 0px 0px 0px 37px; border-bottom:2px solid #303040; box-shadow:none !important;">
+													<h2 class="panel-title" style="line-height:1 !important; font-weight:600; font-size: 18px; color: #ffffff; margin-bottom: 0px; padding:5px">
+														HOTELS
+													</h2>
+												</div>
+											</a>
+											<div id="collapse<?php echo $countHotel;?>" class="panel-collapse collapse in">
+												<div class="panel-body hotelItinerary d-flex flex-wrap" style="margin-left:37px; border-top: 2.5px solid #303040;">
+													<a href="<?php echo $itinerary->regular_url;?>" target="_blank" style="<?php echo empty($itinerary->regular) ? 'display:none' : ' '; ?> margin:auto"> <div class="hotel-type"><p>Regular</p></div><div class="hotel-star" style="background-color: #684967;">
+												<div class="hotel-star-number"> <p>R</p> </div>
 												<?php echo $itinerary->regular;?></div></a>
-												<a href="<?php echo $itinerary->standard_url;?>" target="_blank" style="<?php echo empty($itinerary->standard) ? 'display:none' : ' '; ?>"><div class="hotel-type"><p>Standard</p></div> <div class="hotel-star" style="background-color: #684967;">
+												<a href="<?php echo $itinerary->standard_url;?>" target="_blank" style="<?php echo empty($itinerary->standard) ? 'display:none' : ' '; ?> margin:auto"><div class="hotel-type"><p>Standard</p></div> <div class="hotel-star" style="background-color: #684967;">
 													<div class="hotel-star-number"> <p>S</p> </div>
 												<?php echo $itinerary->standard;?></div></a>
-												<a href="<?php echo $itinerary->comfort_url;?>" target="_blank" style="<?php echo empty($itinerary->comfort) ? 'display:none' : ' '; ?>"><div class="hotel-type"><p>Comfort</p></div> <div class="hotel-star" style="background-color: #684967;">
+												<a href="<?php echo $itinerary->comfort_url;?>" target="_blank" style="<?php echo empty($itinerary->comfort) ? 'display:none' : ' '; ?> margin:auto"><div class="hotel-type"><p>Comfort</p></div> <div class="hotel-star" style="background-color: #684967;">
 													<div class="hotel-star-number"> <p>C</p> </div>
 												<?php echo $itinerary->comfort;?></div></a>
-												<a href="<?php echo $itinerary->luxury_url;?>" target="_blank" style="<?php echo empty($itinerary->luxury) ? 'display:none' : ' '; ?>"><div class="hotel-type"><p>Luxury</p></div> <div class="hotel-star" style="background-color: #684967;">
+												<a href="<?php echo $itinerary->luxury_url;?>" target="_blank" style="<?php echo empty($itinerary->luxury) ? 'display:none' : ' '; ?> margin:auto"><div class="hotel-type"><p>Luxury</p></div> <div class="hotel-star" style="background-color: #684967;">
 													<div class="hotel-star-number"> <p>L</p> </div>
 												<?php echo $itinerary->luxury;?></div></a>
-												
+												</div>
 											</div>
+											<?php $countHotel++; ?>
+					
+
+					
+												
+												
+												
+												
+										
 											<?php endforeach; ?>
 										</ul>
 									</div>

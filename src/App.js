@@ -143,7 +143,6 @@ class App extends Component {
                 isLoading: false,
               });
             }else{
-              // console.log(res);
             this.setState({
               tours: res.data,
               isLoading: false,

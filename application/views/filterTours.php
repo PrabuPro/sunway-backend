@@ -8,11 +8,11 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
-	<title>React App</title>
-	<link href="<?php echo base_url()?>assets/static/css/main.d3e77db7.chunk.css" rel="stylesheet">
+	<title>Sunway Holidays - Filter Tours</title>
+	<link href="<?php echo base_url()?>assets/static/css/main.58e27e7b.chunk.css" rel="stylesheet">
 </head>
 
-<body><noscript>You need to enable JavaScript to run this app.</noscript>
+<body><noscript></noscript>
 	<div id="root"></div>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
 		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
@@ -100,8 +100,8 @@
 		}([])
 
 	</script>
-	<script src="<?php echo base_url()?>assets/static/js/2.f7ae6cc6.chunk.js"></script>
-	<script src="<?php echo base_url()?>assets/static/js/main.92bea711.chunk.js"></script>
+	<script src="<?php echo base_url()?>assets/static/js/2.2a9d7a0a.chunk.js"></script>
+	<script src="<?php echo base_url()?>assets/static/js/main.86e2e51e.chunk.js"></script>
 </body>
 
 </html>
